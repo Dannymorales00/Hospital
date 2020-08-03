@@ -88,19 +88,25 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inicio.vb">
+    <Compile Include="modelos\Citas.vb" />
+    <Compile Include="modelos\ConsultaMedica.vb" />
+    <Compile Include="modelos\Examen.vb" />
+    <Compile Include="modelos\ExamenOrina.vb" />
+    <Compile Include="modelos\ExamenSangre.vb" />
+    <Compile Include="vista\Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio.Designer.vb">
+    <Compile Include="vista\Inicio.Designer.vb">
       <DependentUpon>Inicio.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
+    <Compile Include="vista\Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="vista\Form2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="modelos\Medico.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -116,12 +122,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="modelos\Paciente.vb" />
+    <Compile Include="modelos\PersonaContacto.vb" />
+    <Compile Include="modelos\Usuario.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Inicio.resx">
+    <EmbeddedResource Include="vista\Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
+    <EmbeddedResource Include="vista\Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -155,5 +164,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
