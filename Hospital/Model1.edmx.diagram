@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="64e0d33df4e146d2b8e11f45df444d71" Name="Diagram1">
+        <EntityTypeShape EntityType="ProyectoModel.Citas" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.ConsultaMedica" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Enfermedad" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.ExamenOrina" Width="1.5" PointX="7.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.ExamenSangre" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.MedicamentoAlergico" Width="1.5" PointX="3" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.MedicamentoRecetado" Width="1.5" PointX="7.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Medico" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Paciente" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.PersonaContacto" Width="1.5" PointX="3" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Usuarios" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="ProyectoModel.FK_Citas_Medico" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK_Citas_Paciente1" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK_ConsultaMedica_Citas" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK_ExamenOrina_ConsultaMedica" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK_ExamenSangre_ConsultaMedica" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK_MedicamentoRecetado_ConsultaMedica" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK_Enfermedad_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK_MedicamentoAlergico_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK_PersonaContacto_Paciente" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
