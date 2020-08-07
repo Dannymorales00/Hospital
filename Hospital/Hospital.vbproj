@@ -136,15 +136,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="modelo\Citas.vb" />
-    <Compile Include="modelo\ConsultaMedica.vb" />
-    <Compile Include="modelo\Examen.vb" />
-    <Compile Include="modelo\ExamenOrina.vb" />
-    <Compile Include="modelo\ExamenSangre.vb" />
-    <Compile Include="modelo\Medico.vb" />
-    <Compile Include="modelo\Paciente.vb" />
-    <Compile Include="modelo\PersonaContacto.vb" />
-    <Compile Include="modelo\Usuario.vb" />
     <Compile Include="Paciente.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
