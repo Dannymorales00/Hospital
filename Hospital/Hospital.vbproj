@@ -141,6 +141,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="vista\Leandro.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="vista\Inicio.resx">
