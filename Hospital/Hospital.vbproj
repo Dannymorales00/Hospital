@@ -97,6 +97,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelos\Citas.vb" />
+    <Compile Include="Modelos\ConsultaMedica.vb" />
+    <Compile Include="Modelos\Enfermedad.vb" />
+    <Compile Include="Modelos\Enfermera.vb" />
+    <Compile Include="Modelos\Examen.vb" />
+    <Compile Include="Modelos\ExamenOrina.vb" />
+    <Compile Include="Modelos\ExamenSangre.vb" />
+    <Compile Include="Modelos\Medicamento.vb" />
+    <Compile Include="Modelos\MedicamentoRecetado.vb" />
+    <Compile Include="Modelos\Medico.vb" />
+    <Compile Include="Modelos\Paciente.vb" />
+    <Compile Include="Modelos\PersonaContacto.vb" />
+    <Compile Include="Modelos\Secretaria.vb" />
+    <Compile Include="Modelos\Usuario.vb" />
     <Compile Include="vista\Claseprueba.vb" />
     <Compile Include="vista\Inicio.vb">
       <SubType>Form</SubType>
