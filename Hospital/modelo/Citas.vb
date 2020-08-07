@@ -1,6 +1,5 @@
 ﻿Public Class Citas
 
-
     Private _paciente As Paciente
     Private _fechaHora As Date
     Private _especialidadSolicitada As String

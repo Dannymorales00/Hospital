@@ -136,11 +136,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="modelos\Citas.vb" />
-    <Compile Include="modelos\ConsultaMedica.vb" />
-    <Compile Include="modelos\Examen.vb" />
-    <Compile Include="modelos\ExamenOrina.vb" />
-    <Compile Include="modelos\ExamenSangre.vb" />
+    <Compile Include="modelo\Citas.vb" />
+    <Compile Include="modelo\ConsultaMedica.vb" />
+    <Compile Include="modelo\Examen.vb" />
+    <Compile Include="modelo\ExamenOrina.vb" />
+    <Compile Include="modelo\ExamenSangre.vb" />
+    <Compile Include="modelo\Medico.vb" />
+    <Compile Include="modelo\Paciente.vb" />
+    <Compile Include="modelo\PersonaContacto.vb" />
+    <Compile Include="modelo\Usuario.vb" />
     <Compile Include="Paciente.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -175,7 +179,6 @@
     <Compile Include="vista\Form2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modelos\Medico.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -191,9 +194,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="modelos\Paciente.vb" />
-    <Compile Include="modelos\PersonaContacto.vb" />
-    <Compile Include="modelos\Usuario.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="vista\Inicio.resx">
@@ -256,5 +256,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
