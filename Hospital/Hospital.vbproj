@@ -97,6 +97,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Citas.vb" />
+    <Compile Include="ConsultaMedica.vb" />
+    <Compile Include="Examen.vb" />
+    <Compile Include="ExamenOrina.vb" />
+    <Compile Include="ExamenSangre.vb" />
+    <Compile Include="Medico.vb" />
+    <Compile Include="Paciente.vb" />
+    <Compile Include="PersonaContacto.vb" />
+    <Compile Include="Usuario.vb" />
     <Compile Include="vista\Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
