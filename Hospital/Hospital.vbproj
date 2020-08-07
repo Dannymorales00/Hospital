@@ -97,6 +97,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="vista\Claseprueba.vb" />
     <Compile Include="vista\Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
