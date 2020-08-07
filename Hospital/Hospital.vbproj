@@ -112,6 +112,7 @@
     <Compile Include="Modelos\Secretaria.vb" />
     <Compile Include="Modelos\Usuario.vb" />
     <Compile Include="vista\Claseprueba.vb" />
+    <Compile Include="vista\Class1.vb" />
     <Compile Include="vista\Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
