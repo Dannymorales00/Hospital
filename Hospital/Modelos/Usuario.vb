@@ -1,4 +1,14 @@
 ﻿Public Class Usuario
+
+    Private _cedula As Integer
+    Private _nombre As String
+    Private _fechaNacimiento As String
+    Private _telefono As Integer
+    Private _correo As String
+    Private _nombreUsuario As String
+    Private _contrasena As String
+    Private _tipo As Integer
+
     Property cedula As Integer
         Get
             Return _cedula
@@ -62,7 +72,7 @@
         End Set
     End Property
 
-    Property tipo As Int16
+    Property tipo As Integer
         Get
             Return _tipo
         End Get
@@ -71,14 +81,7 @@
         End Set
     End Property
 
-    Private _cedula As Integer
-    Private _nombre As String
-    Private _fechaNacimiento As String
-    Private _telefono As Integer
-    Private _correo As String
-    Private _nombreUsuario As String
-    Private _contrasena As String
-    Private _tipo As Int16
+
 
     Public Sub New(cedula As Integer, nombre As String, fechaNacimiento As String, telefono As Short, correo As String, nombreUsuario As String, contrasena As String, tipo As Short)
         Me.cedula = cedula
