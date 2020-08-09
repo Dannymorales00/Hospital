@@ -5,6 +5,12 @@
 
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Me.Size = New Size(500, 500)
+        '.........point(x,y)// x = izquierda, y = arriba
+        Me.GrupoIniciar.Location = New Point(115, 75)
+        Me.GrupoRegistrar.Location = New Point(30.7, 75)
+
+
         Me.MostrarIniciarSesion()
 
     End Sub
@@ -40,5 +46,12 @@
         Me.MostrarRegistrar()
 
     End Sub
+
+
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
+    End Sub
+
 
 End Class
