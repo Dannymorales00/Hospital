@@ -91,7 +91,7 @@ Partial Class FrmLogin
         'GrupoIniciar
         '
         Me.GrupoIniciar.AutoSize = True
-        Me.GrupoIniciar.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.GrupoIniciar.BackColor = System.Drawing.Color.Silver
         Me.GrupoIniciar.Controls.Add(Me.BtnIngresar)
         Me.GrupoIniciar.Controls.Add(Me.LblUsuario)
         Me.GrupoIniciar.Controls.Add(Me.TxtInicioContraseña)
@@ -143,7 +143,7 @@ Partial Class FrmLogin
         'GrupoRegistrar
         '
         Me.GrupoRegistrar.AutoSize = True
-        Me.GrupoRegistrar.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.GrupoRegistrar.BackColor = System.Drawing.Color.Silver
         Me.GrupoRegistrar.Controls.Add(Me.CBTipo)
         Me.GrupoRegistrar.Controls.Add(Me.Label8)
         Me.GrupoRegistrar.Controls.Add(Me.TextBox4)
@@ -332,7 +332,7 @@ Partial Class FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(765, 448)
         Me.Controls.Add(Me.GrupoRegistrar)
         Me.Controls.Add(Me.MenuStrip1)
