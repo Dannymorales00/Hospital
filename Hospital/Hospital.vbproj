@@ -111,6 +111,36 @@
     <Compile Include="Modelos\PersonaContacto.vb" />
     <Compile Include="Modelos\Secretaria.vb" />
     <Compile Include="Modelos\Usuario.vb" />
+    <Compile Include="ProyectoEntities.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoEntities.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoEntities.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_buscar_enfermedad_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_buscar_paciente_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_select_citas_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_select_medicamentos_recetados_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_select_medicamento_alergico_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="vista\Claseprueba.vb" />
     <Compile Include="vista\Class1.vb" />
     <Compile Include="vista\Inicio.vb">
@@ -170,6 +200,13 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <EntityDeploy Include="ProyectoEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProyectoEntities.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ProyectoEntities.edmx.diagram">
+      <DependentUpon>ProyectoEntities.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -186,6 +223,17 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ProyectoEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProyectoEntities.edmx</DependentUpon>
+      <LastGenOutput>ProyectoEntities.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="ProyectoEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProyectoEntities.edmx</DependentUpon>
+      <LastGenOutput>ProyectoEntities.vb</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ProyectoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="sp_actualizar_ExamenOrina" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="idConsulta" Type="int" Mode="In" />
+          <Parameter Name="color" Type="nchar" Mode="In" />
+          <Parameter Name="eritrocitos" Type="float" Mode="In" />
+          <Parameter Name="glucosa" Type="float" Mode="In" />
+          <Parameter Name="leucocitos" Type="float" Mode="In" />
+        </Function>
+        <Function Name="sp_actualizar_ExamenSangre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="idConsulta" Type="int" Mode="In" />
+          <Parameter Name="acidoUrico" Type="float" Mode="In" />
+          <Parameter Name="creatinina" Type="float" Mode="In" />
+          <Parameter Name="colesterol" Type="float" Mode="In" />
+          <Parameter Name="hematocrito" Type="float" Mode="In" />
+          <Parameter Name="hemoglobina" Type="float" Mode="In" />
+          <Parameter Name="trigliceridos" Type="float" Mode="In" />
+        </Function>
+        <Function Name="sp_actualizar_paciente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+          <Parameter Name="nombre" Type="nvarchar" Mode="In" />
+          <Parameter Name="edad" Type="int" Mode="In" />
+          <Parameter Name="correo" Type="nvarchar" Mode="In" />
+          <Parameter Name="fechaNacimiento" Type="date" Mode="In" />
+          <Parameter Name="peso" Type="float" Mode="In" />
+          <Parameter Name="altura" Type="float" Mode="In" />
+          <Parameter Name="telefono" Type="int" Mode="In" />
+          <Parameter Name="tipoSangre" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="sp_buscar_enfermedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_buscar_ExamenOrina" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="idConsulta" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_buscar_ExamenSangre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="idConsulta" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_buscar_paciente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_buscar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_eliminar_cita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_eliminar_enfermedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_eliminar_ExamenOrina" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="idConsulta" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_eliminar_ExamenSangre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="idConsulta" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_eliminar_medicamento_alergico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_eliminar_medicamento_Recetado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_eliminar_paciente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_eliminar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_modificar_enfermedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="enfermedad" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_modificar_paciente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="edad" Type="int" Mode="In" />
+          <Parameter Name="correo" Type="varchar" Mode="In" />
+          <Parameter Name="fechaNacimiento" Type="date" Mode="In" />
+          <Parameter Name="peso" Type="float" Mode="In" />
+          <Parameter Name="altura" Type="float" Mode="In" />
+          <Parameter Name="telefono" Type="int" Mode="In" />
+          <Parameter Name="tiposangre" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_modificar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+          <Parameter Name="contraseña" Type="varchar" Mode="In" />
+          <Parameter Name="correo" Type="varchar" Mode="In" />
+          <Parameter Name="fechaNacimiento" Type="date" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="nombreUsuario" Type="varchar" Mode="In" />
+          <Parameter Name="telefono" Type="varchar" Mode="In" />
+          <Parameter Name="tipo" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_registrar_cita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="especialidad" Type="nvarchar" Mode="In" />
+          <Parameter Name="fechaHora" Type="datetime" Mode="In" />
+          <Parameter Name="cedulaPaciente" Type="int" Mode="In" />
+          <Parameter Name="cedulaMedico" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_registrar_enfermedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedulaPaciente" Type="int" Mode="In" />
+          <Parameter Name="enfermedad" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_registrar_ExamenOrina" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idConsulta" Type="int" Mode="In" />
+          <Parameter Name="color" Type="nchar" Mode="In" />
+          <Parameter Name="eritrocitos" Type="float" Mode="In" />
+          <Parameter Name="glucosa" Type="float" Mode="In" />
+          <Parameter Name="leucocitos" Type="float" Mode="In" />
+        </Function>
+        <Function Name="sp_registrar_ExamenSangre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idConsulta" Type="int" Mode="In" />
+          <Parameter Name="acidoUrico" Type="float" Mode="In" />
+          <Parameter Name="creatinina" Type="float" Mode="In" />
+          <Parameter Name="colesterol" Type="float" Mode="In" />
+          <Parameter Name="hematocrito" Type="float" Mode="In" />
+          <Parameter Name="hemoglobina" Type="float" Mode="In" />
+          <Parameter Name="trigliceridos" Type="float" Mode="In" />
+        </Function>
+        <Function Name="sp_registrar_medicamento_alergico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+          <Parameter Name="medicamento" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_registrar_medicamento_recetado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idConsulta" Type="int" Mode="In" />
+          <Parameter Name="medicamento" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_registrar_paciente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="edad" Type="int" Mode="In" />
+          <Parameter Name="correo" Type="varchar" Mode="In" />
+          <Parameter Name="fechaNacimiento" Type="date" Mode="In" />
+          <Parameter Name="peso" Type="float" Mode="In" />
+          <Parameter Name="altura" Type="float" Mode="In" />
+          <Parameter Name="telefono" Type="int" Mode="In" />
+          <Parameter Name="tiposangre" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_registrar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+          <Parameter Name="contraseña" Type="varchar" Mode="In" />
+          <Parameter Name="correo" Type="varchar" Mode="In" />
+          <Parameter Name="fechaNacimiento" Type="date" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="nombreUsuario" Type="varchar" Mode="In" />
+          <Parameter Name="telefono" Type="varchar" Mode="In" />
+          <Parameter Name="tipo" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_select_citas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_select_medicamento_alergico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_select_medicamentos_recetados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_update_cita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="especialidad" Type="nvarchar" Mode="In" />
+          <Parameter Name="fechaHora" Type="datetime" Mode="In" />
+          <Parameter Name="cedula_paciente" Type="int" Mode="In" />
+          <Parameter Name="cedula_medico" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_update_medicamento_alergico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="cedula" Type="int" Mode="In" />
+          <Parameter Name="medicamento" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_update_medicamento_recetado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="idConsulta" Type="int" Mode="In" />
+          <Parameter Name="medicamento" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="ProyectoModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProyectoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ProyectoEntities1" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="sp_actualizar_ExamenOrina" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+            <Parameter Name="color" Mode="In" Type="String" />
+            <Parameter Name="eritrocitos" Mode="In" Type="Double" />
+            <Parameter Name="glucosa" Mode="In" Type="Double" />
+            <Parameter Name="leucocitos" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="sp_actualizar_ExamenSangre" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+            <Parameter Name="acidoUrico" Mode="In" Type="Double" />
+            <Parameter Name="creatinina" Mode="In" Type="Double" />
+            <Parameter Name="colesterol" Mode="In" Type="Double" />
+            <Parameter Name="hematocrito" Mode="In" Type="Double" />
+            <Parameter Name="hemoglobina" Mode="In" Type="Double" />
+            <Parameter Name="trigliceridos" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="sp_actualizar_paciente" ReturnType="Collection(Int32)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="edad" Mode="In" Type="Int32" />
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="fechaNacimiento" Mode="In" Type="DateTime" />
+            <Parameter Name="peso" Mode="In" Type="Double" />
+            <Parameter Name="altura" Mode="In" Type="Double" />
+            <Parameter Name="telefono" Mode="In" Type="Int32" />
+            <Parameter Name="tipoSangre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_buscar_enfermedad" ReturnType="Collection(ProyectoModel.sp_buscar_enfermedad_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_buscar_ExamenOrina" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_buscar_ExamenSangre" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_buscar_paciente" ReturnType="Collection(ProyectoModel.sp_buscar_paciente_Result)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_buscar_usuario" ReturnType="Collection(Int32)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_eliminar_cita" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_eliminar_enfermedad" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_eliminar_ExamenOrina" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_eliminar_ExamenSangre" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_eliminar_medicamento_alergico" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_eliminar_medicamento_Recetado" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_eliminar_paciente" ReturnType="Collection(Int32)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_eliminar_usuario" ReturnType="Collection(Int32)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_modificar_enfermedad" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="enfermedad" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_modificar_paciente" ReturnType="Collection(Int32)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="edad" Mode="In" Type="Int32" />
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="fechaNacimiento" Mode="In" Type="DateTime" />
+            <Parameter Name="peso" Mode="In" Type="Double" />
+            <Parameter Name="altura" Mode="In" Type="Double" />
+            <Parameter Name="telefono" Mode="In" Type="Int32" />
+            <Parameter Name="tiposangre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_modificar_usuario" ReturnType="Collection(Int32)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+            <Parameter Name="contraseña" Mode="In" Type="String" />
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="fechaNacimiento" Mode="In" Type="DateTime" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="nombreUsuario" Mode="In" Type="String" />
+            <Parameter Name="telefono" Mode="In" Type="String" />
+            <Parameter Name="tipo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_registrar_cita" ReturnType="Collection(Int32)">
+            <Parameter Name="especialidad" Mode="In" Type="String" />
+            <Parameter Name="fechaHora" Mode="In" Type="DateTime" />
+            <Parameter Name="cedulaPaciente" Mode="In" Type="Int32" />
+            <Parameter Name="cedulaMedico" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_registrar_enfermedad" ReturnType="Collection(Int32)">
+            <Parameter Name="cedulaPaciente" Mode="In" Type="Int32" />
+            <Parameter Name="enfermedad" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_registrar_ExamenOrina" ReturnType="Collection(Int32)">
+            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+            <Parameter Name="color" Mode="In" Type="String" />
+            <Parameter Name="eritrocitos" Mode="In" Type="Double" />
+            <Parameter Name="glucosa" Mode="In" Type="Double" />
+            <Parameter Name="leucocitos" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="sp_registrar_ExamenSangre" ReturnType="Collection(Int32)">
+            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+            <Parameter Name="acidoUrico" Mode="In" Type="Double" />
+            <Parameter Name="creatinina" Mode="In" Type="Double" />
+            <Parameter Name="colesterol" Mode="In" Type="Double" />
+            <Parameter Name="hematocrito" Mode="In" Type="Double" />
+            <Parameter Name="hemoglobina" Mode="In" Type="Double" />
+            <Parameter Name="trigliceridos" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="sp_registrar_medicamento_alergico" ReturnType="Collection(Int32)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+            <Parameter Name="medicamento" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_registrar_medicamento_recetado" ReturnType="Collection(Int32)">
+            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+            <Parameter Name="medicamento" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_registrar_paciente" ReturnType="Collection(Int32)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="edad" Mode="In" Type="Int32" />
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="fechaNacimiento" Mode="In" Type="DateTime" />
+            <Parameter Name="peso" Mode="In" Type="Double" />
+            <Parameter Name="altura" Mode="In" Type="Double" />
+            <Parameter Name="telefono" Mode="In" Type="Int32" />
+            <Parameter Name="tiposangre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_registrar_usuario" ReturnType="Collection(Int32)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+            <Parameter Name="contraseña" Mode="In" Type="String" />
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="fechaNacimiento" Mode="In" Type="DateTime" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="nombreUsuario" Mode="In" Type="String" />
+            <Parameter Name="telefono" Mode="In" Type="String" />
+            <Parameter Name="tipo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_select_citas" ReturnType="Collection(ProyectoModel.sp_select_citas_Result)" />
+          <FunctionImport Name="sp_select_medicamento_alergico" ReturnType="Collection(ProyectoModel.sp_select_medicamento_alergico_Result)" />
+          <FunctionImport Name="sp_select_medicamentos_recetados" ReturnType="Collection(ProyectoModel.sp_select_medicamentos_recetados_Result)" />
+          <FunctionImport Name="sp_update_cita" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="especialidad" Mode="In" Type="String" />
+            <Parameter Name="fechaHora" Mode="In" Type="DateTime" />
+            <Parameter Name="cedula_paciente" Mode="In" Type="Int32" />
+            <Parameter Name="cedula_medico" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_update_medicamento_alergico" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+            <Parameter Name="medicamento" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_update_medicamento_recetado" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+            <Parameter Name="medicamento" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="sp_buscar_enfermedad_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="cedula_paciente" Nullable="false" />
+          <Property Type="String" Name="enfermedad" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_buscar_paciente_Result">
+          <Property Type="Int32" Name="cedula" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="edad" Nullable="false" />
+          <Property Type="String" Name="correo" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaNacimiento" Nullable="false" />
+          <Property Type="Double" Name="peso" Nullable="false" />
+          <Property Type="Double" Name="altura" Nullable="false" />
+          <Property Type="Int32" Name="telefono" Nullable="false" />
+          <Property Type="String" Name="tipoSangre" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="sp_select_citas_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="especialidad" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaHora" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="cedula_paciente" Nullable="false" />
+          <Property Type="Int32" Name="cedula_medico" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_select_medicamento_alergico_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="cedula_paciente" Nullable="false" />
+          <Property Type="String" Name="medicamento" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_select_medicamentos_recetados_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="id_consulta" Nullable="false" />
+          <Property Type="String" Name="medicamento" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProyectoModelStoreContainer" CdmEntityContainer="ProyectoEntities1" >
+          <FunctionImportMapping FunctionImportName="sp_actualizar_ExamenOrina" FunctionName="ProyectoModel.Store.sp_actualizar_ExamenOrina" />
+          <FunctionImportMapping FunctionImportName="sp_actualizar_ExamenSangre" FunctionName="ProyectoModel.Store.sp_actualizar_ExamenSangre" />
+          <FunctionImportMapping FunctionImportName="sp_actualizar_paciente" FunctionName="ProyectoModel.Store.sp_actualizar_paciente" />
+          <FunctionImportMapping FunctionImportName="sp_buscar_enfermedad" FunctionName="ProyectoModel.Store.sp_buscar_enfermedad">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_buscar_enfermedad_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cedula_paciente" ColumnName="cedula_paciente" />
+                <ScalarProperty Name="enfermedad" ColumnName="enfermedad" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_buscar_ExamenOrina" FunctionName="ProyectoModel.Store.sp_buscar_ExamenOrina" />
+          <FunctionImportMapping FunctionImportName="sp_buscar_ExamenSangre" FunctionName="ProyectoModel.Store.sp_buscar_ExamenSangre" />
+          <FunctionImportMapping FunctionImportName="sp_buscar_paciente" FunctionName="ProyectoModel.Store.sp_buscar_paciente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_buscar_paciente_Result">
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+                <ScalarProperty Name="peso" ColumnName="peso" />
+                <ScalarProperty Name="altura" ColumnName="altura" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="tipoSangre" ColumnName="tipoSangre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_buscar_usuario" FunctionName="ProyectoModel.Store.sp_buscar_usuario" />
+          <FunctionImportMapping FunctionImportName="sp_eliminar_cita" FunctionName="ProyectoModel.Store.sp_eliminar_cita" />
+          <FunctionImportMapping FunctionImportName="sp_eliminar_enfermedad" FunctionName="ProyectoModel.Store.sp_eliminar_enfermedad" />
+          <FunctionImportMapping FunctionImportName="sp_eliminar_ExamenOrina" FunctionName="ProyectoModel.Store.sp_eliminar_ExamenOrina" />
+          <FunctionImportMapping FunctionImportName="sp_eliminar_ExamenSangre" FunctionName="ProyectoModel.Store.sp_eliminar_ExamenSangre" />
+          <FunctionImportMapping FunctionImportName="sp_eliminar_medicamento_alergico" FunctionName="ProyectoModel.Store.sp_eliminar_medicamento_alergico" />
+          <FunctionImportMapping FunctionImportName="sp_eliminar_medicamento_Recetado" FunctionName="ProyectoModel.Store.sp_eliminar_medicamento_Recetado" />
+          <FunctionImportMapping FunctionImportName="sp_eliminar_paciente" FunctionName="ProyectoModel.Store.sp_eliminar_paciente" />
+          <FunctionImportMapping FunctionImportName="sp_eliminar_usuario" FunctionName="ProyectoModel.Store.sp_eliminar_usuario" />
+          <FunctionImportMapping FunctionImportName="sp_modificar_enfermedad" FunctionName="ProyectoModel.Store.sp_modificar_enfermedad" />
+          <FunctionImportMapping FunctionImportName="sp_modificar_paciente" FunctionName="ProyectoModel.Store.sp_modificar_paciente" />
+          <FunctionImportMapping FunctionImportName="sp_modificar_usuario" FunctionName="ProyectoModel.Store.sp_modificar_usuario" />
+          <FunctionImportMapping FunctionImportName="sp_registrar_cita" FunctionName="ProyectoModel.Store.sp_registrar_cita" />
+          <FunctionImportMapping FunctionImportName="sp_registrar_enfermedad" FunctionName="ProyectoModel.Store.sp_registrar_enfermedad" />
+          <FunctionImportMapping FunctionImportName="sp_registrar_ExamenOrina" FunctionName="ProyectoModel.Store.sp_registrar_ExamenOrina" />
+          <FunctionImportMapping FunctionImportName="sp_registrar_ExamenSangre" FunctionName="ProyectoModel.Store.sp_registrar_ExamenSangre" />
+          <FunctionImportMapping FunctionImportName="sp_registrar_medicamento_alergico" FunctionName="ProyectoModel.Store.sp_registrar_medicamento_alergico" />
+          <FunctionImportMapping FunctionImportName="sp_registrar_medicamento_recetado" FunctionName="ProyectoModel.Store.sp_registrar_medicamento_recetado" />
+          <FunctionImportMapping FunctionImportName="sp_registrar_paciente" FunctionName="ProyectoModel.Store.sp_registrar_paciente" />
+          <FunctionImportMapping FunctionImportName="sp_registrar_usuario" FunctionName="ProyectoModel.Store.sp_registrar_usuario" />
+          <FunctionImportMapping FunctionImportName="sp_select_citas" FunctionName="ProyectoModel.Store.sp_select_citas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_select_citas_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="especialidad" ColumnName="especialidad" />
+                <ScalarProperty Name="fechaHora" ColumnName="fechaHora" />
+                <ScalarProperty Name="cedula_paciente" ColumnName="cedula_paciente" />
+                <ScalarProperty Name="cedula_medico" ColumnName="cedula_medico" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_select_medicamento_alergico" FunctionName="ProyectoModel.Store.sp_select_medicamento_alergico">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_select_medicamento_alergico_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cedula_paciente" ColumnName="cedula_paciente" />
+                <ScalarProperty Name="medicamento" ColumnName="medicamento" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_select_medicamentos_recetados" FunctionName="ProyectoModel.Store.sp_select_medicamentos_recetados">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_select_medicamentos_recetados_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_consulta" ColumnName="id_consulta" />
+                <ScalarProperty Name="medicamento" ColumnName="medicamento" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_update_cita" FunctionName="ProyectoModel.Store.sp_update_cita" />
+          <FunctionImportMapping FunctionImportName="sp_update_medicamento_alergico" FunctionName="ProyectoModel.Store.sp_update_medicamento_alergico" />
+          <FunctionImportMapping FunctionImportName="sp_update_medicamento_recetado" FunctionName="ProyectoModel.Store.sp_update_medicamento_recetado" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
