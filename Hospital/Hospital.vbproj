@@ -141,8 +141,6 @@
     <Compile Include="sp_select_medicamento_alergico_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="vista\Claseprueba.vb" />
-    <Compile Include="vista\Class1.vb" />
     <Compile Include="vista\FRMPersonaContacto.Designer.vb">
       <DependentUpon>FRMPersonaContacto.vb</DependentUpon>
     </Compile>
@@ -190,7 +188,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="vista\Leandro.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="vista\FRMPersonaContacto.resx">
