@@ -97,6 +97,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\ControladorPersonaContacto.vb" />
     <Compile Include="Modelos\Citas.vb" />
     <Compile Include="Modelos\ConsultaMedica.vb" />
     <Compile Include="Modelos\Enfermedad.vb" />
@@ -262,8 +263,6 @@
       <LastGenOutput>ProyectoEntities.vb</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controladores\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

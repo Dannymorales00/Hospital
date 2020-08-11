@@ -34,12 +34,17 @@ Partial Class FRMPersonaContacto
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.direccionTxt = New System.Windows.Forms.RichTextBox()
+        Me.nombreTxt = New System.Windows.Forms.TextBox()
+        Me.cedulaTxt = New System.Windows.Forms.TextBox()
+        Me.relacionTxt = New System.Windows.Forms.TextBox()
+        Me.telefonoTxt = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.labelCedula = New System.Windows.Forms.Label()
+        Me.labelNombre = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
@@ -59,12 +64,17 @@ Partial Class FRMPersonaContacto
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button3)
+        Me.TabPage1.Controls.Add(Me.labelNombre)
+        Me.TabPage1.Controls.Add(Me.labelCedula)
+        Me.TabPage1.Controls.Add(Me.Label8)
+        Me.TabPage1.Controls.Add(Me.Label7)
         Me.TabPage1.Controls.Add(Me.Button2)
-        Me.TabPage1.Controls.Add(Me.TextBox4)
-        Me.TabPage1.Controls.Add(Me.TextBox3)
-        Me.TabPage1.Controls.Add(Me.TextBox2)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
-        Me.TabPage1.Controls.Add(Me.RichTextBox1)
+        Me.TabPage1.Controls.Add(Me.telefonoTxt)
+        Me.TabPage1.Controls.Add(Me.relacionTxt)
+        Me.TabPage1.Controls.Add(Me.cedulaTxt)
+        Me.TabPage1.Controls.Add(Me.nombreTxt)
+        Me.TabPage1.Controls.Add(Me.direccionTxt)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.Label5)
@@ -117,7 +127,7 @@ Partial Class FRMPersonaContacto
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(20, 72)
+        Me.Label1.Location = New System.Drawing.Point(20, 76)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 18)
         Me.Label1.TabIndex = 13
@@ -188,45 +198,46 @@ Partial Class FRMPersonaContacto
         Me.Label6.TabIndex = 19
         Me.Label6.Text = "Paciente:"
         '
-        'RichTextBox1
+        'direccionTxt
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(178, 203)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(231, 96)
-        Me.RichTextBox1.TabIndex = 20
-        Me.RichTextBox1.Text = ""
+        Me.direccionTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.direccionTxt.Location = New System.Drawing.Point(178, 212)
+        Me.direccionTxt.Name = "direccionTxt"
+        Me.direccionTxt.Size = New System.Drawing.Size(263, 96)
+        Me.direccionTxt.TabIndex = 20
+        Me.direccionTxt.Text = ""
         '
-        'TextBox1
+        'nombreTxt
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(178, 41)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(162, 22)
-        Me.TextBox1.TabIndex = 21
+        Me.nombreTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nombreTxt.Location = New System.Drawing.Point(178, 41)
+        Me.nombreTxt.Name = "nombreTxt"
+        Me.nombreTxt.Size = New System.Drawing.Size(162, 22)
+        Me.nombreTxt.TabIndex = 21
         '
-        'TextBox2
+        'cedulaTxt
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(178, 72)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(162, 22)
-        Me.TextBox2.TabIndex = 22
+        Me.cedulaTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cedulaTxt.Location = New System.Drawing.Point(178, 72)
+        Me.cedulaTxt.Name = "cedulaTxt"
+        Me.cedulaTxt.Size = New System.Drawing.Size(162, 22)
+        Me.cedulaTxt.TabIndex = 22
         '
-        'TextBox3
+        'relacionTxt
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(178, 108)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(162, 22)
-        Me.TextBox3.TabIndex = 23
+        Me.relacionTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.relacionTxt.Location = New System.Drawing.Point(178, 108)
+        Me.relacionTxt.Name = "relacionTxt"
+        Me.relacionTxt.Size = New System.Drawing.Size(162, 22)
+        Me.relacionTxt.TabIndex = 23
         '
-        'TextBox4
+        'telefonoTxt
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(178, 139)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(162, 22)
-        Me.TextBox4.TabIndex = 24
+        Me.telefonoTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.telefonoTxt.Location = New System.Drawing.Point(178, 139)
+        Me.telefonoTxt.Name = "telefonoTxt"
+        Me.telefonoTxt.Size = New System.Drawing.Size(162, 22)
+        Me.telefonoTxt.TabIndex = 24
         '
         'Button2
         '
@@ -238,11 +249,65 @@ Partial Class FRMPersonaContacto
         Me.Button2.Text = "Registrar"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(283, 164)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(54, 13)
+        Me.Label7.TabIndex = 26
+        Me.Label7.Text = "Nombre:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.Location = New System.Drawing.Point(283, 187)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(50, 13)
+        Me.Label8.TabIndex = 27
+        Me.Label8.Text = "Cedula:"
+        '
+        'labelCedula
+        '
+        Me.labelCedula.AutoSize = True
+        Me.labelCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelCedula.ForeColor = System.Drawing.Color.Black
+        Me.labelCedula.Location = New System.Drawing.Point(348, 187)
+        Me.labelCedula.Name = "labelCedula"
+        Me.labelCedula.Size = New System.Drawing.Size(37, 13)
+        Me.labelCedula.TabIndex = 28
+        Me.labelCedula.Text = "******"
+        '
+        'labelNombre
+        '
+        Me.labelNombre.AutoSize = True
+        Me.labelNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelNombre.ForeColor = System.Drawing.Color.Black
+        Me.labelNombre.Location = New System.Drawing.Point(348, 164)
+        Me.labelNombre.Name = "labelNombre"
+        Me.labelNombre.Size = New System.Drawing.Size(37, 13)
+        Me.labelNombre.TabIndex = 29
+        Me.labelNombre.Text = "******"
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(265, 321)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(81, 24)
+        Me.Button3.TabIndex = 30
+        Me.Button3.Text = "Limpiar Campos"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'FRMPersonaContacto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(474, 397)
+        Me.ClientSize = New System.Drawing.Size(492, 397)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "FRMPersonaContacto"
         Me.Text = "FRMPersonaContacto"
@@ -258,7 +323,7 @@ Partial Class FRMPersonaContacto
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents direccionTxt As RichTextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label5 As Label
@@ -267,8 +332,13 @@ Partial Class FRMPersonaContacto
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents telefonoTxt As TextBox
+    Friend WithEvents relacionTxt As TextBox
+    Friend WithEvents cedulaTxt As TextBox
+    Friend WithEvents nombreTxt As TextBox
+    Friend WithEvents labelNombre As Label
+    Friend WithEvents labelCedula As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Button3 As Button
 End Class
