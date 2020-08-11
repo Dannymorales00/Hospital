@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ProyectoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ProyectoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <Function Name="sp_actualizar_ExamenOrina" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="idConsulta" Type="int" Mode="In" />
@@ -183,9 +183,12 @@
           <Parameter Name="medicamento" Type="varchar" Mode="In" />
           <Parameter Name="descripcion" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="sp_validar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NombreUsuario" Type="varchar" Mode="In" />
+          <Parameter Name="Contraseña" Type="varchar" Mode="In" />
+        </Function>
         <EntityContainer Name="ProyectoModelStoreContainer" />
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ProyectoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -220,7 +223,7 @@
             <Parameter Name="tipoSangre" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_buscar_enfermedad" ReturnType="Collection(ProyectoModel.sp_buscar_enfermedad_Result)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_buscar_ExamenOrina" ReturnType="Collection(Int32)">
             <Parameter Name="id" Mode="In" Type="Int32" />
@@ -231,16 +234,16 @@
             <Parameter Name="idConsulta" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_buscar_paciente" ReturnType="Collection(ProyectoModel.sp_buscar_paciente_Result)">
-            <Parameter Name="cedula" Mode="In" Type="Int32" />
+          <Parameter Name="cedula" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_buscar_usuario" ReturnType="Collection(Int32)">
-            <Parameter Name="cedula" Mode="In" Type="Int32" />
+          <Parameter Name="cedula" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_cita" ReturnType="Collection(Int32)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_enfermedad" ReturnType="Collection(Int32)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_ExamenOrina" ReturnType="Collection(Int32)">
             <Parameter Name="id" Mode="In" Type="Int32" />
@@ -251,16 +254,16 @@
             <Parameter Name="idConsulta" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_medicamento_alergico" ReturnType="Collection(Int32)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_medicamento_Recetado" ReturnType="Collection(Int32)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_paciente" ReturnType="Collection(Int32)">
-            <Parameter Name="cedula" Mode="In" Type="Int32" />
+          <Parameter Name="cedula" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_usuario" ReturnType="Collection(Int32)">
-            <Parameter Name="cedula" Mode="In" Type="Int32" />
+          <Parameter Name="cedula" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_modificar_enfermedad" ReturnType="Collection(Int32)">
             <Parameter Name="id" Mode="In" Type="Int32" />
@@ -367,6 +370,10 @@
             <Parameter Name="idConsulta" Mode="In" Type="Int32" />
             <Parameter Name="medicamento" Mode="In" Type="String" />
             <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_validar_usuario" ReturnType="Collection(Int32)">
+            <Parameter Name="NombreUsuario" Mode="In" Type="String" />
+            <Parameter Name="Contraseña" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_buscar_enfermedad_Result">
@@ -495,6 +502,7 @@
           <FunctionImportMapping FunctionImportName="sp_update_cita" FunctionName="ProyectoModel.Store.sp_update_cita" />
           <FunctionImportMapping FunctionImportName="sp_update_medicamento_alergico" FunctionName="ProyectoModel.Store.sp_update_medicamento_alergico" />
           <FunctionImportMapping FunctionImportName="sp_update_medicamento_recetado" FunctionName="ProyectoModel.Store.sp_update_medicamento_recetado" />
+          <FunctionImportMapping FunctionImportName="sp_validar_usuario" FunctionName="ProyectoModel.Store.sp_validar_usuario" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
