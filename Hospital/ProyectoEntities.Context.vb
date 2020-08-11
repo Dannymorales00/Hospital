@@ -387,4 +387,12 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_update_medicamento_recetado", idParameter, idConsultaParameter, medicamentoParameter, descripcionParameter)
     End Function
 
+    Public Overridable Function sp_validar_usuario(nombreUsuario As String, contraseña As String) As ObjectResult(Of Nullable(Of Integer))
+        Dim nombreUsuarioParameter As ObjectParameter = If(nombreUsuario IsNot Nothing, New ObjectParameter("NombreUsuario", nombreUsuario), New ObjectParameter("NombreUsuario", GetType(String)))
+
+        Dim contraseñaParameter As ObjectParameter = If(contraseña IsNot Nothing, New ObjectParameter("Contraseña", contraseña), New ObjectParameter("Contraseña", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_validar_usuario", nombreUsuarioParameter, contraseñaParameter)
+    End Function
+
 End Class

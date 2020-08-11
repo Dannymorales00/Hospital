@@ -22,17 +22,34 @@ Partial Class FrmPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.BtnUsuarios = New System.Windows.Forms.Button()
         Me.SuspendLayout()
+        '
+        'BtnUsuarios
+        '
+        Me.BtnUsuarios.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnUsuarios.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.BtnUsuarios.Location = New System.Drawing.Point(47, 57)
+        Me.BtnUsuarios.Name = "BtnUsuarios"
+        Me.BtnUsuarios.Size = New System.Drawing.Size(101, 67)
+        Me.BtnUsuarios.TabIndex = 0
+        Me.BtnUsuarios.Text = "Usuarios"
+        Me.BtnUsuarios.UseVisualStyleBackColor = True
         '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(917, 491)
+        Me.Controls.Add(Me.BtnUsuarios)
         Me.Name = "FrmPrincipal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmPrincipal"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents BtnUsuarios As Button
 End Class

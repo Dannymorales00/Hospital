@@ -24,8 +24,8 @@ Partial Class FrmLogin
     Private Sub InitializeComponent()
         Me.LblUsuario = New System.Windows.Forms.Label()
         Me.LblContraseña = New System.Windows.Forms.Label()
-        Me.TxtInicioUsuario = New System.Windows.Forms.TextBox()
-        Me.TxtInicioContraseña = New System.Windows.Forms.TextBox()
+        Me.TxtUsuario = New System.Windows.Forms.TextBox()
+        Me.TxtContraseña = New System.Windows.Forms.TextBox()
         Me.GrupoIniciar = New System.Windows.Forms.GroupBox()
         Me.BtnIngresar = New System.Windows.Forms.Button()
         Me.GrupoIniciar.SuspendLayout()
@@ -35,7 +35,7 @@ Partial Class FrmLogin
         '
         Me.LblUsuario.AutoSize = True
         Me.LblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUsuario.Location = New System.Drawing.Point(61, 42)
+        Me.LblUsuario.Location = New System.Drawing.Point(43, 39)
         Me.LblUsuario.Name = "LblUsuario"
         Me.LblUsuario.Size = New System.Drawing.Size(62, 16)
         Me.LblUsuario.TabIndex = 0
@@ -45,25 +45,25 @@ Partial Class FrmLogin
         '
         Me.LblContraseña.AutoSize = True
         Me.LblContraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblContraseña.Location = New System.Drawing.Point(61, 123)
+        Me.LblContraseña.Location = New System.Drawing.Point(43, 105)
         Me.LblContraseña.Name = "LblContraseña"
         Me.LblContraseña.Size = New System.Drawing.Size(87, 16)
         Me.LblContraseña.TabIndex = 1
         Me.LblContraseña.Text = "Contraseña"
         '
-        'TxtInicioUsuario
+        'TxtUsuario
         '
-        Me.TxtInicioUsuario.Location = New System.Drawing.Point(64, 61)
-        Me.TxtInicioUsuario.Name = "TxtInicioUsuario"
-        Me.TxtInicioUsuario.Size = New System.Drawing.Size(134, 21)
-        Me.TxtInicioUsuario.TabIndex = 2
+        Me.TxtUsuario.Location = New System.Drawing.Point(46, 58)
+        Me.TxtUsuario.Name = "TxtUsuario"
+        Me.TxtUsuario.Size = New System.Drawing.Size(134, 21)
+        Me.TxtUsuario.TabIndex = 2
         '
-        'TxtInicioContraseña
+        'TxtContraseña
         '
-        Me.TxtInicioContraseña.Location = New System.Drawing.Point(64, 142)
-        Me.TxtInicioContraseña.Name = "TxtInicioContraseña"
-        Me.TxtInicioContraseña.Size = New System.Drawing.Size(134, 21)
-        Me.TxtInicioContraseña.TabIndex = 3
+        Me.TxtContraseña.Location = New System.Drawing.Point(46, 124)
+        Me.TxtContraseña.Name = "TxtContraseña"
+        Me.TxtContraseña.Size = New System.Drawing.Size(134, 21)
+        Me.TxtContraseña.TabIndex = 3
         '
         'GrupoIniciar
         '
@@ -71,23 +71,22 @@ Partial Class FrmLogin
         Me.GrupoIniciar.BackColor = System.Drawing.Color.Silver
         Me.GrupoIniciar.Controls.Add(Me.BtnIngresar)
         Me.GrupoIniciar.Controls.Add(Me.LblUsuario)
-        Me.GrupoIniciar.Controls.Add(Me.TxtInicioContraseña)
+        Me.GrupoIniciar.Controls.Add(Me.TxtContraseña)
         Me.GrupoIniciar.Controls.Add(Me.LblContraseña)
-        Me.GrupoIniciar.Controls.Add(Me.TxtInicioUsuario)
-        Me.GrupoIniciar.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GrupoIniciar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GrupoIniciar.Controls.Add(Me.TxtUsuario)
+        Me.GrupoIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GrupoIniciar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrupoIniciar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GrupoIniciar.Location = New System.Drawing.Point(60, 61)
+        Me.GrupoIniciar.Location = New System.Drawing.Point(58, 61)
         Me.GrupoIniciar.Name = "GrupoIniciar"
-        Me.GrupoIniciar.Size = New System.Drawing.Size(249, 349)
+        Me.GrupoIniciar.Size = New System.Drawing.Size(228, 260)
         Me.GrupoIniciar.TabIndex = 4
         Me.GrupoIniciar.TabStop = False
-        Me.GrupoIniciar.Text = "Inicio"
         '
         'BtnIngresar
         '
         Me.BtnIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnIngresar.Location = New System.Drawing.Point(82, 254)
+        Me.BtnIngresar.Location = New System.Drawing.Point(60, 183)
         Me.BtnIngresar.Name = "BtnIngresar"
         Me.BtnIngresar.Size = New System.Drawing.Size(98, 27)
         Me.BtnIngresar.TabIndex = 4
@@ -99,7 +98,7 @@ Partial Class FrmLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(404, 433)
+        Me.ClientSize = New System.Drawing.Size(373, 408)
         Me.Controls.Add(Me.GrupoIniciar)
         Me.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -120,8 +119,8 @@ Partial Class FrmLogin
 
     Friend WithEvents LblUsuario As Label
     Friend WithEvents LblContraseña As Label
-    Friend WithEvents TxtInicioUsuario As TextBox
-    Friend WithEvents TxtInicioContraseña As TextBox
+    Friend WithEvents TxtUsuario As TextBox
+    Friend WithEvents TxtContraseña As TextBox
     Friend WithEvents GrupoIniciar As GroupBox
     Friend WithEvents BtnIngresar As Button
 End Class
