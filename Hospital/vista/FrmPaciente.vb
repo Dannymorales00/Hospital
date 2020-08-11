@@ -6,6 +6,9 @@
 
                 If result = 1 Then
                     MsgBox("Se inserto correctamente")
+
+                Else
+                    MsgBox("No se inserto correctamente")
                 End If
 
             End Using

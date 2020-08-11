@@ -143,6 +143,18 @@
     </Compile>
     <Compile Include="vista\Claseprueba.vb" />
     <Compile Include="vista\Class1.vb" />
+    <Compile Include="vista\FrmPrincipal.Designer.vb">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FrmUsuario.Designer.vb">
+      <DependentUpon>FrmUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +187,12 @@
     <Compile Include="vista\Leandro.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="vista\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
     </EmbeddedResource>
