@@ -12,15 +12,80 @@
 
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
 
-        Using almacen = New ProyectoEntities1()
 
 
+        If Comprobar() Then
+
+            Me.usuario = New Usuario()
+            usuario.cedula = Val(TxtCedula.Text)
+            usuario.nombre = TxtNombre.Text
+            usuario.nombreUsuario = TxtNombreUsuario.Text
+            usuario.telefono = Val(TxtTelefono.Text)
+            usuario.contrasena = TxtContraseña.Text
+            usuario.correo = TxtCorreo.Text
+            usuario.tipo = CBTipo.SelectedItem.ToString
+            usuario.fechaNacimiento = DateTimePickerAgregar.Value
 
 
-        End Using
+            Try
+
+                Using almacen = New ProyectoEntities1()
+
+                    Dim result = almacen.sp_registrar_usuario(usuario.cedula, usuario.contrasena, usuario.correo, usuario.fechaNacimiento, usuario.nombre, usuario.nombreUsuario, usuario.telefono, usuario.tipo).SingleOrDefault
+
+                    If result = 1 Then
+                        MsgBox("se agrego correctamente el usuario")
+                        Limpiar()
+
+                    Else
+                        MsgBox("No se agrego el usuario")
+
+                    End If
+
+
+                End Using
+
+
+            Catch ex As Exception
+                MsgBox("error al agregar...")
+                MsgBox(ex)
+
+            End Try
+
+        Else
+
+            MsgBox("Debe rellenar todos los campos")
+
+        End If
 
 
     End Sub
+
+
+    Function Comprobar() As Boolean
+
+        Return Not (TxtNombre.Text.Equals("") AndAlso TxtCedula.Text.Equals("") AndAlso TxtContraseña.Text.Equals("") AndAlso TxtCorreo.Text.Equals("") AndAlso TxtTelefono.Text.Equals("") AndAlso TxtNombreUsuario.Text.Equals("") AndAlso CBTipo.SelectedIndex < 0)
+
+    End Function
+
+    Private Sub Limpiar()
+        TxtNombre.Text = ""
+        TxtNombreUsuario.Text = ""
+        TxtCedula.Text = ""
+        TxtContraseña.Text = ""
+        TxtCorreo.Text = ""
+        TxtTelefono.Text = ""
+        TxtNombreUsuario.Text = ""
+        CBTipo.SelectedIndex = -1
+
+
+
+
+    End Sub
+
+
+
+
 
 
 

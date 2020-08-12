@@ -7,7 +7,7 @@
     Private _correo As String
     Private _nombreUsuario As String
     Private _contrasena As String
-    Private _tipo As Integer
+    Private _tipo As String
 
     Property cedula As Integer
         Get
@@ -72,7 +72,7 @@
         End Set
     End Property
 
-    Property tipo As Integer
+    Property tipo As String
         Get
             Return _tipo
         End Get

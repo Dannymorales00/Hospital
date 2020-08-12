@@ -33,7 +33,7 @@ Partial Class FrmUsuario
         Me.TxtTelefono = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePickerAgregar = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -95,7 +95,7 @@ Partial Class FrmUsuario
         Me.GrupoAgregar.Controls.Add(Me.TxtTelefono)
         Me.GrupoAgregar.Controls.Add(Me.Label5)
         Me.GrupoAgregar.Controls.Add(Me.Label4)
-        Me.GrupoAgregar.Controls.Add(Me.DateTimePicker1)
+        Me.GrupoAgregar.Controls.Add(Me.DateTimePickerAgregar)
         Me.GrupoAgregar.Controls.Add(Me.Label3)
         Me.GrupoAgregar.Controls.Add(Me.BtnAgregar)
         Me.GrupoAgregar.Controls.Add(Me.Label1)
@@ -203,13 +203,13 @@ Partial Class FrmUsuario
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Telefono"
         '
-        'DateTimePicker1
+        'DateTimePickerAgregar
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(154, 194)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(127, 21)
-        Me.DateTimePicker1.TabIndex = 6
+        Me.DateTimePickerAgregar.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePickerAgregar.Location = New System.Drawing.Point(154, 194)
+        Me.DateTimePickerAgregar.Name = "DateTimePickerAgregar"
+        Me.DateTimePickerAgregar.Size = New System.Drawing.Size(127, 21)
+        Me.DateTimePickerAgregar.TabIndex = 6
         '
         'Label3
         '
@@ -637,7 +637,7 @@ Partial Class FrmUsuario
     Friend WithEvents TxtTelefono As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DateTimePickerAgregar As DateTimePicker
     Friend WithEvents Label3 As Label
     Friend WithEvents BtnAgregar As Button
     Friend WithEvents Label1 As Label
