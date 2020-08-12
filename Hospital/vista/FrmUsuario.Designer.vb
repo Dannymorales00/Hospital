@@ -55,7 +55,7 @@ Partial Class FrmUsuario
         Me.BuscarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.GrupoActualizar = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.CBTipoActualizar = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TxtContraseñaActualizar = New System.Windows.Forms.TextBox()
@@ -66,7 +66,7 @@ Partial Class FrmUsuario
         Me.TxtTelefonoActualizar = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePickerActualizar = New System.Windows.Forms.DateTimePicker()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.BtnCargar = New System.Windows.Forms.Button()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -402,7 +402,7 @@ Partial Class FrmUsuario
         '
         Me.GrupoActualizar.AutoSize = True
         Me.GrupoActualizar.BackColor = System.Drawing.Color.Silver
-        Me.GrupoActualizar.Controls.Add(Me.Button1)
+        Me.GrupoActualizar.Controls.Add(Me.BtnActualizar)
         Me.GrupoActualizar.Controls.Add(Me.CBTipoActualizar)
         Me.GrupoActualizar.Controls.Add(Me.Label10)
         Me.GrupoActualizar.Controls.Add(Me.TxtContraseñaActualizar)
@@ -413,7 +413,7 @@ Partial Class FrmUsuario
         Me.GrupoActualizar.Controls.Add(Me.TxtTelefonoActualizar)
         Me.GrupoActualizar.Controls.Add(Me.Label13)
         Me.GrupoActualizar.Controls.Add(Me.Label14)
-        Me.GrupoActualizar.Controls.Add(Me.DateTimePicker2)
+        Me.GrupoActualizar.Controls.Add(Me.DateTimePickerActualizar)
         Me.GrupoActualizar.Controls.Add(Me.Label16)
         Me.GrupoActualizar.Controls.Add(Me.BtnCargar)
         Me.GrupoActualizar.Controls.Add(Me.Label17)
@@ -428,15 +428,15 @@ Partial Class FrmUsuario
         Me.GrupoActualizar.TabIndex = 13
         Me.GrupoActualizar.TabStop = False
         '
-        'Button1
+        'BtnActualizar
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(222, 317)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(98, 27)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "Actualizar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnActualizar.Location = New System.Drawing.Point(222, 317)
+        Me.BtnActualizar.Name = "BtnActualizar"
+        Me.BtnActualizar.Size = New System.Drawing.Size(98, 27)
+        Me.BtnActualizar.TabIndex = 17
+        Me.BtnActualizar.Text = "Actualizar"
+        Me.BtnActualizar.UseVisualStyleBackColor = True
         '
         'CBTipoActualizar
         '
@@ -531,13 +531,13 @@ Partial Class FrmUsuario
         Me.Label14.TabIndex = 7
         Me.Label14.Text = "Telefono"
         '
-        'DateTimePicker2
+        'DateTimePickerActualizar
         '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(154, 194)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(127, 21)
-        Me.DateTimePicker2.TabIndex = 6
+        Me.DateTimePickerActualizar.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePickerActualizar.Location = New System.Drawing.Point(154, 194)
+        Me.DateTimePickerActualizar.Name = "DateTimePickerActualizar"
+        Me.DateTimePickerActualizar.Size = New System.Drawing.Size(127, 21)
+        Me.DateTimePickerActualizar.TabIndex = 6
         '
         'Label16
         '
@@ -659,7 +659,7 @@ Partial Class FrmUsuario
     Friend WithEvents BuscarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents GrupoActualizar As GroupBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnActualizar As Button
     Friend WithEvents CBTipoActualizar As ComboBox
     Friend WithEvents Label10 As Label
     Friend WithEvents TxtContraseñaActualizar As TextBox
@@ -670,7 +670,7 @@ Partial Class FrmUsuario
     Friend WithEvents TxtTelefonoActualizar As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DateTimePickerActualizar As DateTimePicker
     Friend WithEvents Label16 As Label
     Friend WithEvents BtnCargar As Button
     Friend WithEvents Label17 As Label

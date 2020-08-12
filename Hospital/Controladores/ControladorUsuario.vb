@@ -50,18 +50,22 @@
 
     Function Buscar(usuario As Usuario) As Usuario
 
-        Dim usuario1 As Usuario = Nothing
+        Dim usuario1 As New Usuario()
+
 
         Try
 
             Using almacen = New ProyectoEntities1()
 
                 Dim Result = almacen.sp_buscar_usuario(usuario.cedula).SingleOrDefault
-
-
-
-
-
+                usuario1.cedula = Result.cedula
+                usuario1.contrasena = Result.contraseña
+                usuario1.correo = Result.correo
+                usuario1.fechaNacimiento = Result.fechaNacimiento
+                usuario1.nombre = Result.nombre
+                usuario1.nombreUsuario = Result.nombreUsuario
+                usuario1.telefono = Result.telefono
+                usuario1.tipo = Result.tipo
 
 
             End Using
@@ -76,5 +80,34 @@
         Return usuario1
 
     End Function
+
+
+
+    Function Actualizar(usuario As Usuario) As Integer
+        Dim result As Integer = 0
+        Try
+
+            Using almacen = New ProyectoEntities1()
+
+                result = almacen.sp_actualizar_usuario(usuario.cedula, usuario.contrasena, usuario.correo, usuario.fechaNacimiento, usuario.nombre, usuario.nombreUsuario, usuario.telefono, usuario.tipo).SingleOrDefault
+
+
+
+            End Using
+
+
+        Catch ex As Exception
+            MsgBox("error al agregar...")
+            'MsgBox(ex)
+
+        End Try
+
+        Return result
+
+    End Function
+
+
+
+
 
 End Class
