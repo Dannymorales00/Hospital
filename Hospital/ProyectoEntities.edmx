@@ -184,8 +184,8 @@
           <Parameter Name="descripcion" Type="varchar" Mode="In" />
         </Function>
         <Function Name="sp_validar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="NombreUsuario" Type="varchar" Mode="In" />
-          <Parameter Name="Contraseña" Type="varchar" Mode="In" />
+          <Parameter Name="nombreUsuario" Type="varchar" Mode="In" />
+          <Parameter Name="contraseña" Type="varchar" Mode="In" />
         </Function>
         <EntityContainer Name="ProyectoModelStoreContainer" />
       </Schema></edmx:StorageModels>
@@ -372,8 +372,8 @@
             <Parameter Name="descripcion" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_validar_usuario" ReturnType="Collection(Int32)">
-            <Parameter Name="NombreUsuario" Mode="In" Type="String" />
-            <Parameter Name="Contraseña" Mode="In" Type="String" />
+            <Parameter Name="nombreUsuario" Mode="In" Type="String" />
+            <Parameter Name="contraseña" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_buscar_enfermedad_Result">

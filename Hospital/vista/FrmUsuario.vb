@@ -1,7 +1,9 @@
 ﻿Public Class FrmUsuario
     Private usuario As Usuario
+    Private controladorUsuario As ControladorUsuario
     Private Sub FrmUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.usuario = New Usuario()
+        Me.controladorUsuario = New ControladorUsuario()
 
         AjustesVentanas()
         MostrarAgregar()
@@ -11,8 +13,6 @@
 
 
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
-
-
 
         If Comprobar() Then
 
@@ -26,32 +26,14 @@
             usuario.tipo = CBTipo.SelectedItem.ToString
             usuario.fechaNacimiento = DateTimePickerAgregar.Value
 
+            If controladorUsuario.Registrar(usuario) = 1 Then
+                MsgBox("se agrego correctamente el usuario")
+                Limpiar()
 
-            Try
+            Else
+                MsgBox("No se agrego el usuario")
 
-                Using almacen = New ProyectoEntities1()
-
-                    Dim result = almacen.sp_registrar_usuario(usuario.cedula, usuario.contrasena, usuario.correo, usuario.fechaNacimiento, usuario.nombre, usuario.nombreUsuario, usuario.telefono, usuario.tipo).SingleOrDefault
-
-                    If result = 1 Then
-                        MsgBox("se agrego correctamente el usuario")
-                        Limpiar()
-
-                    Else
-                        MsgBox("No se agrego el usuario")
-
-                    End If
-
-
-                End Using
-
-
-            Catch ex As Exception
-                MsgBox("error al agregar...")
-                MsgBox(ex)
-
-            End Try
-
+            End If
         Else
 
             MsgBox("Debe rellenar todos los campos")
@@ -77,10 +59,6 @@
         TxtTelefono.Text = ""
         TxtNombreUsuario.Text = ""
         CBTipo.SelectedIndex = -1
-
-
-
-
     End Sub
 
 
@@ -155,6 +133,59 @@
 
     Private Sub BuscarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuscarToolStripMenuItem.Click
         MostrarBuscar()
+
+    End Sub
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+
+        If Not (TxtCedulaEliminar.Text.Equals("")) Then
+
+            Me.usuario = New Usuario()
+            usuario.cedula = Val(TxtCedulaEliminar.Text)
+
+
+            If controladorUsuario.Eliminar(usuario) = 1 Then
+                MsgBox("se elimino correctamente el usuario")
+                Limpiar()
+
+            Else
+                MsgBox("No se elimino el usuario")
+
+            End If
+        Else
+
+            MsgBox("Debe rellenar todos los campos")
+
+        End If
+
+
+
+    End Sub
+
+    Private Sub BtnCargar_Click(sender As Object, e As EventArgs) Handles BtnCargar.Click
+
+        If Not (TxtCedulaActualizar.Text.Equals("")) Then
+
+            Me.usuario = New Usuario()
+            usuario.cedula = Val(TxtCedulaActualizar.Text)
+
+
+            If (controladorUsuario.Buscar(usuario)) IsNot Nothing Then
+                MsgBox("se elimino correctamente el usuario")
+                Limpiar()
+
+            Else
+                MsgBox("No se elimino el usuario")
+
+            End If
+        Else
+
+            MsgBox("Debe rellenar todos los campos")
+
+        End If
+
+
+
 
     End Sub
 End Class
