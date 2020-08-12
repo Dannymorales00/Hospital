@@ -192,7 +192,7 @@ Partial Class FRMPersonaContacto
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(20, 173)
+        Me.Label6.Location = New System.Drawing.Point(20, 175)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(78, 18)
         Me.Label6.TabIndex = 19
