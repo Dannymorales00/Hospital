@@ -29,20 +29,22 @@ Partial Class FrmPrincipal
         '
         Me.BtnUsuarios.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnUsuarios.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.BtnUsuarios.Location = New System.Drawing.Point(47, 57)
+        Me.BtnUsuarios.Location = New System.Drawing.Point(63, 70)
+        Me.BtnUsuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnUsuarios.Name = "BtnUsuarios"
-        Me.BtnUsuarios.Size = New System.Drawing.Size(101, 67)
+        Me.BtnUsuarios.Size = New System.Drawing.Size(135, 82)
         Me.BtnUsuarios.TabIndex = 0
         Me.BtnUsuarios.Text = "Usuarios"
         Me.BtnUsuarios.UseVisualStyleBackColor = True
         '
         'FrmPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(917, 491)
+        Me.ClientSize = New System.Drawing.Size(1223, 604)
         Me.Controls.Add(Me.BtnUsuarios)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmPrincipal"
