@@ -99,6 +99,7 @@
   <ItemGroup>
     <Compile Include="Controladores\ControladorPaciente.vb" />
     <Compile Include="Controladores\ControladorPersonaContacto.vb" />
+    <Compile Include="Controladores\ControladorUsuario.vb" />
     <Compile Include="Modelos\Citas.vb" />
     <Compile Include="Modelos\ConsultaMedica.vb" />
     <Compile Include="Modelos\Enfermedad.vb" />
@@ -132,6 +133,9 @@
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_buscar_paciente_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_buscar_usuario_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_select_citas_Result.vb">

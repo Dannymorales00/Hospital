@@ -33,7 +33,7 @@ Partial Class FrmUsuario
         Me.TxtTelefono = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePickerAgregar = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -55,24 +55,24 @@ Partial Class FrmUsuario
         Me.BuscarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.GrupoActualizar = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.BtnActualizar = New System.Windows.Forms.Button()
+        Me.CBTipoActualizar = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtContraseñaActualizar = New System.Windows.Forms.TextBox()
+        Me.TxtNombreUsuarioActualizar = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TxtCorreoActualizar = New System.Windows.Forms.TextBox()
+        Me.TxtTelefonoActualizar = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePickerActualizar = New System.Windows.Forms.DateTimePicker()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.BtnCargar = New System.Windows.Forms.Button()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TxtNombreActualizar = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TxtCedulaActualizar = New System.Windows.Forms.TextBox()
         Me.GrupoAgregar.SuspendLayout()
         Me.GrupoEliminar.SuspendLayout()
         Me.GrupoBuscar.SuspendLayout()
@@ -95,7 +95,7 @@ Partial Class FrmUsuario
         Me.GrupoAgregar.Controls.Add(Me.TxtTelefono)
         Me.GrupoAgregar.Controls.Add(Me.Label5)
         Me.GrupoAgregar.Controls.Add(Me.Label4)
-        Me.GrupoAgregar.Controls.Add(Me.DateTimePicker1)
+        Me.GrupoAgregar.Controls.Add(Me.DateTimePickerAgregar)
         Me.GrupoAgregar.Controls.Add(Me.Label3)
         Me.GrupoAgregar.Controls.Add(Me.BtnAgregar)
         Me.GrupoAgregar.Controls.Add(Me.Label1)
@@ -203,13 +203,13 @@ Partial Class FrmUsuario
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Telefono"
         '
-        'DateTimePicker1
+        'DateTimePickerAgregar
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(154, 194)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(127, 21)
-        Me.DateTimePicker1.TabIndex = 6
+        Me.DateTimePickerAgregar.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePickerAgregar.Location = New System.Drawing.Point(154, 194)
+        Me.DateTimePickerAgregar.Name = "DateTimePickerAgregar"
+        Me.DateTimePickerAgregar.Size = New System.Drawing.Size(127, 21)
+        Me.DateTimePickerAgregar.TabIndex = 6
         '
         'Label3
         '
@@ -402,24 +402,24 @@ Partial Class FrmUsuario
         '
         Me.GrupoActualizar.AutoSize = True
         Me.GrupoActualizar.BackColor = System.Drawing.Color.Silver
-        Me.GrupoActualizar.Controls.Add(Me.Button1)
-        Me.GrupoActualizar.Controls.Add(Me.ComboBox1)
+        Me.GrupoActualizar.Controls.Add(Me.BtnActualizar)
+        Me.GrupoActualizar.Controls.Add(Me.CBTipoActualizar)
         Me.GrupoActualizar.Controls.Add(Me.Label10)
-        Me.GrupoActualizar.Controls.Add(Me.TextBox1)
-        Me.GrupoActualizar.Controls.Add(Me.TextBox2)
+        Me.GrupoActualizar.Controls.Add(Me.TxtContraseñaActualizar)
+        Me.GrupoActualizar.Controls.Add(Me.TxtNombreUsuarioActualizar)
         Me.GrupoActualizar.Controls.Add(Me.Label11)
         Me.GrupoActualizar.Controls.Add(Me.Label12)
-        Me.GrupoActualizar.Controls.Add(Me.TextBox3)
-        Me.GrupoActualizar.Controls.Add(Me.TextBox4)
+        Me.GrupoActualizar.Controls.Add(Me.TxtCorreoActualizar)
+        Me.GrupoActualizar.Controls.Add(Me.TxtTelefonoActualizar)
         Me.GrupoActualizar.Controls.Add(Me.Label13)
         Me.GrupoActualizar.Controls.Add(Me.Label14)
-        Me.GrupoActualizar.Controls.Add(Me.DateTimePicker2)
+        Me.GrupoActualizar.Controls.Add(Me.DateTimePickerActualizar)
         Me.GrupoActualizar.Controls.Add(Me.Label16)
         Me.GrupoActualizar.Controls.Add(Me.BtnCargar)
         Me.GrupoActualizar.Controls.Add(Me.Label17)
-        Me.GrupoActualizar.Controls.Add(Me.TextBox5)
+        Me.GrupoActualizar.Controls.Add(Me.TxtNombreActualizar)
         Me.GrupoActualizar.Controls.Add(Me.Label18)
-        Me.GrupoActualizar.Controls.Add(Me.TextBox6)
+        Me.GrupoActualizar.Controls.Add(Me.TxtCedulaActualizar)
         Me.GrupoActualizar.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GrupoActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrupoActualizar.Location = New System.Drawing.Point(654, 57)
@@ -428,24 +428,24 @@ Partial Class FrmUsuario
         Me.GrupoActualizar.TabIndex = 13
         Me.GrupoActualizar.TabStop = False
         '
-        'Button1
+        'BtnActualizar
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(222, 317)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(98, 27)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "Actualizar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnActualizar.Location = New System.Drawing.Point(222, 317)
+        Me.BtnActualizar.Name = "BtnActualizar"
+        Me.BtnActualizar.Size = New System.Drawing.Size(98, 27)
+        Me.BtnActualizar.TabIndex = 17
+        Me.BtnActualizar.Text = "Actualizar"
+        Me.BtnActualizar.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'CBTipoActualizar
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Medico", "Secretaria", "Enfermera"})
-        Me.ComboBox1.Location = New System.Drawing.Point(154, 265)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(166, 23)
-        Me.ComboBox1.TabIndex = 16
+        Me.CBTipoActualizar.FormattingEnabled = True
+        Me.CBTipoActualizar.Items.AddRange(New Object() {"Medico", "Secretaria", "Enfermera"})
+        Me.CBTipoActualizar.Location = New System.Drawing.Point(154, 265)
+        Me.CBTipoActualizar.Name = "CBTipoActualizar"
+        Me.CBTipoActualizar.Size = New System.Drawing.Size(166, 23)
+        Me.CBTipoActualizar.TabIndex = 16
         '
         'Label10
         '
@@ -458,20 +458,20 @@ Partial Class FrmUsuario
         Me.Label10.TabIndex = 15
         Me.Label10.Text = "Tipo"
         '
-        'TextBox1
+        'TxtContraseñaActualizar
         '
-        Me.TextBox1.Location = New System.Drawing.Point(154, 226)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(166, 21)
-        Me.TextBox1.TabIndex = 14
-        Me.TextBox1.UseSystemPasswordChar = True
+        Me.TxtContraseñaActualizar.Location = New System.Drawing.Point(154, 226)
+        Me.TxtContraseñaActualizar.Name = "TxtContraseñaActualizar"
+        Me.TxtContraseñaActualizar.Size = New System.Drawing.Size(166, 21)
+        Me.TxtContraseñaActualizar.TabIndex = 14
+        Me.TxtContraseñaActualizar.UseSystemPasswordChar = True
         '
-        'TextBox2
+        'TxtNombreUsuarioActualizar
         '
-        Me.TextBox2.Location = New System.Drawing.Point(154, 91)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(166, 21)
-        Me.TextBox2.TabIndex = 13
+        Me.TxtNombreUsuarioActualizar.Location = New System.Drawing.Point(154, 91)
+        Me.TxtNombreUsuarioActualizar.Name = "TxtNombreUsuarioActualizar"
+        Me.TxtNombreUsuarioActualizar.Size = New System.Drawing.Size(166, 21)
+        Me.TxtNombreUsuarioActualizar.TabIndex = 13
         '
         'Label11
         '
@@ -495,19 +495,19 @@ Partial Class FrmUsuario
         Me.Label12.TabIndex = 11
         Me.Label12.Text = "Nombre de usuario"
         '
-        'TextBox3
+        'TxtCorreoActualizar
         '
-        Me.TextBox3.Location = New System.Drawing.Point(154, 127)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(166, 21)
-        Me.TextBox3.TabIndex = 10
+        Me.TxtCorreoActualizar.Location = New System.Drawing.Point(154, 127)
+        Me.TxtCorreoActualizar.Name = "TxtCorreoActualizar"
+        Me.TxtCorreoActualizar.Size = New System.Drawing.Size(166, 21)
+        Me.TxtCorreoActualizar.TabIndex = 10
         '
-        'TextBox4
+        'TxtTelefonoActualizar
         '
-        Me.TextBox4.Location = New System.Drawing.Point(154, 159)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(166, 21)
-        Me.TextBox4.TabIndex = 9
+        Me.TxtTelefonoActualizar.Location = New System.Drawing.Point(154, 159)
+        Me.TxtTelefonoActualizar.Name = "TxtTelefonoActualizar"
+        Me.TxtTelefonoActualizar.Size = New System.Drawing.Size(166, 21)
+        Me.TxtTelefonoActualizar.TabIndex = 9
         '
         'Label13
         '
@@ -531,13 +531,13 @@ Partial Class FrmUsuario
         Me.Label14.TabIndex = 7
         Me.Label14.Text = "Telefono"
         '
-        'DateTimePicker2
+        'DateTimePickerActualizar
         '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(154, 194)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(127, 21)
-        Me.DateTimePicker2.TabIndex = 6
+        Me.DateTimePickerActualizar.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePickerActualizar.Location = New System.Drawing.Point(154, 194)
+        Me.DateTimePickerActualizar.Name = "DateTimePickerActualizar"
+        Me.DateTimePickerActualizar.Size = New System.Drawing.Size(127, 21)
+        Me.DateTimePickerActualizar.TabIndex = 6
         '
         'Label16
         '
@@ -565,36 +565,36 @@ Partial Class FrmUsuario
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.Black
-        Me.Label17.Location = New System.Drawing.Point(80, 63)
+        Me.Label17.Location = New System.Drawing.Point(84, 30)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(57, 16)
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "Cedula"
         '
-        'TextBox5
+        'TxtNombreActualizar
         '
-        Me.TextBox5.Location = New System.Drawing.Point(154, 28)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(166, 21)
-        Me.TextBox5.TabIndex = 3
+        Me.TxtNombreActualizar.Location = New System.Drawing.Point(154, 58)
+        Me.TxtNombreActualizar.Name = "TxtNombreActualizar"
+        Me.TxtNombreActualizar.Size = New System.Drawing.Size(166, 21)
+        Me.TxtNombreActualizar.TabIndex = 3
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.Black
-        Me.Label18.Location = New System.Drawing.Point(74, 32)
+        Me.Label18.Location = New System.Drawing.Point(78, 61)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(63, 16)
         Me.Label18.TabIndex = 1
         Me.Label18.Text = "Nombre"
         '
-        'TextBox6
+        'TxtCedulaActualizar
         '
-        Me.TextBox6.Location = New System.Drawing.Point(154, 59)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(166, 21)
-        Me.TextBox6.TabIndex = 2
+        Me.TxtCedulaActualizar.Location = New System.Drawing.Point(154, 27)
+        Me.TxtCedulaActualizar.Name = "TxtCedulaActualizar"
+        Me.TxtCedulaActualizar.Size = New System.Drawing.Size(166, 21)
+        Me.TxtCedulaActualizar.TabIndex = 2
         '
         'FrmUsuario
         '
@@ -637,7 +637,7 @@ Partial Class FrmUsuario
     Friend WithEvents TxtTelefono As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DateTimePickerAgregar As DateTimePicker
     Friend WithEvents Label3 As Label
     Friend WithEvents BtnAgregar As Button
     Friend WithEvents Label1 As Label
@@ -659,22 +659,22 @@ Partial Class FrmUsuario
     Friend WithEvents BuscarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents GrupoActualizar As GroupBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents BtnActualizar As Button
+    Friend WithEvents CBTipoActualizar As ComboBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtContraseñaActualizar As TextBox
+    Friend WithEvents TxtNombreUsuarioActualizar As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TxtCorreoActualizar As TextBox
+    Friend WithEvents TxtTelefonoActualizar As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DateTimePickerActualizar As DateTimePicker
     Friend WithEvents Label16 As Label
     Friend WithEvents BtnCargar As Button
     Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TxtNombreActualizar As TextBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TxtCedulaActualizar As TextBox
 End Class

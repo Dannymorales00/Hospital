@@ -1,7 +1,9 @@
 ﻿Public Class FrmUsuario
     Private usuario As Usuario
+    Private controladorUsuario As ControladorUsuario
     Private Sub FrmUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.usuario = New Usuario()
+        Me.controladorUsuario = New ControladorUsuario()
 
         AjustesVentanas()
         MostrarAgregar()
@@ -12,15 +14,78 @@
 
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
 
-        Using almacen = New ProyectoEntities1()
+        If ComprobarAgregar() Then
 
+            Me.usuario = New Usuario()
+            usuario.cedula = Val(TxtCedula.Text)
+            usuario.nombre = TxtNombre.Text
+            usuario.nombreUsuario = TxtNombreUsuario.Text
+            usuario.telefono = Val(TxtTelefono.Text)
+            usuario.contrasena = TxtContraseña.Text
+            usuario.correo = TxtCorreo.Text
+            usuario.tipo = CBTipo.SelectedItem.ToString
+            usuario.fechaNacimiento = DateTimePickerAgregar.Value
 
+            If controladorUsuario.Registrar(usuario) = 1 Then
+                MsgBox("se agrego correctamente el usuario")
+                LimpiarAgregar()
 
+            Else
+                MsgBox("No se agrego el usuario")
 
-        End Using
+            End If
+        Else
+
+            MsgBox("Debe rellenar todos los campos")
+
+        End If
 
 
     End Sub
+
+
+    Function ComprobarAgregar() As Boolean
+
+        Return Not (TxtNombre.Text.Equals("") AndAlso TxtCedula.Text.Equals("") AndAlso TxtContraseña.Text.Equals("") AndAlso TxtCorreo.Text.Equals("") AndAlso TxtTelefono.Text.Equals("") AndAlso TxtNombreUsuario.Text.Equals("") AndAlso CBTipo.SelectedIndex < 0)
+
+    End Function
+
+    Function ComprobarActualizar() As Boolean
+
+        Return Not (TxtNombreActualizar.Text.Equals("") AndAlso TxtCedulaActualizar.Text.Equals("") AndAlso TxtContraseñaActualizar.Text.Equals("") AndAlso TxtCorreoActualizar.Text.Equals("") AndAlso TxtTelefonoActualizar.Text.Equals("") AndAlso TxtNombreUsuarioActualizar.Text.Equals("") AndAlso CBTipoActualizar.SelectedIndex < 0)
+
+    End Function
+
+    Private Sub LimpiarAgregar()
+        TxtNombre.Text = ""
+        TxtNombreUsuario.Text = ""
+        TxtCedula.Text = ""
+        TxtContraseña.Text = ""
+        TxtCorreo.Text = ""
+        TxtTelefono.Text = ""
+        CBTipo.SelectedIndex = -1
+        DateTimePickerAgregar = New DateTimePicker()
+
+    End Sub
+
+    Private Sub LimpiarActualizar()
+        TxtNombreActualizar.Text = ""
+        TxtNombreUsuarioActualizar.Text = ""
+        TxtCedulaActualizar.Text = ""
+        TxtContraseñaActualizar.Text = ""
+        TxtCorreoActualizar.Text = ""
+        TxtTelefonoActualizar.Text = ""
+        CBTipoActualizar.SelectedIndex = -1
+        DateTimePickerActualizar = New DateTimePicker()
+
+    End Sub
+
+    Private Sub LimpiarEliminar()
+        TxtCedulaEliminar.Text = ""
+
+    End Sub
+
+
 
 
 
@@ -91,5 +156,97 @@
     Private Sub BuscarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuscarToolStripMenuItem.Click
         MostrarBuscar()
 
+    End Sub
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+
+        If Not (TxtCedulaEliminar.Text.Equals("")) Then
+
+            Me.usuario = New Usuario()
+            usuario.cedula = Val(TxtCedulaEliminar.Text)
+
+
+            If controladorUsuario.Eliminar(usuario) = 1 Then
+                MsgBox("se elimino correctamente el usuario")
+                LimpiarEliminar()
+
+            Else
+                MsgBox("No se elimino el usuario")
+
+            End If
+        Else
+
+            MsgBox("Debe rellenar todos los campos")
+
+        End If
+
+
+
+    End Sub
+
+    Private Sub BtnCargar_Click(sender As Object, e As EventArgs) Handles BtnCargar.Click
+
+        If Not (TxtCedulaActualizar.Text.Equals("")) Then
+
+            Me.usuario = New Usuario()
+            usuario.cedula = Val(TxtCedulaActualizar.Text)
+
+            usuario = controladorUsuario.Buscar(usuario)
+            If Not (usuario.tipo = Nothing) Then
+
+                TxtNombreActualizar.Text = usuario.nombre
+                TxtNombreUsuarioActualizar.Text = usuario.nombreUsuario
+                TxtCedulaActualizar.Text = usuario.cedula
+                TxtContraseñaActualizar.Text = usuario.contrasena
+                TxtCorreoActualizar.Text = usuario.correo
+                TxtTelefonoActualizar.Text = usuario.telefono
+                CBTipoActualizar.SelectedItem = usuario.tipo.Trim
+                DateTimePickerActualizar.Value = usuario.fechaNacimiento
+
+
+
+
+            Else
+                MsgBox("No se cargo los datos del usuario")
+
+            End If
+        Else
+
+            MsgBox("Debe rellenar el campo cedula para cargar un usuario")
+
+        End If
+
+
+
+
+    End Sub
+
+    Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
+
+        If ComprobarActualizar() Then
+
+            Me.usuario = New Usuario()
+            usuario.cedula = Val(TxtCedulaActualizar.Text)
+            usuario.nombre = TxtNombreActualizar.Text
+            usuario.nombreUsuario = TxtNombreUsuarioActualizar.Text
+            usuario.telefono = Val(TxtTelefonoActualizar.Text)
+            usuario.contrasena = TxtContraseñaActualizar.Text
+            usuario.correo = TxtCorreoActualizar.Text
+            usuario.tipo = CBTipoActualizar.SelectedItem.ToString
+            usuario.fechaNacimiento = DateTimePickerActualizar.Value
+
+            If controladorUsuario.Actualizar(usuario) = 1 Then
+                MsgBox("se actualizó correctamente el usuario")
+                LimpiarActualizar()
+
+            Else
+                MsgBox("No se actualizo el usuario")
+
+            End If
+        Else
+
+            MsgBox("no puede dejar campos vacios")
+
+        End If
     End Sub
 End Class
