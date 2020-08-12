@@ -49,8 +49,8 @@ Partial Class FrmUsuario
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TxtCedulaBuscar = New System.Windows.Forms.TextBox()
-        Me.IniciarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistrarseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgregarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ActualizarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuscarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -363,19 +363,19 @@ Partial Class FrmUsuario
         Me.TxtCedulaBuscar.Size = New System.Drawing.Size(152, 21)
         Me.TxtCedulaBuscar.TabIndex = 2
         '
-        'IniciarSesiónToolStripMenuItem
+        'AgregarToolStripMenuItem
         '
-        Me.IniciarSesiónToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IniciarSesiónToolStripMenuItem.Name = "IniciarSesiónToolStripMenuItem"
-        Me.IniciarSesiónToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
-        Me.IniciarSesiónToolStripMenuItem.Text = "Agregar"
+        Me.AgregarToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AgregarToolStripMenuItem.Name = "AgregarToolStripMenuItem"
+        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.AgregarToolStripMenuItem.Text = "Agregar"
         '
-        'RegistrarseToolStripMenuItem
+        'EliminarToolStripMenuItem
         '
-        Me.RegistrarseToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RegistrarseToolStripMenuItem.Name = "RegistrarseToolStripMenuItem"
-        Me.RegistrarseToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
-        Me.RegistrarseToolStripMenuItem.Text = "Eliminar"
+        Me.EliminarToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'ActualizarToolStripMenuItem
         '
@@ -391,7 +391,7 @@ Partial Class FrmUsuario
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IniciarSesiónToolStripMenuItem, Me.RegistrarseToolStripMenuItem, Me.ActualizarToolStripMenuItem, Me.BuscarToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.ActualizarToolStripMenuItem, Me.BuscarToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1031, 24)
@@ -653,8 +653,8 @@ Partial Class FrmUsuario
     Friend WithEvents BtnBuscar As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents TxtCedulaBuscar As TextBox
-    Friend WithEvents IniciarSesiónToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RegistrarseToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AgregarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ActualizarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BuscarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStrip1 As MenuStrip

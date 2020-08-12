@@ -2,25 +2,13 @@
     Private usuario As Usuario
     Private Sub FrmUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.usuario = New Usuario()
-        AjustesVentana()
+
+        AjustesVentanas()
+        MostrarAgregar()
 
     End Sub
 
-    Private Sub IniciarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IniciarSesiónToolStripMenuItem.Click
 
-    End Sub
-
-    Private Sub RegistrarseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarseToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub ActualizarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActualizarToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub BuscarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuscarToolStripMenuItem.Click
-
-    End Sub
 
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
 
@@ -34,15 +22,16 @@
 
     End Sub
 
-    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
 
-    End Sub
 
-    Private Sub AjustesVentana()
+    Private Sub AjustesVentanas()
 
         Me.Size = New Size(500, 500)
         '-----point(x,y)    x = izquierda, y = arriba
         Me.GrupoAgregar.Location = New Point(70, 60)
+        Me.GrupoActualizar.Location = New Point(70, 60)
+        Me.GrupoEliminar.Location = New Point(70, 60)
+        Me.GrupoBuscar.Location = New Point(70, 60)
 
     End Sub
 
@@ -84,8 +73,23 @@
 
     End Sub
 
+    Private Sub AgregarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarToolStripMenuItem.Click
+        MostrarAgregar()
 
+    End Sub
 
+    Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
+        MostrarEliminar()
 
+    End Sub
 
+    Private Sub ActualizarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActualizarToolStripMenuItem.Click
+        MostrarActualizar()
+
+    End Sub
+
+    Private Sub BuscarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuscarToolStripMenuItem.Click
+        MostrarBuscar()
+
+    End Sub
 End Class
