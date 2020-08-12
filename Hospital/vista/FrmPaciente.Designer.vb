@@ -94,7 +94,7 @@ Partial Class FrmPaciente
         '
         'BtnBuscar
         '
-        Me.BtnBuscar.Location = New System.Drawing.Point(27, 386)
+        Me.BtnBuscar.Location = New System.Drawing.Point(41, 341)
         Me.BtnBuscar.Name = "BtnBuscar"
         Me.BtnBuscar.Size = New System.Drawing.Size(101, 33)
         Me.BtnBuscar.TabIndex = 3
