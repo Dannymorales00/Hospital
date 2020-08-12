@@ -57,7 +57,10 @@
             Using almacen = New ProyectoEntities1()
 
                 Dim Result = almacen.sp_buscar_usuario(usuario.cedula).SingleOrDefault
-                Result.
+
+
+
+
 
 
 
