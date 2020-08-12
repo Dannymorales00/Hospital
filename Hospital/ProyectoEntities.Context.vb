@@ -111,10 +111,10 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_paciente_Result)("sp_buscar_paciente", cedulaParameter)
     End Function
 
-    Public Overridable Function sp_buscar_usuario(cedula As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
+    Public Overridable Function sp_buscar_usuario(cedula As Nullable(Of Integer)) As ObjectResult(Of sp_buscar_usuario_Result)
         Dim cedulaParameter As ObjectParameter = If(cedula.HasValue, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(Integer)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_buscar_usuario", cedulaParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_usuario_Result)("sp_buscar_usuario", cedulaParameter)
     End Function
 
     Public Overridable Function sp_eliminar_cita(id As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
