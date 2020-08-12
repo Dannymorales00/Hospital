@@ -143,6 +143,9 @@
     <Compile Include="sp_select_medicamento_alergico_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_select_persona_contacto_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="vista\FRMPersonaContacto.Designer.vb">
       <DependentUpon>FRMPersonaContacto.vb</DependentUpon>
     </Compile>

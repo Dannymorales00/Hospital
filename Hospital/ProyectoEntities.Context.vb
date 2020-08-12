@@ -388,11 +388,73 @@ Partial Public Class ProyectoEntities1
     End Function
 
     Public Overridable Function sp_validar_usuario(nombreUsuario As String, contraseña As String) As ObjectResult(Of Nullable(Of Integer))
-        Dim nombreUsuarioParameter As ObjectParameter = If(nombreUsuario IsNot Nothing, New ObjectParameter("NombreUsuario", nombreUsuario), New ObjectParameter("NombreUsuario", GetType(String)))
+        Dim nombreUsuarioParameter As ObjectParameter = If(nombreUsuario IsNot Nothing, New ObjectParameter("nombreUsuario", nombreUsuario), New ObjectParameter("nombreUsuario", GetType(String)))
 
-        Dim contraseñaParameter As ObjectParameter = If(contraseña IsNot Nothing, New ObjectParameter("Contraseña", contraseña), New ObjectParameter("Contraseña", GetType(String)))
+        Dim contraseñaParameter As ObjectParameter = If(contraseña IsNot Nothing, New ObjectParameter("contraseña", contraseña), New ObjectParameter("contraseña", GetType(String)))
 
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_validar_usuario", nombreUsuarioParameter, contraseñaParameter)
+    End Function
+
+    Public Overridable Function sp_actualizar_persona_contacto(cedula As Nullable(Of Integer), nombre As String, relacionFamiliar As String, telefono As String, direccion As String, cPaciente As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
+        Dim cedulaParameter As ObjectParameter = If(cedula.HasValue, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(Integer)))
+
+        Dim nombreParameter As ObjectParameter = If(nombre IsNot Nothing, New ObjectParameter("nombre", nombre), New ObjectParameter("nombre", GetType(String)))
+
+        Dim relacionFamiliarParameter As ObjectParameter = If(relacionFamiliar IsNot Nothing, New ObjectParameter("relacionFamiliar", relacionFamiliar), New ObjectParameter("relacionFamiliar", GetType(String)))
+
+        Dim telefonoParameter As ObjectParameter = If(telefono IsNot Nothing, New ObjectParameter("telefono", telefono), New ObjectParameter("telefono", GetType(String)))
+
+        Dim direccionParameter As ObjectParameter = If(direccion IsNot Nothing, New ObjectParameter("direccion", direccion), New ObjectParameter("direccion", GetType(String)))
+
+        Dim cPacienteParameter As ObjectParameter = If(cPaciente.HasValue, New ObjectParameter("cPaciente", cPaciente), New ObjectParameter("cPaciente", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_actualizar_persona_contacto", cedulaParameter, nombreParameter, relacionFamiliarParameter, telefonoParameter, direccionParameter, cPacienteParameter)
+    End Function
+
+    Public Overridable Function sp_actualizar_usuario(cedula As Nullable(Of Integer), contraseña As String, correo As String, fechaNacimiento As Nullable(Of Date), nombre As String, nombreUsuario As String, telefono As String, tipo As String) As ObjectResult(Of Nullable(Of Integer))
+        Dim cedulaParameter As ObjectParameter = If(cedula.HasValue, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(Integer)))
+
+        Dim contraseñaParameter As ObjectParameter = If(contraseña IsNot Nothing, New ObjectParameter("contraseña", contraseña), New ObjectParameter("contraseña", GetType(String)))
+
+        Dim correoParameter As ObjectParameter = If(correo IsNot Nothing, New ObjectParameter("correo", correo), New ObjectParameter("correo", GetType(String)))
+
+        Dim fechaNacimientoParameter As ObjectParameter = If(fechaNacimiento.HasValue, New ObjectParameter("fechaNacimiento", fechaNacimiento), New ObjectParameter("fechaNacimiento", GetType(Date)))
+
+        Dim nombreParameter As ObjectParameter = If(nombre IsNot Nothing, New ObjectParameter("nombre", nombre), New ObjectParameter("nombre", GetType(String)))
+
+        Dim nombreUsuarioParameter As ObjectParameter = If(nombreUsuario IsNot Nothing, New ObjectParameter("nombreUsuario", nombreUsuario), New ObjectParameter("nombreUsuario", GetType(String)))
+
+        Dim telefonoParameter As ObjectParameter = If(telefono IsNot Nothing, New ObjectParameter("telefono", telefono), New ObjectParameter("telefono", GetType(String)))
+
+        Dim tipoParameter As ObjectParameter = If(tipo IsNot Nothing, New ObjectParameter("tipo", tipo), New ObjectParameter("tipo", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_actualizar_usuario", cedulaParameter, contraseñaParameter, correoParameter, fechaNacimientoParameter, nombreParameter, nombreUsuarioParameter, telefonoParameter, tipoParameter)
+    End Function
+
+    Public Overridable Function sp_eliminar_persona_contacto(cedula As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
+        Dim cedulaParameter As ObjectParameter = If(cedula.HasValue, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_eliminar_persona_contacto", cedulaParameter)
+    End Function
+
+    Public Overridable Function sp_registrar_persona_contacto(cedula As Nullable(Of Integer), nombre As String, relacionFamiliar As String, telefono As String, direccion As String, cPaciente As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
+        Dim cedulaParameter As ObjectParameter = If(cedula.HasValue, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(Integer)))
+
+        Dim nombreParameter As ObjectParameter = If(nombre IsNot Nothing, New ObjectParameter("nombre", nombre), New ObjectParameter("nombre", GetType(String)))
+
+        Dim relacionFamiliarParameter As ObjectParameter = If(relacionFamiliar IsNot Nothing, New ObjectParameter("relacionFamiliar", relacionFamiliar), New ObjectParameter("relacionFamiliar", GetType(String)))
+
+        Dim telefonoParameter As ObjectParameter = If(telefono IsNot Nothing, New ObjectParameter("telefono", telefono), New ObjectParameter("telefono", GetType(String)))
+
+        Dim direccionParameter As ObjectParameter = If(direccion IsNot Nothing, New ObjectParameter("direccion", direccion), New ObjectParameter("direccion", GetType(String)))
+
+        Dim cPacienteParameter As ObjectParameter = If(cPaciente.HasValue, New ObjectParameter("cPaciente", cPaciente), New ObjectParameter("cPaciente", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_registrar_persona_contacto", cedulaParameter, nombreParameter, relacionFamiliarParameter, telefonoParameter, direccionParameter, cPacienteParameter)
+    End Function
+
+    Public Overridable Function sp_select_persona_contacto() As ObjectResult(Of sp_select_persona_contacto_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_select_persona_contacto_Result)("sp_select_persona_contacto")
     End Function
 
 End Class
