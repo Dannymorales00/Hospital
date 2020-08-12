@@ -23,7 +23,11 @@ Partial Class FrmPaciente
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.BtnBuscar = New System.Windows.Forms.Button()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.TxtBuscarCedula = New System.Windows.Forms.TextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.ComboTipo2 = New System.Windows.Forms.ComboBox()
         Me.TxtActualizarAltura = New System.Windows.Forms.TextBox()
@@ -68,7 +72,7 @@ Partial Class FrmPaciente
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.BtnActualizar = New System.Windows.Forms.Button()
+        Me.TabPage4.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -77,13 +81,41 @@ Partial Class FrmPaciente
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.BtnBuscar)
+        Me.TabPage4.Controls.Add(Me.Label20)
+        Me.TabPage4.Controls.Add(Me.TxtBuscarCedula)
         Me.TabPage4.Location = New System.Drawing.Point(4, 29)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(770, 426)
+        Me.TabPage4.Size = New System.Drawing.Size(798, 426)
         Me.TabPage4.TabIndex = 4
-        Me.TabPage4.Text = "TabPage4"
+        Me.TabPage4.Text = "Buscar"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'BtnBuscar
+        '
+        Me.BtnBuscar.Location = New System.Drawing.Point(27, 386)
+        Me.BtnBuscar.Name = "BtnBuscar"
+        Me.BtnBuscar.Size = New System.Drawing.Size(101, 33)
+        Me.BtnBuscar.TabIndex = 3
+        Me.BtnBuscar.Text = "Buscar"
+        Me.BtnBuscar.UseVisualStyleBackColor = True
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(23, 22)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(67, 20)
+        Me.Label20.TabIndex = 2
+        Me.Label20.Text = "Cedula"
+        '
+        'TxtBuscarCedula
+        '
+        Me.TxtBuscarCedula.Location = New System.Drawing.Point(111, 19)
+        Me.TxtBuscarCedula.Name = "TxtBuscarCedula"
+        Me.TxtBuscarCedula.Size = New System.Drawing.Size(133, 27)
+        Me.TxtBuscarCedula.TabIndex = 1
         '
         'TabPage3
         '
@@ -114,6 +146,15 @@ Partial Class FrmPaciente
         Me.TabPage3.TabIndex = 3
         Me.TabPage3.Text = "Actualizar"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'BtnActualizar
+        '
+        Me.BtnActualizar.Location = New System.Drawing.Point(249, 367)
+        Me.BtnActualizar.Name = "BtnActualizar"
+        Me.BtnActualizar.Size = New System.Drawing.Size(119, 33)
+        Me.BtnActualizar.TabIndex = 51
+        Me.BtnActualizar.Text = "Actualizar"
+        Me.BtnActualizar.UseVisualStyleBackColor = True
         '
         'Label19
         '
@@ -313,7 +354,7 @@ Partial Class FrmPaciente
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage2.Size = New System.Drawing.Size(770, 426)
+        Me.TabPage2.Size = New System.Drawing.Size(798, 426)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Eliminar"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -588,15 +629,6 @@ Partial Class FrmPaciente
         Me.TabControl1.Size = New System.Drawing.Size(806, 459)
         Me.TabControl1.TabIndex = 0
         '
-        'BtnActualizar
-        '
-        Me.BtnActualizar.Location = New System.Drawing.Point(249, 367)
-        Me.BtnActualizar.Name = "BtnActualizar"
-        Me.BtnActualizar.Size = New System.Drawing.Size(119, 33)
-        Me.BtnActualizar.TabIndex = 51
-        Me.BtnActualizar.Text = "Actualizar"
-        Me.BtnActualizar.UseVisualStyleBackColor = True
-        '
         'FrmPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -606,6 +638,8 @@ Partial Class FrmPaciente
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmPaciente"
         Me.Text = "FrmPaciente"
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
@@ -664,4 +698,16 @@ Partial Class FrmPaciente
     Friend WithEvents Label2 As Label
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents BtnActualizar As Button
+    Friend WithEvents TxtBuscarCedula As TextBox
+    Friend WithEvents BtnBuscar As Button
+    Friend WithEvents Label20 As Label
+    Friend WithEvents CedulaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EdadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CorreoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaNacimientoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PesoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AlturaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TipoSangreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

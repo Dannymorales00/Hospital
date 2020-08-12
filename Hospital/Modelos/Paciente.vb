@@ -4,7 +4,7 @@
     Private _fechaNacimiento As Date
     Private _telefono As Integer
     Private _correo As String
-    Private _edad As Short
+    Private _edad As Integer
     Private _peso As Double
     Private _altura As Double
     Private _tipoSangre As String
@@ -69,7 +69,7 @@
         End Set
     End Property
 
-    Property edad As Int16
+    Property edad As Integer
         Get
             Return _edad
         End Get
@@ -123,22 +123,20 @@
         End Set
     End Property
 
-    Public Sub New(medicamentos As List(Of MedicamentoAlergico), enfermedades As List(Of Enfermedad), contactosPersona As List(Of PersonaContacto), tipoSangre As String, altura As Double, peso As Double, edad As Short, correo As String, telefono As Integer, fechaNacimiento As Date, nombre As String, cedula As Integer)
-        Me.medicamentos = medicamentos
-        Me.enfermedades = enfermedades
-        Me.contactosPersona = contactosPersona
-        Me.tipoSangre = tipoSangre
-        Me.altura = altura
-        Me.peso = peso
-        Me.edad = edad
-        Me.correo = correo
-        Me.telefono = telefono
-        Me.fechaNacimiento = fechaNacimiento
-        Me.nombre = nombre
-        Me.cedula = cedula
+    Public Sub New(cedula As Integer, nombre As String, fechaNacimiento As Date, telefono As Integer, correo As String, edad As Integer, peso As Double, altura As Double, tipoSangre As String)
+        _cedula = cedula
+        _nombre = nombre
+        _fechaNacimiento = fechaNacimiento
+        _telefono = telefono
+        _correo = correo
+        _edad = edad
+        _peso = peso
+        _altura = altura
+        _tipoSangre = tipoSangre
     End Sub
 
     Public Sub New()
+
     End Sub
 
 End Class

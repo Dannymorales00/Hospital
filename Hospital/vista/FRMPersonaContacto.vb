@@ -15,9 +15,9 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         conPersonaContacto.registrar(nombreTxt.Text, CInt(cedulaTxt.Text), relacionTxt.Text, CInt(telefonoTxt.Text), labelCedula.Text, direccionTxt.Text)
     End Sub
-    Function comprobarCampos() As Boolean
-        If nombreTxt.Text IsNot "" And cedulaTxt.Text IsNot "" And relacionTxt IsNot "" And telefonoTxt IsNot "" And labelCedula IsNot "******" And Then
+    'Function comprobarCampos() As Boolean
+    '    If nombreTxt.Text IsNot "" And cedulaTxt.Text IsNot "" And relacionTxt IsNot "" And telefonoTxt IsNot "" And labelCedula IsNot "******" And Then
 
-        End If
-    End Function
+    '    End If
+    'End Function
 End Class
