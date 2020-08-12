@@ -424,7 +424,7 @@
             <Parameter Name="tipo" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_persona_contacto" ReturnType="Collection(Int32)">
-            <Parameter Name="cedula" Mode="In" Type="Int32" />
+          <Parameter Name="cedula" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_registrar_persona_contacto" ReturnType="Collection(Int32)">
             <Parameter Name="cedula" Mode="In" Type="Int32" />
