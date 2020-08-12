@@ -1,7 +1,7 @@
 ﻿Public Class FRMPersonaContacto
     Dim conPersonaContacto As New ControladorPersonaContacto
     Dim personaContacto As New PersonaContacto
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -21,8 +21,14 @@
             personaContacto.telefono = telefonoTxt.Text
             personaContacto.cedulaPaciente = labelCedula.Text
             personaContacto.direccion = direccionTxt.Text
-            conPersonaContacto.registrar(personaContacto)
-            limpiarCampos()
+            If conPersonaContacto.registrar(personaContacto) Then
+                limpiarCampos()
+                MsgBox("Se inserto la persona correctamente")
+            Else
+                MsgBox("Error al agregar la persona")
+            End If
+
+
         End If
 
     End Sub
@@ -47,5 +53,21 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         limpiarCampos()
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
+
+    Private Sub labelNombre_Click(sender As Object, e As EventArgs) Handles labelNombre.Click
+
+    End Sub
+
+    Private Sub labelCedula_Click(sender As Object, e As EventArgs) Handles labelCedula.Click
+
     End Sub
 End Class

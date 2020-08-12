@@ -34,6 +34,14 @@
           <Parameter Name="telefono" Type="int" Mode="In" />
           <Parameter Name="tipoSangre" Type="nchar" Mode="In" />
         </Function>
+        <Function Name="sp_actualizar_persona_contacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="relacionFamiliar" Type="varchar" Mode="In" />
+          <Parameter Name="telefono" Type="varchar" Mode="In" />
+          <Parameter Name="direccion" Type="varchar" Mode="In" />
+          <Parameter Name="cPaciente" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_actualizar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="int" Mode="In" />
           <Parameter Name="contraseña" Type="varchar" Mode="In" />
@@ -82,6 +90,9 @@
           <Parameter Name="id" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_eliminar_paciente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_eliminar_persona_contacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_eliminar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -161,6 +172,14 @@
           <Parameter Name="telefono" Type="int" Mode="In" />
           <Parameter Name="tiposangre" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="sp_registrar_persona_contacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="relacionFamiliar" Type="varchar" Mode="In" />
+          <Parameter Name="telefono" Type="varchar" Mode="In" />
+          <Parameter Name="direccion" Type="varchar" Mode="In" />
+          <Parameter Name="cPaciente" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_registrar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="int" Mode="In" />
           <Parameter Name="contraseña" Type="varchar" Mode="In" />
@@ -174,6 +193,7 @@
         <Function Name="sp_select_citas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_select_medicamento_alergico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_select_medicamentos_recetados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_select_persona_contacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_update_cita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="especialidad" Type="nvarchar" Mode="In" />
@@ -246,7 +266,7 @@
           <FunctionImport Name="sp_buscar_paciente" ReturnType="Collection(ProyectoModel.sp_buscar_paciente_Result)">
           <Parameter Name="cedula" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="sp_buscar_usuario" ReturnType="Collection(ProyectoModel.sp_buscar_usuario_Result)">
+          <FunctionImport Name="sp_buscar_usuario" ReturnType="Collection(Int32)">
           <Parameter Name="cedula" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_cita" ReturnType="Collection(Int32)">
@@ -385,6 +405,14 @@
             <Parameter Name="nombreUsuario" Mode="In" Type="String" />
             <Parameter Name="contraseña" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="sp_actualizar_persona_contacto" ReturnType="Collection(Int32)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="relacionFamiliar" Mode="In" Type="String" />
+            <Parameter Name="telefono" Mode="In" Type="String" />
+            <Parameter Name="direccion" Mode="In" Type="String" />
+            <Parameter Name="cPaciente" Mode="In" Type="Int32" />
+          </FunctionImport>
           <FunctionImport Name="sp_actualizar_usuario" ReturnType="Collection(Int32)">
             <Parameter Name="cedula" Mode="In" Type="Int32" />
             <Parameter Name="contraseña" Mode="In" Type="String" />
@@ -395,6 +423,18 @@
             <Parameter Name="telefono" Mode="In" Type="String" />
             <Parameter Name="tipo" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="sp_eliminar_persona_contacto" ReturnType="Collection(Int32)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_registrar_persona_contacto" ReturnType="Collection(Int32)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="relacionFamiliar" Mode="In" Type="String" />
+            <Parameter Name="telefono" Mode="In" Type="String" />
+            <Parameter Name="direccion" Mode="In" Type="String" />
+            <Parameter Name="cPaciente" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_select_persona_contacto" ReturnType="Collection(ProyectoModel.sp_select_persona_contacto_Result)" />
         </EntityContainer>
         <ComplexType Name="sp_buscar_enfermedad_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -432,15 +472,13 @@
           <Property Type="String" Name="medicamento" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" />
         </ComplexType>
-        <ComplexType Name="sp_buscar_usuario_Result">
+        <ComplexType Name="sp_select_persona_contacto_Result">
           <Property Type="Int32" Name="cedula" Nullable="false" />
-          <Property Type="String" Name="contraseña" Nullable="false" MaxLength="10" />
-          <Property Type="String" Name="correo" Nullable="false" MaxLength="50" />
-          <Property Type="DateTime" Name="fechaNacimiento" Nullable="false" />
           <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="nombreUsuario" Nullable="false" MaxLength="50" />
-          <Property Type="Int32" Name="telefono" Nullable="false" />
-          <Property Type="String" Name="tipo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="relacionFamiliar" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="telefono" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="direccion" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="cedPaciente" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -478,20 +516,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_buscar_usuario" FunctionName="ProyectoModel.Store.sp_buscar_usuario" >
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="ProyectoModel.sp_buscar_usuario_Result">
-                <ScalarProperty Name="cedula" ColumnName="cedula" />
-                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
-                <ScalarProperty Name="correo" ColumnName="correo" />
-                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
-                <ScalarProperty Name="telefono" ColumnName="telefono" />
-                <ScalarProperty Name="tipo" ColumnName="tipo" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_buscar_usuario" FunctionName="ProyectoModel.Store.sp_buscar_usuario" />
           <FunctionImportMapping FunctionImportName="sp_eliminar_cita" FunctionName="ProyectoModel.Store.sp_eliminar_cita" />
           <FunctionImportMapping FunctionImportName="sp_eliminar_enfermedad" FunctionName="ProyectoModel.Store.sp_eliminar_enfermedad" />
           <FunctionImportMapping FunctionImportName="sp_eliminar_ExamenOrina" FunctionName="ProyectoModel.Store.sp_eliminar_ExamenOrina" />
@@ -546,7 +571,22 @@
           <FunctionImportMapping FunctionImportName="sp_update_medicamento_alergico" FunctionName="ProyectoModel.Store.sp_update_medicamento_alergico" />
           <FunctionImportMapping FunctionImportName="sp_update_medicamento_recetado" FunctionName="ProyectoModel.Store.sp_update_medicamento_recetado" />
           <FunctionImportMapping FunctionImportName="sp_validar_usuario" FunctionName="ProyectoModel.Store.sp_validar_usuario" />
+          <FunctionImportMapping FunctionImportName="sp_actualizar_persona_contacto" FunctionName="ProyectoModel.Store.sp_actualizar_persona_contacto" />
           <FunctionImportMapping FunctionImportName="sp_actualizar_usuario" FunctionName="ProyectoModel.Store.sp_actualizar_usuario" />
+          <FunctionImportMapping FunctionImportName="sp_eliminar_persona_contacto" FunctionName="ProyectoModel.Store.sp_eliminar_persona_contacto" />
+          <FunctionImportMapping FunctionImportName="sp_registrar_persona_contacto" FunctionName="ProyectoModel.Store.sp_registrar_persona_contacto" />
+          <FunctionImportMapping FunctionImportName="sp_select_persona_contacto" FunctionName="ProyectoModel.Store.sp_select_persona_contacto">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_select_persona_contacto_Result">
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="relacionFamiliar" ColumnName="relacionFamiliar" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="cedPaciente" ColumnName="cedPaciente" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
