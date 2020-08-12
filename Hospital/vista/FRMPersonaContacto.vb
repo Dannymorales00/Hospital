@@ -20,4 +20,8 @@
 
         End If
     End Function
+
+    Private Sub FRMPersonaContacto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
