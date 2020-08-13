@@ -91,14 +91,14 @@ Partial Class FrmBuscarPaciente
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(1055, 38)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(109, 28)
         Me.Button1.TabIndex = 17
         Me.Button1.Text = "Seleccionar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'BuscarPaciente
+        'FrmBuscarPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -110,7 +110,7 @@ Partial Class FrmBuscarPaciente
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Name = "BuscarPaciente"
+        Me.Name = "FrmBuscarPaciente"
         Me.Text = "BuscarPaciente"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

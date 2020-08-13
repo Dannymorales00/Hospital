@@ -43,6 +43,7 @@
             MessageBox.Show("debe seleccionar una fila")
         End If
 
+        Me.Hide()
 
     End Sub
 

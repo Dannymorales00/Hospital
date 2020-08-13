@@ -1,5 +1,5 @@
 ﻿Public Class Paciente
-    Private _cedula As Integer
+    Private _cedula As String
     Private _nombre As String
     Private _fechaNacimiento As Date
     Private _telefono As Integer
@@ -114,7 +114,7 @@
         End Set
     End Property
 
-    Property cedula As Integer
+    Property cedula As String
         Get
             Return _cedula
         End Get

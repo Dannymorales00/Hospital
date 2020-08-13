@@ -83,7 +83,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim pacienteForm As New FrmBuscarPaciente
         pacienteForm.ShowDialog()
-        paciente = pacienteForm.pacienteRetorno
+        paciente = pacienteForm.PacienteRetorno1
         pacienteForm.Close()
 
         If paciente.cedula = Nothing Then
