@@ -453,8 +453,22 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_registrar_persona_contacto", cedulaParameter, nombreParameter, relacionFamiliarParameter, telefonoParameter, direccionParameter, cPacienteParameter)
     End Function
 
-    Public Overridable Function sp_select_persona_contacto() As ObjectResult(Of sp_select_persona_contacto_Result)
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_select_persona_contacto_Result)("sp_select_persona_contacto")
+    Public Overridable Function sp_select_persona_contacto(cedula As String) As ObjectResult(Of sp_select_persona_contacto_Result)
+        Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_select_persona_contacto_Result)("sp_select_persona_contacto", cedulaParameter)
+    End Function
+
+    Public Overridable Function sp_buscar_medico(cedula As String) As ObjectResult(Of sp_buscar_medico_Result)
+        Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_medico_Result)("sp_buscar_medico", cedulaParameter)
+    End Function
+
+    Public Overridable Function sp_buscar_pacientes(cedula As String) As ObjectResult(Of sp_buscar_pacientes_Result)
+        Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_pacientes_Result)("sp_buscar_pacientes", cedulaParameter)
     End Function
 
 End Class
