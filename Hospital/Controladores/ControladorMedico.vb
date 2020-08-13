@@ -3,6 +3,8 @@
 
     Function Buscar(medico As Medico) As List(Of Medico)
         Dim listaMedicos As New List(Of Medico)
+
+
         Try
 
             Using almacen = New ProyectoEntities1()
@@ -15,8 +17,6 @@
                     medico.nombre = Result.ElementAt(i).nombre
 
                     listaMedicos.Add(medico)
-
-
                     MsgBox(listaMedicos.ElementAt(i).nombre)
                 Next
 
