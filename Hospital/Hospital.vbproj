@@ -143,6 +143,9 @@
     <Compile Include="sp_buscar_medico_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_buscar_pacientes_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="sp_buscar_paciente_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
