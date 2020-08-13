@@ -1,6 +1,6 @@
 ﻿Public Class FrmCita
 
-    Private buscarPaciente As BuscarPaciente
+    Private FrmBuscarPaciente As FrmBuscarPaciente
 
 
 End Class
