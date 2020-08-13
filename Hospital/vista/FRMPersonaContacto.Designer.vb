@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FRMPersonaContacto
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,14 @@ Partial Class FRMPersonaContacto
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.labelNombre = New System.Windows.Forms.Label()
         Me.labelCedula = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.telefonoTxt = New System.Windows.Forms.TextBox()
         Me.relacionTxt = New System.Windows.Forms.TextBox()
         Me.cedulaTxt = New System.Windows.Forms.TextBox()
@@ -101,15 +101,15 @@ Partial Class FRMPersonaContacto
         Me.Label7.TabIndex = 26
         Me.Label7.Text = "Nombre:"
         '
-        'Button2
+        'btnRegistrar
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(177, 360)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(81, 24)
-        Me.Button2.TabIndex = 25
-        Me.Button2.Text = "Registrar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrar.Location = New System.Drawing.Point(177, 360)
+        Me.btnRegistrar.Name = "btnRegistrar"
+        Me.btnRegistrar.Size = New System.Drawing.Size(81, 24)
+        Me.btnRegistrar.TabIndex = 25
+        Me.btnRegistrar.Text = "Registrar"
+        Me.btnRegistrar.UseVisualStyleBackColor = True
         '
         'telefonoTxt
         '
@@ -241,7 +241,7 @@ Partial Class FRMPersonaContacto
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(520, 19)
+        Me.Label9.Location = New System.Drawing.Point(515, 19)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(65, 18)
         Me.Label9.TabIndex = 32
@@ -250,26 +250,26 @@ Partial Class FRMPersonaContacto
         'cedulaBuscarTxt
         '
         Me.cedulaBuscarTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cedulaBuscarTxt.Location = New System.Drawing.Point(605, 18)
+        Me.cedulaBuscarTxt.Location = New System.Drawing.Point(586, 18)
         Me.cedulaBuscarTxt.Name = "cedulaBuscarTxt"
-        Me.cedulaBuscarTxt.Size = New System.Drawing.Size(162, 22)
+        Me.cedulaBuscarTxt.Size = New System.Drawing.Size(158, 22)
         Me.cedulaBuscarTxt.TabIndex = 33
         '
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(409, 360)
+        Me.Button4.Location = New System.Drawing.Point(400, 360)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(81, 24)
         Me.Button4.TabIndex = 34
-        Me.Button4.Text = "Elimiar"
+        Me.Button4.Text = "Eliminar"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'FRMPersonaContacto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1293, 461)
+        Me.ClientSize = New System.Drawing.Size(1253, 461)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.cedulaBuscarTxt)
@@ -283,7 +283,7 @@ Partial Class FRMPersonaContacto
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnRegistrar)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.telefonoTxt)
         Me.Controls.Add(Me.Button1)
@@ -307,7 +307,7 @@ Partial Class FRMPersonaContacto
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnRegistrar As Button
     Friend WithEvents telefonoTxt As TextBox
     Friend WithEvents relacionTxt As TextBox
     Friend WithEvents cedulaTxt As TextBox

@@ -62,9 +62,7 @@
         End Set
     End Property
 
-    Public Sub New(consultaMedica As ConsultaMedica, id As Integer, medico As Medico, especialidadSolicitada As String, fechaHora As Date, paciente As Paciente)
-        Me.consultaMedica = consultaMedica
-        Me.id = id
+    Public Sub New(medico As Medico, especialidadSolicitada As String, fechaHora As Date, paciente As Paciente)
         Me.medico = medico
         Me.especialidadSolicitada = especialidadSolicitada
         Me.fechaHora = fechaHora

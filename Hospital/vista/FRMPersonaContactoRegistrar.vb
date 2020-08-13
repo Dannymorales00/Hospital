@@ -9,7 +9,7 @@
         labelNombre.Text = "******"
         telefonoTxt.Text = ""
         direccionTxt.Text = ""
-        relacionTxt.Text = "a"
+        relacionTxt.Text = ""
     End Sub
     Function comprobarCampos() As Boolean
         If nombreTxt.Text IsNot "" And cedulaTxt.Text IsNot "" And relacionTxt IsNot "" And telefonoTxt IsNot "" And labelCedula IsNot "******" And direccionTxt IsNot "" Then
@@ -31,15 +31,12 @@
             personaContacto.telefono = telefonoTxt.Text
             personaContacto.cedulaPaciente = labelCedula.Text
             personaContacto.direccion = direccionTxt.Text
-            If conPersonaContacto.registrar(personaContacto) Then
-                limpiarCampos()
-                MsgBox("Se inserto la persona correctamente")
-            Else
-                MsgBox("Error al agregar la persona")
-            End If
-
-
+            Me.Hide()
         End If
+
+    End Sub
+
+    Private Sub FRMPersonaContactoRegistrar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
