@@ -496,6 +496,16 @@
           <Property Type="String" Name="direccion" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="cedPaciente" Nullable="false" />
         </ComplexType>
+        <ComplexType Name="sp_buscar_usuario_Result">
+          <Property Type="Int32" Name="cedula" Nullable="false" />
+          <Property Type="String" Name="contraseña" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="correo" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaNacimiento" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="nombreUsuario" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="telefono" Nullable="false" />
+          <Property Type="String" Name="tipo" Nullable="false" MaxLength="50" />
+        </ComplexType>
         <ComplexType Name="sp_buscar_medico_Result">
           <Property Type="Int32" Name="cedula" Nullable="false" />
           <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
@@ -510,16 +520,6 @@
           <Property Type="Double" Name="altura" Nullable="false" />
           <Property Type="Int32" Name="telefono" Nullable="false" />
           <Property Type="String" Name="tipoSangre" Nullable="false" MaxLength="10" />
-        </ComplexType>
-        <ComplexType Name="sp_buscar_usuario_Result">
-          <Property Type="Int32" Name="cedula" Nullable="false" />
-          <Property Type="String" Name="contraseña" Nullable="false" MaxLength="10" />
-          <Property Type="String" Name="correo" Nullable="false" MaxLength="50" />
-          <Property Type="DateTime" Name="fechaNacimiento" Nullable="false" />
-          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="nombreUsuario" Nullable="false" MaxLength="50" />
-          <Property Type="Int32" Name="telefono" Nullable="false" />
-          <Property Type="String" Name="tipo" Nullable="false" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>

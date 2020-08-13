@@ -98,9 +98,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\ControladorCita.vb" />
+    <Compile Include="Controladores\ControladorMedico.vb" />
     <Compile Include="Controladores\ControladorPaciente.vb" />
     <Compile Include="Controladores\ControladorPersonaContacto.vb" />
     <Compile Include="Controladores\ControladorUsuario.vb" />
+    <Compile Include="Modelos\BuscarMedico.Designer.vb">
+      <DependentUpon>BuscarMedico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\BuscarMedico.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modelos\Citas.vb" />
     <Compile Include="Modelos\ConsultaMedica.vb" />
     <Compile Include="Modelos\Enfermedad.vb" />
@@ -175,6 +182,12 @@
     <Compile Include="vista\FRMPersonaContacto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\FRMPersonaContactoRegistrar.Designer.vb">
+      <DependentUpon>FRMPersonaContactoRegistrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FRMPersonaContactoRegistrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\FrmPrincipal.Designer.vb">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </Compile>
@@ -218,6 +231,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Modelos\BuscarMedico.resx">
+      <DependentUpon>BuscarMedico.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\BuscarPaciente.resx">
       <DependentUpon>BuscarPaciente.vb</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FRMPersonaContacto.resx">
       <DependentUpon>FRMPersonaContacto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FRMPersonaContactoRegistrar.resx">
+      <DependentUpon>FRMPersonaContactoRegistrar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
