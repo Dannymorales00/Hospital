@@ -1,6 +1,6 @@
 ﻿Public Class FRMPersonaContacto
     Dim conPersonaContacto As New ControladorPersonaContacto
-
+    Dim paciente As New Paciente
 
     Sub limpiarCampos()
         nombreTxt.Text = ""
@@ -40,6 +40,7 @@
             personaContacto.telefono = telefonoTxt.Text
             personaContacto.cedulaPaciente = labelCedula.Text
             personaContacto.direccion = direccionTxt.Text
+            personaContacto.cedulaPaciente = CInt(labelCedula.Text)
             If conPersonaContacto.registrar(personaContacto) Then
                 limpiarCampos()
                 MsgBox("Se inserto la persona correctamente")
@@ -74,5 +75,17 @@
         cargarTabla()
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim pacienteForm As New BuscarPaciente
+        pacienteForm.ShowDialog()
+        paciente = pacienteForm.pacienteRetorno
+        pacienteForm.Close()
 
+        If paciente.cedula = Nothing Then
+        Else
+            labelCedula.Text = paciente.cedula.ToString
+            labelNombre.Text = paciente.nombre
+        End If
+
+    End Sub
 End Class
