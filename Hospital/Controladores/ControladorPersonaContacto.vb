@@ -12,6 +12,18 @@
         End Try
     End Function
 
+    Function actualizar(personaContacto As PersonaContacto) As Boolean
+        Try
+            Using Almacen As New ProyectoEntities1
+                Almacen.sp_actualizar_persona_contacto(personaContacto.cedula, personaContacto.nombreCompleto, personaContacto.relacionFamiliar, personaContacto.telefono, personaContacto.direccion, personaContacto.cedulaPaciente)
+            End Using
+            Return True
+        Catch ex As Exception
+            MsgBox("Error:" + ex.ToString)
+            Return False
+        End Try
+    End Function
+
     Function consultar(personaContacto As PersonaContacto) As List(Of sp_select_persona_contacto_Result)
 
         Try
@@ -22,6 +34,18 @@
         Catch ex As Exception
             MsgBox("Error:" + ex.ToString)
             Return Nothing
+        End Try
+    End Function
+
+    Function eliminar(personaContacto As PersonaContacto) As Boolean
+
+        Try
+            Using Almacen As New ProyectoEntities1
+                Almacen.sp_eliminar_persona_contacto(personaContacto.cedula)
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
         End Try
     End Function
 End Class

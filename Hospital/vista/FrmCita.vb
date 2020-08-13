@@ -1,12 +1,12 @@
 ﻿Public Class FrmCita
     Private cita As Citas
-    Private buscarPaciente As BuscarPaciente
+    Private buscarPaciente As FrmBuscarPaciente
     Private paciente As New Paciente
     Private medico As New Medico
 
 
     Public Sub cargarPaciente()
-        Dim pacienteForm As New BuscarPaciente
+        Dim pacienteForm As New FrmBuscarPaciente
         pacienteForm.ShowDialog()
         paciente = pacienteForm.pacienteRetorno
         pacienteForm.Close()
