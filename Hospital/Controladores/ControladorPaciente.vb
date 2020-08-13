@@ -2,37 +2,31 @@
     Private paciente As Paciente
 
 
-    Public Sub registrar(paciente As Paciente)
+    Public Function registrar(paciente As Paciente) As Integer
+        Dim result As Integer = 0
         Try
             Using Almacen As New ProyectoEntities1
-                Dim result = Almacen.sp_registrar_paciente(paciente.cedula, paciente.nombre, paciente.edad, paciente.correo, paciente.fechaNacimiento, paciente.peso, paciente.altura, paciente.telefono, paciente.tipoSangre).SingleOrDefault
-                If result = 1 Then
-                    MsgBox("Se inserto correctamente")
+                result = Almacen.sp_registrar_paciente(paciente.cedula, paciente.nombre, paciente.edad, paciente.correo, paciente.fechaNacimiento, paciente.peso, paciente.altura, paciente.telefono, paciente.tipoSangre).SingleOrDefault
 
-                Else
-                    MsgBox("No se inserto correctamente")
-                End If
             End Using
         Catch ex As Exception
 
         End Try
-    End Sub
+        Return result
+    End Function
 
-    Public Sub eliminar(paciente As Paciente)
+    Public Function eliminar(paciente As Paciente) As Integer
+        Dim result As Integer = 0
         Try
             Using Almacen As New ProyectoEntities1
-                Dim result = Almacen.sp_eliminar_paciente(paciente.cedula).SingleOrDefault
-                If result = 1 Then
-                    MsgBox("Se elimino correctamente")
+                result = Almacen.sp_eliminar_paciente(paciente.cedula).SingleOrDefault
 
-                Else
-                    MsgBox("No se elimino correctamente")
-                End If
             End Using
         Catch ex As Exception
 
         End Try
-    End Sub
+        Return result
+    End Function
 
     Public Function cargar(paciente As Paciente) As Paciente
         Dim paciente2 As Paciente = New Paciente()
@@ -57,30 +51,31 @@
         Return paciente2
     End Function
 
-    Public Sub actualizar(paciente As Paciente)
+    Public Function actualizar(paciente As Paciente) As Integer
+        Dim result As Integer = 0
         Try
             Using Almacen As New ProyectoEntities1
-                Dim result = Almacen.sp_actualizar_paciente(paciente.cedula, paciente.nombre, paciente.edad, paciente.correo, paciente.fechaNacimiento, paciente.peso, paciente.altura, paciente.telefono, paciente.tipoSangre).SingleOrDefault
-                If result = 1 Then
-                    MsgBox("Se actualizo correctamente")
+                result = Almacen.sp_actualizar_paciente(paciente.cedula, paciente.nombre, paciente.edad, paciente.correo, paciente.fechaNacimiento, paciente.peso, paciente.altura, paciente.telefono, paciente.tipoSangre).SingleOrDefault
 
-                Else
-                    MsgBox("No se actualizo correctamente")
-                End If
             End Using
         Catch ex As Exception
 
         End Try
-    End Sub
+        Return result
+    End Function
 
 
+    Public Function buscarPacientes(paciente As Paciente) As List(Of sp_buscar_pacientes_Result)
+        Dim pacientes As New List(Of Paciente)
+        Try
+            Using almacen As New ProyectoEntities1
+                Return almacen.sp_buscar_pacientes(paciente.cedula.ToString).ToList
+            End Using
+        Catch ex As Exception
+            Return Nothing
+        End Try
 
-
-
-
-
-
-
+    End Function
 
 End Class
 
