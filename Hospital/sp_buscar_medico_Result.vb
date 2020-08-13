@@ -10,13 +10,8 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class sp_select_persona_contacto_Result
-    Public Property Nombre_Completo As String
-    Public Property Cedula As Integer
-    Public Property Relacion_Familiar As String
-    Public Property Telefono As String
-    Public Property Dirección As String
-    Public Property Nombre_Paciente As String
-    Public Property Paciente As Integer
+Partial Public Class sp_buscar_medico_Result
+    Public Property cedula As Integer
+    Public Property nombre As String
 
 End Class

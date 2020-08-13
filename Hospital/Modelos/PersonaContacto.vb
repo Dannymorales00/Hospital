@@ -3,7 +3,7 @@
     Private _relacionFamiliar As String
     Private _telefono As Integer
     Private _direccion As String
-    Private _cedula As Integer
+    Private _cedula As String
     Private _cedulaPaciente As Integer
 
     Property cedulaPaciente As Integer
@@ -15,7 +15,7 @@
         End Set
     End Property
 
-    Property cedula As Integer
+    Property cedula As String
         Get
             Return _cedula
         End Get

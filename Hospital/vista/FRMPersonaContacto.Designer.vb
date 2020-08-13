@@ -40,11 +40,11 @@ Partial Class FRMPersonaContacto
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.tablaPersonas = New System.Windows.Forms.DataGridView()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cedulaBuscarTxt = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tablaPersonas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button3
@@ -228,13 +228,13 @@ Partial Class FRMPersonaContacto
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Cedula:"
         '
-        'DataGridView1
+        'tablaPersonas
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(518, 46)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(357, 273)
-        Me.DataGridView1.TabIndex = 31
+        Me.tablaPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tablaPersonas.Location = New System.Drawing.Point(518, 46)
+        Me.tablaPersonas.Name = "tablaPersonas"
+        Me.tablaPersonas.Size = New System.Drawing.Size(727, 395)
+        Me.tablaPersonas.TabIndex = 31
         '
         'Label9
         '
@@ -269,11 +269,11 @@ Partial Class FRMPersonaContacto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(903, 415)
+        Me.ClientSize = New System.Drawing.Size(1293, 461)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.cedulaBuscarTxt)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.tablaPersonas)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.labelNombre)
         Me.Controls.Add(Me.Label2)
@@ -294,7 +294,7 @@ Partial Class FRMPersonaContacto
         Me.Controls.Add(Me.nombreTxt)
         Me.Name = "FRMPersonaContacto"
         Me.Text = "FRMPersonaContacto"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tablaPersonas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -317,7 +317,7 @@ Partial Class FRMPersonaContacto
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Button3 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents tablaPersonas As DataGridView
     Friend WithEvents Label9 As Label
     Friend WithEvents cedulaBuscarTxt As TextBox
     Friend WithEvents Button4 As Button
