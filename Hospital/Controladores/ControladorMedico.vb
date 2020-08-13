@@ -35,9 +35,6 @@
         End Try
 
 
-
-
-
         Return listaMedicos
     End Function
 
