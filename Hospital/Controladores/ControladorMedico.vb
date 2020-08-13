@@ -20,8 +20,7 @@
                 '    MsgBox(listaMedicos.ElementAt(i).nombre)
                 'Next
                 For Each medico1 As sp_buscar_medico_Result In Result
-                    Dim medico2 As Medico
-                    medico2 = New Medico()
+                    Dim medico2 As New Medico()
 
                     medico2.cedula = medico1.cedula
                     medico2.nombre = medico1.nombre
@@ -44,16 +43,8 @@
         End Try
 
 
-
-
-
         Return listaMedicos
     End Function
-
-
-
-
-
 
 
 End Class

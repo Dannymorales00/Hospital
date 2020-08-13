@@ -54,7 +54,7 @@
 
     End Sub
     Function comprobarCampos() As Boolean
-        If nombreTxt.Text IsNot "" And cedulaTxt.Text IsNot "" And relacionTxt IsNot "" And telefonoTxt IsNot "" And labelCedula IsNot "******" And direccionTxt IsNot "" Then
+        If nombreTxt.Text IsNot "" AndAlso cedulaTxt.Text IsNot "" AndAlso relacionTxt IsNot "" AndAlso telefonoTxt IsNot "" AndAlso labelCedula IsNot "******" AndAlso direccionTxt IsNot "" Then
             Return True
         Else
             MsgBox("Rellene todos los campos")

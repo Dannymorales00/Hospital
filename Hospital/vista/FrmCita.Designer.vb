@@ -34,6 +34,8 @@ Partial Class FrmCita
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.LlbMedico = New System.Windows.Forms.Label()
+        Me.LblPaciente = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
@@ -48,11 +50,13 @@ Partial Class FrmCita
         Me.TabControl1.Location = New System.Drawing.Point(1, -1)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(467, 354)
+        Me.TabControl1.Size = New System.Drawing.Size(636, 354)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.LblPaciente)
+        Me.TabPage1.Controls.Add(Me.LlbMedico)
         Me.TabPage1.Controls.Add(Me.TxtRegistrarEspecialidad)
         Me.TabPage1.Controls.Add(Me.BtnMedico)
         Me.TabPage1.Controls.Add(Me.BtnPaciente)
@@ -63,7 +67,7 @@ Partial Class FrmCita
         Me.TabPage1.Location = New System.Drawing.Point(4, 27)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(459, 323)
+        Me.TabPage1.Size = New System.Drawing.Size(628, 323)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Registrar"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -157,11 +161,31 @@ Partial Class FrmCita
         Me.TabPage4.Text = "Buscar"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'LlbMedico
+        '
+        Me.LlbMedico.AutoSize = True
+        Me.LlbMedico.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LlbMedico.Location = New System.Drawing.Point(388, 97)
+        Me.LlbMedico.Name = "LlbMedico"
+        Me.LlbMedico.Size = New System.Drawing.Size(187, 20)
+        Me.LlbMedico.TabIndex = 7
+        Me.LlbMedico.Text = "Medico Seleccionado"
+        '
+        'LblPaciente
+        '
+        Me.LblPaciente.AutoSize = True
+        Me.LblPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPaciente.Location = New System.Drawing.Point(388, 171)
+        Me.LblPaciente.Name = "LblPaciente"
+        Me.LblPaciente.Size = New System.Drawing.Size(198, 20)
+        Me.LblPaciente.TabIndex = 8
+        Me.LblPaciente.Text = "Paciente seleccionado"
+        '
         'FrmCita
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(465, 355)
+        Me.ClientSize = New System.Drawing.Size(638, 353)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "FrmCita"
         Me.Text = "FrmCita"
@@ -184,4 +208,6 @@ Partial Class FrmCita
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents BtnRegistrar As Button
+    Friend WithEvents LblPaciente As Label
+    Friend WithEvents LlbMedico As Label
 End Class

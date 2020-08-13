@@ -28,7 +28,7 @@
         DataGridView1.DataSource = controladorPaciente.buscarPacientes(paciente)
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         pacienteRetorno.cedula = CInt(DataGridView1.Rows(e.RowIndex).Cells(0).Value)
         pacienteRetorno.nombre = DataGridView1.Rows(e.RowIndex).Cells(1).Value
         pacienteRetorno.edad = CInt(DataGridView1.Rows(e.RowIndex).Cells(2).Value)
@@ -46,4 +46,6 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Visible = False
     End Sub
+
+
 End Class
