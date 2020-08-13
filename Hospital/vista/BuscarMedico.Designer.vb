@@ -23,9 +23,9 @@ Partial Class BuscarMedico
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridViewMedicos = New System.Windows.Forms.DataGridView()
-        Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.TxtCedula = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.BtnSeleccionar = New System.Windows.Forms.Button()
         CType(Me.DataGridViewMedicos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -34,17 +34,10 @@ Partial Class BuscarMedico
         Me.DataGridViewMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewMedicos.Location = New System.Drawing.Point(47, 139)
         Me.DataGridViewMedicos.Name = "DataGridViewMedicos"
-        Me.DataGridViewMedicos.Size = New System.Drawing.Size(646, 147)
+        Me.DataGridViewMedicos.ReadOnly = True
+        Me.DataGridViewMedicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridViewMedicos.Size = New System.Drawing.Size(253, 147)
         Me.DataGridViewMedicos.TabIndex = 0
-        '
-        'BtnBuscar
-        '
-        Me.BtnBuscar.Location = New System.Drawing.Point(247, 79)
-        Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnBuscar.TabIndex = 1
-        Me.BtnBuscar.Text = "Buscar"
-        Me.BtnBuscar.UseVisualStyleBackColor = True
         '
         'TxtCedula
         '
@@ -62,14 +55,24 @@ Partial Class BuscarMedico
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Cedula"
         '
+        'BtnSeleccionar
+        '
+        Me.BtnSeleccionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSeleccionar.Location = New System.Drawing.Point(216, 292)
+        Me.BtnSeleccionar.Name = "BtnSeleccionar"
+        Me.BtnSeleccionar.Size = New System.Drawing.Size(84, 23)
+        Me.BtnSeleccionar.TabIndex = 4
+        Me.BtnSeleccionar.Text = "Seleccionar"
+        Me.BtnSeleccionar.UseVisualStyleBackColor = True
+        '
         'BuscarMedico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(358, 342)
+        Me.Controls.Add(Me.BtnSeleccionar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TxtCedula)
-        Me.Controls.Add(Me.BtnBuscar)
         Me.Controls.Add(Me.DataGridViewMedicos)
         Me.Name = "BuscarMedico"
         Me.Text = "BuscarMedico"
@@ -80,7 +83,7 @@ Partial Class BuscarMedico
     End Sub
 
     Friend WithEvents DataGridViewMedicos As DataGridView
-    Friend WithEvents BtnBuscar As Button
     Friend WithEvents TxtCedula As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents BtnSeleccionar As Button
 End Class

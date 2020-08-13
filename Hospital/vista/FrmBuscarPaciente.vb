@@ -1,4 +1,4 @@
-﻿Public Class BuscarPaciente
+﻿Public Class FrmBuscarPaciente
     Private paciente As Paciente
     Public pacienteRetorno As New Paciente
     Private controladorPaciente As New ControladorPaciente

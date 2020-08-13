@@ -102,10 +102,10 @@
     <Compile Include="Controladores\ControladorPaciente.vb" />
     <Compile Include="Controladores\ControladorPersonaContacto.vb" />
     <Compile Include="Controladores\ControladorUsuario.vb" />
-    <Compile Include="Modelos\BuscarMedico.Designer.vb">
+    <Compile Include="vista\BuscarMedico.Designer.vb">
       <DependentUpon>BuscarMedico.vb</DependentUpon>
     </Compile>
-    <Compile Include="Modelos\BuscarMedico.vb">
+    <Compile Include="vista\BuscarMedico.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modelos\Citas.vb" />
@@ -164,10 +164,10 @@
     <Compile Include="sp_select_persona_contacto_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="vista\BuscarPaciente.Designer.vb">
-      <DependentUpon>BuscarPaciente.vb</DependentUpon>
+    <Compile Include="vista\FrmBuscarPaciente.Designer.vb">
+      <DependentUpon>FrmBuscarPaciente.vb</DependentUpon>
     </Compile>
-    <Compile Include="vista\BuscarPaciente.vb">
+    <Compile Include="vista\FrmBuscarPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\FrmCita.Designer.vb">
@@ -231,11 +231,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Modelos\BuscarMedico.resx">
+    <EmbeddedResource Include="vista\BuscarMedico.resx">
       <DependentUpon>BuscarMedico.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vista\BuscarPaciente.resx">
-      <DependentUpon>BuscarPaciente.vb</DependentUpon>
+    <EmbeddedResource Include="vista\FrmBuscarPaciente.resx">
+      <DependentUpon>FrmBuscarPaciente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmCita.resx">
       <DependentUpon>FrmCita.vb</DependentUpon>
