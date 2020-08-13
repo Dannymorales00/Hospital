@@ -33,6 +33,21 @@
             listaMedicos = controladorMedico.Buscar(medico)
 
 
+            MsgBox(listaMedicos.Count)
+            For i As Integer = 0 To listaMedicos.Count - 1
+
+                'MsgBox(i)
+                'MsgBox(listaMedicos.ElementAt(i).nombre)
+
+
+            Next
+
+
+
+
+
+            'MsgBox(listaMedicos.ElementAt(0).nombre)
+            'MsgBox(listaMedicos.ElementAt(1).nombre)
             'DataGridViewMedicos.DataSource = listaMedicos
 
 
