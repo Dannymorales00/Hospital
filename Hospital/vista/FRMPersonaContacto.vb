@@ -76,7 +76,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim pacienteForm As New BuscarPaciente
+        Dim pacienteForm As New FrmBuscarPaciente
         pacienteForm.ShowDialog()
         paciente = pacienteForm.pacienteRetorno
         pacienteForm.Close()

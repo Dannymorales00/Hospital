@@ -10,13 +10,9 @@
 
 
                 'For i As Integer = 0 To Result.Count - 1
-
                 '    medico.cedula = Result.ElementAt(i).cedula
                 '    medico.nombre = Result.ElementAt(i).nombre
-
                 '    listaMedicos.Add(medico)
-
-
                 '    MsgBox(listaMedicos.ElementAt(i).nombre)
                 'Next
                 For Each medico1 As sp_buscar_medico_Result In Result
@@ -27,10 +23,6 @@
                     listaMedicos.Add(medico2)
 
                 Next
-
-                MsgBox(listaMedicos.ElementAt(0).nombre)
-                MsgBox(listaMedicos.ElementAt(1).nombre)
-                MsgBox(listaMedicos.ElementAt(2).nombre)
                 Return listaMedicos
 
             End Using
