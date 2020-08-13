@@ -98,9 +98,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\ControladorCita.vb" />
+    <Compile Include="Controladores\ControladorMedico.vb" />
     <Compile Include="Controladores\ControladorPaciente.vb" />
     <Compile Include="Controladores\ControladorPersonaContacto.vb" />
     <Compile Include="Controladores\ControladorUsuario.vb" />
+    <Compile Include="Modelos\BuscarMedico.Designer.vb">
+      <DependentUpon>BuscarMedico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\BuscarMedico.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modelos\Citas.vb" />
     <Compile Include="Modelos\ConsultaMedica.vb" />
     <Compile Include="Modelos\Enfermedad.vb" />
@@ -224,6 +231,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Modelos\BuscarMedico.resx">
+      <DependentUpon>BuscarMedico.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\BuscarPaciente.resx">
       <DependentUpon>BuscarPaciente.vb</DependentUpon>
     </EmbeddedResource>
