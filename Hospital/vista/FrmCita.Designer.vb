@@ -34,14 +34,15 @@ Partial Class FrmCita
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimeHora = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.DateTimePickerAgregar = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimeFecha = New System.Windows.Forms.DateTimePicker()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnRegistrar
         '
+        Me.BtnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRegistrar.Location = New System.Drawing.Point(31, 328)
         Me.BtnRegistrar.Name = "BtnRegistrar"
         Me.BtnRegistrar.Size = New System.Drawing.Size(124, 46)
@@ -81,6 +82,7 @@ Partial Class FrmCita
         '
         'BtnPaciente
         '
+        Me.BtnPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnPaciente.Location = New System.Drawing.Point(143, 196)
         Me.BtnPaciente.Name = "BtnPaciente"
         Me.BtnPaciente.Size = New System.Drawing.Size(224, 31)
@@ -90,6 +92,7 @@ Partial Class FrmCita
         '
         'BtnMedico
         '
+        Me.BtnMedico.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMedico.Location = New System.Drawing.Point(143, 264)
         Me.BtnMedico.Name = "BtnMedico"
         Me.BtnMedico.Size = New System.Drawing.Size(224, 32)
@@ -151,15 +154,16 @@ Partial Class FrmCita
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Fecha"
         '
-        'DateTimePicker1
+        'DateTimeHora
         '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker1.Location = New System.Drawing.Point(140, 145)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.ShowUpDown = True
-        Me.DateTimePicker1.Size = New System.Drawing.Size(112, 24)
-        Me.DateTimePicker1.TabIndex = 12
+        Me.DateTimeHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimeHora.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimeHora.Location = New System.Drawing.Point(140, 145)
+        Me.DateTimeHora.Name = "DateTimeHora"
+        Me.DateTimeHora.ShowUpDown = True
+        Me.DateTimeHora.Size = New System.Drawing.Size(122, 24)
+        Me.DateTimeHora.TabIndex = 12
+        Me.DateTimeHora.Value = New Date(2020, 8, 13, 17, 30, 58, 0)
         '
         'Label5
         '
@@ -171,24 +175,24 @@ Partial Class FrmCita
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Hora"
         '
-        'DateTimePickerAgregar
+        'DateTimeFecha
         '
-        Me.DateTimePickerAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePickerAgregar.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePickerAgregar.Location = New System.Drawing.Point(140, 80)
-        Me.DateTimePickerAgregar.Margin = New System.Windows.Forms.Padding(4)
-        Me.DateTimePickerAgregar.Name = "DateTimePickerAgregar"
-        Me.DateTimePickerAgregar.Size = New System.Drawing.Size(136, 24)
-        Me.DateTimePickerAgregar.TabIndex = 14
+        Me.DateTimeFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimeFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimeFecha.Location = New System.Drawing.Point(140, 80)
+        Me.DateTimeFecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.DateTimeFecha.Name = "DateTimeFecha"
+        Me.DateTimeFecha.Size = New System.Drawing.Size(136, 24)
+        Me.DateTimeFecha.TabIndex = 14
         '
         'FrmCita
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1085, 386)
-        Me.Controls.Add(Me.DateTimePickerAgregar)
+        Me.Controls.Add(Me.DateTimeFecha)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.DateTimeHora)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.DataGridView1)
@@ -221,7 +225,7 @@ Partial Class FrmCita
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DateTimeHora As DateTimePicker
     Friend WithEvents Label5 As Label
-    Friend WithEvents DateTimePickerAgregar As DateTimePicker
+    Friend WithEvents DateTimeFecha As DateTimePicker
 End Class

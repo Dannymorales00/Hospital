@@ -26,11 +26,19 @@
         medico = New Medico()
 
         If Not (TxtCedula.Text.Equals("")) Then
-            medico.cedula = Val(TxtCedula.Text)
+            medico.cedula = CInt(TxtCedula.Text)
             listaMedicos = controladorMedico.Buscar(medico)
             DataGridViewMedicos.DataSource = listaMedicos
         End If
     End Sub
+
+    Private Sub TxtCedula_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TxtCedula.KeyPress
+
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
 
     Private Sub BtnSeleccionar_Click(sender As Object, e As EventArgs) Handles BtnSeleccionar.Click
 
