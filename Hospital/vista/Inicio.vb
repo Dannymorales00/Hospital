@@ -51,6 +51,13 @@
 
             End Using
 
+            Using almacen1 = New ProyectoEntities1
+
+
+
+
+            End Using
+
 
         Catch ex As Exception
             MsgBox("Error al validar el usuario")
@@ -94,7 +101,7 @@
     End Sub
 
     Private Sub Entrar()
-        Dim frmPrincipal = New FrmPrincipal()
+        Dim frmPrincipal = New FrmPrincipal(usuario)
         frmPrincipal.Show()
         Me.Hide()
 

@@ -2,6 +2,12 @@
 
 Public Class FrmPrincipal
 
+    Public Sub New(usuario As Usuario)
+
+        InitializeComponent()
+
+    End Sub
+
 
 
 
