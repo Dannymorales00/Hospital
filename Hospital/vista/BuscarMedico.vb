@@ -14,7 +14,7 @@
 
     Private Sub BuscarMedico_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         medico = New Medico()
-
+        medicoSeleccionado = New Medico()
         controladorMedico = New ControladorMedico()
 
 

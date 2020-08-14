@@ -28,14 +28,14 @@
         medico = medicoForm.P_Medico
         medicoForm.Close()
 
-        If Not medico.cedula = Nothing Then
+        If Not medico.cedula = 0 Then
             LblMedico.Text = medico.cedula.ToString
         End If
 
     End Sub
 
     Public Function comprobarRegistrar() As Boolean
-        Return Not (TxtRegistrarEspecialidad.Equals("") And DateTimeFecha.Checked And DateTimeHora.Checked And paciente IsNot Nothing And medico IsNot Nothing)
+        Return (TxtRegistrarEspecialidad IsNot Nothing And DateTimeFecha.Checked And DateTimeHora.Checked And paciente IsNot Nothing And medico IsNot Nothing)
     End Function
     Private Sub BtnMedico_Click(sender As Object, e As EventArgs) Handles BtnMedico.Click
         cargarMedico()
