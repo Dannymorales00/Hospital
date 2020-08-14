@@ -471,4 +471,12 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_pacientes_Result)("sp_buscar_pacientes", cedulaParameter)
     End Function
 
+    Public Overridable Function sp_Buscar_usuario2(nombreUsuario As String, contraseña As String) As ObjectResult(Of sp_Buscar_usuario2_Result)
+        Dim nombreUsuarioParameter As ObjectParameter = If(nombreUsuario IsNot Nothing, New ObjectParameter("nombreUsuario", nombreUsuario), New ObjectParameter("nombreUsuario", GetType(String)))
+
+        Dim contraseñaParameter As ObjectParameter = If(contraseña IsNot Nothing, New ObjectParameter("contraseña", contraseña), New ObjectParameter("contraseña", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_Buscar_usuario2_Result)("sp_Buscar_usuario2", nombreUsuarioParameter, contraseñaParameter)
+    End Function
+
 End Class

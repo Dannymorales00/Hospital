@@ -75,6 +75,10 @@
         <Function Name="sp_buscar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="int" Mode="In" />
         </Function>
+        <Function Name="sp_Buscar_usuario2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombreUsuario" Type="varchar" Mode="In" />
+          <Parameter Name="contraseña" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="sp_eliminar_cita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
         </Function>
@@ -451,6 +455,10 @@
           <FunctionImport Name="sp_buscar_pacientes" ReturnType="Collection(ProyectoModel.sp_buscar_pacientes_Result)">
           <Parameter Name="cedula" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="sp_Buscar_usuario2" ReturnType="Collection(ProyectoModel.sp_Buscar_usuario2_Result)">
+            <Parameter Name="nombreUsuario" Mode="In" Type="String" />
+            <Parameter Name="contraseña" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_buscar_enfermedad_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -521,6 +529,16 @@
           <Property Type="String" Name="Dirección" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Nombre_Paciente" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="Paciente" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_Buscar_usuario2_Result">
+          <Property Type="Int32" Name="cedula" Nullable="false" />
+          <Property Type="String" Name="contraseña" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="correo" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaNacimiento" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="nombreUsuario" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="telefono" Nullable="false" />
+          <Property Type="String" Name="tipo" Nullable="false" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -663,6 +681,20 @@
                 <ScalarProperty Name="altura" ColumnName="altura" />
                 <ScalarProperty Name="telefono" ColumnName="telefono" />
                 <ScalarProperty Name="tipoSangre" ColumnName="tipoSangre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Buscar_usuario2" FunctionName="ProyectoModel.Store.sp_Buscar_usuario2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_Buscar_usuario2_Result">
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

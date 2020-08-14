@@ -102,6 +102,9 @@
     <Compile Include="Controladores\ControladorPaciente.vb" />
     <Compile Include="Controladores\ControladorPersonaContacto.vb" />
     <Compile Include="Controladores\ControladorUsuario.vb" />
+    <Compile Include="sp_Buscar_usuario2_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="vista\BuscarMedico.Designer.vb">
       <DependentUpon>BuscarMedico.vb</DependentUpon>
     </Compile>
