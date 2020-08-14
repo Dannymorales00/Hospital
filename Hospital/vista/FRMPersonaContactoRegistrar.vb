@@ -1,6 +1,15 @@
 ﻿Public Class FRMPersonaContactoRegistrar
     Dim conPersonaContacto As New ControladorPersonaContacto
-    Dim personaContacto As New PersonaContacto
+    Private _personaContacto As PersonaContacto
+
+    Property personaContacto As PersonaContacto
+        Get
+            Return _personaContacto
+        End Get
+        Set
+            _personaContacto = Value
+        End Set
+    End Property
 
     Sub limpiarCampos()
         nombreTxt.Text = ""

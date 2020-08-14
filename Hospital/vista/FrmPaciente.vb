@@ -6,12 +6,23 @@
 
     Private paciente As Paciente
     Private controladorPaciente As New ControladorPaciente()
+    Private controladorPersonaContacto As New ControladorPersonaContacto
+    Private personaContacto As New PersonaContacto()
+    Public Function comprobarAgregar() As Boolean
+        Return Not (TxtRegistroCedula.Text = "" And TxtRegistroNombre.Text = "" And TxtAltura.Text = "" And TxtCorreo.Text = "" And TxtEdad.Text = "" And btnPersonaContacto.Text = "Persona Contacto" And TxtPeso.Text = "" And TxtTelefono.Text = "" And ComboTipoSangre.SelectedIndex < 0 And DateTimePicker1.Checked)
 
+    End Function
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnRegistrar.Click
         If comprobarAgregar() Then
             paciente = New Paciente(Val(TxtRegistroCedula.Text), TxtRegistroNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipoSangre.SelectedItem.ToString)
             If controladorPaciente.registrar(paciente) = 1 Then
-                MsgBox("se agrego correctamente el paciente")
+                MsgBox("Se agrego correctamente el paciente")
+                If controladorPersonaContacto.registrar(personaContacto) Then
+                    MsgBox("Se agrego el contacto la persona contacto ")
+
+                Else
+                    MsgBox("Error al agregar el contacto del paciente")
+                End If
             Else
                 MsgBox("No se agrego el paciente")
             End If
@@ -54,14 +65,25 @@
         End If
     End Sub
 
-    Public Function comprobarAgregar()
-        Return Not (TxtRegistroCedula.Text.Equals("") AndAlso TxtRegistroNombre.Text.Equals("") AndAlso TxtAltura.Text.Equals("") AndAlso TxtCorreo.Text.Equals("") AndAlso TxtEdad.Text.Equals("") AndAlso TxtPeso.Text.Equals("") AndAlso TxtTelefono.Text.Equals("") AndAlso ComboTipoSangre.SelectedIndex < 0 AndAlso DateTimePicker1.Checked)
-    End Function
+
 
     Public Function comprabarActualizar() As Boolean
         Return Not (TxtActualizarCedula.Text.Equals("") AndAlso TxtActualizarNombre.Text.Equals("") AndAlso TxtActualizarAltura.Text.Equals("") AndAlso TxtActualizarCorreo.Text.Equals("") AndAlso TxtActualizarEdad.Text.Equals("") AndAlso TxtActualizarPeso.Text.Equals("") AndAlso TxtActualizarTelefono.Text.Equals("") AndAlso ComboTipo2.SelectedIndex < 0 AndAlso DateTimePicker2.Checked)
     End Function
 
+    Sub limpiarCampos()
+        TxtRegistroCedula.Text = ""
+        TxtRegistroNombre.Text = ""
+        DateTimePicker1.ResetText()
+        TxtTelefono.Text = ""
+        TxtCorreo.Text = ""
+        TxtEdad.Text = ""
+        TxtAltura.Text = ""
+        TxtPeso.Text = ""
+        btnPersonaContacto.Text = "Persona Contacto"
+        ComboTipoSangre.ResetText()
+
+    End Sub
     Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
         If comprabarActualizar() Then
             paciente = New Paciente(Val(TxtActualizarCedula.Text), TxtActualizarNombre.Text, DateTimePicker2.Value.ToString("yyyy-MM-dd"), Val(TxtActualizarTelefono.Text), TxtActualizarCorreo.Text, Val(TxtActualizarEdad.Text), Val(TxtActualizarPeso.Text), Val(TxtActualizarAltura.Text), ComboTipo2.SelectedItem.ToString)
@@ -82,6 +104,27 @@
         paciente = New Paciente()
         paciente.cedula = Val(TxtBuscarCedula.Text)
         Dim result = controladorPaciente.cargar(paciente)
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnPersonaContacto.Click
+        If TxtRegistroNombre.Text = "" And TxtRegistroCedula.Text = "" Then
+            MsgBox("Tiene que rellenar los campos Nombre y Cedula primero")
+        Else
+            personaContacto = New PersonaContacto
+            Dim frmPersonaContacto As New FRMPersonaContactoRegistrar
+            frmPersonaContacto.labelCedula.Text = TxtRegistroCedula.Text
+            frmPersonaContacto.labelNombre.Text = TxtRegistroNombre.Text
+            frmPersonaContacto.ShowDialog()
+            personaContacto = frmPersonaContacto.personaContacto
+            Try
+                btnPersonaContacto.Text = personaContacto.nombreCompleto
+            Catch ex As Exception
+                MsgBox("No se registro un paciente")
+            End Try
+
+            frmPersonaContacto.Close()
+        End If
 
     End Sub
 End Class
