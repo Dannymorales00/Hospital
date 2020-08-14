@@ -1,10 +1,11 @@
-﻿Public Class FrmPrincipal
-    Private Sub BtnUsuarios_Click(sender As Object, e As EventArgs) Handles BtnUsuarios.Click
-        Dim frmUsuarios = New FrmUsuario()
-        frmUsuarios.Show()
+﻿Imports System.ComponentModel
+
+Public Class FrmPrincipal
 
 
-    End Sub
+
+
+
 
 
     'Private Sub FrmPrincipal(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing

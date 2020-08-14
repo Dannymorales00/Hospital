@@ -1,5 +1,5 @@
 ﻿Public Class FrmLogin
-
+    Private usuario As Usuario
     Private nombreUsuario As String
     Private Contraseña As String
 
