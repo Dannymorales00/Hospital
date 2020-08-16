@@ -22,25 +22,13 @@ Partial Class FrmPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.BtnUsuarios = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PerfilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuPerfilNombreUSuario = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuPerfilTipo = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnUsuarios = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'BtnUsuarios
-        '
-        Me.BtnUsuarios.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.BtnUsuarios.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnUsuarios.ForeColor = System.Drawing.Color.DimGray
-        Me.BtnUsuarios.Location = New System.Drawing.Point(28, 49)
-        Me.BtnUsuarios.Name = "BtnUsuarios"
-        Me.BtnUsuarios.Size = New System.Drawing.Size(85, 59)
-        Me.BtnUsuarios.TabIndex = 0
-        Me.BtnUsuarios.Text = "Usuarios"
-        Me.BtnUsuarios.UseVisualStyleBackColor = False
         '
         'MenuStrip1
         '
@@ -70,6 +58,16 @@ Partial Class FrmPrincipal
         Me.MenuPerfilTipo.Size = New System.Drawing.Size(192, 22)
         Me.MenuPerfilTipo.Text = "sin tipo"
         '
+        'BtnUsuarios
+        '
+        Me.BtnUsuarios.BackgroundImage = Global.Hospital.My.Resources.Resources.usuariospng
+        Me.BtnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnUsuarios.Location = New System.Drawing.Point(53, 63)
+        Me.BtnUsuarios.Name = "BtnUsuarios"
+        Me.BtnUsuarios.Size = New System.Drawing.Size(79, 60)
+        Me.BtnUsuarios.TabIndex = 2
+        Me.BtnUsuarios.UseVisualStyleBackColor = True
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -89,10 +87,9 @@ Partial Class FrmPrincipal
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents BtnUsuarios As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents PerfilToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuPerfilNombreUSuario As ToolStripMenuItem
     Friend WithEvents MenuPerfilTipo As ToolStripMenuItem
+    Friend WithEvents BtnUsuarios As Button
 End Class

@@ -318,6 +318,7 @@
       <DependentUpon>ProyectoEntities.edmx</DependentUpon>
       <LastGenOutput>ProyectoEntities.vb</LastGenOutput>
     </Content>
+    <None Include="Resources\usuariospng.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
