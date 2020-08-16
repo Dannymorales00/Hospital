@@ -413,7 +413,7 @@
             <Parameter Name="medicamento" Mode="In" Type="String" />
             <Parameter Name="descripcion" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="sp_validar_usuario" ReturnType="Collection(Int32)">
+          <FunctionImport Name="sp_validar_usuario" ReturnType="Collection(ProyectoModel.sp_validar_usuario_Result)">
             <Parameter Name="nombreUsuario" Mode="In" Type="String" />
             <Parameter Name="contraseña" Mode="In" Type="String" />
           </FunctionImport>
@@ -540,6 +540,16 @@
           <Property Type="Int32" Name="telefono" Nullable="false" />
           <Property Type="String" Name="tipo" Nullable="false" MaxLength="50" />
         </ComplexType>
+        <ComplexType Name="sp_validar_usuario_Result">
+          <Property Type="Int32" Name="cedula" Nullable="false" />
+          <Property Type="String" Name="contraseña" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="correo" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaNacimiento" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="nombreUsuario" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="telefono" Nullable="false" />
+          <Property Type="String" Name="tipo" Nullable="false" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -643,7 +653,20 @@
           <FunctionImportMapping FunctionImportName="sp_update_cita" FunctionName="ProyectoModel.Store.sp_update_cita" />
           <FunctionImportMapping FunctionImportName="sp_update_medicamento_alergico" FunctionName="ProyectoModel.Store.sp_update_medicamento_alergico" />
           <FunctionImportMapping FunctionImportName="sp_update_medicamento_recetado" FunctionName="ProyectoModel.Store.sp_update_medicamento_recetado" />
-          <FunctionImportMapping FunctionImportName="sp_validar_usuario" FunctionName="ProyectoModel.Store.sp_validar_usuario" />
+          <FunctionImportMapping FunctionImportName="sp_validar_usuario" FunctionName="ProyectoModel.Store.sp_validar_usuario" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_validar_usuario_Result">
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_actualizar_persona_contacto" FunctionName="ProyectoModel.Store.sp_actualizar_persona_contacto" />
           <FunctionImportMapping FunctionImportName="sp_actualizar_usuario" FunctionName="ProyectoModel.Store.sp_actualizar_usuario" />
           <FunctionImportMapping FunctionImportName="sp_eliminar_persona_contacto" FunctionName="ProyectoModel.Store.sp_eliminar_persona_contacto" />
