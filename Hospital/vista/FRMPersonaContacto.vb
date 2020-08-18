@@ -51,7 +51,7 @@
                 Else
                     MsgBox("Error al actualizar la persona")
                 End If
-        End If
+            End If
             cargarTabla()
             limpiarCampos()
 

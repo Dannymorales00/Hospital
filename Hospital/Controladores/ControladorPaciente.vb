@@ -32,7 +32,7 @@
         Dim paciente2 As Paciente = New Paciente()
         Try
             Using Almacen As New ProyectoEntities1
-                Dim result = Almacen.sp_buscar_paciente(Val(paciente.cedula)).SingleOrDefault
+                Dim result = Almacen.sp_buscar_paciente(CInt(paciente.cedula)).SingleOrDefault
 
 
                 paciente2.nombre = result.nombre

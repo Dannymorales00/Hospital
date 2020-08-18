@@ -337,8 +337,10 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_registrar_usuario", cedulaParameter, contraseñaParameter, correoParameter, fechaNacimientoParameter, nombreParameter, nombreUsuarioParameter, telefonoParameter, tipoParameter)
     End Function
 
-    Public Overridable Function sp_select_citas() As ObjectResult(Of sp_select_citas_Result)
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_select_citas_Result)("sp_select_citas")
+    Public Overridable Function sp_select_citas(cedula As String) As ObjectResult(Of sp_select_citas_Result)
+        Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_select_citas_Result)("sp_select_citas", cedulaParameter)
     End Function
 
     Public Overridable Function sp_select_medicamento_alergico() As ObjectResult(Of sp_select_medicamento_alergico_Result)

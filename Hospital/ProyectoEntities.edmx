@@ -196,7 +196,9 @@
           <Parameter Name="telefono" Type="varchar" Mode="In" />
           <Parameter Name="tipo" Type="varchar" Mode="In" />
         </Function>
-        <Function Name="sp_select_citas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_select_citas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="sp_select_medicamento_alergico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_select_medicamentos_recetados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_select_persona_contacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -387,7 +389,9 @@
             <Parameter Name="telefono" Mode="In" Type="String" />
             <Parameter Name="tipo" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="sp_select_citas" ReturnType="Collection(ProyectoModel.sp_select_citas_Result)" />
+          <FunctionImport Name="sp_select_citas" ReturnType="Collection(ProyectoModel.sp_select_citas_Result)" >
+            <Parameter Name="cedula" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="sp_select_medicamento_alergico" ReturnType="Collection(ProyectoModel.sp_select_medicamento_alergico_Result)" />
           <FunctionImport Name="sp_select_medicamentos_recetados" ReturnType="Collection(ProyectoModel.sp_select_medicamentos_recetados_Result)" />
           <FunctionImport Name="sp_update_cita" ReturnType="Collection(Int32)">
