@@ -24,7 +24,7 @@ Partial Class FrmLogin
     Private Sub InitializeComponent()
         Me.LblUsuario = New System.Windows.Forms.Label()
         Me.LblContraseña = New System.Windows.Forms.Label()
-        Me.TxtUsuario = New System.Windows.Forms.TextBox()
+        Me.TxtNombreUsuario = New System.Windows.Forms.TextBox()
         Me.TxtContraseña = New System.Windows.Forms.TextBox()
         Me.GrupoIniciar = New System.Windows.Forms.GroupBox()
         Me.BtnIngresar = New System.Windows.Forms.Button()
@@ -53,10 +53,10 @@ Partial Class FrmLogin
         '
         'TxtUsuario
         '
-        Me.TxtUsuario.Location = New System.Drawing.Point(46, 58)
-        Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(134, 21)
-        Me.TxtUsuario.TabIndex = 2
+        Me.TxtNombreUsuario.Location = New System.Drawing.Point(46, 58)
+        Me.TxtNombreUsuario.Name = "TxtUsuario"
+        Me.TxtNombreUsuario.Size = New System.Drawing.Size(134, 21)
+        Me.TxtNombreUsuario.TabIndex = 2
         '
         'TxtContraseña
         '
@@ -73,7 +73,7 @@ Partial Class FrmLogin
         Me.GrupoIniciar.Controls.Add(Me.LblUsuario)
         Me.GrupoIniciar.Controls.Add(Me.TxtContraseña)
         Me.GrupoIniciar.Controls.Add(Me.LblContraseña)
-        Me.GrupoIniciar.Controls.Add(Me.TxtUsuario)
+        Me.GrupoIniciar.Controls.Add(Me.TxtNombreUsuario)
         Me.GrupoIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GrupoIniciar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrupoIniciar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
@@ -119,7 +119,7 @@ Partial Class FrmLogin
 
     Friend WithEvents LblUsuario As Label
     Friend WithEvents LblContraseña As Label
-    Friend WithEvents TxtUsuario As TextBox
+    Friend WithEvents TxtNombreUsuario As TextBox
     Friend WithEvents TxtContraseña As TextBox
     Friend WithEvents GrupoIniciar As GroupBox
     Friend WithEvents BtnIngresar As Button

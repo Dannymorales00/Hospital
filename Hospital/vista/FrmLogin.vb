@@ -1,28 +1,13 @@
 ﻿Public Class FrmLogin
     Private usuario As Usuario
-    Private nombreUsuario As String
-    Private Contraseña As String
+    Private usuarioParametro As Usuario
 
-    Public Property P_NombreUsuario As String
-        Get
-            Return nombreUsuario
-        End Get
-        Set(value As String)
-            nombreUsuario = value
-        End Set
-    End Property
 
-    Public Property P_Contraseña As String
-        Get
-            Return Contraseña
-        End Get
-        Set(value As String)
-            Contraseña = value
-        End Set
-    End Property
+
 
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        usuario = New Usuario()
+        usuarioParametro = New Usuario()
         AjustarGrupoControles()
 
 
@@ -30,34 +15,27 @@
 
     Private Function ValidarTxt() As Boolean
 
-        Return Not (TxtUsuario.Text.Equals("")) AndAlso Not (TxtContraseña.Text.Equals(""))
+        Return Not (TxtNombreUsuario.Text.Equals("")) And Not (TxtContraseña.Text.Equals(""))
 
     End Function
 
 
 
     Private Function ValidarUSuario() As Integer
-        Dim Result As Integer = 0
 
         Try
 
-
-
-
             Using almacen = New ProyectoEntities1
 
-                Result = almacen.sp_validar_usuario(P_NombreUsuario, P_Contraseña).SingleOrDefault
+                Dim Result = almacen.sp_validar_usuario(usuario.nombreUsuario, usuario.contrasena).ToList
 
-
-            End Using
-
-            Using almacen1 = New ProyectoEntities1
-
-
-
+                If Result.Count > 0 Then
+                    usuarioParametro.nombreUsuario = Result.ElementAt(0).nombreUsuario
+                    usuarioParametro.tipo = Result.ElementAt(0).tipo
+                    Return 1
+                End If
 
             End Using
-
 
         Catch ex As Exception
             MsgBox("Error al validar el usuario")
@@ -65,7 +43,7 @@
         End Try
 
 
-        Return Result
+        Return 0
     End Function
 
     Private Sub AjustarGrupoControles()
@@ -79,8 +57,9 @@
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
 
         If ValidarTxt() Then
-            P_NombreUsuario = TxtUsuario.Text
-            P_Contraseña = TxtContraseña.Text
+            usuario = New Usuario()
+            usuario.nombreUsuario = TxtNombreUsuario.Text
+            usuario.contrasena = TxtContraseña.Text
 
             If ValidarUSuario() = 1 Then
                 MsgBox("Bienvenido")
@@ -91,7 +70,8 @@
 
             End If
 
-
+        Else
+            MsgBox("Debe Ingresar un usuario y una contraseña")
 
         End If
 
@@ -101,12 +81,10 @@
     End Sub
 
     Private Sub Entrar()
-        Dim frmPrincipal = New FrmPrincipal(usuario)
+
+        Dim frmPrincipal = New FrmPrincipal(usuarioParametro)
         frmPrincipal.Show()
         Me.Hide()
-
-
-
 
     End Sub
 

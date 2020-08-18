@@ -389,12 +389,12 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_update_medicamento_recetado", idParameter, idConsultaParameter, medicamentoParameter, descripcionParameter)
     End Function
 
-    Public Overridable Function sp_validar_usuario(nombreUsuario As String, contraseña As String) As ObjectResult(Of Nullable(Of Integer))
+    Public Overridable Function sp_validar_usuario(nombreUsuario As String, contraseña As String) As ObjectResult(Of sp_validar_usuario_Result)
         Dim nombreUsuarioParameter As ObjectParameter = If(nombreUsuario IsNot Nothing, New ObjectParameter("nombreUsuario", nombreUsuario), New ObjectParameter("nombreUsuario", GetType(String)))
 
         Dim contraseñaParameter As ObjectParameter = If(contraseña IsNot Nothing, New ObjectParameter("contraseña", contraseña), New ObjectParameter("contraseña", GetType(String)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_validar_usuario", nombreUsuarioParameter, contraseñaParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_validar_usuario_Result)("sp_validar_usuario", nombreUsuarioParameter, contraseñaParameter)
     End Function
 
     Public Overridable Function sp_actualizar_persona_contacto(cedula As Nullable(Of Integer), nombre As String, relacionFamiliar As String, telefono As String, direccion As String, cPaciente As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
@@ -471,6 +471,14 @@ Partial Public Class ProyectoEntities1
         Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
 
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_pacientes_Result)("sp_buscar_pacientes", cedulaParameter)
+    End Function
+
+    Public Overridable Function sp_Buscar_usuario2(nombreUsuario As String, contraseña As String) As ObjectResult(Of sp_Buscar_usuario2_Result)
+        Dim nombreUsuarioParameter As ObjectParameter = If(nombreUsuario IsNot Nothing, New ObjectParameter("nombreUsuario", nombreUsuario), New ObjectParameter("nombreUsuario", GetType(String)))
+
+        Dim contraseñaParameter As ObjectParameter = If(contraseña IsNot Nothing, New ObjectParameter("contraseña", contraseña), New ObjectParameter("contraseña", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_Buscar_usuario2_Result)("sp_Buscar_usuario2", nombreUsuarioParameter, contraseñaParameter)
     End Function
 
 End Class

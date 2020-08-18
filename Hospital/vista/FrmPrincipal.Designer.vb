@@ -22,36 +22,74 @@ Partial Class FrmPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.PerfilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuPerfilNombreUSuario = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuPerfilTipo = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnUsuarios = New System.Windows.Forms.Button()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PerfilToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(917, 24)
+        Me.MenuStrip1.TabIndex = 1
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'PerfilToolStripMenuItem
+        '
+        Me.PerfilToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuPerfilNombreUSuario, Me.MenuPerfilTipo})
+        Me.PerfilToolStripMenuItem.Name = "PerfilToolStripMenuItem"
+        Me.PerfilToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
+        Me.PerfilToolStripMenuItem.Text = "Perfil"
+        '
+        'MenuPerfilNombreUSuario
+        '
+        Me.MenuPerfilNombreUSuario.Name = "MenuPerfilNombreUSuario"
+        Me.MenuPerfilNombreUSuario.Size = New System.Drawing.Size(192, 22)
+        Me.MenuPerfilNombreUSuario.Text = "sin nombre de usuario"
+        '
+        'MenuPerfilTipo
+        '
+        Me.MenuPerfilTipo.Name = "MenuPerfilTipo"
+        Me.MenuPerfilTipo.Size = New System.Drawing.Size(192, 22)
+        Me.MenuPerfilTipo.Text = "sin tipo"
         '
         'BtnUsuarios
         '
-        Me.BtnUsuarios.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnUsuarios.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.BtnUsuarios.Location = New System.Drawing.Point(63, 70)
-        Me.BtnUsuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnUsuarios.BackgroundImage = Global.Hospital.My.Resources.Resources.usuariospng
+        Me.BtnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnUsuarios.Location = New System.Drawing.Point(53, 63)
         Me.BtnUsuarios.Name = "BtnUsuarios"
-        Me.BtnUsuarios.Size = New System.Drawing.Size(135, 82)
-        Me.BtnUsuarios.TabIndex = 0
-        Me.BtnUsuarios.Text = "Usuarios"
+        Me.BtnUsuarios.Size = New System.Drawing.Size(79, 60)
+        Me.BtnUsuarios.TabIndex = 2
         Me.BtnUsuarios.UseVisualStyleBackColor = True
         '
         'FrmPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1223, 604)
+        Me.ClientSize = New System.Drawing.Size(917, 491)
         Me.Controls.Add(Me.BtnUsuarios)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmPrincipal"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents PerfilToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuPerfilNombreUSuario As ToolStripMenuItem
+    Friend WithEvents MenuPerfilTipo As ToolStripMenuItem
     Friend WithEvents BtnUsuarios As Button
 End Class
