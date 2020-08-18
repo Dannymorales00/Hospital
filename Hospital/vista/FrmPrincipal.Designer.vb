@@ -27,6 +27,7 @@ Partial Class FrmPrincipal
         Me.MenuPerfilNombreUSuario = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuPerfilTipo = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnUsuarios = New System.Windows.Forms.Button()
+        Me.BtnEnfermedades = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -68,12 +69,22 @@ Partial Class FrmPrincipal
         Me.BtnUsuarios.TabIndex = 2
         Me.BtnUsuarios.UseVisualStyleBackColor = True
         '
+        'BtnEnfermedades
+        '
+        Me.BtnEnfermedades.Location = New System.Drawing.Point(277, 68)
+        Me.BtnEnfermedades.Name = "BtnEnfermedades"
+        Me.BtnEnfermedades.Size = New System.Drawing.Size(112, 50)
+        Me.BtnEnfermedades.TabIndex = 3
+        Me.BtnEnfermedades.Text = "Enfermedades"
+        Me.BtnEnfermedades.UseVisualStyleBackColor = True
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(917, 491)
+        Me.Controls.Add(Me.BtnEnfermedades)
         Me.Controls.Add(Me.BtnUsuarios)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -92,4 +103,5 @@ Partial Class FrmPrincipal
     Friend WithEvents MenuPerfilNombreUSuario As ToolStripMenuItem
     Friend WithEvents MenuPerfilTipo As ToolStripMenuItem
     Friend WithEvents BtnUsuarios As Button
+    Friend WithEvents BtnEnfermedades As Button
 End Class

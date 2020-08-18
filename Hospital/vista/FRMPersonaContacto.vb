@@ -120,4 +120,72 @@
     Private Sub cedulaBuscarTxt_TextChanged(sender As Object, e As EventArgs) Handles cedulaBuscarTxt.TextChanged
         cargarTabla()
     End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
+    End Sub
+
+    Private Sub labelNombre_Click(sender As Object, e As EventArgs) Handles labelNombre.Click
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub labelCedula_Click(sender As Object, e As EventArgs) Handles labelCedula.Click
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub telefonoTxt_TextChanged(sender As Object, e As EventArgs) Handles telefonoTxt.TextChanged
+
+    End Sub
+
+    Private Sub tablaPersonas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles tablaPersonas.CellContentClick
+
+    End Sub
+
+    Private Sub relacionTxt_TextChanged(sender As Object, e As EventArgs) Handles relacionTxt.TextChanged
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
+
+    Private Sub cedulaTxt_TextChanged(sender As Object, e As EventArgs) Handles cedulaTxt.TextChanged
+
+    End Sub
+
+    Private Sub direccionTxt_TextChanged(sender As Object, e As EventArgs) Handles direccionTxt.TextChanged
+
+    End Sub
+
+    Private Sub nombreTxt_TextChanged(sender As Object, e As EventArgs) Handles nombreTxt.TextChanged
+
+    End Sub
 End Class
