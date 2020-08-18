@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9C6A551C-6C30-4443-81E8-7EB775E13ADD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Hospital.FrmLogin</StartupObject>
+    <StartupObject>Hospital.FrmEnfermedad</StartupObject>
     <RootNamespace>Hospital</RootNamespace>
     <AssemblyName>Hospital</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\ControladorCita.vb" />
+    <Compile Include="Controladores\ControladorEnfermedad.vb" />
     <Compile Include="Controladores\ControladorMedico.vb" />
     <Compile Include="Controladores\ControladorPaciente.vb" />
     <Compile Include="Controladores\ControladorPersonaContacto.vb" />
@@ -183,6 +184,12 @@
     <Compile Include="vista\FrmCita.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\FrmEnfermedad.Designer.vb">
+      <DependentUpon>FrmEnfermedad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\FRMPersonaContacto.Designer.vb">
       <DependentUpon>FRMPersonaContacto.vb</DependentUpon>
     </Compile>
@@ -246,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmCita.resx">
       <DependentUpon>FrmCita.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmEnfermedad.resx">
+      <DependentUpon>FrmEnfermedad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FRMPersonaContacto.resx">
       <DependentUpon>FRMPersonaContacto.vb</DependentUpon>

@@ -5,6 +5,11 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="ProyectoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="sp_actualizar_enfermedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="enfermedad" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="sp_actualizar_ExamenOrina" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="idConsulta" Type="int" Mode="In" />
@@ -53,7 +58,7 @@
           <Parameter Name="tipo" Type="varchar" Mode="In" />
         </Function>
         <Function Name="sp_buscar_enfermedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="cedulaPaciente" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_buscar_ExamenOrina" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
@@ -83,7 +88,8 @@
           <Parameter Name="id" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_eliminar_enfermedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="cedula" Type="int" Mode="In" />
+          <Parameter Name="enfermedad" Type="varchar" Mode="In" />
         </Function>
         <Function Name="sp_eliminar_ExamenOrina" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
@@ -267,7 +273,7 @@
             <Parameter Name="tipoSangre" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_buscar_enfermedad" ReturnType="Collection(ProyectoModel.sp_buscar_enfermedad_Result)">
-          <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="cedulaPaciente" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_buscar_ExamenOrina" ReturnType="Collection(Int32)">
             <Parameter Name="id" Mode="In" Type="Int32" />
@@ -287,7 +293,8 @@
           <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_enfermedad" ReturnType="Collection(Int32)">
-          <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+            <Parameter Name="enfermedad" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_ExamenOrina" ReturnType="Collection(Int32)">
             <Parameter Name="id" Mode="In" Type="Int32" />
@@ -394,7 +401,7 @@
             <Parameter Name="tipo" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_select_citas" ReturnType="Collection(ProyectoModel.sp_select_citas_Result)" >
-            <Parameter Name="cedula" Mode="In" Type="String" />
+          <Parameter Name="cedula" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_select_medicamento_alergico" ReturnType="Collection(ProyectoModel.sp_select_medicamento_alergico_Result)" />
           <FunctionImport Name="sp_select_medicamentos_recetados" ReturnType="Collection(ProyectoModel.sp_select_medicamentos_recetados_Result)" />
@@ -462,6 +469,11 @@
           <FunctionImport Name="sp_Buscar_usuario2" ReturnType="Collection(ProyectoModel.sp_Buscar_usuario2_Result)">
             <Parameter Name="nombreUsuario" Mode="In" Type="String" />
             <Parameter Name="contraseña" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_actualizar_enfermedad" ReturnType="Collection(Int32)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="enfermedad" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_buscar_enfermedad_Result">
@@ -725,6 +737,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_actualizar_enfermedad" FunctionName="ProyectoModel.Store.sp_actualizar_enfermedad" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

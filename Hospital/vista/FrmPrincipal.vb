@@ -3,10 +3,12 @@
 Public Class FrmPrincipal
     Private usuario As Usuario
     Private frmUsuario As FrmUsuario
+    Private frmEnfermedades As FrmEnfermedad
 
     Public Sub New(usuario1 As Usuario)
         usuario = New Usuario()
         frmUsuario = New FrmUsuario()
+        frmEnfermedades = New FrmEnfermedad()
         usuario = usuario1
         InitializeComponent()
 
@@ -24,5 +26,9 @@ Public Class FrmPrincipal
     Private Sub BtnUsuarios_Click(sender As Object, e As EventArgs) Handles BtnUsuarios.Click
         frmUsuario.Show()
 
+    End Sub
+
+    Private Sub BtnEnfermedades_Click(sender As Object, e As EventArgs) Handles BtnEnfermedades.Click
+        frmEnfermedades.Show()
     End Sub
 End Class

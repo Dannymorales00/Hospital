@@ -43,7 +43,7 @@
     Private Sub BtnSeleccionar_Click(sender As Object, e As EventArgs) Handles BtnSeleccionar.Click
 
 
-        If DataGridViewMedicos.SelectedRows.Count > 0 Then
+        If DataGridViewMedicos.SelectedRows.Count > 0 And DataGridViewMedicos.SelectedRows.Count < 2 Then
             medico = medicoSeleccionado
             'NumeroDeFilaSeleccionada = DataGridViewMedicos.CurrentRow.Index
 
