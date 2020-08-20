@@ -110,6 +110,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnPersonaContacto.Click
         If TxtRegistroNombre.Text = "" And TxtRegistroCedula.Text = "" Then
             MsgBox("Tiene que rellenar los campos Nombre y Cedula primero")
+
         Else
             personaContacto = New PersonaContacto
             Dim frmPersonaContacto As New FRMPersonaContactoRegistrar
