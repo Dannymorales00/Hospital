@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9C6A551C-6C30-4443-81E8-7EB775E13ADD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Hospital.FrmEnfermedad</StartupObject>
+    <StartupObject>Hospital.FrmMedicamentoAlergicoRegistrar</StartupObject>
     <RootNamespace>Hospital</RootNamespace>
     <AssemblyName>Hospital</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -100,11 +100,20 @@
   <ItemGroup>
     <Compile Include="Controladores\ControladorCita.vb" />
     <Compile Include="Controladores\ControladorEnfermedad.vb" />
+    <Compile Include="Controladores\ControladorMedicamentoAlergico.vb" />
+    <Compile Include="Controladores\ControladorMedicamentos.vb" />
     <Compile Include="Controladores\ControladorMedico.vb" />
     <Compile Include="Controladores\ControladorPaciente.vb" />
     <Compile Include="Controladores\ControladorPersonaContacto.vb" />
     <Compile Include="Controladores\ControladorUsuario.vb" />
+    <Compile Include="Medicamentos.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Medicamentos.vb" />
     <Compile Include="sp_Buscar_usuario2_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_select_medicamentos_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_validar_usuario_Result.vb">
@@ -123,7 +132,7 @@
     <Compile Include="Modelos\Examen.vb" />
     <Compile Include="Modelos\ExamenOrina.vb" />
     <Compile Include="Modelos\ExamenSangre.vb" />
-    <Compile Include="Modelos\Medicamento.vb" />
+    <Compile Include="Modelos\MedicamentoAlergico.vb" />
     <Compile Include="Modelos\MedicamentoRecetado.vb" />
     <Compile Include="Modelos\Medico.vb" />
     <Compile Include="Modelos\Paciente.vb" />
@@ -188,6 +197,12 @@
       <DependentUpon>FrmEnfermedad.vb</DependentUpon>
     </Compile>
     <Compile Include="vista\FrmEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FrmMedicamentoAlergicoRegistrar.Designer.vb">
+      <DependentUpon>FrmMedicamentoAlergicoRegistrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmMedicamentoAlergicoRegistrar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\FRMPersonaContacto.Designer.vb">
@@ -256,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmEnfermedad.resx">
       <DependentUpon>FrmEnfermedad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmMedicamentoAlergicoRegistrar.resx">
+      <DependentUpon>FrmMedicamentoAlergicoRegistrar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FRMPersonaContacto.resx">
       <DependentUpon>FRMPersonaContacto.vb</DependentUpon>
