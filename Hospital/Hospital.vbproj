@@ -193,6 +193,12 @@
     <Compile Include="vista\FrmEnfermedad.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\FrmPacienteEnfermedad.Designer.vb">
+      <DependentUpon>FrmPacienteEnfermedad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmPacienteEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\FRMPersonaContacto.Designer.vb">
       <DependentUpon>FRMPersonaContacto.vb</DependentUpon>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmEnfermedad.resx">
       <DependentUpon>FrmEnfermedad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmPacienteEnfermedad.resx">
+      <DependentUpon>FrmPacienteEnfermedad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FRMPersonaContacto.resx">
       <DependentUpon>FRMPersonaContacto.vb</DependentUpon>

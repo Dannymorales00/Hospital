@@ -52,6 +52,8 @@ Partial Class FrmPaciente
         Me.TxtEliminarCedula = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnPersonaContacto = New System.Windows.Forms.Button()
         Me.ComboTipoSangre = New System.Windows.Forms.ComboBox()
         Me.BtnRegistrar = New System.Windows.Forms.Button()
         Me.TxtAltura = New System.Windows.Forms.TextBox()
@@ -72,8 +74,7 @@ Partial Class FrmPaciente
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.btnPersonaContacto = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnEnfermedades = New System.Windows.Forms.Button()
         Me.TabPage4.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -90,7 +91,7 @@ Partial Class FrmPaciente
         Me.TabPage4.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage4.Size = New System.Drawing.Size(596, 383)
+        Me.TabPage4.Size = New System.Drawing.Size(596, 484)
         Me.TabPage4.TabIndex = 4
         Me.TabPage4.Text = "Buscar"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -149,7 +150,7 @@ Partial Class FrmPaciente
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage3.Size = New System.Drawing.Size(596, 383)
+        Me.TabPage3.Size = New System.Drawing.Size(596, 484)
         Me.TabPage3.TabIndex = 3
         Me.TabPage3.Text = "Actualizar"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -350,7 +351,7 @@ Partial Class FrmPaciente
         Me.TabPage2.Location = New System.Drawing.Point(4, 26)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(596, 383)
+        Me.TabPage2.Size = New System.Drawing.Size(596, 484)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Eliminar"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -385,6 +386,7 @@ Partial Class FrmPaciente
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.BtnEnfermedades)
         Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.btnPersonaContacto)
         Me.TabPage1.Controls.Add(Me.ComboTipoSangre)
@@ -414,6 +416,26 @@ Partial Class FrmPaciente
         Me.TabPage1.TabIndex = 2
         Me.TabPage1.Text = "Registrar"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(157, 337)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(142, 33)
+        Me.Button1.TabIndex = 35
+        Me.Button1.Text = "Limpiar Campos"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnPersonaContacto
+        '
+        Me.btnPersonaContacto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPersonaContacto.Location = New System.Drawing.Point(22, 251)
+        Me.btnPersonaContacto.Name = "btnPersonaContacto"
+        Me.btnPersonaContacto.Size = New System.Drawing.Size(162, 30)
+        Me.btnPersonaContacto.TabIndex = 34
+        Me.btnPersonaContacto.Text = "Persona Contacto"
+        Me.btnPersonaContacto.UseVisualStyleBackColor = True
         '
         'ComboTipoSangre
         '
@@ -605,25 +627,15 @@ Partial Class FrmPaciente
         Me.TabControl1.Size = New System.Drawing.Size(604, 514)
         Me.TabControl1.TabIndex = 0
         '
-        'btnPersonaContacto
+        'BtnEnfermedades
         '
-        Me.btnPersonaContacto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPersonaContacto.Location = New System.Drawing.Point(22, 251)
-        Me.btnPersonaContacto.Name = "btnPersonaContacto"
-        Me.btnPersonaContacto.Size = New System.Drawing.Size(162, 30)
-        Me.btnPersonaContacto.TabIndex = 34
-        Me.btnPersonaContacto.Text = "Persona Contacto"
-        Me.btnPersonaContacto.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(157, 337)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(142, 33)
-        Me.Button1.TabIndex = 35
-        Me.Button1.Text = "Limpiar Campos"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnEnfermedades.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEnfermedades.Location = New System.Drawing.Point(203, 251)
+        Me.BtnEnfermedades.Name = "BtnEnfermedades"
+        Me.BtnEnfermedades.Size = New System.Drawing.Size(162, 30)
+        Me.BtnEnfermedades.TabIndex = 36
+        Me.BtnEnfermedades.Text = "Enfermedades"
+        Me.BtnEnfermedades.UseVisualStyleBackColor = True
         '
         'FrmPaciente
         '
@@ -707,4 +719,5 @@ Partial Class FrmPaciente
     Friend WithEvents TipoSangreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents btnPersonaContacto As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents BtnEnfermedades As Button
 End Class
