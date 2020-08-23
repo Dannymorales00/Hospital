@@ -6,6 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9C6A551C-6C30-4443-81E8-7EB775E13ADD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
+    <StartupObject>Hospital.FrmPaciente</StartupObject>
     <StartupObject>Hospital.FrmMedicamentoAlergicoRegistrar</StartupObject>
     <RootNamespace>Hospital</RootNamespace>
     <AssemblyName>Hospital</AssemblyName>
@@ -199,6 +200,12 @@
     <Compile Include="vista\FrmEnfermedad.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\FrmPacienteEnfermedad.Designer.vb">
+      <DependentUpon>FrmPacienteEnfermedad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmPacienteEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\FrmMedicamentoAlergicoRegistrar.Designer.vb">
       <DependentUpon>FrmMedicamentoAlergicoRegistrar.vb</DependentUpon>
     </Compile>
@@ -271,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmEnfermedad.resx">
       <DependentUpon>FrmEnfermedad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmPacienteEnfermedad.resx">
+      <DependentUpon>FrmPacienteEnfermedad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmMedicamentoAlergicoRegistrar.resx">
       <DependentUpon>FrmMedicamentoAlergicoRegistrar.vb</DependentUpon>

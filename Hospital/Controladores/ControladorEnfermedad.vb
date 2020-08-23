@@ -110,6 +110,32 @@
 
 
 
+    Function BuscarIndice(listaEnfermedad As List(Of Enfermedad), enfermedad As Enfermedad) As Integer
+
+
+        For Each elemento As Enfermedad In listaEnfermedad
+
+            If elemento.id = enfermedad.id Then
+                Return listaEnfermedad.IndexOf(elemento)
+            End If
+
+
+        Next
+
+
+
+
+
+
+
+        Return -1
+    End Function
+
+
+
+
+
+
 
 
 End Class
