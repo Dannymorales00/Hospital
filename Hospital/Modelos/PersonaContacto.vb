@@ -1,10 +1,12 @@
 ﻿Public Class PersonaContacto
+    Private _id As Integer
     Private _nombreCompleto As String
     Private _relacionFamiliar As String
     Private _telefono As Integer
     Private _direccion As String
     Private _cedula As String
     Private _cedulaPaciente As Integer
+
 
     Property cedulaPaciente As Integer
         Get
@@ -56,6 +58,15 @@
         End Get
         Set
             _nombreCompleto = Value
+        End Set
+    End Property
+
+    Public Property id As Integer
+        Get
+            Return _id
+        End Get
+        Set(value As Integer)
+            _id = value
         End Set
     End Property
 

@@ -46,6 +46,6 @@
     End Sub
 
     Private Sub FRMPersonaContactoRegistrar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        personaContacto = New PersonaContacto
     End Sub
 End Class

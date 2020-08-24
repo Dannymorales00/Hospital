@@ -6,14 +6,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9C6A551C-6C30-4443-81E8-7EB775E13ADD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Hospital.My.MyApplication</StartupObject>
+    <StartupObject>Hospital.FrmPaciente</StartupObject>
+    <StartupObject>Hospital.FrmMedicamentoAlergicoRegistrar</StartupObject>
     <RootNamespace>Hospital</RootNamespace>
     <AssemblyName>Hospital</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +28,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -76,6 +77,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -98,10 +100,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\ControladorCita.vb" />
+    <Compile Include="Controladores\ControladorEnfermedad.vb" />
+    <Compile Include="Controladores\ControladorMedicamentoAlergico.vb" />
+    <Compile Include="Controladores\ControladorMedicamentos.vb" />
     <Compile Include="Controladores\ControladorMedico.vb" />
     <Compile Include="Controladores\ControladorPaciente.vb" />
     <Compile Include="Controladores\ControladorPersonaContacto.vb" />
     <Compile Include="Controladores\ControladorUsuario.vb" />
+    <Compile Include="Medicamentos.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Medicamentos.vb" />
+    <Compile Include="sp_Buscar_usuario2_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_select_medicamentos_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_validar_usuario_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="vista\BuscarMedico.Designer.vb">
       <DependentUpon>BuscarMedico.vb</DependentUpon>
     </Compile>
@@ -115,7 +133,7 @@
     <Compile Include="Modelos\Examen.vb" />
     <Compile Include="Modelos\ExamenOrina.vb" />
     <Compile Include="Modelos\ExamenSangre.vb" />
-    <Compile Include="Modelos\Medicamento.vb" />
+    <Compile Include="Modelos\MedicamentoAlergico.vb" />
     <Compile Include="Modelos\MedicamentoRecetado.vb" />
     <Compile Include="Modelos\Medico.vb" />
     <Compile Include="Modelos\Paciente.vb" />
@@ -176,6 +194,24 @@
     <Compile Include="vista\FrmCita.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\FrmEnfermedad.Designer.vb">
+      <DependentUpon>FrmEnfermedad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FrmPacienteEnfermedad.Designer.vb">
+      <DependentUpon>FrmPacienteEnfermedad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmPacienteEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FrmMedicamentoAlergicoRegistrar.Designer.vb">
+      <DependentUpon>FrmMedicamentoAlergicoRegistrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmMedicamentoAlergicoRegistrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\FRMPersonaContacto.Designer.vb">
       <DependentUpon>FRMPersonaContacto.vb</DependentUpon>
     </Compile>
@@ -206,11 +242,11 @@
     <Compile Include="vista\FrmUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vista\Inicio.vb">
+    <Compile Include="vista\FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vista\Inicio.Designer.vb">
-      <DependentUpon>Inicio.vb</DependentUpon>
+    <Compile Include="vista\FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\FrmPaciente.Designer.vb">
@@ -246,6 +282,15 @@
     <EmbeddedResource Include="vista\FrmCita.resx">
       <DependentUpon>FrmCita.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmEnfermedad.resx">
+      <DependentUpon>FrmEnfermedad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmPacienteEnfermedad.resx">
+      <DependentUpon>FrmPacienteEnfermedad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmMedicamentoAlergicoRegistrar.resx">
+      <DependentUpon>FrmMedicamentoAlergicoRegistrar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\FRMPersonaContacto.resx">
       <DependentUpon>FRMPersonaContacto.vb</DependentUpon>
     </EmbeddedResource>
@@ -258,8 +303,8 @@
     <EmbeddedResource Include="vista\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vista\Inicio.resx">
-      <DependentUpon>Inicio.vb</DependentUpon>
+    <EmbeddedResource Include="vista\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmPaciente.resx">
       <DependentUpon>FrmPaciente.vb</DependentUpon>
@@ -317,6 +362,7 @@
       <DependentUpon>ProyectoEntities.edmx</DependentUpon>
       <LastGenOutput>ProyectoEntities.vb</LastGenOutput>
     </Content>
+    <None Include="Resources\usuariospng.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

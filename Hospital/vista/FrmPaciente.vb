@@ -8,15 +8,18 @@
     Private controladorPaciente As New ControladorPaciente()
     Private controladorPersonaContacto As New ControladorPersonaContacto
     Private personaContacto As New PersonaContacto()
+    Private listaEnfermedades As New List(Of Enfermedad)
     Public Function comprobarAgregar() As Boolean
-        Return Not (TxtRegistroCedula.Text = "" And TxtRegistroNombre.Text = "" And TxtAltura.Text = "" And TxtCorreo.Text = "" And TxtEdad.Text = "" And btnPersonaContacto.Text = "Persona Contacto" And TxtPeso.Text = "" And TxtTelefono.Text = "" And ComboTipoSangre.SelectedIndex < 0 And DateTimePicker1.Checked)
-
+        Return Not TxtRegistroCedula.Text.Equals("") And Not TxtRegistroNombre.Text.Equals("") And Not TxtAltura.Text.Equals("") And Not TxtCorreo.Text.Equals("") And Not TxtEdad.Text.Equals("") And Not TxtPeso.Text.Equals("") And Not TxtTelefono.Equals("")
+        'Not TxtRegistroCedula.Text = "" And Not TxtRegistroNombre.Text = "" And Not TxtAltura.Text = "" And Not TxtCorreo.Text = "" And Not TxtEdad.Text = "" And Not btnPersonaContacto.Text = "Persona Contacto" And Not TxtPeso.Text = "" And Not TxtTelefono.Text = "" And Not ComboTipoSangre.SelectedIndex < 0 And DateTimePicker1.Checked
     End Function
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnRegistrar.Click
         If comprobarAgregar() Then
             paciente = New Paciente(Val(TxtRegistroCedula.Text), TxtRegistroNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipoSangre.SelectedItem.ToString)
             If controladorPaciente.registrar(paciente) = 1 Then
                 MsgBox("Se agrego correctamente el paciente")
+
+
                 If controladorPersonaContacto.registrar(personaContacto) Then
                     MsgBox("Se agrego el contacto la persona contacto ")
 
@@ -110,6 +113,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnPersonaContacto.Click
         If TxtRegistroNombre.Text = "" And TxtRegistroCedula.Text = "" Then
             MsgBox("Tiene que rellenar los campos Nombre y Cedula primero")
+
         Else
             personaContacto = New PersonaContacto
             Dim frmPersonaContacto As New FRMPersonaContactoRegistrar
@@ -125,6 +129,40 @@
 
             frmPersonaContacto.Close()
         End If
+
+    End Sub
+
+    Private Sub BtnEnfermedades_Click(sender As Object, e As EventArgs) Handles BtnEnfermedades.Click
+        Dim paciente = New Paciente()
+        If comprobarAgregar() Then
+
+            paciente = New Paciente(Val(TxtRegistroCedula.Text), TxtRegistroNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipoSangre.SelectedItem.ToString)
+            Dim frmEnfermedad = New FrmPacienteEnfermedad(paciente)
+            frmEnfermedad.ShowDialog()
+
+            If frmEnfermedad.P_ListaEnfermedades.Count > 0 Then
+                listaEnfermedades = frmEnfermedad.P_ListaEnfermedades
+
+                For Each elemento As Enfermedad In listaEnfermedades
+
+                    MsgBox("Enfermedad: " + elemento.nombre + " // Descripcion: " + elemento.descripcion)
+
+
+                Next
+
+
+
+            End If
+
+
+        Else
+            MsgBox("Debe rellenar todos los campos de paciente para agregar enfermedades")
+
+        End If
+
+
+
+
 
     End Sub
 End Class

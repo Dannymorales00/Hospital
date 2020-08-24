@@ -31,19 +31,24 @@ Partial Class FrmCita
         Me.TxtRegistrarEspecialidad = New System.Windows.Forms.TextBox()
         Me.LblMedico = New System.Windows.Forms.Label()
         Me.LblPaciente = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.DataGridCitas = New System.Windows.Forms.DataGridView()
+        Me.TxtCedulaP = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DateTimeHora = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DateTimeFecha = New System.Windows.Forms.DateTimePicker()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.LblID = New System.Windows.Forms.Label()
+        CType(Me.DataGridCitas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnRegistrar
         '
         Me.BtnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegistrar.Location = New System.Drawing.Point(31, 328)
+        Me.BtnRegistrar.Location = New System.Drawing.Point(443, 336)
         Me.BtnRegistrar.Name = "BtnRegistrar"
         Me.BtnRegistrar.Size = New System.Drawing.Size(124, 46)
         Me.BtnRegistrar.TabIndex = 0
@@ -127,22 +132,24 @@ Partial Class FrmCita
         Me.LblPaciente.TabIndex = 8
         Me.LblPaciente.Text = "Paciente seleccionado"
         '
-        'DataGridView1
+        'DataGridCitas
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(440, 74)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(614, 183)
-        Me.DataGridView1.TabIndex = 9
+        Me.DataGridCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridCitas.Location = New System.Drawing.Point(440, 51)
+        Me.DataGridCitas.Name = "DataGridCitas"
+        Me.DataGridCitas.ReadOnly = True
+        Me.DataGridCitas.RowHeadersWidth = 51
+        Me.DataGridCitas.RowTemplate.Height = 24
+        Me.DataGridCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridCitas.Size = New System.Drawing.Size(614, 268)
+        Me.DataGridCitas.TabIndex = 9
         '
-        'TextBox1
+        'TxtCedulaP
         '
-        Me.TextBox1.Location = New System.Drawing.Point(545, 23)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(142, 22)
-        Me.TextBox1.TabIndex = 10
+        Me.TxtCedulaP.Location = New System.Drawing.Point(591, 18)
+        Me.TxtCedulaP.Name = "TxtCedulaP"
+        Me.TxtCedulaP.Size = New System.Drawing.Size(142, 22)
+        Me.TxtCedulaP.TabIndex = 10
         '
         'Label4
         '
@@ -163,7 +170,7 @@ Partial Class FrmCita
         Me.DateTimeHora.ShowUpDown = True
         Me.DateTimeHora.Size = New System.Drawing.Size(122, 24)
         Me.DateTimeHora.TabIndex = 12
-        Me.DateTimeHora.Value = New Date(2020, 8, 13, 17, 30, 58, 0)
+        Me.DateTimeHora.Value = New Date(2020, 8, 17, 7, 30, 0, 0)
         '
         'Label5
         '
@@ -185,17 +192,71 @@ Partial Class FrmCita
         Me.DateTimeFecha.Size = New System.Drawing.Size(136, 24)
         Me.DateTimeFecha.TabIndex = 14
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(437, 22)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(130, 18)
+        Me.Label6.TabIndex = 15
+        Me.Label6.Text = "Cedula Paciente"
+        '
+        'BtnLimpiar
+        '
+        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLimpiar.Location = New System.Drawing.Point(591, 336)
+        Me.BtnLimpiar.Name = "BtnLimpiar"
+        Me.BtnLimpiar.Size = New System.Drawing.Size(124, 46)
+        Me.BtnLimpiar.TabIndex = 16
+        Me.BtnLimpiar.Text = "Limpiar"
+        Me.BtnLimpiar.UseVisualStyleBackColor = True
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminar.Location = New System.Drawing.Point(740, 336)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(124, 46)
+        Me.BtnEliminar.TabIndex = 17
+        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(766, 18)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(29, 18)
+        Me.Label7.TabIndex = 18
+        Me.Label7.Text = "ID:"
+        '
+        'LblID
+        '
+        Me.LblID.AutoSize = True
+        Me.LblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblID.Location = New System.Drawing.Point(801, 19)
+        Me.LblID.Name = "LblID"
+        Me.LblID.Size = New System.Drawing.Size(0, 18)
+        Me.LblID.TabIndex = 19
+        '
         'FrmCita
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1085, 386)
+        Me.ClientSize = New System.Drawing.Size(1085, 394)
+        Me.Controls.Add(Me.LblID)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.BtnEliminar)
+        Me.Controls.Add(Me.BtnLimpiar)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.DateTimeFecha)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.DateTimeHora)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.TxtCedulaP)
+        Me.Controls.Add(Me.DataGridCitas)
         Me.Controls.Add(Me.LblPaciente)
         Me.Controls.Add(Me.LblMedico)
         Me.Controls.Add(Me.TxtRegistrarEspecialidad)
@@ -207,7 +268,7 @@ Partial Class FrmCita
         Me.Controls.Add(Me.Label3)
         Me.Name = "FrmCita"
         Me.Text = "FrmCita"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridCitas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -222,10 +283,15 @@ Partial Class FrmCita
     Friend WithEvents TxtRegistrarEspecialidad As TextBox
     Friend WithEvents LblMedico As Label
     Friend WithEvents LblPaciente As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents DataGridCitas As DataGridView
+    Friend WithEvents TxtCedulaP As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents DateTimeHora As DateTimePicker
     Friend WithEvents Label5 As Label
     Friend WithEvents DateTimeFecha As DateTimePicker
+    Friend WithEvents Label6 As Label
+    Friend WithEvents BtnLimpiar As Button
+    Friend WithEvents BtnEliminar As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents LblID As Label
 End Class

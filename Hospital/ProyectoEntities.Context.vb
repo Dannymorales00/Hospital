@@ -24,6 +24,7 @@ Partial Public Class ProyectoEntities1
         Throw New UnintentionalCodeFirstException()
     End Sub
 
+    Public Overridable Property Medicamentos() As DbSet(Of Medicamentos)
 
     Public Overridable Function sp_actualizar_ExamenOrina(id As Nullable(Of Integer), idConsulta As Nullable(Of Integer), color As String, eritrocitos As Nullable(Of Double), glucosa As Nullable(Of Double), leucocitos As Nullable(Of Double)) As ObjectResult(Of Nullable(Of Integer))
         Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
@@ -83,10 +84,10 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_actualizar_paciente", cedulaParameter, nombreParameter, edadParameter, correoParameter, fechaNacimientoParameter, pesoParameter, alturaParameter, telefonoParameter, tipoSangreParameter)
     End Function
 
-    Public Overridable Function sp_buscar_enfermedad(id As Nullable(Of Integer)) As ObjectResult(Of sp_buscar_enfermedad_Result)
-        Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
+    Public Overridable Function sp_buscar_enfermedad(cedulaPaciente As Nullable(Of Integer)) As ObjectResult(Of sp_buscar_enfermedad_Result)
+        Dim cedulaPacienteParameter As ObjectParameter = If(cedulaPaciente.HasValue, New ObjectParameter("cedulaPaciente", cedulaPaciente), New ObjectParameter("cedulaPaciente", GetType(Integer)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_enfermedad_Result)("sp_buscar_enfermedad", idParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_enfermedad_Result)("sp_buscar_enfermedad", cedulaPacienteParameter)
     End Function
 
     Public Overridable Function sp_buscar_ExamenOrina(id As Nullable(Of Integer), idConsulta As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
@@ -123,10 +124,12 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_eliminar_cita", idParameter)
     End Function
 
-    Public Overridable Function sp_eliminar_enfermedad(id As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
-        Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
+    Public Overridable Function sp_eliminar_enfermedad(cedula As Nullable(Of Integer), enfermedad As String) As ObjectResult(Of Nullable(Of Integer))
+        Dim cedulaParameter As ObjectParameter = If(cedula.HasValue, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(Integer)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_eliminar_enfermedad", idParameter)
+        Dim enfermedadParameter As ObjectParameter = If(enfermedad IsNot Nothing, New ObjectParameter("enfermedad", enfermedad), New ObjectParameter("enfermedad", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_eliminar_enfermedad", cedulaParameter, enfermedadParameter)
     End Function
 
     Public Overridable Function sp_eliminar_ExamenOrina(id As Nullable(Of Integer), idConsulta As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
@@ -275,14 +278,12 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_registrar_ExamenSangre", idConsultaParameter, acidoUricoParameter, creatininaParameter, colesterolParameter, hematocritoParameter, hemoglobinaParameter, trigliceridosParameter)
     End Function
 
-    Public Overridable Function sp_registrar_medicamento_alergico(cedula As Nullable(Of Integer), medicamento As String, descripcion As String) As ObjectResult(Of Nullable(Of Integer))
+    Public Overridable Function sp_registrar_medicamento_alergico(cedula As Nullable(Of Integer), medicamento As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
         Dim cedulaParameter As ObjectParameter = If(cedula.HasValue, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(Integer)))
 
-        Dim medicamentoParameter As ObjectParameter = If(medicamento IsNot Nothing, New ObjectParameter("medicamento", medicamento), New ObjectParameter("medicamento", GetType(String)))
+        Dim medicamentoParameter As ObjectParameter = If(medicamento.HasValue, New ObjectParameter("medicamento", medicamento), New ObjectParameter("medicamento", GetType(Integer)))
 
-        Dim descripcionParameter As ObjectParameter = If(descripcion IsNot Nothing, New ObjectParameter("descripcion", descripcion), New ObjectParameter("descripcion", GetType(String)))
-
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_registrar_medicamento_alergico", cedulaParameter, medicamentoParameter, descripcionParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_registrar_medicamento_alergico", cedulaParameter, medicamentoParameter)
     End Function
 
     Public Overridable Function sp_registrar_medicamento_recetado(idConsulta As Nullable(Of Integer), medicamento As String, descripcion As String) As ObjectResult(Of Nullable(Of Integer))
@@ -337,8 +338,10 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_registrar_usuario", cedulaParameter, contraseñaParameter, correoParameter, fechaNacimientoParameter, nombreParameter, nombreUsuarioParameter, telefonoParameter, tipoParameter)
     End Function
 
-    Public Overridable Function sp_select_citas() As ObjectResult(Of sp_select_citas_Result)
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_select_citas_Result)("sp_select_citas")
+    Public Overridable Function sp_select_citas(cedula As String) As ObjectResult(Of sp_select_citas_Result)
+        Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_select_citas_Result)("sp_select_citas", cedulaParameter)
     End Function
 
     Public Overridable Function sp_select_medicamento_alergico() As ObjectResult(Of sp_select_medicamento_alergico_Result)
@@ -363,16 +366,14 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_update_cita", idParameter, especialidadParameter, fechaHoraParameter, cedula_pacienteParameter, cedula_medicoParameter)
     End Function
 
-    Public Overridable Function sp_update_medicamento_alergico(id As Nullable(Of Integer), cedula As Nullable(Of Integer), medicamento As String, descripcion As String) As ObjectResult(Of Nullable(Of Integer))
+    Public Overridable Function sp_update_medicamento_alergico(id As Nullable(Of Integer), cedula As Nullable(Of Integer), medicamento As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
         Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
 
         Dim cedulaParameter As ObjectParameter = If(cedula.HasValue, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(Integer)))
 
-        Dim medicamentoParameter As ObjectParameter = If(medicamento IsNot Nothing, New ObjectParameter("medicamento", medicamento), New ObjectParameter("medicamento", GetType(String)))
+        Dim medicamentoParameter As ObjectParameter = If(medicamento.HasValue, New ObjectParameter("medicamento", medicamento), New ObjectParameter("medicamento", GetType(Integer)))
 
-        Dim descripcionParameter As ObjectParameter = If(descripcion IsNot Nothing, New ObjectParameter("descripcion", descripcion), New ObjectParameter("descripcion", GetType(String)))
-
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_update_medicamento_alergico", idParameter, cedulaParameter, medicamentoParameter, descripcionParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_update_medicamento_alergico", idParameter, cedulaParameter, medicamentoParameter)
     End Function
 
     Public Overridable Function sp_update_medicamento_recetado(id As Nullable(Of Integer), idConsulta As Nullable(Of Integer), medicamento As String, descripcion As String) As ObjectResult(Of Nullable(Of Integer))
@@ -387,12 +388,12 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_update_medicamento_recetado", idParameter, idConsultaParameter, medicamentoParameter, descripcionParameter)
     End Function
 
-    Public Overridable Function sp_validar_usuario(nombreUsuario As String, contraseña As String) As ObjectResult(Of Nullable(Of Integer))
+    Public Overridable Function sp_validar_usuario(nombreUsuario As String, contraseña As String) As ObjectResult(Of sp_validar_usuario_Result)
         Dim nombreUsuarioParameter As ObjectParameter = If(nombreUsuario IsNot Nothing, New ObjectParameter("nombreUsuario", nombreUsuario), New ObjectParameter("nombreUsuario", GetType(String)))
 
         Dim contraseñaParameter As ObjectParameter = If(contraseña IsNot Nothing, New ObjectParameter("contraseña", contraseña), New ObjectParameter("contraseña", GetType(String)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_validar_usuario", nombreUsuarioParameter, contraseñaParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_validar_usuario_Result)("sp_validar_usuario", nombreUsuarioParameter, contraseñaParameter)
     End Function
 
     Public Overridable Function sp_actualizar_persona_contacto(cedula As Nullable(Of Integer), nombre As String, relacionFamiliar As String, telefono As String, direccion As String, cPaciente As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
@@ -469,6 +470,28 @@ Partial Public Class ProyectoEntities1
         Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
 
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_pacientes_Result)("sp_buscar_pacientes", cedulaParameter)
+    End Function
+
+    Public Overridable Function sp_Buscar_usuario2(nombreUsuario As String, contraseña As String) As ObjectResult(Of sp_Buscar_usuario2_Result)
+        Dim nombreUsuarioParameter As ObjectParameter = If(nombreUsuario IsNot Nothing, New ObjectParameter("nombreUsuario", nombreUsuario), New ObjectParameter("nombreUsuario", GetType(String)))
+
+        Dim contraseñaParameter As ObjectParameter = If(contraseña IsNot Nothing, New ObjectParameter("contraseña", contraseña), New ObjectParameter("contraseña", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_Buscar_usuario2_Result)("sp_Buscar_usuario2", nombreUsuarioParameter, contraseñaParameter)
+    End Function
+
+    Public Overridable Function sp_actualizar_enfermedad(id As Nullable(Of Integer), enfermedad As String, descripcion As String) As ObjectResult(Of Nullable(Of Integer))
+        Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
+
+        Dim enfermedadParameter As ObjectParameter = If(enfermedad IsNot Nothing, New ObjectParameter("enfermedad", enfermedad), New ObjectParameter("enfermedad", GetType(String)))
+
+        Dim descripcionParameter As ObjectParameter = If(descripcion IsNot Nothing, New ObjectParameter("descripcion", descripcion), New ObjectParameter("descripcion", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_actualizar_enfermedad", idParameter, enfermedadParameter, descripcionParameter)
+    End Function
+
+    Public Overridable Function sp_select_medicamentos() As ObjectResult(Of sp_select_medicamentos_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_select_medicamentos_Result)("sp_select_medicamentos")
     End Function
 
 End Class
