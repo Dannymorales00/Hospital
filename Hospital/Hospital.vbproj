@@ -194,6 +194,12 @@
     <Compile Include="vista\FrmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\FRMSeleccionarCitas.Designer.vb">
+      <DependentUpon>FRMSeleccionarCitas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FRMSeleccionarCitas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\FrmUsuario.Designer.vb">
       <DependentUpon>FrmUsuario.vb</DependentUpon>
     </Compile>
