@@ -1,12 +1,21 @@
-﻿Public Class FrmMedicamentoAlergicoRegistrar
+﻿Imports System.ComponentModel
+
+Public Class FrmMedicamentoAlergicoRegistrar
 
     Private medicamentos As Medicamentos
     Private alergico As New MedicamentoAlergico
     Private controladorMedicamentos As New ControladorMedicamentos
     Private controladorAlergicos As New ControladorMedicamentoAlergico
+    Private paciente As New Paciente
+
+    Public Sub New(paciente As Paciente)
+        InitializeComponent()
+        Me.paciente = paciente
+    End Sub
+
 
     Private Sub FrmMedicamentoAlergicoRegistrar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cargarMedicamentos()
+        CargarMedicamentos()
     End Sub
 
     Public Sub CargarMedicamentos()
@@ -24,7 +33,7 @@
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnRegistrar.Click
 
         For Each item In clb_medicamentos.CheckedIndices
-            alergico = New MedicamentoAlergico(562, item + 1)
+            alergico = New MedicamentoAlergico(paciente.cedula, item + 1)
             If controladorAlergicos.registrar(alergico) = True Then
                 MsgBox("Medicamentos Alergicos agregados...")
             End If

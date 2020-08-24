@@ -7,7 +7,7 @@
     <ProjectGuid>{9C6A551C-6C30-4443-81E8-7EB775E13ADD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>Hospital.FrmPaciente</StartupObject>
-    <StartupObject>Hospital.FrmMedicamentoAlergicoRegistrar</StartupObject>
+    <StartupObject>Hospital.FrmPaciente</StartupObject>
     <RootNamespace>Hospital</RootNamespace>
     <AssemblyName>Hospital</AssemblyName>
     <FileAlignment>512</FileAlignment>
