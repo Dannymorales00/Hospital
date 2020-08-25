@@ -4,39 +4,29 @@
     Private _altura As Double
     Private _sintomas As String
     Private _descripcionProceso As String
-    Private _medicamentosRecetados As MedicamentoRecetado
     Private _descripcionSintomas As String
-    Private _examen As List(Of Examen)
     Private _id As Integer
     Private _idCitas As Integer
+    'Private _medicamentosRecetados As MedicamentoRecetado
+    'Private _examenSangre As ExamenSangre
+    'Private _examenOrina As ExamenOrina
 
-    Public Sub New(idCitas As Integer, id As Integer, examen As List(Of Examen), descripcionSintomas As String, descripcionProceso As String, sintomas As String, altura As Double, peso As Double, presion As Integer, medicamentosRecetados As MedicamentoRecetado)
-        Me.idCitas = idCitas
-        Me.id = id
-        Me.examen = examen
-        Me.descripcionSintomas = descripcionSintomas
-        Me.descripcionProceso = descripcionProceso
-        Me.sintomas = sintomas
-        Me.altura = altura
-        Me.peso = peso
-        Me.presion = presion
-        Me.MedicamentosRecetados = medicamentosRecetados
+    Public Sub New(presion As Integer, peso As Double, altura As Double, sintomas As String, descripcionProceso As String, descripcionSintomas As String, id As Integer, idCitas As Integer)
+        _presion = presion
+        _peso = peso
+        _altura = altura
+        _sintomas = sintomas
+        _descripcionProceso = descripcionProceso
+        '_medicamentosRecetados = medicamentosRecetados
+        _descripcionSintomas = descripcionSintomas
+        '_examenSangre = examenSangre
+        '_examenOrina = examenOrina
+        _id = id
+        _idCitas = idCitas
     End Sub
 
     Public Sub New()
     End Sub
-    Property idCitas As Integer
-        Get
-            Return _idCitas
-        End Get
-        Set
-            _idCitas = Value
-        End Set
-    End Property
-
-
-
-
     Property id As Integer
         Get
             Return _id
@@ -45,14 +35,12 @@
             _id = Value
         End Set
     End Property
-
-
-    Property examen As List(Of Examen)
+    Property idCitas As Integer
         Get
-            Return _examen
+            Return _idCitas
         End Get
         Set
-            _examen = Value
+            _idCitas = Value
         End Set
     End Property
 
@@ -112,12 +100,30 @@
         End Set
     End Property
 
-    Public Property MedicamentosRecetados As MedicamentoRecetado
-        Get
-            Return _medicamentosRecetados
-        End Get
-        Set(value As MedicamentoRecetado)
-            _medicamentosRecetados = value
-        End Set
-    End Property
+    'Public Property MedicamentosRecetados As MedicamentoRecetado
+    '    Get
+    '        Return _medicamentosRecetados
+    '    End Get
+    '    Set(value As MedicamentoRecetado)
+    '        _medicamentosRecetados = value
+    '    End Set
+    'End Property
+
+    'Public Property ExamenSangre As ExamenSangre
+    '    Get
+    '        Return _examenSangre
+    '    End Get
+    '    Set(value As ExamenSangre)
+    '        _examenSangre = value
+    '    End Set
+    'End Property
+
+    'Public Property ExamenOrina As ExamenOrina
+    '    Get
+    '        Return _examenOrina
+    '    End Get
+    '    Set(value As ExamenOrina)
+    '        _examenOrina = value
+    '    End Set
+    'End Property
 End Class

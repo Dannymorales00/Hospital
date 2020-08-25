@@ -3,12 +3,15 @@
 Public Class FrmPrincipal
     Private usuario As Usuario
     Private frmUsuario As FrmUsuario
-    Private frmEnfermedades As FrmEnfermedad
+    Private frmCitas As FrmCita
+    Private frmPaciente As FrmPaciente
+
 
     Public Sub New(usuario1 As Usuario)
         usuario = New Usuario()
         frmUsuario = New FrmUsuario()
-        frmEnfermedades = New FrmEnfermedad()
+        frmCitas = New FrmCita()
+        frmPaciente = New FrmPaciente()
         usuario = usuario1
         InitializeComponent()
 
@@ -17,7 +20,7 @@ Public Class FrmPrincipal
 
 
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Centrar(Me.PanelModulos)
         Me.MenuPerfilNombreUSuario.Text = "Username: " + usuario.nombreUsuario
         Me.MenuPerfilTipo.Text = "Tipo: " + usuario.tipo
 
@@ -28,7 +31,49 @@ Public Class FrmPrincipal
 
     End Sub
 
-    Private Sub BtnEnfermedades_Click(sender As Object, e As EventArgs) Handles BtnEnfermedades.Click
-        frmEnfermedades.Show()
+    Private Sub BtnCitas_Click(sender As Object, e As EventArgs) Handles BtnCitas.Click
+        frmCitas.Show()
+    End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Dim opcion As DialogResult
+        opcion = MessageBox.Show("Realmente desea Salir",
+                                 "Salir del Programa",
+                                 MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Question)
+        If (opcion = DialogResult.Yes) Then
+            'Me.Close()
+            Application.ExitThread()
+        End If
+    End Sub
+
+
+
+    Private Sub Centrar(ByVal Objeto As Object)
+
+        ' Centrar un Formulario ...  
+        If TypeOf Objeto Is Form Then
+            Dim frm As Form = CType(Objeto, Form)
+            With Screen.PrimaryScreen.WorkingArea ' Dimensiones de la pantalla sin el TaskBar  
+                frm.Top = (.Height - frm.Height) \ 2
+                frm.Left = (.Width - frm.Width) \ 2
+            End With
+
+            ' Centrar un control dentro del contenedor  
+        Else
+            ' referencia al control  
+            Dim c As Control = CType(Objeto, Control)
+
+            'le  establece el top y el Left dentro del Parent  
+            With c
+                .Top = (.Parent.ClientSize.Height - c.Height) \ 2
+                .Left = (.Parent.ClientSize.Width - c.Width) \ 2
+            End With
+        End If
+    End Sub
+
+    Private Sub BtnPaciente_Click(sender As Object, e As EventArgs) Handles BtnPaciente.Click
+        frmPaciente.ShowDialog()
+
     End Sub
 End Class

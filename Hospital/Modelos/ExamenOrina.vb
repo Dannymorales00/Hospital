@@ -25,14 +25,12 @@
             _idConsulta = value
         End Set
     End Property
-
-
-    Property leucocitos As Double
+    Public Property Leucocitos As Double
         Get
             Return _leucocitos
         End Get
-        Set
-            _leucocitos = Value
+        Set(value As Double)
+            _leucocitos = value
         End Set
     End Property
 
@@ -62,6 +60,8 @@
             _glucosa = Value
         End Set
     End Property
+
+
 
     Public Sub New(id As Integer, idConsulta As Integer, glucosa As Double, eritrocitos As Double, color As String, leucocitos As Double)
         _id = id

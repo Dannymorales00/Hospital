@@ -21,11 +21,6 @@
                 enfermedad.nombre = TxtEnfermedad.Text
                 enfermedad.descripcion = TxtDescripcion.Text
 
-                MsgBox(TxtCedula.Text)
-                MsgBox(TxtEnfermedad.Text)
-                MsgBox(TxtDescripcion.Text)
-
-
                 If BtnRegistrar.Text.Equals("Registrar") Then
                     Registrar()
 

@@ -7,7 +7,7 @@
     <ProjectGuid>{9C6A551C-6C30-4443-81E8-7EB775E13ADD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>Hospital.FrmPaciente</StartupObject>
-    <StartupObject>Hospital.FrmConsultaExamenSangre</StartupObject>
+    <StartupObject>Hospital.FrmExamenOrina</StartupObject>
     <RootNamespace>Hospital</RootNamespace>
     <AssemblyName>Hospital</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -100,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\ControladorCita.vb" />
+    <Compile Include="Controladores\ControladorConsulta.vb" />
     <Compile Include="Controladores\ControladorEnfermedad.vb" />
     <Compile Include="Controladores\ControladorExamenOrina.vb" />
     <Compile Include="Controladores\ControladorMedicamentoAlergico.vb" />
@@ -112,6 +113,12 @@
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Medicamentos.vb" />
+    <Compile Include="sp_buscar_consulta_con_cedula_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_buscar_ExamenOrina_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="sp_Buscar_usuario2_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
@@ -183,6 +190,12 @@
     <Compile Include="sp_select_persona_contacto_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="vista\FrmBuscarConsulta.Designer.vb">
+      <DependentUpon>FrmBuscarConsulta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmBuscarConsulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\FrmBuscarPaciente.Designer.vb">
       <DependentUpon>FrmBuscarPaciente.vb</DependentUpon>
     </Compile>
@@ -211,6 +224,18 @@
       <DependentUpon>FrmEnfermedad.vb</DependentUpon>
     </Compile>
     <Compile Include="vista\FrmEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FrmExamenes.Designer.vb">
+      <DependentUpon>FrmExamenes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmExamenes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FrmExamenOrina.Designer.vb">
+      <DependentUpon>FrmExamenOrina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmExamenOrina.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\FrmPacienteEnfermedad.Designer.vb">
@@ -289,6 +314,9 @@
     <EmbeddedResource Include="vista\BuscarMedico.resx">
       <DependentUpon>BuscarMedico.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmBuscarConsulta.resx">
+      <DependentUpon>FrmBuscarConsulta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmBuscarPaciente.resx">
       <DependentUpon>FrmBuscarPaciente.vb</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +331,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmEnfermedad.resx">
       <DependentUpon>FrmEnfermedad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmExamenes.resx">
+      <DependentUpon>FrmExamenes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmExamenOrina.resx">
+      <DependentUpon>FrmExamenOrina.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmPacienteEnfermedad.resx">
       <DependentUpon>FrmPacienteEnfermedad.vb</DependentUpon>

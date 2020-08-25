@@ -1,21 +1,10 @@
 ﻿Public Class Citas
 
-
     Private _paciente As Paciente
     Private _fechaHora As Date
     Private _especialidadSolicitada As String
     Private _medico As Medico
     Private _id As Integer
-    Private _consultaMedica As ConsultaMedica
-
-    Property consultaMedica As ConsultaMedica
-        Get
-            Return _consultaMedica
-        End Get
-        Set
-            _consultaMedica = Value
-        End Set
-    End Property
 
     Property id As Integer
         Get
