@@ -9,14 +9,7 @@
     Private _id As Integer
     Private _idConsulta As Integer
 
-    Property idConsulta As Integer
-        Get
-            Return _idConsulta
-        End Get
-        Set
-            _idConsulta = Value
-        End Set
-    End Property
+
 
     Property id As Integer
         Get
@@ -26,7 +19,14 @@
             _id = Value
         End Set
     End Property
-
+    Property idConsulta As Integer
+        Get
+            Return _idConsulta
+        End Get
+        Set
+            _idConsulta = Value
+        End Set
+    End Property
     Property creatinina As Double
         Get
             Return _creatinina

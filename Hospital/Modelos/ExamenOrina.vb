@@ -1,11 +1,12 @@
 ﻿Public Class ExamenOrina
     Inherits Examen
     Private _id As Integer
+    Private _idConsulta As Integer
     Private _glucosa As Double
     Private _eritrocitos As Double
     Private _color As String
     Private _leucocitos As Double
-    Private idConsulta As Integer
+
 
 
     Property id As Integer
@@ -16,9 +17,17 @@
             _id = Value
         End Set
     End Property
+    Public Property IdConsulta As Integer
+        Get
+            Return _idConsulta
+        End Get
+        Set(value As Integer)
+            _idConsulta = value
+        End Set
+    End Property
 
 
-    Property leucitos As Double
+    Property leucocitos As Double
         Get
             Return _leucocitos
         End Get
@@ -54,12 +63,13 @@
         End Set
     End Property
 
-    Public Sub New(id As Integer, leucitos As Double, color As String, eritrocitos As Double, glucosa As Double)
-        Me.id = id
-        Me.leucitos = leucitos
-        Me.color = color
-        Me.eritrocitos = eritrocitos
-        Me.glucosa = glucosa
+    Public Sub New(id As Integer, idConsulta As Integer, glucosa As Double, eritrocitos As Double, color As String, leucocitos As Double)
+        _id = id
+        _idConsulta = idConsulta
+        _glucosa = glucosa
+        _eritrocitos = eritrocitos
+        _color = color
+        _leucocitos = leucocitos
     End Sub
 
     Public Sub New()
