@@ -3,6 +3,7 @@
     Private frmUsuario As FrmUsuario
     Private frmCitas As FrmCita
     Private frmPaciente As FrmPaciente
+    Private frmExamenes As FrmExamenes
 
 
     Public Sub New(usuario1 As Usuario)
@@ -10,6 +11,7 @@
         frmUsuario = New FrmUsuario()
         frmCitas = New FrmCita()
         frmPaciente = New FrmPaciente()
+        frmExamenes = New FrmExamenes()
         usuario = usuario1
         InitializeComponent()
 
@@ -44,8 +46,14 @@
             Application.ExitThread()
         End If
     End Sub
+    Private Sub BtnPaciente_Click(sender As Object, e As EventArgs) Handles BtnPaciente.Click
+        frmPaciente.ShowDialog()
 
+    End Sub
 
+    Private Sub BtnExamenes_Click(sender As Object, e As EventArgs) Handles BtnExamenes.Click
+        frmExamenes.ShowDialog()
+    End Sub
 
     Private Sub Centrar(ByVal Objeto As Object)
 
@@ -69,11 +77,5 @@
             End With
         End If
     End Sub
-
-    Private Sub BtnPaciente_Click(sender As Object, e As EventArgs) Handles BtnPaciente.Click
-        frmPaciente.ShowDialog()
-
-    End Sub
-
 
 End Class
