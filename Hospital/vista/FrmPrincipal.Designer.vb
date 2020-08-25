@@ -28,6 +28,9 @@ Partial Class FrmPrincipal
         Me.MenuPerfilTipo = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnUsuarios = New System.Windows.Forms.Button()
         Me.BtnEnfermedades = New System.Windows.Forms.Button()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -78,12 +81,32 @@ Partial Class FrmPrincipal
         Me.BtnEnfermedades.Text = "Enfermedades"
         Me.BtnEnfermedades.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(486, 73)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 50)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Citas de Hoy"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(652, 73)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(112, 50)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "Consultas de Hoy"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(917, 491)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.BtnEnfermedades)
         Me.Controls.Add(Me.BtnUsuarios)
         Me.Controls.Add(Me.MenuStrip1)
@@ -104,4 +127,7 @@ Partial Class FrmPrincipal
     Friend WithEvents MenuPerfilTipo As ToolStripMenuItem
     Friend WithEvents BtnUsuarios As Button
     Friend WithEvents BtnEnfermedades As Button
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

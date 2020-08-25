@@ -31,4 +31,9 @@ Public Class FrmPrincipal
     Private Sub BtnEnfermedades_Click(sender As Object, e As EventArgs) Handles BtnEnfermedades.Click
         frmEnfermedades.Show()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim frmSelecionarCitas As New FRMSeleccionarCitas
+        frmSelecionarCitas.ShowDialog()
+    End Sub
 End Class

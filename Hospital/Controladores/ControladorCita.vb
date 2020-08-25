@@ -45,4 +45,14 @@
             Return Nothing
         End Try
     End Function
+
+    Public Function buscarCitasHoy() As List(Of sp_buscar_citas_Result)
+        Try
+            Using almacen As New ProyectoEntities1
+                Return almacen.sp_buscar_citas().ToList
+            End Using
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
 End Class

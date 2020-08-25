@@ -70,5 +70,7 @@
     End Sub
 
     Public Sub New()
+        paciente = New Paciente
+        medico = New Medico
     End Sub
 End Class
