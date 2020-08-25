@@ -22,692 +22,358 @@ Partial Class FrmPaciente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.BtnBuscar = New System.Windows.Forms.Button()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.TxtBuscarCedula = New System.Windows.Forms.TextBox()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.BtnActualizar = New System.Windows.Forms.Button()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.ComboTipo2 = New System.Windows.Forms.ComboBox()
-        Me.TxtActualizarAltura = New System.Windows.Forms.TextBox()
-        Me.TxtActualizarPeso = New System.Windows.Forms.TextBox()
-        Me.TxtActualizarEdad = New System.Windows.Forms.TextBox()
-        Me.TxtActualizarTelefono = New System.Windows.Forms.TextBox()
-        Me.TxtActualizarCorreo = New System.Windows.Forms.TextBox()
-        Me.TxtActualizarNombre = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.BtnCargar = New System.Windows.Forms.Button()
-        Me.TxtActualizarCedula = New System.Windows.Forms.TextBox()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
-        Me.TxtEliminarCedula = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnPersonaContacto = New System.Windows.Forms.Button()
-        Me.ComboTipoSangre = New System.Windows.Forms.ComboBox()
+        Me.BtnMedicamentos = New System.Windows.Forms.Button()
+        Me.BtnEnfermedades = New System.Windows.Forms.Button()
+        Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.BtnPersonaC = New System.Windows.Forms.Button()
+        Me.ComboTipo = New System.Windows.Forms.ComboBox()
         Me.BtnRegistrar = New System.Windows.Forms.Button()
         Me.TxtAltura = New System.Windows.Forms.TextBox()
         Me.TxtPeso = New System.Windows.Forms.TextBox()
         Me.TxtEdad = New System.Windows.Forms.TextBox()
         Me.TxtTelefono = New System.Windows.Forms.TextBox()
         Me.TxtCorreo = New System.Windows.Forms.TextBox()
-        Me.TxtRegistroNombre = New System.Windows.Forms.TextBox()
-        Me.TxtRegistroCedula = New System.Windows.Forms.TextBox()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
+        Me.TxtCedula = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.BtnEnfermedades = New System.Windows.Forms.Button()
-        Me.TabPage4.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
+        Me.TxtBuscarCedula = New System.Windows.Forms.TextBox()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.BtnBuscar)
-        Me.TabPage4.Controls.Add(Me.Label20)
-        Me.TabPage4.Controls.Add(Me.TxtBuscarCedula)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 26)
-        Me.TabPage4.Margin = New System.Windows.Forms.Padding(2)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage4.Size = New System.Drawing.Size(596, 484)
-        Me.TabPage4.TabIndex = 4
-        Me.TabPage4.Text = "Buscar"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'BtnBuscar
-        '
-        Me.BtnBuscar.Location = New System.Drawing.Point(31, 277)
-        Me.BtnBuscar.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(76, 27)
-        Me.BtnBuscar.TabIndex = 3
-        Me.BtnBuscar.Text = "Buscar"
-        Me.BtnBuscar.UseVisualStyleBackColor = True
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(17, 18)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(58, 17)
-        Me.Label20.TabIndex = 2
-        Me.Label20.Text = "Cedula"
-        '
-        'TxtBuscarCedula
-        '
-        Me.TxtBuscarCedula.Location = New System.Drawing.Point(83, 15)
-        Me.TxtBuscarCedula.Margin = New System.Windows.Forms.Padding(2)
-        Me.TxtBuscarCedula.Name = "TxtBuscarCedula"
-        Me.TxtBuscarCedula.Size = New System.Drawing.Size(101, 23)
-        Me.TxtBuscarCedula.TabIndex = 1
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(Me.BtnActualizar)
-        Me.TabPage3.Controls.Add(Me.Label19)
-        Me.TabPage3.Controls.Add(Me.ComboTipo2)
-        Me.TabPage3.Controls.Add(Me.TxtActualizarAltura)
-        Me.TabPage3.Controls.Add(Me.TxtActualizarPeso)
-        Me.TabPage3.Controls.Add(Me.TxtActualizarEdad)
-        Me.TabPage3.Controls.Add(Me.TxtActualizarTelefono)
-        Me.TabPage3.Controls.Add(Me.TxtActualizarCorreo)
-        Me.TabPage3.Controls.Add(Me.TxtActualizarNombre)
-        Me.TabPage3.Controls.Add(Me.DateTimePicker2)
-        Me.TabPage3.Controls.Add(Me.Label10)
-        Me.TabPage3.Controls.Add(Me.Label11)
-        Me.TabPage3.Controls.Add(Me.Label12)
-        Me.TabPage3.Controls.Add(Me.Label14)
-        Me.TabPage3.Controls.Add(Me.Label15)
-        Me.TabPage3.Controls.Add(Me.Label16)
-        Me.TabPage3.Controls.Add(Me.Label17)
-        Me.TabPage3.Controls.Add(Me.Label18)
-        Me.TabPage3.Controls.Add(Me.BtnCargar)
-        Me.TabPage3.Controls.Add(Me.TxtActualizarCedula)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 26)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage3.Size = New System.Drawing.Size(596, 484)
-        Me.TabPage3.TabIndex = 3
-        Me.TabPage3.Text = "Actualizar"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'BtnActualizar
-        '
-        Me.BtnActualizar.Location = New System.Drawing.Point(187, 298)
-        Me.BtnActualizar.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnActualizar.Name = "BtnActualizar"
-        Me.BtnActualizar.Size = New System.Drawing.Size(89, 27)
-        Me.BtnActualizar.TabIndex = 51
-        Me.BtnActualizar.Text = "Actualizar"
-        Me.BtnActualizar.UseVisualStyleBackColor = True
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(40, 28)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(58, 17)
-        Me.Label19.TabIndex = 50
-        Me.Label19.Text = "Cedula"
-        '
-        'ComboTipo2
-        '
-        Me.ComboTipo2.FormattingEnabled = True
-        Me.ComboTipo2.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"})
-        Me.ComboTipo2.Location = New System.Drawing.Point(496, 250)
-        Me.ComboTipo2.Margin = New System.Windows.Forms.Padding(2)
-        Me.ComboTipo2.Name = "ComboTipo2"
-        Me.ComboTipo2.Size = New System.Drawing.Size(66, 25)
-        Me.ComboTipo2.TabIndex = 49
-        '
-        'TxtActualizarAltura
-        '
-        Me.TxtActualizarAltura.Location = New System.Drawing.Point(318, 253)
-        Me.TxtActualizarAltura.Name = "TxtActualizarAltura"
-        Me.TxtActualizarAltura.Size = New System.Drawing.Size(51, 23)
-        Me.TxtActualizarAltura.TabIndex = 48
-        '
-        'TxtActualizarPeso
-        '
-        Me.TxtActualizarPeso.Location = New System.Drawing.Point(187, 253)
-        Me.TxtActualizarPeso.Name = "TxtActualizarPeso"
-        Me.TxtActualizarPeso.Size = New System.Drawing.Size(55, 23)
-        Me.TxtActualizarPeso.TabIndex = 47
-        '
-        'TxtActualizarEdad
-        '
-        Me.TxtActualizarEdad.Location = New System.Drawing.Point(81, 253)
-        Me.TxtActualizarEdad.Name = "TxtActualizarEdad"
-        Me.TxtActualizarEdad.Size = New System.Drawing.Size(46, 23)
-        Me.TxtActualizarEdad.TabIndex = 46
-        '
-        'TxtActualizarTelefono
-        '
-        Me.TxtActualizarTelefono.Location = New System.Drawing.Point(146, 166)
-        Me.TxtActualizarTelefono.Name = "TxtActualizarTelefono"
-        Me.TxtActualizarTelefono.Size = New System.Drawing.Size(166, 23)
-        Me.TxtActualizarTelefono.TabIndex = 45
-        '
-        'TxtActualizarCorreo
-        '
-        Me.TxtActualizarCorreo.Location = New System.Drawing.Point(146, 208)
-        Me.TxtActualizarCorreo.Name = "TxtActualizarCorreo"
-        Me.TxtActualizarCorreo.Size = New System.Drawing.Size(236, 23)
-        Me.TxtActualizarCorreo.TabIndex = 44
-        '
-        'TxtActualizarNombre
-        '
-        Me.TxtActualizarNombre.Location = New System.Drawing.Point(146, 72)
-        Me.TxtActualizarNombre.Name = "TxtActualizarNombre"
-        Me.TxtActualizarNombre.Size = New System.Drawing.Size(236, 23)
-        Me.TxtActualizarNombre.TabIndex = 43
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(187, 112)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(127, 21)
-        Me.DateTimePicker2.TabIndex = 42
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(382, 250)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(116, 16)
-        Me.Label10.TabIndex = 41
-        Me.Label10.Text = "Tipo de Sangre"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(268, 250)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(48, 16)
-        Me.Label11.TabIndex = 40
-        Me.Label11.Text = "Altura"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(142, 250)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(44, 16)
-        Me.Label12.TabIndex = 39
-        Me.Label12.Text = "Peso"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(37, 250)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(45, 16)
-        Me.Label14.TabIndex = 38
-        Me.Label14.Text = "Edad"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(35, 163)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(70, 16)
-        Me.Label15.TabIndex = 37
-        Me.Label15.Text = "Telefono"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(35, 208)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(55, 16)
-        Me.Label16.TabIndex = 36
-        Me.Label16.Text = "Correo"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.Black
-        Me.Label17.Location = New System.Drawing.Point(35, 112)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(133, 16)
-        Me.Label17.TabIndex = 35
-        Me.Label17.Text = "Fecha Nacimiento"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.Black
-        Me.Label18.Location = New System.Drawing.Point(35, 72)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(63, 16)
-        Me.Label18.TabIndex = 34
-        Me.Label18.Text = "Nombre"
-        '
-        'BtnCargar
-        '
-        Me.BtnCargar.Location = New System.Drawing.Point(37, 298)
-        Me.BtnCargar.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnCargar.Name = "BtnCargar"
-        Me.BtnCargar.Size = New System.Drawing.Size(89, 27)
-        Me.BtnCargar.TabIndex = 1
-        Me.BtnCargar.Text = "Cargar"
-        Me.BtnCargar.UseVisualStyleBackColor = True
-        '
-        'TxtActualizarCedula
-        '
-        Me.TxtActualizarCedula.Location = New System.Drawing.Point(146, 28)
-        Me.TxtActualizarCedula.Margin = New System.Windows.Forms.Padding(2)
-        Me.TxtActualizarCedula.Name = "TxtActualizarCedula"
-        Me.TxtActualizarCedula.Size = New System.Drawing.Size(144, 23)
-        Me.TxtActualizarCedula.TabIndex = 0
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.BtnEliminar)
-        Me.TabPage2.Controls.Add(Me.TxtEliminarCedula)
-        Me.TabPage2.Controls.Add(Me.Label13)
-        Me.TabPage2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabPage2.Location = New System.Drawing.Point(4, 26)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(596, 484)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Eliminar"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.Location = New System.Drawing.Point(22, 159)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(98, 45)
-        Me.BtnEliminar.TabIndex = 27
-        Me.BtnEliminar.Text = "Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
-        '
-        'TxtEliminarCedula
-        '
-        Me.TxtEliminarCedula.Location = New System.Drawing.Point(133, 75)
-        Me.TxtEliminarCedula.Name = "TxtEliminarCedula"
-        Me.TxtEliminarCedula.Size = New System.Drawing.Size(152, 24)
-        Me.TxtEliminarCedula.TabIndex = 26
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(51, 77)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(60, 18)
-        Me.Label13.TabIndex = 25
-        Me.Label13.Text = "Cedula"
-        '
-        'TabPage1
-        '
-        Me.TabPage1.Controls.Add(Me.BtnEnfermedades)
-        Me.TabPage1.Controls.Add(Me.Button1)
-        Me.TabPage1.Controls.Add(Me.btnPersonaContacto)
-        Me.TabPage1.Controls.Add(Me.ComboTipoSangre)
-        Me.TabPage1.Controls.Add(Me.BtnRegistrar)
-        Me.TabPage1.Controls.Add(Me.TxtAltura)
-        Me.TabPage1.Controls.Add(Me.TxtPeso)
-        Me.TabPage1.Controls.Add(Me.TxtEdad)
-        Me.TabPage1.Controls.Add(Me.TxtTelefono)
-        Me.TabPage1.Controls.Add(Me.TxtCorreo)
-        Me.TabPage1.Controls.Add(Me.TxtRegistroNombre)
-        Me.TabPage1.Controls.Add(Me.TxtRegistroCedula)
-        Me.TabPage1.Controls.Add(Me.DateTimePicker1)
-        Me.TabPage1.Controls.Add(Me.Label9)
-        Me.TabPage1.Controls.Add(Me.Label8)
-        Me.TabPage1.Controls.Add(Me.Label7)
-        Me.TabPage1.Controls.Add(Me.Label6)
-        Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Controls.Add(Me.Label5)
-        Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.Label2)
-        Me.TabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabPage1.Location = New System.Drawing.Point(4, 26)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(596, 484)
-        Me.TabPage1.TabIndex = 2
-        Me.TabPage1.Text = "Registrar"
-        Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(157, 337)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(142, 33)
-        Me.Button1.TabIndex = 35
-        Me.Button1.Text = "Limpiar Campos"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'btnPersonaContacto
-        '
-        Me.btnPersonaContacto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPersonaContacto.Location = New System.Drawing.Point(22, 251)
-        Me.btnPersonaContacto.Name = "btnPersonaContacto"
-        Me.btnPersonaContacto.Size = New System.Drawing.Size(162, 30)
-        Me.btnPersonaContacto.TabIndex = 34
-        Me.btnPersonaContacto.Text = "Persona Contacto"
-        Me.btnPersonaContacto.UseVisualStyleBackColor = True
-        '
-        'ComboTipoSangre
-        '
-        Me.ComboTipoSangre.FormattingEnabled = True
-        Me.ComboTipoSangre.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"})
-        Me.ComboTipoSangre.Location = New System.Drawing.Point(484, 297)
-        Me.ComboTipoSangre.Margin = New System.Windows.Forms.Padding(2)
-        Me.ComboTipoSangre.Name = "ComboTipoSangre"
-        Me.ComboTipoSangre.Size = New System.Drawing.Size(80, 25)
-        Me.ComboTipoSangre.TabIndex = 33
+        'BtnMedicamentos
+        '
+        Me.BtnMedicamentos.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMedicamentos.Location = New System.Drawing.Point(391, 274)
+        Me.BtnMedicamentos.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnMedicamentos.Name = "BtnMedicamentos"
+        Me.BtnMedicamentos.Size = New System.Drawing.Size(149, 37)
+        Me.BtnMedicamentos.TabIndex = 60
+        Me.BtnMedicamentos.Text = "Medicamentos"
+        Me.BtnMedicamentos.UseVisualStyleBackColor = True
+        '
+        'BtnEnfermedades
+        '
+        Me.BtnEnfermedades.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEnfermedades.Location = New System.Drawing.Point(211, 274)
+        Me.BtnEnfermedades.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnEnfermedades.Name = "BtnEnfermedades"
+        Me.BtnEnfermedades.Size = New System.Drawing.Size(158, 37)
+        Me.BtnEnfermedades.TabIndex = 59
+        Me.BtnEnfermedades.Text = "Enfermedades"
+        Me.BtnEnfermedades.UseVisualStyleBackColor = True
+        '
+        'BtnLimpiar
+        '
+        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLimpiar.Location = New System.Drawing.Point(724, 360)
+        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnLimpiar.Name = "BtnLimpiar"
+        Me.BtnLimpiar.Size = New System.Drawing.Size(160, 41)
+        Me.BtnLimpiar.TabIndex = 58
+        Me.BtnLimpiar.Text = "Limpiar Campos"
+        Me.BtnLimpiar.UseVisualStyleBackColor = True
+        '
+        'BtnPersonaC
+        '
+        Me.BtnPersonaC.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPersonaC.Location = New System.Drawing.Point(17, 274)
+        Me.BtnPersonaC.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnPersonaC.Name = "BtnPersonaC"
+        Me.BtnPersonaC.Size = New System.Drawing.Size(172, 37)
+        Me.BtnPersonaC.TabIndex = 57
+        Me.BtnPersonaC.Text = "Persona Contacto"
+        Me.BtnPersonaC.UseVisualStyleBackColor = True
+        '
+        'ComboTipo
+        '
+        Me.ComboTipo.FormattingEnabled = True
+        Me.ComboTipo.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"})
+        Me.ComboTipo.Location = New System.Drawing.Point(178, 377)
+        Me.ComboTipo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ComboTipo.Name = "ComboTipo"
+        Me.ComboTipo.Size = New System.Drawing.Size(105, 24)
+        Me.ComboTipo.TabIndex = 56
         '
         'BtnRegistrar
         '
         Me.BtnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegistrar.Location = New System.Drawing.Point(22, 337)
+        Me.BtnRegistrar.Location = New System.Drawing.Point(561, 360)
+        Me.BtnRegistrar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnRegistrar.Name = "BtnRegistrar"
-        Me.BtnRegistrar.Size = New System.Drawing.Size(102, 33)
-        Me.BtnRegistrar.TabIndex = 32
+        Me.BtnRegistrar.Size = New System.Drawing.Size(136, 41)
+        Me.BtnRegistrar.TabIndex = 55
         Me.BtnRegistrar.Text = "Registrar"
         Me.BtnRegistrar.UseVisualStyleBackColor = True
         '
         'TxtAltura
         '
-        Me.TxtAltura.Location = New System.Drawing.Point(302, 297)
+        Me.TxtAltura.Location = New System.Drawing.Point(367, 331)
+        Me.TxtAltura.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtAltura.Name = "TxtAltura"
-        Me.TxtAltura.Size = New System.Drawing.Size(51, 24)
-        Me.TxtAltura.TabIndex = 30
+        Me.TxtAltura.Size = New System.Drawing.Size(67, 22)
+        Me.TxtAltura.TabIndex = 54
         '
         'TxtPeso
         '
-        Me.TxtPeso.Location = New System.Drawing.Point(170, 297)
+        Me.TxtPeso.Location = New System.Drawing.Point(211, 331)
+        Me.TxtPeso.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtPeso.Name = "TxtPeso"
-        Me.TxtPeso.Size = New System.Drawing.Size(55, 24)
-        Me.TxtPeso.TabIndex = 29
+        Me.TxtPeso.Size = New System.Drawing.Size(72, 22)
+        Me.TxtPeso.TabIndex = 53
         '
         'TxtEdad
         '
-        Me.TxtEdad.Location = New System.Drawing.Point(64, 297)
+        Me.TxtEdad.Location = New System.Drawing.Point(73, 331)
+        Me.TxtEdad.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtEdad.Name = "TxtEdad"
-        Me.TxtEdad.Size = New System.Drawing.Size(46, 24)
-        Me.TxtEdad.TabIndex = 28
+        Me.TxtEdad.Size = New System.Drawing.Size(60, 22)
+        Me.TxtEdad.TabIndex = 52
         '
         'TxtTelefono
         '
-        Me.TxtTelefono.Location = New System.Drawing.Point(129, 167)
+        Me.TxtTelefono.Location = New System.Drawing.Point(160, 171)
+        Me.TxtTelefono.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtTelefono.Name = "TxtTelefono"
-        Me.TxtTelefono.Size = New System.Drawing.Size(166, 24)
-        Me.TxtTelefono.TabIndex = 27
+        Me.TxtTelefono.Size = New System.Drawing.Size(186, 22)
+        Me.TxtTelefono.TabIndex = 51
         '
         'TxtCorreo
         '
-        Me.TxtCorreo.Location = New System.Drawing.Point(129, 210)
+        Me.TxtCorreo.Location = New System.Drawing.Point(160, 223)
+        Me.TxtCorreo.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCorreo.Name = "TxtCorreo"
-        Me.TxtCorreo.Size = New System.Drawing.Size(236, 24)
-        Me.TxtCorreo.TabIndex = 26
+        Me.TxtCorreo.Size = New System.Drawing.Size(186, 22)
+        Me.TxtCorreo.TabIndex = 50
         '
-        'TxtRegistroNombre
+        'TxtNombre
         '
-        Me.TxtRegistroNombre.Location = New System.Drawing.Point(129, 73)
-        Me.TxtRegistroNombre.Name = "TxtRegistroNombre"
-        Me.TxtRegistroNombre.Size = New System.Drawing.Size(236, 24)
-        Me.TxtRegistroNombre.TabIndex = 25
+        Me.TxtNombre.Location = New System.Drawing.Point(160, 55)
+        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(313, 22)
+        Me.TxtNombre.TabIndex = 49
         '
-        'TxtRegistroCedula
+        'TxtCedula
         '
-        Me.TxtRegistroCedula.Location = New System.Drawing.Point(129, 36)
-        Me.TxtRegistroCedula.Name = "TxtRegistroCedula"
-        Me.TxtRegistroCedula.Size = New System.Drawing.Size(236, 24)
-        Me.TxtRegistroCedula.TabIndex = 24
+        Me.TxtCedula.Location = New System.Drawing.Point(160, 9)
+        Me.TxtCedula.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtCedula.Name = "TxtCedula"
+        Me.TxtCedula.Size = New System.Drawing.Size(186, 22)
+        Me.TxtCedula.TabIndex = 48
         '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(196, 114)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(249, 105)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
+        Me.DateTimePicker1.MinDate = New Date(1800, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(127, 21)
-        Me.DateTimePicker1.TabIndex = 23
+        Me.DateTimePicker1.Size = New System.Drawing.Size(168, 24)
+        Me.DateTimePicker1.TabIndex = 47
         '
-        'Label9
+        'Label21
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(365, 295)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(116, 16)
-        Me.Label9.TabIndex = 19
-        Me.Label9.Text = "Tipo de Sangre"
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.Black
+        Me.Label21.Location = New System.Drawing.Point(15, 377)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(136, 20)
+        Me.Label21.TabIndex = 46
+        Me.Label21.Text = "Tipo de Sangre"
         '
-        'Label8
+        'Label22
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(251, 295)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(48, 16)
-        Me.Label8.TabIndex = 18
-        Me.Label8.Text = "Altura"
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.Black
+        Me.Label22.Location = New System.Drawing.Point(300, 333)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(59, 20)
+        Me.Label22.TabIndex = 45
+        Me.Label22.Text = "Altura"
         '
-        'Label7
+        'Label23
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(126, 295)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(44, 16)
-        Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Peso"
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.ForeColor = System.Drawing.Color.Black
+        Me.Label23.Location = New System.Drawing.Point(152, 331)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(51, 20)
+        Me.Label23.TabIndex = 44
+        Me.Label23.Text = "Peso"
         '
-        'Label6
+        'Label24
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(20, 295)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(45, 16)
-        Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Edad"
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.Black
+        Me.Label24.Location = New System.Drawing.Point(15, 328)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(51, 20)
+        Me.Label24.TabIndex = 43
+        Me.Label24.Text = "Edad"
         '
-        'Label4
+        'Label25
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(19, 165)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 16)
-        Me.Label4.TabIndex = 15
-        Me.Label4.Text = "Telefono"
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.Black
+        Me.Label25.Location = New System.Drawing.Point(13, 168)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(81, 20)
+        Me.Label25.TabIndex = 42
+        Me.Label25.Text = "Telefono"
         '
-        'Label5
+        'Label26
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(19, 210)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 16)
-        Me.Label5.TabIndex = 14
-        Me.Label5.Text = "Correo"
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.Black
+        Me.Label26.Location = New System.Drawing.Point(13, 223)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(66, 20)
+        Me.Label26.TabIndex = 41
+        Me.Label26.Text = "Correo"
         '
-        'Label3
+        'Label27
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(19, 114)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(133, 16)
-        Me.Label3.TabIndex = 13
-        Me.Label3.Text = "Fecha Nacimiento"
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.ForeColor = System.Drawing.Color.Black
+        Me.Label27.Location = New System.Drawing.Point(13, 105)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(160, 20)
+        Me.Label27.TabIndex = 40
+        Me.Label27.Text = "Fecha Nacimiento"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.ForeColor = System.Drawing.Color.Black
+        Me.Label28.Location = New System.Drawing.Point(13, 9)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(67, 20)
+        Me.Label28.TabIndex = 39
+        Me.Label28.Text = "Cedula"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.Color.Black
+        Me.Label29.Location = New System.Drawing.Point(13, 55)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(74, 20)
+        Me.Label29.TabIndex = 38
+        Me.Label29.Text = "Nombre"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(561, 50)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(662, 298)
+        Me.DataGridView1.TabIndex = 61
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminar.Location = New System.Drawing.Point(909, 360)
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(136, 41)
+        Me.BtnEliminar.TabIndex = 62
+        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(19, 36)
+        Me.Label1.Location = New System.Drawing.Point(557, 15)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 16)
-        Me.Label1.TabIndex = 12
+        Me.Label1.Size = New System.Drawing.Size(67, 20)
+        Me.Label1.TabIndex = 63
         Me.Label1.Text = "Cedula"
         '
-        'Label2
+        'TxtBuscarCedula
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(19, 73)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 16)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Nombre"
-        '
-        'TabControl1
-        '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(0, 1)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(604, 514)
-        Me.TabControl1.TabIndex = 0
-        '
-        'BtnEnfermedades
-        '
-        Me.BtnEnfermedades.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEnfermedades.Location = New System.Drawing.Point(203, 251)
-        Me.BtnEnfermedades.Name = "BtnEnfermedades"
-        Me.BtnEnfermedades.Size = New System.Drawing.Size(162, 30)
-        Me.BtnEnfermedades.TabIndex = 36
-        Me.BtnEnfermedades.Text = "Enfermedades"
-        Me.BtnEnfermedades.UseVisualStyleBackColor = True
+        Me.TxtBuscarCedula.Location = New System.Drawing.Point(647, 15)
+        Me.TxtBuscarCedula.Name = "TxtBuscarCedula"
+        Me.TxtBuscarCedula.Size = New System.Drawing.Size(177, 22)
+        Me.TxtBuscarCedula.TabIndex = 64
         '
         'FrmPaciente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(597, 510)
-        Me.Controls.Add(Me.TabControl1)
+        Me.ClientSize = New System.Drawing.Size(1235, 414)
+        Me.Controls.Add(Me.TxtBuscarCedula)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.BtnEliminar)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.BtnMedicamentos)
+        Me.Controls.Add(Me.BtnEnfermedades)
+        Me.Controls.Add(Me.BtnLimpiar)
+        Me.Controls.Add(Me.BtnPersonaC)
+        Me.Controls.Add(Me.ComboTipo)
+        Me.Controls.Add(Me.BtnRegistrar)
+        Me.Controls.Add(Me.TxtAltura)
+        Me.Controls.Add(Me.TxtPeso)
+        Me.Controls.Add(Me.TxtEdad)
+        Me.Controls.Add(Me.TxtTelefono)
+        Me.Controls.Add(Me.TxtCorreo)
+        Me.Controls.Add(Me.TxtNombre)
+        Me.Controls.Add(Me.TxtCedula)
+        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.Label25)
+        Me.Controls.Add(Me.Label26)
+        Me.Controls.Add(Me.Label27)
+        Me.Controls.Add(Me.Label28)
+        Me.Controls.Add(Me.Label29)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmPaciente"
         Me.Text = "FrmPaciente"
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents Label19 As Label
-    Friend WithEvents ComboTipo2 As ComboBox
-    Friend WithEvents TxtActualizarAltura As TextBox
-    Friend WithEvents TxtActualizarPeso As TextBox
-    Friend WithEvents TxtActualizarEdad As TextBox
-    Friend WithEvents TxtActualizarTelefono As TextBox
-    Friend WithEvents TxtActualizarCorreo As TextBox
-    Friend WithEvents TxtActualizarNombre As TextBox
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents BtnCargar As Button
-    Friend WithEvents TxtActualizarCedula As TextBox
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents BtnEliminar As Button
-    Friend WithEvents TxtEliminarCedula As TextBox
-    Friend WithEvents Label13 As Label
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents ComboTipoSangre As ComboBox
-    Friend WithEvents BtnRegistrar As Button
-    Friend WithEvents TxtAltura As TextBox
-    Friend WithEvents TxtPeso As TextBox
-    Friend WithEvents TxtEdad As TextBox
-    Friend WithEvents TxtTelefono As TextBox
-    Friend WithEvents TxtCorreo As TextBox
-    Friend WithEvents TxtRegistroNombre As TextBox
-    Friend WithEvents TxtRegistroCedula As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents BtnActualizar As Button
-    Friend WithEvents TxtBuscarCedula As TextBox
-    Friend WithEvents BtnBuscar As Button
-    Friend WithEvents Label20 As Label
     Friend WithEvents CedulaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EdadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -717,7 +383,31 @@ Partial Class FrmPaciente
     Friend WithEvents AlturaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TipoSangreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents btnPersonaContacto As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnMedicamentos As Button
     Friend WithEvents BtnEnfermedades As Button
+    Friend WithEvents BtnLimpiar As Button
+    Friend WithEvents BtnPersonaC As Button
+    Friend WithEvents ComboTipo As ComboBox
+    Friend WithEvents BtnRegistrar As Button
+    Friend WithEvents TxtAltura As TextBox
+    Friend WithEvents TxtPeso As TextBox
+    Friend WithEvents TxtEdad As TextBox
+    Friend WithEvents TxtTelefono As TextBox
+    Friend WithEvents TxtCorreo As TextBox
+    Friend WithEvents TxtNombre As TextBox
+    Friend WithEvents TxtCedula As TextBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents BtnEliminar As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TxtBuscarCedula As TextBox
 End Class
