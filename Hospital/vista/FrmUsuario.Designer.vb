@@ -22,6 +22,9 @@ Partial Class FrmUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GrupoAgregar = New System.Windows.Forms.GroupBox()
         Me.CBTipo = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -84,7 +87,7 @@ Partial Class FrmUsuario
         'GrupoAgregar
         '
         Me.GrupoAgregar.AutoSize = True
-        Me.GrupoAgregar.BackColor = System.Drawing.Color.Silver
+        Me.GrupoAgregar.BackColor = System.Drawing.Color.Teal
         Me.GrupoAgregar.Controls.Add(Me.CBTipo)
         Me.GrupoAgregar.Controls.Add(Me.Label8)
         Me.GrupoAgregar.Controls.Add(Me.TxtContraseña)
@@ -123,7 +126,7 @@ Partial Class FrmUsuario
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.ForeColor = System.Drawing.SystemColors.Control
         Me.Label8.Location = New System.Drawing.Point(95, 265)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(40, 16)
@@ -133,6 +136,7 @@ Partial Class FrmUsuario
         'TxtContraseña
         '
         Me.TxtContraseña.Location = New System.Drawing.Point(154, 226)
+        Me.TxtContraseña.MaxLength = 20
         Me.TxtContraseña.Name = "TxtContraseña"
         Me.TxtContraseña.Size = New System.Drawing.Size(166, 21)
         Me.TxtContraseña.TabIndex = 14
@@ -141,6 +145,7 @@ Partial Class FrmUsuario
         'TxtNombreUsuario
         '
         Me.TxtNombreUsuario.Location = New System.Drawing.Point(154, 91)
+        Me.TxtNombreUsuario.MaxLength = 20
         Me.TxtNombreUsuario.Name = "TxtNombreUsuario"
         Me.TxtNombreUsuario.Size = New System.Drawing.Size(166, 21)
         Me.TxtNombreUsuario.TabIndex = 13
@@ -149,7 +154,7 @@ Partial Class FrmUsuario
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.ForeColor = System.Drawing.SystemColors.Control
         Me.Label7.Location = New System.Drawing.Point(54, 230)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(87, 16)
@@ -160,7 +165,7 @@ Partial Class FrmUsuario
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.ForeColor = System.Drawing.SystemColors.Control
         Me.Label6.Location = New System.Drawing.Point(8, 91)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(140, 16)
@@ -170,6 +175,7 @@ Partial Class FrmUsuario
         'TxtCorreo
         '
         Me.TxtCorreo.Location = New System.Drawing.Point(154, 127)
+        Me.TxtCorreo.MaxLength = 25
         Me.TxtCorreo.Name = "TxtCorreo"
         Me.TxtCorreo.Size = New System.Drawing.Size(166, 21)
         Me.TxtCorreo.TabIndex = 10
@@ -177,6 +183,7 @@ Partial Class FrmUsuario
         'TxtTelefono
         '
         Me.TxtTelefono.Location = New System.Drawing.Point(154, 159)
+        Me.TxtTelefono.MaxLength = 10
         Me.TxtTelefono.Name = "TxtTelefono"
         Me.TxtTelefono.Size = New System.Drawing.Size(166, 21)
         Me.TxtTelefono.TabIndex = 9
@@ -185,7 +192,7 @@ Partial Class FrmUsuario
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
         Me.Label5.Location = New System.Drawing.Point(82, 127)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(55, 16)
@@ -196,7 +203,7 @@ Partial Class FrmUsuario
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
         Me.Label4.Location = New System.Drawing.Point(69, 163)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 16)
@@ -215,7 +222,7 @@ Partial Class FrmUsuario
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
         Me.Label3.Location = New System.Drawing.Point(14, 198)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(133, 16)
@@ -224,7 +231,9 @@ Partial Class FrmUsuario
         '
         'BtnAgregar
         '
+        Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.Control
         Me.BtnAgregar.Location = New System.Drawing.Point(222, 317)
         Me.BtnAgregar.Name = "BtnAgregar"
         Me.BtnAgregar.Size = New System.Drawing.Size(98, 27)
@@ -236,7 +245,7 @@ Partial Class FrmUsuario
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(80, 63)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(57, 16)
@@ -246,6 +255,7 @@ Partial Class FrmUsuario
         'TxtNombre
         '
         Me.TxtNombre.Location = New System.Drawing.Point(154, 28)
+        Me.TxtNombre.MaxLength = 25
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(166, 21)
         Me.TxtNombre.TabIndex = 3
@@ -254,7 +264,7 @@ Partial Class FrmUsuario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(74, 32)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 16)
@@ -264,6 +274,7 @@ Partial Class FrmUsuario
         'TxtCedula
         '
         Me.TxtCedula.Location = New System.Drawing.Point(154, 59)
+        Me.TxtCedula.MaxLength = 10
         Me.TxtCedula.Name = "TxtCedula"
         Me.TxtCedula.Size = New System.Drawing.Size(166, 21)
         Me.TxtCedula.TabIndex = 2
@@ -271,7 +282,7 @@ Partial Class FrmUsuario
         'GrupoEliminar
         '
         Me.GrupoEliminar.AutoSize = True
-        Me.GrupoEliminar.BackColor = System.Drawing.Color.Silver
+        Me.GrupoEliminar.BackColor = System.Drawing.Color.Teal
         Me.GrupoEliminar.Controls.Add(Me.BtnEliminar)
         Me.GrupoEliminar.Controls.Add(Me.Label15)
         Me.GrupoEliminar.Controls.Add(Me.TxtCedulaEliminar)
@@ -279,13 +290,15 @@ Partial Class FrmUsuario
         Me.GrupoEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrupoEliminar.Location = New System.Drawing.Point(369, 57)
         Me.GrupoEliminar.Name = "GrupoEliminar"
-        Me.GrupoEliminar.Size = New System.Drawing.Size(279, 129)
+        Me.GrupoEliminar.Size = New System.Drawing.Size(351, 129)
         Me.GrupoEliminar.TabIndex = 11
         Me.GrupoEliminar.TabStop = False
         '
         'BtnEliminar
         '
+        Me.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminar.ForeColor = System.Drawing.SystemColors.Control
         Me.BtnEliminar.Location = New System.Drawing.Point(158, 80)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(98, 27)
@@ -297,7 +310,7 @@ Partial Class FrmUsuario
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Black
+        Me.Label15.ForeColor = System.Drawing.SystemColors.Control
         Me.Label15.Location = New System.Drawing.Point(19, 36)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(57, 16)
@@ -307,6 +320,7 @@ Partial Class FrmUsuario
         'TxtCedulaEliminar
         '
         Me.TxtCedulaEliminar.Location = New System.Drawing.Point(93, 32)
+        Me.TxtCedulaEliminar.MaxLength = 10
         Me.TxtCedulaEliminar.Name = "TxtCedulaEliminar"
         Me.TxtCedulaEliminar.Size = New System.Drawing.Size(163, 21)
         Me.TxtCedulaEliminar.TabIndex = 2
@@ -314,33 +328,59 @@ Partial Class FrmUsuario
         'GrupoBuscar
         '
         Me.GrupoBuscar.AutoSize = True
-        Me.GrupoBuscar.BackColor = System.Drawing.Color.Silver
+        Me.GrupoBuscar.BackColor = System.Drawing.Color.Teal
         Me.GrupoBuscar.Controls.Add(Me.DataGridView1)
         Me.GrupoBuscar.Controls.Add(Me.BtnBuscar)
         Me.GrupoBuscar.Controls.Add(Me.Label9)
         Me.GrupoBuscar.Controls.Add(Me.TxtCedulaBuscar)
         Me.GrupoBuscar.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GrupoBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GrupoBuscar.ForeColor = System.Drawing.SystemColors.Control
         Me.GrupoBuscar.Location = New System.Drawing.Point(369, 192)
         Me.GrupoBuscar.Name = "GrupoBuscar"
-        Me.GrupoBuscar.Size = New System.Drawing.Size(279, 229)
+        Me.GrupoBuscar.Size = New System.Drawing.Size(351, 229)
         Me.GrupoBuscar.TabIndex = 12
         Me.GrupoBuscar.TabStop = False
         '
         'DataGridView1
         '
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.DimGray
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowFrame
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowFrame
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.WindowFrame
         Me.DataGridView1.Location = New System.Drawing.Point(33, 119)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(223, 73)
+        Me.DataGridView1.RowTemplate.ReadOnly = True
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(289, 67)
         Me.DataGridView1.TabIndex = 18
         '
         'BtnBuscar
         '
+        Me.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBuscar.Location = New System.Drawing.Point(158, 64)
+        Me.BtnBuscar.ForeColor = System.Drawing.SystemColors.Control
+        Me.BtnBuscar.Location = New System.Drawing.Point(158, 63)
         Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(98, 27)
+        Me.BtnBuscar.Size = New System.Drawing.Size(111, 27)
         Me.BtnBuscar.TabIndex = 17
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.UseVisualStyleBackColor = True
@@ -349,8 +389,8 @@ Partial Class FrmUsuario
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(30, 41)
+        Me.Label9.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label9.Location = New System.Drawing.Point(30, 40)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(57, 16)
         Me.Label9.TabIndex = 0
@@ -358,9 +398,10 @@ Partial Class FrmUsuario
         '
         'TxtCedulaBuscar
         '
-        Me.TxtCedulaBuscar.Location = New System.Drawing.Point(104, 37)
+        Me.TxtCedulaBuscar.Location = New System.Drawing.Point(104, 36)
+        Me.TxtCedulaBuscar.MaxLength = 10
         Me.TxtCedulaBuscar.Name = "TxtCedulaBuscar"
-        Me.TxtCedulaBuscar.Size = New System.Drawing.Size(152, 21)
+        Me.TxtCedulaBuscar.Size = New System.Drawing.Size(165, 21)
         Me.TxtCedulaBuscar.TabIndex = 2
         '
         'AgregarToolStripMenuItem
@@ -391,17 +432,18 @@ Partial Class FrmUsuario
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.HighlightText
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.ActualizarToolStripMenuItem, Me.BuscarToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1031, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1096, 24)
         Me.MenuStrip1.TabIndex = 10
         Me.MenuStrip1.Text = "MenuInicio"
         '
         'GrupoActualizar
         '
         Me.GrupoActualizar.AutoSize = True
-        Me.GrupoActualizar.BackColor = System.Drawing.Color.Silver
+        Me.GrupoActualizar.BackColor = System.Drawing.Color.Teal
         Me.GrupoActualizar.Controls.Add(Me.BtnActualizar)
         Me.GrupoActualizar.Controls.Add(Me.CBTipoActualizar)
         Me.GrupoActualizar.Controls.Add(Me.Label10)
@@ -422,7 +464,8 @@ Partial Class FrmUsuario
         Me.GrupoActualizar.Controls.Add(Me.TxtCedulaActualizar)
         Me.GrupoActualizar.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GrupoActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GrupoActualizar.Location = New System.Drawing.Point(654, 57)
+        Me.GrupoActualizar.ForeColor = System.Drawing.SystemColors.Control
+        Me.GrupoActualizar.Location = New System.Drawing.Point(726, 57)
         Me.GrupoActualizar.Name = "GrupoActualizar"
         Me.GrupoActualizar.Size = New System.Drawing.Size(351, 364)
         Me.GrupoActualizar.TabIndex = 13
@@ -430,7 +473,9 @@ Partial Class FrmUsuario
         '
         'BtnActualizar
         '
+        Me.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnActualizar.ForeColor = System.Drawing.SystemColors.Control
         Me.BtnActualizar.Location = New System.Drawing.Point(222, 317)
         Me.BtnActualizar.Name = "BtnActualizar"
         Me.BtnActualizar.Size = New System.Drawing.Size(98, 27)
@@ -451,7 +496,7 @@ Partial Class FrmUsuario
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Black
+        Me.Label10.ForeColor = System.Drawing.SystemColors.Control
         Me.Label10.Location = New System.Drawing.Point(95, 265)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(40, 16)
@@ -461,6 +506,7 @@ Partial Class FrmUsuario
         'TxtContraseñaActualizar
         '
         Me.TxtContraseñaActualizar.Location = New System.Drawing.Point(154, 226)
+        Me.TxtContraseñaActualizar.MaxLength = 20
         Me.TxtContraseñaActualizar.Name = "TxtContraseñaActualizar"
         Me.TxtContraseñaActualizar.Size = New System.Drawing.Size(166, 21)
         Me.TxtContraseñaActualizar.TabIndex = 14
@@ -469,6 +515,7 @@ Partial Class FrmUsuario
         'TxtNombreUsuarioActualizar
         '
         Me.TxtNombreUsuarioActualizar.Location = New System.Drawing.Point(154, 91)
+        Me.TxtNombreUsuarioActualizar.MaxLength = 20
         Me.TxtNombreUsuarioActualizar.Name = "TxtNombreUsuarioActualizar"
         Me.TxtNombreUsuarioActualizar.Size = New System.Drawing.Size(166, 21)
         Me.TxtNombreUsuarioActualizar.TabIndex = 13
@@ -477,7 +524,7 @@ Partial Class FrmUsuario
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.Black
+        Me.Label11.ForeColor = System.Drawing.SystemColors.Control
         Me.Label11.Location = New System.Drawing.Point(54, 230)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(87, 16)
@@ -488,7 +535,7 @@ Partial Class FrmUsuario
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.Black
+        Me.Label12.ForeColor = System.Drawing.SystemColors.Control
         Me.Label12.Location = New System.Drawing.Point(8, 91)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(140, 16)
@@ -498,6 +545,7 @@ Partial Class FrmUsuario
         'TxtCorreoActualizar
         '
         Me.TxtCorreoActualizar.Location = New System.Drawing.Point(154, 127)
+        Me.TxtCorreoActualizar.MaxLength = 25
         Me.TxtCorreoActualizar.Name = "TxtCorreoActualizar"
         Me.TxtCorreoActualizar.Size = New System.Drawing.Size(166, 21)
         Me.TxtCorreoActualizar.TabIndex = 10
@@ -505,6 +553,7 @@ Partial Class FrmUsuario
         'TxtTelefonoActualizar
         '
         Me.TxtTelefonoActualizar.Location = New System.Drawing.Point(154, 159)
+        Me.TxtTelefonoActualizar.MaxLength = 10
         Me.TxtTelefonoActualizar.Name = "TxtTelefonoActualizar"
         Me.TxtTelefonoActualizar.Size = New System.Drawing.Size(166, 21)
         Me.TxtTelefonoActualizar.TabIndex = 9
@@ -513,7 +562,7 @@ Partial Class FrmUsuario
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Black
+        Me.Label13.ForeColor = System.Drawing.SystemColors.Control
         Me.Label13.Location = New System.Drawing.Point(82, 127)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(55, 16)
@@ -524,7 +573,7 @@ Partial Class FrmUsuario
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Black
+        Me.Label14.ForeColor = System.Drawing.SystemColors.Control
         Me.Label14.Location = New System.Drawing.Point(69, 163)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(70, 16)
@@ -543,7 +592,7 @@ Partial Class FrmUsuario
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Black
+        Me.Label16.ForeColor = System.Drawing.SystemColors.Control
         Me.Label16.Location = New System.Drawing.Point(14, 198)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(133, 16)
@@ -552,7 +601,9 @@ Partial Class FrmUsuario
         '
         'BtnCargar
         '
+        Me.BtnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCargar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCargar.ForeColor = System.Drawing.SystemColors.Control
         Me.BtnCargar.Location = New System.Drawing.Point(77, 317)
         Me.BtnCargar.Name = "BtnCargar"
         Me.BtnCargar.Size = New System.Drawing.Size(119, 27)
@@ -564,7 +615,7 @@ Partial Class FrmUsuario
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.Black
+        Me.Label17.ForeColor = System.Drawing.SystemColors.Control
         Me.Label17.Location = New System.Drawing.Point(84, 30)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(57, 16)
@@ -574,6 +625,7 @@ Partial Class FrmUsuario
         'TxtNombreActualizar
         '
         Me.TxtNombreActualizar.Location = New System.Drawing.Point(154, 58)
+        Me.TxtNombreActualizar.MaxLength = 25
         Me.TxtNombreActualizar.Name = "TxtNombreActualizar"
         Me.TxtNombreActualizar.Size = New System.Drawing.Size(166, 21)
         Me.TxtNombreActualizar.TabIndex = 3
@@ -582,7 +634,7 @@ Partial Class FrmUsuario
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.Black
+        Me.Label18.ForeColor = System.Drawing.SystemColors.Control
         Me.Label18.Location = New System.Drawing.Point(78, 61)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(63, 16)
@@ -592,6 +644,7 @@ Partial Class FrmUsuario
         'TxtCedulaActualizar
         '
         Me.TxtCedulaActualizar.Location = New System.Drawing.Point(154, 27)
+        Me.TxtCedulaActualizar.MaxLength = 10
         Me.TxtCedulaActualizar.Name = "TxtCedulaActualizar"
         Me.TxtCedulaActualizar.Size = New System.Drawing.Size(166, 21)
         Me.TxtCedulaActualizar.TabIndex = 2
@@ -600,7 +653,7 @@ Partial Class FrmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1031, 450)
+        Me.ClientSize = New System.Drawing.Size(1096, 471)
         Me.Controls.Add(Me.GrupoActualizar)
         Me.Controls.Add(Me.GrupoBuscar)
         Me.Controls.Add(Me.GrupoEliminar)

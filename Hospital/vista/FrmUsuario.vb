@@ -249,4 +249,21 @@
 
         End If
     End Sub
+
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Dim ListaUsuario As New List(Of Usuario)
+        If Not TxtCedulaBuscar.Text.Equals("") Then
+            usuario = New Usuario()
+            usuario.cedula = CInt(TxtCedulaBuscar.Text)
+            Dim usuario1 = controladorUsuario.Buscar(usuario)
+            If usuario1 IsNot Nothing Then
+                ListaUsuario.Add(usuario1)
+                DataGridView1.DataSource = ListaUsuario
+
+            End If
+
+
+        End If
+
+    End Sub
 End Class

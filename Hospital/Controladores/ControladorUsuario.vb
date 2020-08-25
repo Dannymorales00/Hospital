@@ -50,7 +50,7 @@
 
     Function Buscar(usuario As Usuario) As Usuario
 
-        Dim usuario1 As New Usuario()
+        Dim usuario1 As Usuario = Nothing
 
 
         Try
@@ -58,6 +58,7 @@
             Using almacen = New ProyectoEntities1()
 
                 Dim Result = almacen.sp_buscar_usuario(usuario.cedula).SingleOrDefault
+                usuario1 = New Usuario()
                 usuario1.cedula = Result.cedula
                 usuario1.contrasena = Result.contraseña
                 usuario1.correo = Result.correo
