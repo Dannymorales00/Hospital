@@ -32,7 +32,7 @@
         Dim paciente2 As Paciente = New Paciente()
         Try
             Using Almacen As New ProyectoEntities1
-                Dim result = Almacen.sp_buscar_paciente(CInt(paciente.cedula)).SingleOrDefault
+                Dim result = Almacen.sp_buscar_paciente(Val(paciente.cedula)).SingleOrDefault
 
 
                 paciente2.nombre = result.nombre
@@ -64,7 +64,19 @@
         Return result
     End Function
 
+    Public Function actualizarPesoAltura(paciente As Paciente) As Boolean
 
+        Try
+            Using Almacen As New ProyectoEntities1
+                Almacen.sp_actualizar_peso_altura_paciente(paciente.cedula, paciente.peso, paciente.altura)
+
+            End Using
+            Return True
+        Catch ex As Exception
+
+        End Try
+        Return False
+    End Function
     Public Function buscarPacientes(paciente As Paciente) As List(Of sp_buscar_pacientes_Result)
         Dim pacientes As New List(Of Paciente)
         Try

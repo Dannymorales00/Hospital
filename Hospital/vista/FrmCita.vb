@@ -62,7 +62,7 @@
                 End If
             Else
                 If controladorCita.actualizar(cita) = 1 Then
-                    MsgBox("Se actualizo la persona correctamente")
+                    MsgBox("Se actualizo la cita correctamente")
                 Else
                     MsgBox("Error al actualizar la cita")
                 End If
