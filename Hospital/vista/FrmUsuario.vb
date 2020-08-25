@@ -266,4 +266,8 @@
         End If
 
     End Sub
+
+    Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
+        Me.Hide()
+    End Sub
 End Class

@@ -22,9 +22,8 @@ Partial Class FrmUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GrupoAgregar = New System.Windows.Forms.GroupBox()
         Me.CBTipo = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -76,6 +75,7 @@ Partial Class FrmUsuario
         Me.TxtNombreActualizar = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TxtCedulaActualizar = New System.Windows.Forms.TextBox()
+        Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GrupoAgregar.SuspendLayout()
         Me.GrupoEliminar.SuspendLayout()
         Me.GrupoBuscar.SuspendLayout()
@@ -344,26 +344,18 @@ Partial Class FrmUsuario
         '
         'DataGridView1
         '
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.DimGray
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowFrame
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowFrame
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowFrame
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowFrame
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.WindowFrame
         Me.DataGridView1.Location = New System.Drawing.Point(33, 119)
@@ -433,7 +425,7 @@ Partial Class FrmUsuario
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.ActualizarToolStripMenuItem, Me.BuscarToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.ActualizarToolStripMenuItem, Me.BuscarToolStripMenuItem, Me.CerrarToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1096, 24)
@@ -649,17 +641,28 @@ Partial Class FrmUsuario
         Me.TxtCedulaActualizar.Size = New System.Drawing.Size(166, 21)
         Me.TxtCedulaActualizar.TabIndex = 2
         '
+        'CerrarToolStripMenuItem
+        '
+        Me.CerrarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
+        Me.CerrarToolStripMenuItem.Text = "Cerrar"
+        '
         'FrmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1096, 471)
+        Me.ControlBox = False
         Me.Controls.Add(Me.GrupoActualizar)
         Me.Controls.Add(Me.GrupoBuscar)
         Me.Controls.Add(Me.GrupoEliminar)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GrupoAgregar)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FrmUsuario"
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmUsuario"
         Me.TopMost = True
@@ -730,4 +733,5 @@ Partial Class FrmUsuario
     Friend WithEvents TxtNombreActualizar As TextBox
     Friend WithEvents Label18 As Label
     Friend WithEvents TxtCedulaActualizar As TextBox
+    Friend WithEvents CerrarToolStripMenuItem As ToolStripMenuItem
 End Class
