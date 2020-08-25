@@ -1,6 +1,4 @@
-﻿Imports System.ComponentModel
-
-Public Class FrmPrincipal
+﻿Public Class FrmPrincipal
     Private usuario As Usuario
     Private frmUsuario As FrmUsuario
     Private frmCitas As FrmCita
@@ -77,8 +75,5 @@ Public Class FrmPrincipal
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim frmSelecionarCitas As New FRMSeleccionarCitas
-        frmSelecionarCitas.ShowDialog()
-    End Sub
+
 End Class

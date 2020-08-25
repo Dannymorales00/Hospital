@@ -513,7 +513,7 @@
             <Parameter Name="sintomas" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_buscar_consulta" ReturnType="Collection(ProyectoModel.sp_buscar_consulta_Result)">
-            <Parameter Name="cedulaMedico" Mode="In" Type="Int32" />
+          <Parameter Name="cedulaMedico" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_buscar_consulta_con_cedula" ReturnType="Collection(ProyectoModel.sp_buscar_consulta_con_cedula_Result)">
           <Parameter Name="cedula" Mode="In" Type="String" />

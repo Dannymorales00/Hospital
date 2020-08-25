@@ -490,6 +490,40 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_select_medicamentos_Result)("sp_select_medicamentos")
     End Function
 
+    Public Overridable Function sp_buscar_citas() As ObjectResult(Of sp_buscar_citas_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_citas_Result)("sp_buscar_citas")
+    End Function
+
+    Public Overridable Function sp_actualizar_peso_altura_paciente(cedulaPaciente As Nullable(Of Integer), peso As Nullable(Of Double), altura As Nullable(Of Double)) As ObjectResult(Of Nullable(Of Integer))
+        Dim cedulaPacienteParameter As ObjectParameter = If(cedulaPaciente.HasValue, New ObjectParameter("cedulaPaciente", cedulaPaciente), New ObjectParameter("cedulaPaciente", GetType(Integer)))
+
+        Dim pesoParameter As ObjectParameter = If(peso.HasValue, New ObjectParameter("peso", peso), New ObjectParameter("peso", GetType(Double)))
+
+        Dim alturaParameter As ObjectParameter = If(altura.HasValue, New ObjectParameter("altura", altura), New ObjectParameter("altura", GetType(Double)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_actualizar_peso_altura_paciente", cedulaPacienteParameter, pesoParameter, alturaParameter)
+    End Function
+
+    Public Overridable Function sp_registrar_consulta(idCita As Nullable(Of Integer), presion As Nullable(Of Double), peso As Nullable(Of Double), altura As Nullable(Of Double), sintomas As String) As ObjectResult(Of Nullable(Of Integer))
+        Dim idCitaParameter As ObjectParameter = If(idCita.HasValue, New ObjectParameter("idCita", idCita), New ObjectParameter("idCita", GetType(Integer)))
+
+        Dim presionParameter As ObjectParameter = If(presion.HasValue, New ObjectParameter("presion", presion), New ObjectParameter("presion", GetType(Double)))
+
+        Dim pesoParameter As ObjectParameter = If(peso.HasValue, New ObjectParameter("peso", peso), New ObjectParameter("peso", GetType(Double)))
+
+        Dim alturaParameter As ObjectParameter = If(altura.HasValue, New ObjectParameter("altura", altura), New ObjectParameter("altura", GetType(Double)))
+
+        Dim sintomasParameter As ObjectParameter = If(sintomas IsNot Nothing, New ObjectParameter("sintomas", sintomas), New ObjectParameter("sintomas", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_registrar_consulta", idCitaParameter, presionParameter, pesoParameter, alturaParameter, sintomasParameter)
+    End Function
+
+    Public Overridable Function sp_buscar_consulta(cedulaMedico As Nullable(Of Integer)) As ObjectResult(Of sp_buscar_consulta_Result)
+        Dim cedulaMedicoParameter As ObjectParameter = If(cedulaMedico.HasValue, New ObjectParameter("cedulaMedico", cedulaMedico), New ObjectParameter("cedulaMedico", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_consulta_Result)("sp_buscar_consulta", cedulaMedicoParameter)
+    End Function
+
     Public Overridable Function sp_buscar_consulta_con_cedula(cedula As String) As ObjectResult(Of sp_buscar_consulta_con_cedula_Result)
         Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
 
