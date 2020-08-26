@@ -38,7 +38,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Cedula</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -68,7 +70,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Fecha</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -98,7 +102,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Color</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -128,7 +134,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Eritrocitos</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -158,7 +166,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Glucosa</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -188,7 +198,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Leucocitos</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -418,7 +430,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetExamenOrina1</DataSetName>
-        <Top>0.17639cm</Top>
+        <Top>1.02306cm</Top>
         <Left>0.35137cm</Left>
         <Height>1.2cm</Height>
         <Width>20.47283cm</Width>
@@ -470,7 +482,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Cedula</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -500,7 +514,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Fecha</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -530,7 +546,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Acido Urico</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -560,7 +578,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Colesterol</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -590,7 +610,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Creatinina</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -620,7 +642,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Hematocrito</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -650,7 +674,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Hemoglobina</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -680,7 +706,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Trigliceridos</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -972,8 +1000,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetExamenSangre1</DataSetName>
-        <Top>0.17639cm</Top>
-        <Left>21.17937cm</Left>
+        <Top>7.69056cm</Top>
+        <Left>0.35137cm</Left>
         <Height>1.2cm</Height>
         <Width>20.84667cm</Width>
         <ZIndex>1</ZIndex>
@@ -983,11 +1011,75 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Examen de Orina</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>0.28195cm</Top>
+        <Left>0.35137cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.06444cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Examen de Sangre</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>6.91417cm</Top>
+        <Left>0.35137cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.38194cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>2.775in</Height>
+    <Height>4.94167in</Height>
     <Style />
   </Body>
-  <Width>16.54568in</Width>
+  <Width>8.4337in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -1002,17 +1094,19 @@
               <TextRuns>
                 <TextRun>
                   <Value>Examenes</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>20pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>1.19803cm</Top>
-          <Left>20.81953cm</Left>
-          <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Top>0.80997cm</Top>
+          <Left>9.16604cm</Left>
+          <Height>1.0445cm</Height>
+          <Width>4.532cm</Width>
           <Style>
             <Border>
               <Style>None</Style>

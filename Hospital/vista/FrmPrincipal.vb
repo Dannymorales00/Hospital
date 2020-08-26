@@ -4,7 +4,7 @@
     Private frmCitas As FrmCita
     Private frmPaciente As FrmPaciente
     Private frmExamenes As FrmExamenes
-
+    Private frmReportes As FrmReportes
 
     Public Sub New(usuario1 As Usuario)
         usuario = New Usuario()
@@ -12,6 +12,7 @@
         frmCitas = New FrmCita()
         frmPaciente = New FrmPaciente()
         frmExamenes = New FrmExamenes()
+        frmReportes = New FrmReportes()
         usuario = usuario1
         InitializeComponent()
 
@@ -106,4 +107,7 @@
         End If
     End Sub
 
+    Private Sub BtnReportes_Click(sender As Object, e As EventArgs) Handles BtnReportes.Click
+        frmReportes.Show()
+    End Sub
 End Class

@@ -59,7 +59,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Cedula</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -89,7 +91,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nombre</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -119,7 +123,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Edad</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -149,7 +155,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Correo</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -179,7 +187,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Fecha Nacimiento</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -209,7 +219,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Peso</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -239,7 +251,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Altura</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -269,7 +283,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Telefono</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -299,7 +315,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Tipo Sangre</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -329,7 +347,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Fecha y Hora</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -359,7 +379,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Sintomas</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -389,7 +411,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Proceso</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -419,7 +443,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Cedula medico</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -832,7 +858,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -880,7 +905,7 @@
     <Height>2.85833in</Height>
     <Style />
   </Body>
-  <Width>13.83177in</Width>
+  <Width>13.73177in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -894,8 +919,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Consulta Medica</Value>
-                  <Style />
+                  <Value>Consultas Medicas</Value>
+                  <Style>
+                    <FontSize>20pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -904,17 +931,19 @@
               <TextRuns>
                 <TextRun>
                   <Value />
-                  <Style />
+                  <Style>
+                    <FontSize>20pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>1.2827cm</Top>
+          <Top>1.00753cm</Top>
           <Left>14.95637cm</Left>
-          <Height>0.6cm</Height>
-          <Width>3.643cm</Width>
+          <Height>0.95983cm</Height>
+          <Width>7.23183cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
