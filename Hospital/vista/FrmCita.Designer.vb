@@ -22,6 +22,8 @@ Partial Class FrmCita
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BtnRegistrar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -42,15 +44,19 @@ Partial Class FrmCita
         Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.LblID = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         CType(Me.DataGridCitas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnRegistrar
         '
-        Me.BtnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegistrar.Location = New System.Drawing.Point(443, 336)
+        Me.BtnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRegistrar.ForeColor = System.Drawing.Color.AliceBlue
+        Me.BtnRegistrar.Location = New System.Drawing.Point(462, 355)
+        Me.BtnRegistrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnRegistrar.Name = "BtnRegistrar"
-        Me.BtnRegistrar.Size = New System.Drawing.Size(124, 46)
+        Me.BtnRegistrar.Size = New System.Drawing.Size(140, 36)
         Me.BtnRegistrar.TabIndex = 0
         Me.BtnRegistrar.Text = "Registrar"
         Me.BtnRegistrar.UseVisualStyleBackColor = True
@@ -58,106 +64,128 @@ Partial Class FrmCita
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 23)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label1.Location = New System.Drawing.Point(37, 52)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 18)
+        Me.Label1.Size = New System.Drawing.Size(100, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Especialidad"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 201)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label2.Location = New System.Drawing.Point(68, 226)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 18)
+        Me.Label2.Size = New System.Drawing.Size(69, 16)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Paciente"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 270)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label3.Location = New System.Drawing.Point(78, 295)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 18)
+        Me.Label3.Size = New System.Drawing.Size(59, 16)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Médico"
         '
         'BtnPaciente
         '
-        Me.BtnPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPaciente.Location = New System.Drawing.Point(143, 196)
+        Me.BtnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPaciente.ForeColor = System.Drawing.Color.AliceBlue
+        Me.BtnPaciente.Location = New System.Drawing.Point(154, 219)
+        Me.BtnPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnPaciente.Name = "BtnPaciente"
-        Me.BtnPaciente.Size = New System.Drawing.Size(224, 31)
+        Me.BtnPaciente.Size = New System.Drawing.Size(252, 31)
         Me.BtnPaciente.TabIndex = 4
         Me.BtnPaciente.Text = "Seleccionar Paciente"
         Me.BtnPaciente.UseVisualStyleBackColor = True
         '
         'BtnMedico
         '
-        Me.BtnMedico.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnMedico.Location = New System.Drawing.Point(143, 264)
+        Me.BtnMedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMedico.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMedico.ForeColor = System.Drawing.Color.AliceBlue
+        Me.BtnMedico.Location = New System.Drawing.Point(154, 287)
+        Me.BtnMedico.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnMedico.Name = "BtnMedico"
-        Me.BtnMedico.Size = New System.Drawing.Size(224, 32)
+        Me.BtnMedico.Size = New System.Drawing.Size(252, 32)
         Me.BtnMedico.TabIndex = 5
         Me.BtnMedico.Text = "Seleccionar Médico"
         Me.BtnMedico.UseVisualStyleBackColor = True
         '
         'TxtRegistrarEspecialidad
         '
-        Me.TxtRegistrarEspecialidad.Location = New System.Drawing.Point(140, 22)
+        Me.TxtRegistrarEspecialidad.Location = New System.Drawing.Point(152, 46)
+        Me.TxtRegistrarEspecialidad.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtRegistrarEspecialidad.MaxLength = 40
         Me.TxtRegistrarEspecialidad.Name = "TxtRegistrarEspecialidad"
-        Me.TxtRegistrarEspecialidad.Size = New System.Drawing.Size(227, 22)
+        Me.TxtRegistrarEspecialidad.Size = New System.Drawing.Size(254, 22)
         Me.TxtRegistrarEspecialidad.TabIndex = 6
         '
         'LblMedico
         '
         Me.LblMedico.AutoSize = True
-        Me.LblMedico.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblMedico.Location = New System.Drawing.Point(159, 299)
+        Me.LblMedico.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblMedico.ForeColor = System.Drawing.Color.AliceBlue
+        Me.LblMedico.Location = New System.Drawing.Point(207, 322)
         Me.LblMedico.Name = "LblMedico"
-        Me.LblMedico.Size = New System.Drawing.Size(187, 20)
+        Me.LblMedico.Size = New System.Drawing.Size(159, 16)
         Me.LblMedico.TabIndex = 7
         Me.LblMedico.Text = "Medico Seleccionado"
         '
         'LblPaciente
         '
         Me.LblPaciente.AutoSize = True
-        Me.LblPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPaciente.Location = New System.Drawing.Point(159, 230)
+        Me.LblPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPaciente.ForeColor = System.Drawing.Color.AliceBlue
+        Me.LblPaciente.Location = New System.Drawing.Point(199, 252)
         Me.LblPaciente.Name = "LblPaciente"
-        Me.LblPaciente.Size = New System.Drawing.Size(198, 20)
+        Me.LblPaciente.Size = New System.Drawing.Size(167, 16)
         Me.LblPaciente.TabIndex = 8
         Me.LblPaciente.Text = "Paciente seleccionado"
         '
         'DataGridCitas
         '
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DataGridCitas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridCitas.BackgroundColor = System.Drawing.SystemColors.ScrollBar
         Me.DataGridCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridCitas.Location = New System.Drawing.Point(440, 51)
+        Me.DataGridCitas.Location = New System.Drawing.Point(459, 70)
+        Me.DataGridCitas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridCitas.Name = "DataGridCitas"
         Me.DataGridCitas.ReadOnly = True
         Me.DataGridCitas.RowHeadersWidth = 51
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.DataGridCitas.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridCitas.RowTemplate.Height = 24
         Me.DataGridCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridCitas.Size = New System.Drawing.Size(614, 268)
+        Me.DataGridCitas.Size = New System.Drawing.Size(561, 268)
         Me.DataGridCitas.TabIndex = 9
         '
         'TxtCedulaP
         '
-        Me.TxtCedulaP.Location = New System.Drawing.Point(591, 18)
+        Me.TxtCedulaP.Location = New System.Drawing.Point(628, 38)
+        Me.TxtCedulaP.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtCedulaP.MaxLength = 20
         Me.TxtCedulaP.Name = "TxtCedulaP"
-        Me.TxtCedulaP.Size = New System.Drawing.Size(142, 22)
+        Me.TxtCedulaP.Size = New System.Drawing.Size(160, 22)
         Me.TxtCedulaP.TabIndex = 10
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(12, 83)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label4.Location = New System.Drawing.Point(86, 108)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(54, 18)
+        Me.Label4.Size = New System.Drawing.Size(51, 16)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Fecha"
         '
@@ -165,20 +193,22 @@ Partial Class FrmCita
         '
         Me.DateTimeHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimeHora.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimeHora.Location = New System.Drawing.Point(140, 145)
+        Me.DateTimeHora.Location = New System.Drawing.Point(152, 169)
+        Me.DateTimeHora.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimeHora.Name = "DateTimeHora"
         Me.DateTimeHora.ShowUpDown = True
-        Me.DateTimeHora.Size = New System.Drawing.Size(122, 24)
+        Me.DateTimeHora.Size = New System.Drawing.Size(136, 21)
         Me.DateTimeHora.TabIndex = 12
         Me.DateTimeHora.Value = New Date(2020, 8, 17, 7, 30, 0, 0)
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(12, 149)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label5.Location = New System.Drawing.Point(95, 174)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(45, 18)
+        Me.Label5.Size = New System.Drawing.Size(42, 16)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Hora"
         '
@@ -186,38 +216,45 @@ Partial Class FrmCita
         '
         Me.DateTimeFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimeFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimeFecha.Location = New System.Drawing.Point(140, 80)
+        Me.DateTimeFecha.Location = New System.Drawing.Point(152, 103)
         Me.DateTimeFecha.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimeFecha.Name = "DateTimeFecha"
-        Me.DateTimeFecha.Size = New System.Drawing.Size(136, 24)
+        Me.DateTimeFecha.Size = New System.Drawing.Size(152, 21)
         Me.DateTimeFecha.TabIndex = 14
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(437, 22)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label6.Location = New System.Drawing.Point(456, 42)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(130, 18)
+        Me.Label6.Size = New System.Drawing.Size(122, 16)
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "Cedula Paciente"
         '
         'BtnLimpiar
         '
-        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLimpiar.Location = New System.Drawing.Point(591, 336)
+        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLimpiar.ForeColor = System.Drawing.Color.AliceBlue
+        Me.BtnLimpiar.Location = New System.Drawing.Point(628, 355)
+        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(124, 46)
+        Me.BtnLimpiar.Size = New System.Drawing.Size(140, 36)
         Me.BtnLimpiar.TabIndex = 16
         Me.BtnLimpiar.Text = "Limpiar"
         Me.BtnLimpiar.UseVisualStyleBackColor = True
         '
         'BtnEliminar
         '
-        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.Location = New System.Drawing.Point(740, 336)
+        Me.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminar.ForeColor = System.Drawing.Color.AliceBlue
+        Me.BtnEliminar.Location = New System.Drawing.Point(796, 355)
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(124, 46)
+        Me.BtnEliminar.Size = New System.Drawing.Size(140, 36)
         Me.BtnEliminar.TabIndex = 17
         Me.BtnEliminar.Text = "Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
@@ -226,9 +263,10 @@ Partial Class FrmCita
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(766, 18)
+        Me.Label7.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label7.Location = New System.Drawing.Point(825, 38)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(29, 18)
+        Me.Label7.Size = New System.Drawing.Size(25, 15)
         Me.Label7.TabIndex = 18
         Me.Label7.Text = "ID:"
         '
@@ -236,16 +274,32 @@ Partial Class FrmCita
         '
         Me.LblID.AutoSize = True
         Me.LblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblID.Location = New System.Drawing.Point(801, 19)
+        Me.LblID.Location = New System.Drawing.Point(866, 38)
         Me.LblID.Name = "LblID"
-        Me.LblID.Size = New System.Drawing.Size(0, 18)
+        Me.LblID.Size = New System.Drawing.Size(0, 15)
         Me.LblID.TabIndex = 19
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.AliceBlue
+        Me.BtnCerrar.Location = New System.Drawing.Point(953, 2)
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(81, 27)
+        Me.BtnCerrar.TabIndex = 20
+        Me.BtnCerrar.Text = "Cerrar"
+        Me.BtnCerrar.UseVisualStyleBackColor = True
         '
         'FrmCita
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1085, 394)
+        Me.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.ClientSize = New System.Drawing.Size(1036, 418)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.LblID)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.BtnEliminar)
@@ -266,7 +320,12 @@ Partial Class FrmCita
         Me.Controls.Add(Me.BtnPaciente)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FrmCita"
+        Me.ShowIcon = False
         Me.Text = "FrmCita"
         CType(Me.DataGridCitas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -294,4 +353,5 @@ Partial Class FrmCita
     Friend WithEvents BtnEliminar As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents LblID As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

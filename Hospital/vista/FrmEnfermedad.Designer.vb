@@ -39,6 +39,7 @@ Partial Class FrmEnfermedad
         Me.LabelNombre = New System.Windows.Forms.Label()
         Me.labelNumeroId = New System.Windows.Forms.Label()
         Me.labelId = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         CType(Me.TablaEnfermedades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -215,11 +216,23 @@ Partial Class FrmEnfermedad
         Me.labelId.Text = "***"
         Me.labelId.Visible = False
         '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrar.Location = New System.Drawing.Point(1000, 2)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(85, 24)
+        Me.BtnCerrar.TabIndex = 62
+        Me.BtnCerrar.Text = "Cerrar"
+        Me.BtnCerrar.UseVisualStyleBackColor = True
+        '
         'FrmEnfermedad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1086, 497)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.labelId)
         Me.Controls.Add(Me.labelNumeroId)
         Me.Controls.Add(Me.LabelNombre)
@@ -237,7 +250,10 @@ Partial Class FrmEnfermedad
         Me.Controls.Add(Me.TxtEnfermedad)
         Me.Controls.Add(Me.TxtCedula)
         Me.Controls.Add(Me.TxtDescripcion)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FrmEnfermedad"
+        Me.ShowIcon = False
         Me.Text = "FrmEnfermedad"
         CType(Me.TablaEnfermedades, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -262,4 +278,5 @@ Partial Class FrmEnfermedad
     Friend WithEvents LabelNombre As Label
     Friend WithEvents labelNumeroId As Label
     Friend WithEvents labelId As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

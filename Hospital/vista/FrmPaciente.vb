@@ -1,14 +1,16 @@
 ﻿Public Class FrmPaciente
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cargarTabla()
-
-    End Sub
-
+    Private frmEnfemedades As New FrmEnfermedad
     Private paciente As Paciente
     Private controladorPaciente As New ControladorPaciente()
     Private controladorPersonaContacto As New ControladorPersonaContacto
     Private personaContacto As New PersonaContacto()
     Private listaEnfermedades As New List(Of Enfermedad)
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cargarTabla()
+
+    End Sub
+
+
 
     Public Function comprobarAgregar() As Boolean
         Return Not TxtCedula.Text.Equals("") And TxtNombre.Text.Equals("") And TxtAltura.Text.Equals("") And TxtCorreo.Text.Equals("") And TxtEdad.Text.Equals("") And TxtPeso.Text.Equals("") And TxtTelefono.Equals("")
@@ -24,8 +26,8 @@
     End Sub
 
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnRegistrar.Click
-        If comprobarAgregar() Then
-            paciente = New Paciente(Val(TxtCedula.Text), TxtNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipo.SelectedItem.ToString.Trim)
+        'If comprobarAgregar() Then
+        paciente = New Paciente(Val(TxtCedula.Text), TxtNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipo.SelectedItem.ToString.Trim)
 
             If BtnRegistrar.Text = "Registrar" Then
                 If controladorPaciente.registrar(paciente) = 1 Then
@@ -50,9 +52,9 @@
                 End If
             End If
 
-        Else
-            MsgBox("Debe rellenar todos los campos")
-        End If
+        'Else
+        '    MsgBox("Debe rellenar todos los campos")
+        'End If
 
         cargarTabla()
         limpiarCampos()
@@ -191,5 +193,12 @@
 
     Private Sub TxtBuscarCedula_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscarCedula.TextChanged
         cargarTabla()
+    End Sub
+    Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
+        Me.Hide()
+    End Sub
+
+    Private Sub AdministrarEnfermedadesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarEnfermedadesToolStripMenuItem.Click
+        frmEnfemedades.Show()
     End Sub
 End Class

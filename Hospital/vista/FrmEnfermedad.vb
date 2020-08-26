@@ -106,9 +106,9 @@
         frmPaciente.ShowDialog()
 
         paciente = frmPaciente.PacienteRetorno1
-        frmPaciente.Close()
 
-        If paciente.cedula IsNot Nothing Then
+
+        If paciente IsNot Nothing Then
 
             LabelNombre.Text = paciente.nombre
             TxtCedula.Text = paciente.cedula.ToString
@@ -122,7 +122,7 @@
         End If
 
 
-
+        frmPaciente.Close()
 
     End Sub
 
@@ -210,5 +210,9 @@
 
 
 
+    End Sub
+
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Hide()
     End Sub
 End Class

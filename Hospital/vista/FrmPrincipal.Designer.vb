@@ -41,10 +41,11 @@ Partial Class FrmPrincipal
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PerfilToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(986, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1315, 28)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -52,26 +53,26 @@ Partial Class FrmPrincipal
         '
         Me.PerfilToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuPerfilNombreUSuario, Me.MenuPerfilTipo})
         Me.PerfilToolStripMenuItem.Name = "PerfilToolStripMenuItem"
-        Me.PerfilToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
+        Me.PerfilToolStripMenuItem.Size = New System.Drawing.Size(56, 24)
         Me.PerfilToolStripMenuItem.Text = "Perfil"
         '
         'MenuPerfilNombreUSuario
         '
         Me.MenuPerfilNombreUSuario.Name = "MenuPerfilNombreUSuario"
-        Me.MenuPerfilNombreUSuario.Size = New System.Drawing.Size(192, 22)
+        Me.MenuPerfilNombreUSuario.Size = New System.Drawing.Size(239, 26)
         Me.MenuPerfilNombreUSuario.Text = "sin nombre de usuario"
         '
         'MenuPerfilTipo
         '
         Me.MenuPerfilTipo.Name = "MenuPerfilTipo"
-        Me.MenuPerfilTipo.Size = New System.Drawing.Size(192, 22)
+        Me.MenuPerfilTipo.Size = New System.Drawing.Size(239, 26)
         Me.MenuPerfilTipo.Text = "sin tipo"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(52, 24)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'BtnUsuarios
@@ -79,11 +80,13 @@ Partial Class FrmPrincipal
         Me.BtnUsuarios.BackgroundImage = CType(resources.GetObject("BtnUsuarios.BackgroundImage"), System.Drawing.Image)
         Me.BtnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnUsuarios.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.BtnUsuarios.Location = New System.Drawing.Point(3, 3)
+        Me.BtnUsuarios.Location = New System.Drawing.Point(4, 4)
+        Me.BtnUsuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnUsuarios.Name = "BtnUsuarios"
-        Me.BtnUsuarios.Size = New System.Drawing.Size(173, 130)
+        Me.BtnUsuarios.Size = New System.Drawing.Size(231, 160)
         Me.BtnUsuarios.TabIndex = 2
         Me.BtnUsuarios.Text = "Usuarios"
         Me.BtnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -94,10 +97,12 @@ Partial Class FrmPrincipal
         Me.BtnCitas.BackgroundImage = CType(resources.GetObject("BtnCitas.BackgroundImage"), System.Drawing.Image)
         Me.BtnCitas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnCitas.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCitas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCitas.Location = New System.Drawing.Point(322, 3)
+        Me.BtnCitas.Location = New System.Drawing.Point(429, 4)
+        Me.BtnCitas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnCitas.Name = "BtnCitas"
-        Me.BtnCitas.Size = New System.Drawing.Size(173, 130)
+        Me.BtnCitas.Size = New System.Drawing.Size(231, 160)
         Me.BtnCitas.TabIndex = 3
         Me.BtnCitas.Text = "Citas"
         Me.BtnCitas.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -108,10 +113,12 @@ Partial Class FrmPrincipal
         Me.BtnPaciente.BackgroundImage = CType(resources.GetObject("BtnPaciente.BackgroundImage"), System.Drawing.Image)
         Me.BtnPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnPaciente.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPaciente.Location = New System.Drawing.Point(610, 3)
+        Me.BtnPaciente.Location = New System.Drawing.Point(813, 4)
+        Me.BtnPaciente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnPaciente.Name = "BtnPaciente"
-        Me.BtnPaciente.Size = New System.Drawing.Size(173, 130)
+        Me.BtnPaciente.Size = New System.Drawing.Size(231, 160)
         Me.BtnPaciente.TabIndex = 4
         Me.BtnPaciente.Text = "Pacientes"
         Me.BtnPaciente.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -125,9 +132,11 @@ Partial Class FrmPrincipal
         Me.PanelModulos.Controls.Add(Me.BtnCitas)
         Me.PanelModulos.Controls.Add(Me.BtnPaciente)
         Me.PanelModulos.Controls.Add(Me.BtnUsuarios)
-        Me.PanelModulos.Location = New System.Drawing.Point(89, 69)
+        Me.PanelModulos.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.PanelModulos.Location = New System.Drawing.Point(119, 85)
+        Me.PanelModulos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelModulos.Name = "PanelModulos"
-        Me.PanelModulos.Size = New System.Drawing.Size(786, 366)
+        Me.PanelModulos.Size = New System.Drawing.Size(1048, 450)
         Me.PanelModulos.TabIndex = 5
         '
         'BtnReportes
@@ -135,9 +144,11 @@ Partial Class FrmPrincipal
         Me.BtnReportes.BackgroundImage = CType(resources.GetObject("BtnReportes.BackgroundImage"), System.Drawing.Image)
         Me.BtnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnReportes.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnReportes.Location = New System.Drawing.Point(610, 233)
+        Me.BtnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnReportes.Location = New System.Drawing.Point(813, 287)
+        Me.BtnReportes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnReportes.Name = "BtnReportes"
-        Me.BtnReportes.Size = New System.Drawing.Size(173, 130)
+        Me.BtnReportes.Size = New System.Drawing.Size(231, 160)
         Me.BtnReportes.TabIndex = 7
         Me.BtnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnReportes.UseVisualStyleBackColor = True
@@ -147,10 +158,12 @@ Partial Class FrmPrincipal
         Me.BtnExamenes.BackgroundImage = CType(resources.GetObject("BtnExamenes.BackgroundImage"), System.Drawing.Image)
         Me.BtnExamenes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnExamenes.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnExamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnExamenes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExamenes.Location = New System.Drawing.Point(322, 233)
+        Me.BtnExamenes.Location = New System.Drawing.Point(429, 287)
+        Me.BtnExamenes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnExamenes.Name = "BtnExamenes"
-        Me.BtnExamenes.Size = New System.Drawing.Size(173, 130)
+        Me.BtnExamenes.Size = New System.Drawing.Size(231, 160)
         Me.BtnExamenes.TabIndex = 6
         Me.BtnExamenes.Text = "Examenes"
         Me.BtnExamenes.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -161,10 +174,12 @@ Partial Class FrmPrincipal
         Me.BtnConsulta.BackgroundImage = CType(resources.GetObject("BtnConsulta.BackgroundImage"), System.Drawing.Image)
         Me.BtnConsulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnConsulta.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnConsulta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnConsulta.Location = New System.Drawing.Point(3, 233)
+        Me.BtnConsulta.Location = New System.Drawing.Point(4, 287)
+        Me.BtnConsulta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnConsulta.Name = "BtnConsulta"
-        Me.BtnConsulta.Size = New System.Drawing.Size(173, 130)
+        Me.BtnConsulta.Size = New System.Drawing.Size(231, 160)
         Me.BtnConsulta.TabIndex = 5
         Me.BtnConsulta.Text = "Consulta"
         Me.BtnConsulta.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -172,15 +187,16 @@ Partial Class FrmPrincipal
         '
         'FrmPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(986, 536)
+        Me.ClientSize = New System.Drawing.Size(1315, 660)
         Me.ControlBox = False
         Me.Controls.Add(Me.PanelModulos)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmPrincipal"
         Me.Opacity = 0.99R
         Me.ShowIcon = False
