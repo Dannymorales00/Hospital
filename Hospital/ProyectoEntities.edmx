@@ -267,6 +267,11 @@
           <Parameter Name="cedula_paciente" Type="int" Mode="In" />
           <Parameter Name="cedula_medico" Type="int" Mode="In" />
         </Function>
+        <Function Name="sp_update_consulta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="sintomas" Type="varchar" Mode="In" />
+          <Parameter Name="descripcionProceso" Type="varchar" Mode="In" />
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_update_medicamento_alergico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="cedula" Type="int" Mode="In" />
@@ -539,7 +544,7 @@
           <FunctionImport Name="sp_buscar_consulta_con_cedula" ReturnType="Collection(ProyectoModel.sp_buscar_consulta_con_cedula_Result)">
           <Parameter Name="cedula" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="sp_obtener_cedula_medico" ReturnType="Collection(Int32)">
+          <FunctionImport Name="sp_obtener_cedula_medico" ReturnType="Collection(ProyectoModel.sp_obtener_cedula_medico_Result)">
           <Parameter Name="nombreus" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_reporte_Consultas" ReturnType="Collection(ProyectoModel.sp_reporte_Consultas_Result)">
@@ -559,6 +564,11 @@
           </FunctionImport>
           <FunctionImport Name="sp_obtener_consulta_por_idCita" ReturnType="Collection(ProyectoModel.sp_obtener_consulta_por_idCita_Result)">
           <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_update_consulta" ReturnType="Collection(Int32)">
+            <Parameter Name="sintomas" Mode="In" Type="String" />
+            <Parameter Name="descripcionProceso" Mode="In" Type="String" />
+            <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_buscar_enfermedad_Result">
@@ -741,6 +751,9 @@
           <Property Type="String" Name="descripcionSintomas" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="sintomas" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="descripcionProceso" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_obtener_cedula_medico_Result">
+          <Property Type="Int32" Name="cedula" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -984,7 +997,13 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_obtener_cedula_medico" FunctionName="ProyectoModel.Store.sp_obtener_cedula_medico" />
+          <FunctionImportMapping FunctionImportName="sp_obtener_cedula_medico" FunctionName="ProyectoModel.Store.sp_obtener_cedula_medico" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_obtener_cedula_medico_Result">
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_reporte_Consultas" FunctionName="ProyectoModel.Store.sp_reporte_Consultas">
             <ResultMapping>
               <ComplexTypeMapping TypeName="ProyectoModel.sp_reporte_Consultas_Result">
@@ -1044,6 +1063,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_update_consulta" FunctionName="ProyectoModel.Store.sp_update_consulta" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

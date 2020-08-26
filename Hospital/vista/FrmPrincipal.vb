@@ -107,4 +107,7 @@
         End If
     End Sub
 
+    Private Sub BtnConsulta_Click(sender As Object, e As EventArgs) Handles BtnConsulta.Click
+
+    End Sub
 End Class

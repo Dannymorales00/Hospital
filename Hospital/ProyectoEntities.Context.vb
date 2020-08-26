@@ -530,10 +530,10 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_consulta_con_cedula_Result)("sp_buscar_consulta_con_cedula", cedulaParameter)
     End Function
 
-    Public Overridable Function sp_obtener_cedula_medico(nombreus As String) As ObjectResult(Of Nullable(Of Integer))
+    Public Overridable Function sp_obtener_cedula_medico(nombreus As String) As ObjectResult(Of sp_obtener_cedula_medico_Result)
         Dim nombreusParameter As ObjectParameter = If(nombreus IsNot Nothing, New ObjectParameter("nombreus", nombreus), New ObjectParameter("nombreus", GetType(String)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_obtener_cedula_medico", nombreusParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_obtener_cedula_medico_Result)("sp_obtener_cedula_medico", nombreusParameter)
     End Function
 
     Public Overridable Function sp_reporte_Consultas(fechaInicio As Nullable(Of Date), fechaFin As Nullable(Of Date), cedulaPaciente As Nullable(Of Integer)) As ObjectResult(Of sp_reporte_Consultas_Result)
@@ -570,6 +570,16 @@ Partial Public Class ProyectoEntities1
         Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
 
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_obtener_consulta_por_idCita_Result)("sp_obtener_consulta_por_idCita", idParameter)
+    End Function
+
+    Public Overridable Function sp_update_consulta(sintomas As String, descripcionProceso As String, id As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
+        Dim sintomasParameter As ObjectParameter = If(sintomas IsNot Nothing, New ObjectParameter("sintomas", sintomas), New ObjectParameter("sintomas", GetType(String)))
+
+        Dim descripcionProcesoParameter As ObjectParameter = If(descripcionProceso IsNot Nothing, New ObjectParameter("descripcionProceso", descripcionProceso), New ObjectParameter("descripcionProceso", GetType(String)))
+
+        Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_update_consulta", sintomasParameter, descripcionProcesoParameter, idParameter)
     End Function
 
 End Class
