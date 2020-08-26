@@ -11,8 +11,13 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class sp_buscar_consulta_Result
+    Public Property id As Integer
     Public Property idCitas As Integer
-    Public Property nombre As String
-    Public Property cedula_paciente As Integer
+    Public Property altura As Double
+    Public Property peso As Double
+    Public Property presion As Double
+    Public Property descripcionSintomas As String
+    Public Property sintomas As String
+    Public Property descripcionProceso As String
 
 End Class
