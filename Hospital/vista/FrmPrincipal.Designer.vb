@@ -128,6 +128,7 @@ Partial Class FrmPrincipal
         Me.PanelModulos.Controls.Add(Me.BtnCitas)
         Me.PanelModulos.Controls.Add(Me.BtnPaciente)
         Me.PanelModulos.Controls.Add(Me.BtnUsuarios)
+        Me.PanelModulos.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.PanelModulos.Location = New System.Drawing.Point(89, 69)
         Me.PanelModulos.Name = "PanelModulos"
         Me.PanelModulos.Size = New System.Drawing.Size(786, 366)
@@ -185,7 +186,7 @@ Partial Class FrmPrincipal
         Me.ControlBox = False
         Me.Controls.Add(Me.PanelModulos)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmPrincipal"
         Me.Opacity = 0.99R

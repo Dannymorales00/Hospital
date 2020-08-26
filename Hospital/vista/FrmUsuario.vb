@@ -270,4 +270,34 @@
     Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
         Me.Hide()
     End Sub
+
+    Private Sub TxtCedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedula.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefono.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtCedulaEliminar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedulaEliminar.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtCedulaBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedulaBuscar.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtTelefonoActualizar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefonoActualizar.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
 End Class
