@@ -249,4 +249,55 @@
 
         End If
     End Sub
+
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Dim ListaUsuario As New List(Of Usuario)
+        If Not TxtCedulaBuscar.Text.Equals("") Then
+            usuario = New Usuario()
+            usuario.cedula = CInt(TxtCedulaBuscar.Text)
+            Dim usuario1 = controladorUsuario.Buscar(usuario)
+            If usuario1 IsNot Nothing Then
+                ListaUsuario.Add(usuario1)
+                DataGridView1.DataSource = ListaUsuario
+
+            End If
+
+
+        End If
+
+    End Sub
+
+    Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
+        Me.Hide()
+    End Sub
+
+    Private Sub TxtCedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedula.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefono.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtCedulaEliminar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedulaEliminar.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtCedulaBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedulaBuscar.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtTelefonoActualizar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefonoActualizar.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
 End Class

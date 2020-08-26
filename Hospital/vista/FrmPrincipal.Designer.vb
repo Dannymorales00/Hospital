@@ -79,6 +79,7 @@ Partial Class FrmPrincipal
         Me.BtnUsuarios.BackgroundImage = CType(resources.GetObject("BtnUsuarios.BackgroundImage"), System.Drawing.Image)
         Me.BtnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnUsuarios.ForeColor = System.Drawing.SystemColors.Desktop
         Me.BtnUsuarios.Location = New System.Drawing.Point(3, 3)
@@ -94,6 +95,7 @@ Partial Class FrmPrincipal
         Me.BtnCitas.BackgroundImage = CType(resources.GetObject("BtnCitas.BackgroundImage"), System.Drawing.Image)
         Me.BtnCitas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnCitas.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCitas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCitas.Location = New System.Drawing.Point(322, 3)
         Me.BtnCitas.Name = "BtnCitas"
@@ -108,6 +110,7 @@ Partial Class FrmPrincipal
         Me.BtnPaciente.BackgroundImage = CType(resources.GetObject("BtnPaciente.BackgroundImage"), System.Drawing.Image)
         Me.BtnPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnPaciente.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnPaciente.Location = New System.Drawing.Point(610, 3)
         Me.BtnPaciente.Name = "BtnPaciente"
@@ -125,6 +128,7 @@ Partial Class FrmPrincipal
         Me.PanelModulos.Controls.Add(Me.BtnCitas)
         Me.PanelModulos.Controls.Add(Me.BtnPaciente)
         Me.PanelModulos.Controls.Add(Me.BtnUsuarios)
+        Me.PanelModulos.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.PanelModulos.Location = New System.Drawing.Point(89, 69)
         Me.PanelModulos.Name = "PanelModulos"
         Me.PanelModulos.Size = New System.Drawing.Size(786, 366)
@@ -135,6 +139,7 @@ Partial Class FrmPrincipal
         Me.BtnReportes.BackgroundImage = CType(resources.GetObject("BtnReportes.BackgroundImage"), System.Drawing.Image)
         Me.BtnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnReportes.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnReportes.Location = New System.Drawing.Point(610, 233)
         Me.BtnReportes.Name = "BtnReportes"
         Me.BtnReportes.Size = New System.Drawing.Size(173, 130)
@@ -147,6 +152,7 @@ Partial Class FrmPrincipal
         Me.BtnExamenes.BackgroundImage = CType(resources.GetObject("BtnExamenes.BackgroundImage"), System.Drawing.Image)
         Me.BtnExamenes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnExamenes.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnExamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnExamenes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnExamenes.Location = New System.Drawing.Point(322, 233)
         Me.BtnExamenes.Name = "BtnExamenes"
@@ -161,6 +167,7 @@ Partial Class FrmPrincipal
         Me.BtnConsulta.BackgroundImage = CType(resources.GetObject("BtnConsulta.BackgroundImage"), System.Drawing.Image)
         Me.BtnConsulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnConsulta.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnConsulta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnConsulta.Location = New System.Drawing.Point(3, 233)
         Me.BtnConsulta.Name = "BtnConsulta"
@@ -179,7 +186,7 @@ Partial Class FrmPrincipal
         Me.ControlBox = False
         Me.Controls.Add(Me.PanelModulos)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmPrincipal"
         Me.Opacity = 0.99R

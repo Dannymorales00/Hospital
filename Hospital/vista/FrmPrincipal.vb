@@ -3,6 +3,7 @@
     Private frmUsuario As FrmUsuario
     Private frmCitas As FrmCita
     Private frmPaciente As FrmPaciente
+    Private frmExamenes As FrmExamenes
 
 
     Public Sub New(usuario1 As Usuario)
@@ -10,6 +11,7 @@
         frmUsuario = New FrmUsuario()
         frmCitas = New FrmCita()
         frmPaciente = New FrmPaciente()
+        frmExamenes = New FrmExamenes()
         usuario = usuario1
         InitializeComponent()
 
@@ -25,12 +27,24 @@
     End Sub
 
     Private Sub BtnUsuarios_Click(sender As Object, e As EventArgs) Handles BtnUsuarios.Click
-        frmUsuario.Show()
+        If usuario.tipo.Equals("Admin") Then
+            frmUsuario.Show()
+        Else
+            MessageBox.Show("No tienes permiso para este modulo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+
+
 
     End Sub
 
     Private Sub BtnCitas_Click(sender As Object, e As EventArgs) Handles BtnCitas.Click
-        frmCitas.Show()
+        If usuario.tipo.Equals("Secretaria") Or usuario.tipo.Equals("Admin") Then
+            frmCitas.Show()
+        Else
+            MessageBox.Show("No tienes permiso para este modulo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+
+
     End Sub
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
@@ -44,8 +58,30 @@
             Application.ExitThread()
         End If
     End Sub
+    Private Sub BtnPaciente_Click(sender As Object, e As EventArgs) Handles BtnPaciente.Click
+        If usuario.tipo.Equals("Secretaria") Or usuario.tipo.Equals("Admin") Then
+            frmPaciente.Show()
+        Else
+            MessageBox.Show("No tienes permiso para este modulo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        End If
 
 
+
+
+    End Sub
+
+    Private Sub BtnExamenes_Click(sender As Object, e As EventArgs) Handles BtnExamenes.Click
+        If usuario.tipo.Equals("Medico") Or usuario.tipo.Equals("Admin") Then
+            frmExamenes.Show()
+        Else
+            MessageBox.Show("No tienes permiso para este modulo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        End If
+
+
+
+    End Sub
 
     Private Sub Centrar(ByVal Objeto As Object)
 
@@ -69,11 +105,5 @@
             End With
         End If
     End Sub
-
-    Private Sub BtnPaciente_Click(sender As Object, e As EventArgs) Handles BtnPaciente.Click
-        frmPaciente.ShowDialog()
-
-    End Sub
-
 
 End Class

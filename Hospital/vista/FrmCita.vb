@@ -149,4 +149,8 @@
     Private Sub TxtCedulaP_TextChanged(sender As Object, e As EventArgs) Handles TxtCedulaP.TextChanged
         cargarTabla()
     End Sub
+
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Hide()
+    End Sub
 End Class

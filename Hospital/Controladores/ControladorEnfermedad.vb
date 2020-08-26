@@ -32,7 +32,6 @@
 
                 If Result.Count > 0 Then
 
-
                     For Each enfermedad1 As sp_buscar_enfermedad_Result In Result
                         Dim enfermedad2 As New Enfermedad()
 
@@ -50,8 +49,8 @@
             End Using
 
         Catch ex As Exception
-            MsgBox("Error al buscar")
-            MsgBox(ex.Message)
+            'MsgBox("Error al buscar")
+            'MsgBox(ex.Message)
         End Try
 
         Return ListaEnfermedad
