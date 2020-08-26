@@ -24,8 +24,8 @@
     End Sub
 
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnRegistrar.Click
-        If comprobarAgregar() Then
-            paciente = New Paciente(Val(TxtCedula.Text), TxtNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipo.SelectedItem.ToString.Trim)
+        'If comprobarAgregar() Then
+        paciente = New Paciente(Val(TxtCedula.Text), TxtNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipo.SelectedItem.ToString.Trim)
 
             If BtnRegistrar.Text = "Registrar" Then
                 If controladorPaciente.registrar(paciente) = 1 Then
@@ -50,9 +50,9 @@
                 End If
             End If
 
-        Else
-            MsgBox("Debe rellenar todos los campos")
-        End If
+        'Else
+        '    MsgBox("Debe rellenar todos los campos")
+        'End If
 
         cargarTabla()
         limpiarCampos()

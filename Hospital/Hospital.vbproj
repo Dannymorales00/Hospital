@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>Hospital.FrmPaciente</StartupObject>
     <StartupObject>Hospital.FrmLogin</StartupObject>
-    <StartupObject>Hospital.FrmLogin</StartupObject>
+    <StartupObject>Hospital.FrmReportes</StartupObject>
     <RootNamespace>Hospital</RootNamespace>
     <AssemblyName>Hospital</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -71,6 +71,24 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -79,6 +97,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -110,6 +129,33 @@
     <Compile Include="Controladores\ControladorPaciente.vb" />
     <Compile Include="Controladores\ControladorPersonaContacto.vb" />
     <Compile Include="Controladores\ControladorUsuario.vb" />
+    <Compile Include="DataSetConsulta.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetConsulta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetConsulta.vb">
+      <DependentUpon>DataSetConsulta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetExamenOrina.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetExamenOrina.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetExamenSangre.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetExamenSangre.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetExamenSangre.vb">
+      <DependentUpon>DataSetExamenSangre.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmReporteConsulta.Designer.vb">
+      <DependentUpon>FrmReporteConsulta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmReporteConsulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Medicamentos.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
@@ -127,6 +173,18 @@
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_Buscar_usuario2_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_obtener_consulta_por_idCita_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_reporte_Consultas_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_reporte_ExamenOrina_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_reporte_ExamenSangre_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_select_medicamentos_Result.vb">
@@ -281,6 +339,18 @@
     <Compile Include="vista\FrmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\FrmReporteExamenes.Designer.vb">
+      <DependentUpon>FrmReporteExamenes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmReporteExamenes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FrmReportes.Designer.vb">
+      <DependentUpon>FrmReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\FRMSeleccionarCitas.Designer.vb">
       <DependentUpon>FRMSeleccionarCitas.vb</DependentUpon>
     </Compile>
@@ -330,6 +400,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="vista\FrmReporteConsulta.resx">
+      <DependentUpon>FrmReporteConsulta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteConsulta.rdlc" />
+    <EmbeddedResource Include="ReporteExamenes.rdlc" />
     <EmbeddedResource Include="vista\BuscarMedico.resx">
       <DependentUpon>BuscarMedico.vb</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +450,12 @@
     <EmbeddedResource Include="vista\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmReporteExamenes.resx">
+      <DependentUpon>FrmReporteExamenes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmReportes.resx">
+      <DependentUpon>FrmReportes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\FRMSeleccionarCitas.resx">
       <DependentUpon>FRMSeleccionarCitas.vb</DependentUpon>
     </EmbeddedResource>
@@ -398,6 +479,39 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSetConsulta.xsc">
+      <DependentUpon>DataSetConsulta.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetConsulta.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetConsulta.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSetConsulta.xss">
+      <DependentUpon>DataSetConsulta.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetExamenOrina.xsc">
+      <DependentUpon>DataSetExamenOrina.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetExamenOrina.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetExamenOrina.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSetExamenOrina.xss">
+      <DependentUpon>DataSetExamenOrina.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetExamenSangre.xsc">
+      <DependentUpon>DataSetExamenSangre.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetExamenSangre.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetExamenSangre.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSetExamenSangre.xss">
+      <DependentUpon>DataSetExamenSangre.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -442,6 +556,20 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ProyectoEntities.edmx</DependentUpon>
       <LastGenOutput>ProyectoEntities.vb</LastGenOutput>
+    </Content>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\usuariospng.png" />
   </ItemGroup>

@@ -42,7 +42,7 @@ Partial Class FrmLogin
         Me.LblUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.LblUsuario.Location = New System.Drawing.Point(64, 41)
         Me.LblUsuario.Name = "LblUsuario"
-        Me.LblUsuario.Size = New System.Drawing.Size(62, 16)
+        Me.LblUsuario.Size = New System.Drawing.Size(74, 20)
         Me.LblUsuario.TabIndex = 0
         Me.LblUsuario.Text = "Usuario"
         '
@@ -54,7 +54,7 @@ Partial Class FrmLogin
         Me.LblContraseña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.LblContraseña.Location = New System.Drawing.Point(64, 107)
         Me.LblContraseña.Name = "LblContraseña"
-        Me.LblContraseña.Size = New System.Drawing.Size(87, 16)
+        Me.LblContraseña.Size = New System.Drawing.Size(105, 20)
         Me.LblContraseña.TabIndex = 1
         Me.LblContraseña.Text = "Contraseña"
         '
@@ -64,7 +64,7 @@ Partial Class FrmLogin
         Me.TxtNombreUsuario.Location = New System.Drawing.Point(67, 60)
         Me.TxtNombreUsuario.MaxLength = 20
         Me.TxtNombreUsuario.Name = "TxtNombreUsuario"
-        Me.TxtNombreUsuario.Size = New System.Drawing.Size(134, 22)
+        Me.TxtNombreUsuario.Size = New System.Drawing.Size(134, 26)
         Me.TxtNombreUsuario.TabIndex = 2
         '
         'TxtContraseña
@@ -74,7 +74,7 @@ Partial Class FrmLogin
         Me.TxtContraseña.MaxLength = 20
         Me.TxtContraseña.Name = "TxtContraseña"
         Me.TxtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtContraseña.Size = New System.Drawing.Size(134, 22)
+        Me.TxtContraseña.Size = New System.Drawing.Size(134, 26)
         Me.TxtContraseña.TabIndex = 3
         '
         'BtnIngresar
@@ -108,6 +108,7 @@ Partial Class FrmLogin
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(857, 24)
@@ -117,6 +118,7 @@ Partial Class FrmLogin
         'MenuStrip2
         '
         Me.MenuStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 489)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Size = New System.Drawing.Size(857, 24)
@@ -130,15 +132,15 @@ Partial Class FrmLogin
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Label1.Location = New System.Drawing.Point(0, 476)
+        Me.Label1.Location = New System.Drawing.Point(0, 472)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 13)
+        Me.Label1.Size = New System.Drawing.Size(146, 17)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "by: Palanganos Team"
         '
         'FrmLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.Disable
         Me.BackColor = System.Drawing.Color.SteelBlue
