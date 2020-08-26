@@ -10,9 +10,12 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class sp_buscar_consulta_Result
-    Public Property idCitas As Integer
-    Public Property nombre As String
+Partial Public Class sp_reporte_ExamenOrina_Result
     Public Property cedula_paciente As Integer
+    Public Property fechaHora As Date
+    Public Property color As String
+    Public Property eritrocitos As Double
+    Public Property glucosa As Double
+    Public Property leucocitos As Double
 
 End Class

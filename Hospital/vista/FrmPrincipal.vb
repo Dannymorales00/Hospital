@@ -78,4 +78,17 @@
         End If
     End Sub
 
+    Private Sub BtnConsulta_Click(sender As Object, e As EventArgs) Handles BtnConsulta.Click
+
+        If usuario.tipo = "Medico" Then
+            Dim frmConsulta As New FRMSeleccionarConsulta
+            frmConsulta.usuario = usuario
+            frmConsulta.ShowDialog()
+        Else usuario.tipo = "Enfermera"
+            Dim frmCitashoy As New FRMSeleccionarCitas
+            frmCitashoy.ShowDialog()
+
+        End If
+
+    End Sub
 End Class

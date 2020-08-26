@@ -106,7 +106,17 @@
 
     End Function
 
+    Function obtenerCedulaMedico(usuario As Usuario) As sp_obtener_cedula_medico_Result
 
+        Try
+            Using almacen As New ProyectoEntities1
+                Return almacen.sp_obtener_cedula_medico(usuario.nombreUsuario).SingleOrDefault
+            End Using
+        Catch ex As Exception
+
+        End Try
+        Return Nothing
+    End Function
 
 
 

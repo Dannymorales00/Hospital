@@ -129,6 +129,21 @@
     <Compile Include="sp_Buscar_usuario2_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_obtener_cedula_medico_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_obtener_consulta_por_idCita_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_reporte_Consultas_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_reporte_ExamenOrina_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_reporte_ExamenSangre_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="sp_select_medicamentos_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
@@ -231,6 +246,12 @@
       <DependentUpon>FrmConsultaExamenSangre.vb</DependentUpon>
     </Compile>
     <Compile Include="vista\FrmConsultaExamenSangre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FRMConsultaMedico.Designer.vb">
+      <DependentUpon>FRMConsultaMedico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FRMConsultaMedico.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\FrmEnfermedad.Designer.vb">
@@ -350,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmConsultaExamenSangre.resx">
       <DependentUpon>FrmConsultaExamenSangre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FRMConsultaMedico.resx">
+      <DependentUpon>FRMConsultaMedico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmEnfermedad.resx">
       <DependentUpon>FrmEnfermedad.vb</DependentUpon>

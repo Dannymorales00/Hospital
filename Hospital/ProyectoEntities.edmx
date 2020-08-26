@@ -158,6 +158,12 @@
           <Parameter Name="telefono" Type="varchar" Mode="In" />
           <Parameter Name="tipo" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="sp_obtener_cedula_medico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombreus" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_obtener_consulta_por_idCita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_registrar_cita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="especialidad" Type="nvarchar" Mode="In" />
           <Parameter Name="fechaHora" Type="datetime" Mode="In" />
@@ -230,6 +236,21 @@
           <Parameter Name="telefono" Type="varchar" Mode="In" />
           <Parameter Name="tipo" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="sp_reporte_Consultas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fechaInicio" Type="date" Mode="In" />
+          <Parameter Name="fechaFin" Type="date" Mode="In" />
+          <Parameter Name="cedulaPaciente" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_reporte_ExamenOrina" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fechaInicio" Type="date" Mode="In" />
+          <Parameter Name="fechaFin" Type="date" Mode="In" />
+          <Parameter Name="cedulaPaciente" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_reporte_ExamenSangre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fechaInicio" Type="date" Mode="In" />
+          <Parameter Name="fechaFin" Type="date" Mode="In" />
+          <Parameter Name="cedulaPaciente" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_select_citas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="varchar" Mode="In" />
         </Function>
@@ -245,6 +266,11 @@
           <Parameter Name="fechaHora" Type="datetime" Mode="In" />
           <Parameter Name="cedula_paciente" Type="int" Mode="In" />
           <Parameter Name="cedula_medico" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_update_consulta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="sintomas" Type="varchar" Mode="In" />
+          <Parameter Name="descripcionProceso" Type="varchar" Mode="In" />
+          <Parameter Name="id" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_update_medicamento_alergico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
@@ -518,6 +544,35 @@
           <FunctionImport Name="sp_buscar_consulta_con_cedula" ReturnType="Collection(ProyectoModel.sp_buscar_consulta_con_cedula_Result)">
           <Parameter Name="cedula" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="sp_obtener_cedula_medico" ReturnType="Collection(ProyectoModel.sp_obtener_cedula_medico_Result)">
+          <Parameter Name="nombreus" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_obtener_paciente_cita">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_reporte_Consultas" ReturnType="Collection(ProyectoModel.sp_reporte_Consultas_Result)">
+            <Parameter Name="fechaInicio" Mode="In" Type="DateTime" />
+            <Parameter Name="fechaFin" Mode="In" Type="DateTime" />
+            <Parameter Name="cedulaPaciente" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_reporte_ExamenOrina" ReturnType="Collection(ProyectoModel.sp_reporte_ExamenOrina_Result)">
+            <Parameter Name="fechaInicio" Mode="In" Type="DateTime" />
+            <Parameter Name="fechaFin" Mode="In" Type="DateTime" />
+            <Parameter Name="cedulaPaciente" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_reporte_ExamenSangre" ReturnType="Collection(ProyectoModel.sp_reporte_ExamenSangre_Result)">
+            <Parameter Name="fechaInicio" Mode="In" Type="DateTime" />
+            <Parameter Name="fechaFin" Mode="In" Type="DateTime" />
+            <Parameter Name="cedulaPaciente" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_obtener_consulta_por_idCita" ReturnType="Collection(ProyectoModel.sp_obtener_consulta_por_idCita_Result)">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_update_consulta" ReturnType="Collection(Int32)">
+            <Parameter Name="sintomas" Mode="In" Type="String" />
+            <Parameter Name="descripcionProceso" Mode="In" Type="String" />
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_buscar_enfermedad_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -629,16 +684,6 @@
           <Property Type="Int32" Name="cedula_paciente" Nullable="false" />
           <Property Type="Int32" Name="cedula_medico" Nullable="false" />
         </ComplexType>
-        <ComplexType Name="sp_buscar_consulta_Result">
-          <Property Type="Int32" Name="id" Nullable="false" />
-          <Property Type="Int32" Name="idCitas" Nullable="false" />
-          <Property Type="Double" Name="altura" Nullable="false" />
-          <Property Type="Double" Name="peso" Nullable="false" />
-          <Property Type="Double" Name="presion" Nullable="false" />
-          <Property Type="String" Name="descripcionSintomas" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="sintomas" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="descripcionProceso" Nullable="true" MaxLength="50" />
-        </ComplexType>
         <ComplexType Name="sp_buscar_ExamenOrina_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
           <Property Type="Int32" Name="idConsulta" Nullable="false" />
@@ -648,6 +693,57 @@
           <Property Type="Double" Name="leucocitos" Nullable="false" />
         </ComplexType>
         <ComplexType Name="sp_buscar_consulta_con_cedula_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="idCitas" Nullable="false" />
+          <Property Type="Double" Name="altura" Nullable="false" />
+          <Property Type="Double" Name="peso" Nullable="false" />
+          <Property Type="Double" Name="presion" Nullable="false" />
+          <Property Type="String" Name="descripcionSintomas" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="sintomas" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="descripcionProceso" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_obtener_cedula_medico_Result">
+          <Property Type="Int32" Name="cedula" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_buscar_consulta_Result">
+          <Property Type="Int32" Name="idCitas" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="cedula_paciente" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_reporte_Consultas_Result">
+          <Property Type="Int32" Name="cedula" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="edad" Nullable="false" />
+          <Property Type="String" Name="correo" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaNacimiento" Nullable="false" />
+          <Property Type="Double" Name="peso" Nullable="false" />
+          <Property Type="Double" Name="altura" Nullable="false" />
+          <Property Type="Int32" Name="telefono" Nullable="false" />
+          <Property Type="String" Name="tipoSangre" Nullable="false" MaxLength="10" />
+          <Property Type="DateTime" Name="fechaHora" Nullable="false" Precision="23" />
+          <Property Type="String" Name="descripcionSintomas" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="descripcionProceso" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="cedula_medico" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_reporte_ExamenOrina_Result">
+          <Property Type="Int32" Name="cedula_paciente" Nullable="false" />
+          <Property Type="DateTime" Name="fechaHora" Nullable="false" Precision="23" />
+          <Property Type="String" Name="color" Nullable="false" MaxLength="20" />
+          <Property Type="Double" Name="eritrocitos" Nullable="false" />
+          <Property Type="Double" Name="glucosa" Nullable="false" />
+          <Property Type="Double" Name="leucocitos" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_reporte_ExamenSangre_Result">
+          <Property Type="Int32" Name="cedula_paciente" Nullable="false" />
+          <Property Type="DateTime" Name="fechaHora" Nullable="false" Precision="23" />
+          <Property Type="Double" Name="acidoUrico" Nullable="false" />
+          <Property Type="Double" Name="colesterol" Nullable="false" />
+          <Property Type="Double" Name="creatinina" Nullable="false" />
+          <Property Type="Double" Name="hematocrito" Nullable="false" />
+          <Property Type="Double" Name="hemoglobina" Nullable="false" />
+          <Property Type="Double" Name="trigliceridos" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_obtener_consulta_por_idCita_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
           <Property Type="Int32" Name="idCitas" Nullable="false" />
           <Property Type="Double" Name="altura" Nullable="false" />
@@ -874,14 +970,9 @@
           <FunctionImportMapping FunctionImportName="sp_buscar_consulta" FunctionName="ProyectoModel.Store.sp_buscar_consulta">
             <ResultMapping>
               <ComplexTypeMapping TypeName="ProyectoModel.sp_buscar_consulta_Result">
-                <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idCitas" ColumnName="idCitas" />
-                <ScalarProperty Name="altura" ColumnName="altura" />
-                <ScalarProperty Name="peso" ColumnName="peso" />
-                <ScalarProperty Name="presion" ColumnName="presion" />
-                <ScalarProperty Name="descripcionSintomas" ColumnName="descripcionSintomas" />
-                <ScalarProperty Name="sintomas" ColumnName="sintomas" />
-                <ScalarProperty Name="descripcionProceso" ColumnName="descripcionProceso" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="cedula_paciente" ColumnName="cedula_paciente" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -899,6 +990,73 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_obtener_cedula_medico" FunctionName="ProyectoModel.Store.sp_obtener_cedula_medico" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_obtener_cedula_medico_Result">
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_reporte_Consultas" FunctionName="ProyectoModel.Store.sp_reporte_Consultas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_reporte_Consultas_Result">
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+                <ScalarProperty Name="peso" ColumnName="peso" />
+                <ScalarProperty Name="altura" ColumnName="altura" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="tipoSangre" ColumnName="tipoSangre" />
+                <ScalarProperty Name="fechaHora" ColumnName="fechaHora" />
+                <ScalarProperty Name="descripcionSintomas" ColumnName="descripcionSintomas" />
+                <ScalarProperty Name="descripcionProceso" ColumnName="descripcionProceso" />
+                <ScalarProperty Name="cedula_medico" ColumnName="cedula_medico" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_reporte_ExamenOrina" FunctionName="ProyectoModel.Store.sp_reporte_ExamenOrina">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_reporte_ExamenOrina_Result">
+                <ScalarProperty Name="cedula_paciente" ColumnName="cedula_paciente" />
+                <ScalarProperty Name="fechaHora" ColumnName="fechaHora" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="eritrocitos" ColumnName="eritrocitos" />
+                <ScalarProperty Name="glucosa" ColumnName="glucosa" />
+                <ScalarProperty Name="leucocitos" ColumnName="leucocitos" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_reporte_ExamenSangre" FunctionName="ProyectoModel.Store.sp_reporte_ExamenSangre">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_reporte_ExamenSangre_Result">
+                <ScalarProperty Name="cedula_paciente" ColumnName="cedula_paciente" />
+                <ScalarProperty Name="fechaHora" ColumnName="fechaHora" />
+                <ScalarProperty Name="acidoUrico" ColumnName="acidoUrico" />
+                <ScalarProperty Name="colesterol" ColumnName="colesterol" />
+                <ScalarProperty Name="creatinina" ColumnName="creatinina" />
+                <ScalarProperty Name="hematocrito" ColumnName="hematocrito" />
+                <ScalarProperty Name="hemoglobina" ColumnName="hemoglobina" />
+                <ScalarProperty Name="trigliceridos" ColumnName="trigliceridos" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_obtener_consulta_por_idCita" FunctionName="ProyectoModel.Store.sp_obtener_consulta_por_idCita">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoModel.sp_obtener_consulta_por_idCita_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idCitas" ColumnName="idCitas" />
+                <ScalarProperty Name="altura" ColumnName="altura" />
+                <ScalarProperty Name="peso" ColumnName="peso" />
+                <ScalarProperty Name="presion" ColumnName="presion" />
+                <ScalarProperty Name="descripcionSintomas" ColumnName="descripcionSintomas" />
+                <ScalarProperty Name="sintomas" ColumnName="sintomas" />
+                <ScalarProperty Name="descripcionProceso" ColumnName="descripcionProceso" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_update_consulta" FunctionName="ProyectoModel.Store.sp_update_consulta" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
