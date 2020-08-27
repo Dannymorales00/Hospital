@@ -1,4 +1,4 @@
-﻿Public Class MedicamentoRecetado
+﻿Public Class MedicamentoAdministrado
     Private _id As Integer
     Private _id_consulta As Integer
     Private _medicamento As Integer
@@ -30,11 +30,11 @@
         End Set
     End Property
 
-    Public Sub New(medicamento As Integer, id_consulta As Integer)
-        Me.medicamento = medicamento
-        Me.id_consulta = id_consulta
+    Public Sub New()
     End Sub
 
-    Public Sub New()
+    Public Sub New(id_consulta As Integer, medicamento As Integer)
+        Me.medicamento = medicamento
+        Me.id_consulta = id_consulta
     End Sub
 End Class

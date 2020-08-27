@@ -96,12 +96,10 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_ExamenOrina_Result)("sp_buscar_ExamenOrina", idConsultaParameter)
     End Function
 
-    Public Overridable Function sp_buscar_ExamenSangre(id As Nullable(Of Integer), idConsulta As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
-        Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
-
+    Public Overridable Function sp_buscar_ExamenSangre(idConsulta As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
         Dim idConsultaParameter As ObjectParameter = If(idConsulta.HasValue, New ObjectParameter("idConsulta", idConsulta), New ObjectParameter("idConsulta", GetType(Integer)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_buscar_ExamenSangre", idParameter, idConsultaParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_buscar_ExamenSangre", idConsultaParameter)
     End Function
 
     Public Overridable Function sp_buscar_paciente(cedula As Nullable(Of Integer)) As ObjectResult(Of sp_buscar_paciente_Result)
@@ -136,12 +134,10 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_eliminar_ExamenOrina", idConsultaParameter)
     End Function
 
-    Public Overridable Function sp_eliminar_ExamenSangre(id As Nullable(Of Integer), idConsulta As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
-        Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
-
+    Public Overridable Function sp_eliminar_ExamenSangre(idConsulta As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
         Dim idConsultaParameter As ObjectParameter = If(idConsulta.HasValue, New ObjectParameter("idConsulta", idConsulta), New ObjectParameter("idConsulta", GetType(Integer)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_eliminar_ExamenSangre", idParameter, idConsultaParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_eliminar_ExamenSangre", idConsultaParameter)
     End Function
 
     Public Overridable Function sp_eliminar_medicamento_alergico(id As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
@@ -428,10 +424,10 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_actualizar_usuario", cedulaParameter, contraseñaParameter, correoParameter, fechaNacimientoParameter, nombreParameter, nombreUsuarioParameter, telefonoParameter, tipoParameter)
     End Function
 
-    Public Overridable Function sp_eliminar_persona_contacto(cedula As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
-        Dim cedulaParameter As ObjectParameter = If(cedula.HasValue, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(Integer)))
+    Public Overridable Function sp_eliminar_persona_contacto(id As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
+        Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_eliminar_persona_contacto", cedulaParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_eliminar_persona_contacto", idParameter)
     End Function
 
     Public Overridable Function sp_registrar_persona_contacto(cedula As Nullable(Of Integer), nombre As String, relacionFamiliar As String, telefono As String, direccion As String, cPaciente As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
@@ -580,6 +576,22 @@ Partial Public Class ProyectoEntities1
         Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
 
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_update_consulta", sintomasParameter, descripcionProcesoParameter, idParameter)
+    End Function
+
+    Public Overridable Function sp_registrar_medicamento_administrado(idConsulta As Nullable(Of Integer), medicamento As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
+        Dim idConsultaParameter As ObjectParameter = If(idConsulta.HasValue, New ObjectParameter("idConsulta", idConsulta), New ObjectParameter("idConsulta", GetType(Integer)))
+
+        Dim medicamentoParameter As ObjectParameter = If(medicamento.HasValue, New ObjectParameter("medicamento", medicamento), New ObjectParameter("medicamento", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_registrar_medicamento_administrado", idConsultaParameter, medicamentoParameter)
+    End Function
+
+    Public Overridable Function sp_registrar_medicamentos_recetados(id_consulta As Nullable(Of Integer), idmedicamento As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
+        Dim id_consultaParameter As ObjectParameter = If(id_consulta.HasValue, New ObjectParameter("id_consulta", id_consulta), New ObjectParameter("id_consulta", GetType(Integer)))
+
+        Dim idmedicamentoParameter As ObjectParameter = If(idmedicamento.HasValue, New ObjectParameter("idmedicamento", idmedicamento), New ObjectParameter("idmedicamento", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_registrar_medicamentos_recetados", id_consultaParameter, idmedicamentoParameter)
     End Function
 
 End Class

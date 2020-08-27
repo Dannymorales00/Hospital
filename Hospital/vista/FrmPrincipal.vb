@@ -4,7 +4,9 @@
     Private frmCitas As FrmCita
     Private frmPaciente As FrmPaciente
     Private frmExamenes As FrmExamenes
-    Private frmReportes As FrmReportes
+    Private frmConsulta As FRMSeleccionarConsulta
+    Private frmReporte As FrmReportes
+    Private frmCitashoy As FRMSeleccionarCitas
 
     Public Sub New(usuario1 As Usuario)
         usuario = New Usuario()
@@ -12,42 +14,24 @@
         frmCitas = New FrmCita()
         frmPaciente = New FrmPaciente()
         frmExamenes = New FrmExamenes()
-        frmReportes = New FrmReportes()
+        frmConsulta = New FRMSeleccionarConsulta
+        frmReporte = New FrmReportes
+        frmCitashoy = New FRMSeleccionarCitas
+
         usuario = usuario1
         InitializeComponent()
-
     End Sub
-
-
-
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Centrar(Me.PanelModulos)
         Me.MenuPerfilNombreUSuario.Text = "Username: " + usuario.nombreUsuario
         Me.MenuPerfilTipo.Text = "Tipo: " + usuario.tipo
-
     End Sub
-
     Private Sub BtnUsuarios_Click(sender As Object, e As EventArgs) Handles BtnUsuarios.Click
-        If usuario.tipo.Equals("Admin") Then
-            frmUsuario.Show()
-        Else
-            MessageBox.Show("No tienes permiso para este modulo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
-
-
-
+        frmUsuario.Show()
     End Sub
-
     Private Sub BtnCitas_Click(sender As Object, e As EventArgs) Handles BtnCitas.Click
-        If usuario.tipo.Equals("Secretaria") Or usuario.tipo.Equals("Admin") Then
-            frmCitas.Show()
-        Else
-            MessageBox.Show("No tienes permiso para este modulo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
-
-
+        frmCitas.Show()
     End Sub
-
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Dim opcion As DialogResult
         opcion = MessageBox.Show("Realmente desea Salir",
@@ -60,32 +44,12 @@
         End If
     End Sub
     Private Sub BtnPaciente_Click(sender As Object, e As EventArgs) Handles BtnPaciente.Click
-        If usuario.tipo.Equals("Secretaria") Or usuario.tipo.Equals("Admin") Then
-            frmPaciente.Show()
-        Else
-            MessageBox.Show("No tienes permiso para este modulo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-        End If
-
-
-
-
+        frmPaciente.ShowDialog()
     End Sub
-
     Private Sub BtnExamenes_Click(sender As Object, e As EventArgs) Handles BtnExamenes.Click
-        If usuario.tipo.Equals("Medico") Or usuario.tipo.Equals("Admin") Then
-            frmExamenes.Show()
-        Else
-            MessageBox.Show("No tienes permiso para este modulo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-        End If
-
-
-
+        frmExamenes.ShowDialog()
     End Sub
-
     Private Sub Centrar(ByVal Objeto As Object)
-
         ' Centrar un Formulario ...  
         If TypeOf Objeto Is Form Then
             Dim frm As Form = CType(Objeto, Form)
@@ -93,12 +57,10 @@
                 frm.Top = (.Height - frm.Height) \ 2
                 frm.Left = (.Width - frm.Width) \ 2
             End With
-
             ' Centrar un control dentro del contenedor  
         Else
             ' referencia al control  
             Dim c As Control = CType(Objeto, Control)
-
             'le  establece el top y el Left dentro del Parent  
             With c
                 .Top = (.Parent.ClientSize.Height - c.Height) \ 2
@@ -108,6 +70,18 @@
     End Sub
 
     Private Sub BtnConsulta_Click(sender As Object, e As EventArgs) Handles BtnConsulta.Click
+        If usuario.tipo = "Medico" Then
+            frmConsulta.usuario = usuario
+            frmConsulta.ShowDialog()
+        Else usuario.tipo = "Enfermera"
 
+            frmCitashoy.ShowDialog()
+
+        End If
+
+    End Sub
+
+    Private Sub BtnReportes_Click(sender As Object, e As EventArgs) Handles BtnReportes.Click
+        frmReporte.ShowDialog()
     End Sub
 End Class

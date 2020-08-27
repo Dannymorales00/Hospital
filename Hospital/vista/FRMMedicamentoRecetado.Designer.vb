@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmMedicamentoAlergicoRegistrar
+Partial Class FRMMedicamentoRecetado
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,18 +22,28 @@ Partial Class FrmMedicamentoAlergicoRegistrar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.btn_close = New System.Windows.Forms.Button()
         Me.BtnRegistrar = New System.Windows.Forms.Button()
         Me.clb_medicamentos = New System.Windows.Forms.CheckedListBox()
-        Me.btn_close = New System.Windows.Forms.Button()
         Me.SuspendLayout()
+        '
+        'btn_close
+        '
+        Me.btn_close.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_close.Location = New System.Drawing.Point(384, 397)
+        Me.btn_close.Name = "btn_close"
+        Me.btn_close.Size = New System.Drawing.Size(102, 33)
+        Me.btn_close.TabIndex = 42
+        Me.btn_close.Text = "Cerrar"
+        Me.btn_close.UseVisualStyleBackColor = True
         '
         'BtnRegistrar
         '
         Me.BtnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegistrar.Location = New System.Drawing.Point(12, 389)
+        Me.BtnRegistrar.Location = New System.Drawing.Point(12, 397)
         Me.BtnRegistrar.Name = "BtnRegistrar"
         Me.BtnRegistrar.Size = New System.Drawing.Size(102, 33)
-        Me.BtnRegistrar.TabIndex = 33
+        Me.BtnRegistrar.TabIndex = 41
         Me.BtnRegistrar.Text = "Registrar"
         Me.BtnRegistrar.UseVisualStyleBackColor = True
         '
@@ -45,33 +55,23 @@ Partial Class FrmMedicamentoAlergicoRegistrar
         Me.clb_medicamentos.Name = "clb_medicamentos"
         Me.clb_medicamentos.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.clb_medicamentos.Size = New System.Drawing.Size(474, 364)
-        Me.clb_medicamentos.TabIndex = 36
+        Me.clb_medicamentos.TabIndex = 40
         '
-        'btn_close
-        '
-        Me.btn_close.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_close.Location = New System.Drawing.Point(384, 389)
-        Me.btn_close.Name = "btn_close"
-        Me.btn_close.Size = New System.Drawing.Size(102, 33)
-        Me.btn_close.TabIndex = 37
-        Me.btn_close.Text = "Cerrar"
-        Me.btn_close.UseVisualStyleBackColor = True
-        '
-        'FrmMedicamentoAlergicoRegistrar
+        'FRMMedicamentoRecetado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(498, 434)
+        Me.ClientSize = New System.Drawing.Size(545, 446)
         Me.Controls.Add(Me.btn_close)
-        Me.Controls.Add(Me.clb_medicamentos)
         Me.Controls.Add(Me.BtnRegistrar)
-        Me.Name = "FrmMedicamentoAlergicoRegistrar"
-        Me.Text = "FrmMedicamentoAlergicoRegistrar"
+        Me.Controls.Add(Me.clb_medicamentos)
+        Me.Name = "FRMMedicamentoRecetado"
+        Me.Text = "FRMMedicamentoRecetado"
         Me.ResumeLayout(False)
 
     End Sub
 
+    Friend WithEvents btn_close As Button
     Friend WithEvents BtnRegistrar As Button
     Friend WithEvents clb_medicamentos As CheckedListBox
-    Friend WithEvents btn_close As Button
 End Class

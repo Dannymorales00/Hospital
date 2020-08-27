@@ -84,7 +84,6 @@
           <Parameter Name="idConsulta" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_buscar_ExamenSangre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="idConsulta" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_buscar_medico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -114,7 +113,6 @@
           <Parameter Name="idConsulta" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_eliminar_ExamenSangre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="idConsulta" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_eliminar_medicamento_alergico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -127,7 +125,7 @@
           <Parameter Name="cedula" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_eliminar_persona_contacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="cedula" Type="int" Mode="In" />
+          <Parameter Name="id" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_eliminar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="int" Mode="In" />
@@ -198,6 +196,10 @@
           <Parameter Name="hemoglobina" Type="float" Mode="In" />
           <Parameter Name="trigliceridos" Type="float" Mode="In" />
         </Function>
+        <Function Name="sp_registrar_medicamento_administrado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idConsulta" Type="int" Mode="In" />
+          <Parameter Name="medicamento" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_registrar_medicamento_alergico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="int" Mode="In" />
           <Parameter Name="medicamento" Type="int" Mode="In" />
@@ -206,6 +208,10 @@
           <Parameter Name="idConsulta" Type="int" Mode="In" />
           <Parameter Name="medicamento" Type="varchar" Mode="In" />
           <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_registrar_medicamentos_recetados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_consulta" Type="int" Mode="In" />
+          <Parameter Name="idmedicamento" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_registrar_paciente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="int" Mode="In" />
@@ -331,8 +337,7 @@
           <Parameter Name="idConsulta" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_buscar_ExamenSangre" ReturnType="Collection(Int32)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
-            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+          <Parameter Name="idConsulta" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_buscar_paciente" ReturnType="Collection(ProyectoModel.sp_buscar_paciente_Result)">
           <Parameter Name="cedula" Mode="In" Type="Int32" />
@@ -351,8 +356,7 @@
           <Parameter Name="idConsulta" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_ExamenSangre" ReturnType="Collection(Int32)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
-            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+          <Parameter Name="idConsulta" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_medicamento_alergico" ReturnType="Collection(Int32)">
           <Parameter Name="id" Mode="In" Type="Int32" />
@@ -495,7 +499,7 @@
             <Parameter Name="tipo" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_persona_contacto" ReturnType="Collection(Int32)">
-          <Parameter Name="cedula" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_registrar_persona_contacto" ReturnType="Collection(Int32)">
             <Parameter Name="cedula" Mode="In" Type="Int32" />
@@ -570,6 +574,14 @@
             <Parameter Name="descripcionProceso" Mode="In" Type="String" />
             <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="sp_registrar_medicamento_administrado" ReturnType="Collection(Int32)">
+            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+            <Parameter Name="medicamento" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_registrar_medicamentos_recetados" ReturnType="Collection(Int32)">
+            <Parameter Name="id_consulta" Mode="In" Type="Int32" />
+            <Parameter Name="idmedicamento" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_buscar_enfermedad_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -640,6 +652,7 @@
           <Property Type="String" Name="Dirección" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Nombre_Paciente" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="Paciente" Nullable="false" />
+          <Property Type="Int32" Name="Id" Nullable="false" />
         </ComplexType>
         <ComplexType Name="sp_Buscar_usuario2_Result">
           <Property Type="Int32" Name="cedula" Nullable="false" />
@@ -680,16 +693,6 @@
           <Property Type="DateTime" Name="fechaHora" Nullable="false" Precision="23" />
           <Property Type="Int32" Name="cedula_paciente" Nullable="false" />
           <Property Type="Int32" Name="cedula_medico" Nullable="false" />
-        </ComplexType>
-        <ComplexType Name="sp_buscar_consulta_Result">
-          <Property Type="Int32" Name="id" Nullable="false" />
-          <Property Type="Int32" Name="idCitas" Nullable="false" />
-          <Property Type="Double" Name="altura" Nullable="false" />
-          <Property Type="Double" Name="peso" Nullable="false" />
-          <Property Type="Double" Name="presion" Nullable="false" />
-          <Property Type="String" Name="descripcionSintomas" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="sintomas" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="descripcionProceso" Nullable="true" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="sp_buscar_ExamenOrina_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -754,6 +757,11 @@
         </ComplexType>
         <ComplexType Name="sp_obtener_cedula_medico_Result">
           <Property Type="Int32" Name="cedula" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_buscar_consulta_Result">
+          <Property Type="Int32" Name="idCitas" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="cedula_paciente" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -897,6 +905,7 @@
                 <ScalarProperty Name="Dirección" ColumnName="Dirección" />
                 <ScalarProperty Name="Nombre_Paciente" ColumnName="Nombre Paciente" />
                 <ScalarProperty Name="Paciente" ColumnName="Paciente" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -972,14 +981,9 @@
           <FunctionImportMapping FunctionImportName="sp_buscar_consulta" FunctionName="ProyectoModel.Store.sp_buscar_consulta">
             <ResultMapping>
               <ComplexTypeMapping TypeName="ProyectoModel.sp_buscar_consulta_Result">
-                <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idCitas" ColumnName="idCitas" />
-                <ScalarProperty Name="altura" ColumnName="altura" />
-                <ScalarProperty Name="peso" ColumnName="peso" />
-                <ScalarProperty Name="presion" ColumnName="presion" />
-                <ScalarProperty Name="descripcionSintomas" ColumnName="descripcionSintomas" />
-                <ScalarProperty Name="sintomas" ColumnName="sintomas" />
-                <ScalarProperty Name="descripcionProceso" ColumnName="descripcionProceso" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="cedula_paciente" ColumnName="cedula_paciente" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -1064,6 +1068,8 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_update_consulta" FunctionName="ProyectoModel.Store.sp_update_consulta" />
+          <FunctionImportMapping FunctionImportName="sp_registrar_medicamento_administrado" FunctionName="ProyectoModel.Store.sp_registrar_medicamento_administrado" />
+          <FunctionImportMapping FunctionImportName="sp_registrar_medicamentos_recetados" FunctionName="ProyectoModel.Store.sp_registrar_medicamentos_recetados" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

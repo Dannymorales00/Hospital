@@ -1,7 +1,9 @@
 ﻿Public Class FRMConsultaMedico
     Private _cita As Citas
-    Dim controladorConsulta As New ControladorConsulta
-    Dim consulta As New ConsultaMedica
+    Private frmMedicamentosAdministrado As New FrmMedicamentoAdministrado
+    Private controladorConsulta As New ControladorConsulta
+    Private consulta As New ConsultaMedica
+    Private frmMedicamentosRecetados As New FRMMedicamentoRecetado
     Property citas As Citas
         Get
             Return _cita
@@ -23,7 +25,6 @@
         consulta.descripcionSintomas = result.descripcionSintomas
         consulta.peso = result.peso
         consulta.presion = result.presion
-
         txtAltura.Text = consulta.altura.ToString
         txtDescripcionSintomas.Text = consulta.descripcionSintomas
         txtPeso.Text = consulta.peso.ToString
@@ -56,4 +57,15 @@
             Return False
         End If
     End Function
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        frmMedicamentosAdministrado.consultaMedica = consulta
+        frmMedicamentosAdministrado.ShowDialog()
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        frmMedicamentosRecetados.consultaMedica = consulta
+        frmMedicamentosRecetados.ShowDialog()
+    End Sub
 End Class
