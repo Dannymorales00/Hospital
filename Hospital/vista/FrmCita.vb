@@ -52,6 +52,7 @@
             cita = New Citas
             cita.especialidadSolicitada = TxtRegistrarEspecialidad.Text
             cita.fechaHora = DateTimeFecha.Value.ToString("yyyy-MM-dd") + " " + DateTimeHora.Value.ToString("hh:mm:ss")
+
             cita.paciente = paciente
             cita.medico = medico
             If BtnRegistrar.Text = "Registrar" Then
@@ -61,6 +62,7 @@
                     MsgBox("No se agrego la cita")
                 End If
             Else
+                cita.id = Val(LblID.Text)
                 If controladorCita.actualizar(cita) = 1 Then
                     MsgBox("Se actualizo la cita correctamente")
                 Else
