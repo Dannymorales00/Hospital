@@ -22,8 +22,8 @@ Partial Class FrmCita
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BtnRegistrar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -124,6 +124,7 @@ Partial Class FrmCita
         '
         Me.TxtRegistrarEspecialidad.Location = New System.Drawing.Point(152, 46)
         Me.TxtRegistrarEspecialidad.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtRegistrarEspecialidad.MaxLength = 40
         Me.TxtRegistrarEspecialidad.Name = "TxtRegistrarEspecialidad"
         Me.TxtRegistrarEspecialidad.Size = New System.Drawing.Size(254, 22)
         Me.TxtRegistrarEspecialidad.TabIndex = 6
@@ -152,8 +153,8 @@ Partial Class FrmCita
         '
         'DataGridCitas
         '
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        Me.DataGridCitas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DataGridCitas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridCitas.BackgroundColor = System.Drawing.SystemColors.ScrollBar
         Me.DataGridCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridCitas.Location = New System.Drawing.Point(459, 70)
@@ -161,8 +162,8 @@ Partial Class FrmCita
         Me.DataGridCitas.Name = "DataGridCitas"
         Me.DataGridCitas.ReadOnly = True
         Me.DataGridCitas.RowHeadersWidth = 51
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.DataGridCitas.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.DataGridCitas.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridCitas.RowTemplate.Height = 24
         Me.DataGridCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridCitas.Size = New System.Drawing.Size(561, 268)
@@ -172,6 +173,7 @@ Partial Class FrmCita
         '
         Me.TxtCedulaP.Location = New System.Drawing.Point(628, 38)
         Me.TxtCedulaP.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TxtCedulaP.MaxLength = 20
         Me.TxtCedulaP.Name = "TxtCedulaP"
         Me.TxtCedulaP.Size = New System.Drawing.Size(160, 22)
         Me.TxtCedulaP.TabIndex = 10

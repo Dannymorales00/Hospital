@@ -1,9 +1,5 @@
 ﻿Public Class FrmPaciente
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cargarTabla()
-
-    End Sub
-
+    'atributos
     Private paciente As Paciente
     Private alergico As List(Of MedicamentoAlergico)
     Private controladorPaciente As New ControladorPaciente()
@@ -11,9 +7,17 @@
     Private controladorAlergico As New ControladorMedicamentoAlergico
     Private personaContacto As New PersonaContacto()
     Private listaEnfermedades As New List(Of Enfermedad)
+    'ventanas
+    Private frmEnfemedades As New FrmEnfermedad
+    Private frmPersonaContacto As New FRMPersonaContacto()
+
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cargarTabla()
+
+    End Sub
 
     Public Function comprobarAgregar() As Boolean
-        Return Not TxtCedula.Text.Equals("") And TxtNombre.Text.Equals("") And TxtAltura.Text.Equals("") And TxtCorreo.Text.Equals("") And TxtEdad.Text.Equals("") And TxtPeso.Text.Equals("") And TxtTelefono.Equals("")
+        Return Not TxtCedula.Text.Equals("") And Not TxtNombre.Text.Equals("") And Not TxtAltura.Text.Equals("") And Not TxtCorreo.Text.Equals("") And Not TxtEdad.Text.Equals("") And Not TxtPeso.Text.Equals("") And Not TxtTelefono.Equals("") And ComboTipo.SelectedIndex >= 0
 
     End Function
 
@@ -141,6 +145,7 @@
         paciente.correo = result1.correo
         paciente.telefono = result1.telefono
         paciente.edad = result1.edad
+        paciente.peso = result1.peso
         paciente.altura = result1.altura
         paciente.contactosPersona = result1.contactosPersona
         paciente.tipoSangre = result1.tipoSangre
@@ -198,8 +203,33 @@
     Private Sub TxtBuscarCedula_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscarCedula.TextChanged
         cargarTabla()
     End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
         Me.Hide()
+    End Sub
+
+    Private Sub AdministrarEnfermedadesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarEnfermedadesToolStripMenuItem.Click
+        frmEnfemedades.Show()
+    End Sub
+
+    Private Sub AdministrarPersonaContactoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarPersonaContactoToolStripMenuItem.Click
+        frmPersonaContacto.Show()
+    End Sub
+
+    Private Sub TxtCedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedula.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtBuscarCedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBuscarCedula.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefono.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
     End Sub
 End Class

@@ -44,15 +44,18 @@ Partial Class FrmExamenOrina
         Me.BtnRegistrar = New System.Windows.Forms.Button()
         Me.TxtColor = New System.Windows.Forms.TextBox()
         Me.BtnSeleccionarConsulta = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         CType(Me.TablaExamenes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(85, 340)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(96, 18)
@@ -63,6 +66,7 @@ Partial Class FrmExamenOrina
         '
         Me.TxtLeucocitos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtLeucocitos.Location = New System.Drawing.Point(185, 336)
+        Me.TxtLeucocitos.MaxLength = 10
         Me.TxtLeucocitos.Name = "TxtLeucocitos"
         Me.TxtLeucocitos.Size = New System.Drawing.Size(206, 22)
         Me.TxtLeucocitos.TabIndex = 118
@@ -71,7 +75,7 @@ Partial Class FrmExamenOrina
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(103, 312)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(76, 18)
@@ -82,6 +86,7 @@ Partial Class FrmExamenOrina
         '
         Me.TxtGlucosa.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtGlucosa.Location = New System.Drawing.Point(185, 308)
+        Me.TxtGlucosa.MaxLength = 10
         Me.TxtGlucosa.Name = "TxtGlucosa"
         Me.TxtGlucosa.Size = New System.Drawing.Size(206, 22)
         Me.TxtGlucosa.TabIndex = 116
@@ -90,7 +95,7 @@ Partial Class FrmExamenOrina
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(87, 280)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(92, 18)
@@ -101,6 +106,7 @@ Partial Class FrmExamenOrina
         '
         Me.TxtEritrocitos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtEritrocitos.Location = New System.Drawing.Point(185, 280)
+        Me.TxtEritrocitos.MaxLength = 10
         Me.TxtEritrocitos.Name = "TxtEritrocitos"
         Me.TxtEritrocitos.Size = New System.Drawing.Size(206, 22)
         Me.TxtEritrocitos.TabIndex = 114
@@ -109,7 +115,7 @@ Partial Class FrmExamenOrina
         '
         Me.lblIdExamenOrina.AutoSize = True
         Me.lblIdExamenOrina.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIdExamenOrina.ForeColor = System.Drawing.Color.Black
+        Me.lblIdExamenOrina.ForeColor = System.Drawing.Color.White
         Me.lblIdExamenOrina.Location = New System.Drawing.Point(187, 218)
         Me.lblIdExamenOrina.Name = "lblIdExamenOrina"
         Me.lblIdExamenOrina.Size = New System.Drawing.Size(29, 18)
@@ -121,7 +127,7 @@ Partial Class FrmExamenOrina
         '
         Me.labelNumeroIdExamen.AutoSize = True
         Me.labelNumeroIdExamen.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelNumeroIdExamen.ForeColor = System.Drawing.Color.Black
+        Me.labelNumeroIdExamen.ForeColor = System.Drawing.Color.White
         Me.labelNumeroIdExamen.Location = New System.Drawing.Point(24, 218)
         Me.labelNumeroIdExamen.Name = "labelNumeroIdExamen"
         Me.labelNumeroIdExamen.Size = New System.Drawing.Size(157, 18)
@@ -132,12 +138,11 @@ Partial Class FrmExamenOrina
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(486, 29)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(216, 20)
+        Me.Label3.Size = New System.Drawing.Size(214, 18)
         Me.Label3.TabIndex = 110
         Me.Label3.Text = "Lista de examenes de orina"
         '
@@ -156,12 +161,11 @@ Partial Class FrmExamenOrina
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(9, 9)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(165, 20)
+        Me.Label6.Size = New System.Drawing.Size(163, 18)
         Me.Label6.TabIndex = 80
         Me.Label6.Text = "Datos de la consulta"
         '
@@ -169,7 +173,7 @@ Partial Class FrmExamenOrina
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(56, 43)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(98, 18)
@@ -180,7 +184,7 @@ Partial Class FrmExamenOrina
         '
         Me.LblIdConsulta.AutoSize = True
         Me.LblIdConsulta.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIdConsulta.ForeColor = System.Drawing.Color.Black
+        Me.LblIdConsulta.ForeColor = System.Drawing.Color.White
         Me.LblIdConsulta.Location = New System.Drawing.Point(168, 43)
         Me.LblIdConsulta.Name = "LblIdConsulta"
         Me.LblIdConsulta.Size = New System.Drawing.Size(29, 18)
@@ -191,7 +195,7 @@ Partial Class FrmExamenOrina
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(92, 70)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 18)
@@ -202,7 +206,7 @@ Partial Class FrmExamenOrina
         '
         Me.LblIdCita.AutoSize = True
         Me.LblIdCita.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIdCita.ForeColor = System.Drawing.Color.Black
+        Me.LblIdCita.ForeColor = System.Drawing.Color.White
         Me.LblIdCita.Location = New System.Drawing.Point(168, 70)
         Me.LblIdCita.Name = "LblIdCita"
         Me.LblIdCita.Size = New System.Drawing.Size(29, 18)
@@ -211,7 +215,9 @@ Partial Class FrmExamenOrina
         '
         'BtnEliminar
         '
+        Me.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminar.ForeColor = System.Drawing.Color.White
         Me.BtnEliminar.Location = New System.Drawing.Point(320, 406)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(85, 24)
@@ -231,7 +237,9 @@ Partial Class FrmExamenOrina
         '
         'BtnLimpiar
         '
+        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLimpiar.ForeColor = System.Drawing.Color.White
         Me.BtnLimpiar.Location = New System.Drawing.Point(202, 406)
         Me.BtnLimpiar.Name = "BtnLimpiar"
         Me.BtnLimpiar.Size = New System.Drawing.Size(85, 24)
@@ -243,7 +251,7 @@ Partial Class FrmExamenOrina
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(124, 252)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(55, 18)
@@ -252,7 +260,9 @@ Partial Class FrmExamenOrina
         '
         'BtnRegistrar
         '
+        Me.BtnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRegistrar.ForeColor = System.Drawing.Color.White
         Me.BtnRegistrar.Location = New System.Drawing.Point(81, 406)
         Me.BtnRegistrar.Name = "BtnRegistrar"
         Me.BtnRegistrar.Size = New System.Drawing.Size(85, 24)
@@ -264,13 +274,16 @@ Partial Class FrmExamenOrina
         '
         Me.TxtColor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtColor.Location = New System.Drawing.Point(185, 252)
+        Me.TxtColor.MaxLength = 10
         Me.TxtColor.Name = "TxtColor"
         Me.TxtColor.Size = New System.Drawing.Size(206, 22)
         Me.TxtColor.TabIndex = 104
         '
         'BtnSeleccionarConsulta
         '
+        Me.BtnSeleccionarConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSeleccionarConsulta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSeleccionarConsulta.ForeColor = System.Drawing.Color.White
         Me.BtnSeleccionarConsulta.Location = New System.Drawing.Point(185, 54)
         Me.BtnSeleccionarConsulta.Name = "BtnSeleccionarConsulta"
         Me.BtnSeleccionarConsulta.Size = New System.Drawing.Size(206, 24)
@@ -278,11 +291,31 @@ Partial Class FrmExamenOrina
         Me.BtnSeleccionarConsulta.Text = "Seleccionar Consulta"
         Me.BtnSeleccionarConsulta.UseVisualStyleBackColor = True
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Window
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1019, 24)
+        Me.MenuStrip1.TabIndex = 120
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.SalirToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.SalirToolStripMenuItem.Text = "Salir"
+        '
         'FrmExamenOrina
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(1019, 465)
+        Me.ControlBox = False
         Me.Controls.Add(Me.BtnSeleccionarConsulta)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TxtLeucocitos)
@@ -300,11 +333,17 @@ Partial Class FrmExamenOrina
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.BtnRegistrar)
         Me.Controls.Add(Me.TxtColor)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.ForeColor = System.Drawing.Color.White
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmExamenOrina"
+        Me.ShowIcon = False
         Me.Text = "FrmExamenOrina"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.TablaExamenes, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -332,4 +371,6 @@ Partial Class FrmExamenOrina
     Friend WithEvents BtnRegistrar As Button
     Friend WithEvents TxtColor As TextBox
     Friend WithEvents BtnSeleccionarConsulta As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -46,13 +46,13 @@
 
     Function ComprobarAgregar() As Boolean
 
-        Return Not (TxtNombre.Text.Equals("") AndAlso TxtCedula.Text.Equals("") AndAlso TxtContraseña.Text.Equals("") AndAlso TxtCorreo.Text.Equals("") AndAlso TxtTelefono.Text.Equals("") AndAlso TxtNombreUsuario.Text.Equals("") AndAlso CBTipo.SelectedIndex < 0)
+        Return Not TxtNombre.Text.Equals("") And Not TxtCedula.Text.Equals("") And Not TxtContraseña.Text.Equals("") And Not TxtCorreo.Text.Equals("") And Not TxtTelefono.Text.Equals("") And Not TxtNombreUsuario.Text.Equals("") And CBTipo.SelectedIndex >= 0
 
     End Function
 
     Function ComprobarActualizar() As Boolean
 
-        Return Not (TxtNombreActualizar.Text.Equals("") AndAlso TxtCedulaActualizar.Text.Equals("") AndAlso TxtContraseñaActualizar.Text.Equals("") AndAlso TxtCorreoActualizar.Text.Equals("") AndAlso TxtTelefonoActualizar.Text.Equals("") AndAlso TxtNombreUsuarioActualizar.Text.Equals("") AndAlso CBTipoActualizar.SelectedIndex < 0)
+        Return Not TxtNombreActualizar.Text.Equals("") And Not TxtCedulaActualizar.Text.Equals("") And Not TxtContraseñaActualizar.Text.Equals("") And Not TxtCorreoActualizar.Text.Equals("") And Not TxtTelefonoActualizar.Text.Equals("") And Not TxtNombreUsuarioActualizar.Text.Equals("") And CBTipoActualizar.SelectedIndex >= 0
 
     End Function
 
@@ -270,4 +270,36 @@
     Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
         Me.Hide()
     End Sub
+
+    Private Sub TxtCedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedula.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefono.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtCedulaEliminar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedulaEliminar.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtCedulaBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedulaBuscar.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtTelefonoActualizar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefonoActualizar.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+
 End Class

@@ -188,4 +188,8 @@
     Private Sub nombreTxt_TextChanged(sender As Object, e As EventArgs) Handles nombreTxt.TextChanged
 
     End Sub
+
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Hide()
+    End Sub
 End Class

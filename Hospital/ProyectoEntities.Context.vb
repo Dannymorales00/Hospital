@@ -96,12 +96,6 @@ Partial Public Class ProyectoEntities1
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_ExamenOrina_Result)("sp_buscar_ExamenOrina", idConsultaParameter)
     End Function
 
-    Public Overridable Function sp_buscar_ExamenSangre(idConsulta As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
-        Dim idConsultaParameter As ObjectParameter = If(idConsulta.HasValue, New ObjectParameter("idConsulta", idConsulta), New ObjectParameter("idConsulta", GetType(Integer)))
-
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_buscar_ExamenSangre", idConsultaParameter)
-    End Function
-
     Public Overridable Function sp_buscar_paciente(cedula As Nullable(Of Integer)) As ObjectResult(Of sp_buscar_paciente_Result)
         Dim cedulaParameter As ObjectParameter = If(cedula.HasValue, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(Integer)))
 
@@ -524,6 +518,64 @@ Partial Public Class ProyectoEntities1
         Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
 
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_consulta_con_cedula_Result)("sp_buscar_consulta_con_cedula", cedulaParameter)
+    End Function
+
+    Public Overridable Function sp_obtener_cedula_medico(nombreus As String) As ObjectResult(Of sp_obtener_cedula_medico_Result)
+        Dim nombreusParameter As ObjectParameter = If(nombreus IsNot Nothing, New ObjectParameter("nombreus", nombreus), New ObjectParameter("nombreus", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_obtener_cedula_medico_Result)("sp_obtener_cedula_medico", nombreusParameter)
+    End Function
+
+    Public Overridable Function sp_reporte_Consultas(fechaInicio As Nullable(Of Date), fechaFin As Nullable(Of Date), cedulaPaciente As Nullable(Of Integer)) As ObjectResult(Of sp_reporte_Consultas_Result)
+        Dim fechaInicioParameter As ObjectParameter = If(fechaInicio.HasValue, New ObjectParameter("fechaInicio", fechaInicio), New ObjectParameter("fechaInicio", GetType(Date)))
+
+        Dim fechaFinParameter As ObjectParameter = If(fechaFin.HasValue, New ObjectParameter("fechaFin", fechaFin), New ObjectParameter("fechaFin", GetType(Date)))
+
+        Dim cedulaPacienteParameter As ObjectParameter = If(cedulaPaciente.HasValue, New ObjectParameter("cedulaPaciente", cedulaPaciente), New ObjectParameter("cedulaPaciente", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_reporte_Consultas_Result)("sp_reporte_Consultas", fechaInicioParameter, fechaFinParameter, cedulaPacienteParameter)
+    End Function
+
+    Public Overridable Function sp_reporte_ExamenOrina(fechaInicio As Nullable(Of Date), fechaFin As Nullable(Of Date), cedulaPaciente As Nullable(Of Integer)) As ObjectResult(Of sp_reporte_ExamenOrina_Result)
+        Dim fechaInicioParameter As ObjectParameter = If(fechaInicio.HasValue, New ObjectParameter("fechaInicio", fechaInicio), New ObjectParameter("fechaInicio", GetType(Date)))
+
+        Dim fechaFinParameter As ObjectParameter = If(fechaFin.HasValue, New ObjectParameter("fechaFin", fechaFin), New ObjectParameter("fechaFin", GetType(Date)))
+
+        Dim cedulaPacienteParameter As ObjectParameter = If(cedulaPaciente.HasValue, New ObjectParameter("cedulaPaciente", cedulaPaciente), New ObjectParameter("cedulaPaciente", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_reporte_ExamenOrina_Result)("sp_reporte_ExamenOrina", fechaInicioParameter, fechaFinParameter, cedulaPacienteParameter)
+    End Function
+
+    Public Overridable Function sp_reporte_ExamenSangre(fechaInicio As Nullable(Of Date), fechaFin As Nullable(Of Date), cedulaPaciente As Nullable(Of Integer)) As ObjectResult(Of sp_reporte_ExamenSangre_Result)
+        Dim fechaInicioParameter As ObjectParameter = If(fechaInicio.HasValue, New ObjectParameter("fechaInicio", fechaInicio), New ObjectParameter("fechaInicio", GetType(Date)))
+
+        Dim fechaFinParameter As ObjectParameter = If(fechaFin.HasValue, New ObjectParameter("fechaFin", fechaFin), New ObjectParameter("fechaFin", GetType(Date)))
+
+        Dim cedulaPacienteParameter As ObjectParameter = If(cedulaPaciente.HasValue, New ObjectParameter("cedulaPaciente", cedulaPaciente), New ObjectParameter("cedulaPaciente", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_reporte_ExamenSangre_Result)("sp_reporte_ExamenSangre", fechaInicioParameter, fechaFinParameter, cedulaPacienteParameter)
+    End Function
+
+    Public Overridable Function sp_obtener_consulta_por_idCita(id As Nullable(Of Integer)) As ObjectResult(Of sp_obtener_consulta_por_idCita_Result)
+        Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_obtener_consulta_por_idCita_Result)("sp_obtener_consulta_por_idCita", idParameter)
+    End Function
+
+    Public Overridable Function sp_update_consulta(sintomas As String, descripcionProceso As String, id As Nullable(Of Integer)) As ObjectResult(Of Nullable(Of Integer))
+        Dim sintomasParameter As ObjectParameter = If(sintomas IsNot Nothing, New ObjectParameter("sintomas", sintomas), New ObjectParameter("sintomas", GetType(String)))
+
+        Dim descripcionProcesoParameter As ObjectParameter = If(descripcionProceso IsNot Nothing, New ObjectParameter("descripcionProceso", descripcionProceso), New ObjectParameter("descripcionProceso", GetType(String)))
+
+        Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Nullable(Of Integer))("sp_update_consulta", sintomasParameter, descripcionProcesoParameter, idParameter)
+    End Function
+
+    Public Overridable Function sp_buscar_ExamenSangre(idConsulta As Nullable(Of Integer)) As ObjectResult(Of sp_buscar_ExamenSangre_Result)
+        Dim idConsultaParameter As ObjectParameter = If(idConsulta.HasValue, New ObjectParameter("idConsulta", idConsulta), New ObjectParameter("idConsulta", GetType(Integer)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_buscar_ExamenSangre_Result)("sp_buscar_ExamenSangre", idConsultaParameter)
     End Function
 
 End Class

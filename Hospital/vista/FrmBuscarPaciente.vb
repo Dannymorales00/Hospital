@@ -1,20 +1,10 @@
 ﻿Public Class FrmBuscarPaciente
     Private paciente As Paciente
-    Private pacienteRetorno As New Paciente
+    Private pacienteRetorno As Paciente = Nothing
     Private controladorPaciente As New ControladorPaciente
     Private Sub BuscarPaciente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cargarTabla()
     End Sub
-
-    Public Property Paciente1 As Paciente
-        Get
-            Return paciente
-        End Get
-        Set(value As Paciente)
-            paciente = value
-        End Set
-    End Property
-
     Public Property PacienteRetorno1 As Paciente
         Get
             Return pacienteRetorno
@@ -39,6 +29,7 @@
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        PacienteRetorno1 = New Paciente()
         PacienteRetorno1.cedula = CInt(DataGridView1.Rows(e.RowIndex).Cells(0).Value)
         PacienteRetorno1.nombre = DataGridView1.Rows(e.RowIndex).Cells(1).Value
         PacienteRetorno1.edad = CInt(DataGridView1.Rows(e.RowIndex).Cells(2).Value)

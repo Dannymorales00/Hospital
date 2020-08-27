@@ -15,14 +15,36 @@
     Function buscarConsultasHoy(medico As Medico) As List(Of sp_buscar_consulta_Result)
         Try
             Using almacen As New ProyectoEntities1
-                almacen.sp_buscar_consulta(medico.cedula).ToList
+                Return almacen.sp_buscar_consulta(medico.cedula).ToList
             End Using
         Catch ex As Exception
 
         End Try
         Return Nothing
     End Function
+    Function actualizarConsulta(consulta As ConsultaMedica) As Boolean
 
+        Try
+            Using almacen As New ProyectoEntities1
+                almacen.sp_update_consulta(consulta.sintomas, consulta.descripcionProceso, consulta.id)
+                Return True
+            End Using
+        Catch ex As Exception
+
+        End Try
+        Return False
+    End Function
+
+    Function obtenerDatosConsulta(cita As Citas) As sp_obtener_consulta_por_idCita_Result
+        Try
+            Using almacen As New ProyectoEntities1
+                Return almacen.sp_obtener_consulta_por_idCita(cita.id).Single
+            End Using
+        Catch ex As Exception
+
+        End Try
+        Return Nothing
+    End Function
 
     Function buscar_por_cedula(cedula As Integer) As List(Of ConsultaMedica)
     Dim ListaConsultas As New List(Of ConsultaMedica)

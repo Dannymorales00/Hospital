@@ -41,9 +41,11 @@ Partial Class FrmPrincipal
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PerfilToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
         Me.MenuStrip1.Size = New System.Drawing.Size(986, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
@@ -51,18 +53,21 @@ Partial Class FrmPrincipal
         'PerfilToolStripMenuItem
         '
         Me.PerfilToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuPerfilNombreUSuario, Me.MenuPerfilTipo})
+        Me.PerfilToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.PerfilToolStripMenuItem.Name = "PerfilToolStripMenuItem"
         Me.PerfilToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
         Me.PerfilToolStripMenuItem.Text = "Perfil"
         '
         'MenuPerfilNombreUSuario
         '
+        Me.MenuPerfilNombreUSuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.MenuPerfilNombreUSuario.Name = "MenuPerfilNombreUSuario"
         Me.MenuPerfilNombreUSuario.Size = New System.Drawing.Size(192, 22)
         Me.MenuPerfilNombreUSuario.Text = "sin nombre de usuario"
         '
         'MenuPerfilTipo
         '
+        Me.MenuPerfilTipo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.MenuPerfilTipo.Name = "MenuPerfilTipo"
         Me.MenuPerfilTipo.Size = New System.Drawing.Size(192, 22)
         Me.MenuPerfilTipo.Text = "sin tipo"
@@ -70,6 +75,7 @@ Partial Class FrmPrincipal
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.SalirToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.SalirToolStripMenuItem.Text = "Salir"
@@ -80,8 +86,8 @@ Partial Class FrmPrincipal
         Me.BtnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnUsuarios.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.BtnUsuarios.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnUsuarios.ForeColor = System.Drawing.Color.MidnightBlue
         Me.BtnUsuarios.Location = New System.Drawing.Point(3, 3)
         Me.BtnUsuarios.Name = "BtnUsuarios"
         Me.BtnUsuarios.Size = New System.Drawing.Size(173, 130)
@@ -96,7 +102,8 @@ Partial Class FrmPrincipal
         Me.BtnCitas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnCitas.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCitas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCitas.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCitas.ForeColor = System.Drawing.Color.MidnightBlue
         Me.BtnCitas.Location = New System.Drawing.Point(322, 3)
         Me.BtnCitas.Name = "BtnCitas"
         Me.BtnCitas.Size = New System.Drawing.Size(173, 130)
@@ -111,7 +118,8 @@ Partial Class FrmPrincipal
         Me.BtnPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnPaciente.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPaciente.ForeColor = System.Drawing.Color.MidnightBlue
         Me.BtnPaciente.Location = New System.Drawing.Point(610, 3)
         Me.BtnPaciente.Name = "BtnPaciente"
         Me.BtnPaciente.Size = New System.Drawing.Size(173, 130)
@@ -128,6 +136,7 @@ Partial Class FrmPrincipal
         Me.PanelModulos.Controls.Add(Me.BtnCitas)
         Me.PanelModulos.Controls.Add(Me.BtnPaciente)
         Me.PanelModulos.Controls.Add(Me.BtnUsuarios)
+        Me.PanelModulos.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.PanelModulos.Location = New System.Drawing.Point(89, 69)
         Me.PanelModulos.Name = "PanelModulos"
         Me.PanelModulos.Size = New System.Drawing.Size(786, 366)
@@ -139,6 +148,8 @@ Partial Class FrmPrincipal
         Me.BtnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnReportes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnReportes.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReportes.ForeColor = System.Drawing.Color.MidnightBlue
         Me.BtnReportes.Location = New System.Drawing.Point(610, 233)
         Me.BtnReportes.Name = "BtnReportes"
         Me.BtnReportes.Size = New System.Drawing.Size(173, 130)
@@ -152,7 +163,8 @@ Partial Class FrmPrincipal
         Me.BtnExamenes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnExamenes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnExamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnExamenes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExamenes.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExamenes.ForeColor = System.Drawing.Color.MidnightBlue
         Me.BtnExamenes.Location = New System.Drawing.Point(322, 233)
         Me.BtnExamenes.Name = "BtnExamenes"
         Me.BtnExamenes.Size = New System.Drawing.Size(173, 130)
@@ -167,7 +179,8 @@ Partial Class FrmPrincipal
         Me.BtnConsulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnConsulta.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnConsulta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnConsulta.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnConsulta.ForeColor = System.Drawing.Color.MidnightBlue
         Me.BtnConsulta.Location = New System.Drawing.Point(3, 233)
         Me.BtnConsulta.Name = "BtnConsulta"
         Me.BtnConsulta.Size = New System.Drawing.Size(173, 130)
@@ -185,7 +198,7 @@ Partial Class FrmPrincipal
         Me.ControlBox = False
         Me.Controls.Add(Me.PanelModulos)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmPrincipal"
         Me.Opacity = 0.99R
