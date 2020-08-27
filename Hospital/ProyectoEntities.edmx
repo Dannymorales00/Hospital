@@ -84,7 +84,6 @@
           <Parameter Name="idConsulta" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_buscar_ExamenSangre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="idConsulta" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_buscar_medico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -114,7 +113,6 @@
           <Parameter Name="idConsulta" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_eliminar_ExamenSangre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="idConsulta" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_eliminar_medicamento_alergico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -127,7 +125,7 @@
           <Parameter Name="cedula" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_eliminar_persona_contacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="cedula" Type="int" Mode="In" />
+          <Parameter Name="id" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_eliminar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="int" Mode="In" />
@@ -305,8 +303,7 @@
           <Parameter Name="idConsulta" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_buscar_ExamenSangre" ReturnType="Collection(Int32)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
-            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+          <Parameter Name="idConsulta" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_buscar_paciente" ReturnType="Collection(ProyectoModel.sp_buscar_paciente_Result)">
           <Parameter Name="cedula" Mode="In" Type="Int32" />
@@ -325,8 +322,7 @@
           <Parameter Name="idConsulta" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_ExamenSangre" ReturnType="Collection(Int32)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
-            <Parameter Name="idConsulta" Mode="In" Type="Int32" />
+          <Parameter Name="idConsulta" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_medicamento_alergico" ReturnType="Collection(Int32)">
           <Parameter Name="id" Mode="In" Type="Int32" />
@@ -469,7 +465,7 @@
             <Parameter Name="tipo" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_eliminar_persona_contacto" ReturnType="Collection(Int32)">
-          <Parameter Name="cedula" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_registrar_persona_contacto" ReturnType="Collection(Int32)">
             <Parameter Name="cedula" Mode="In" Type="Int32" />

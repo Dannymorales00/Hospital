@@ -5,8 +5,10 @@
     End Sub
 
     Private paciente As Paciente
+    Private alergico As List(Of MedicamentoAlergico)
     Private controladorPaciente As New ControladorPaciente()
     Private controladorPersonaContacto As New ControladorPersonaContacto
+    Private controladorAlergico As New ControladorMedicamentoAlergico
     Private personaContacto As New PersonaContacto()
     Private listaEnfermedades As New List(Of Enfermedad)
 
@@ -24,8 +26,8 @@
     End Sub
 
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnRegistrar.Click
-        If comprobarAgregar() Then
-            paciente = New Paciente(Val(TxtCedula.Text), TxtNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipo.SelectedItem.ToString.Trim)
+        'If comprobarAgregar() Then
+        paciente = New Paciente(Val(TxtCedula.Text), TxtNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipo.SelectedItem.ToString.Trim)
 
             If BtnRegistrar.Text = "Registrar" Then
                 If controladorPaciente.registrar(paciente) = 1 Then
@@ -34,10 +36,17 @@
 
                     If controladorPersonaContacto.registrar(personaContacto) Then
                         MsgBox("Se agrego el contacto la persona contacto ")
-
                     Else
                         MsgBox("Error al agregar el contacto del paciente")
                     End If
+
+                    For Each item In alergico
+                        If controladorAlergico.registrar(item) Then
+                            MsgBox("Se agrego el medicamento alergico")
+                        Else
+                            MsgBox("Error al medicamento alergico del paciente")
+                        End If
+                    Next
 
                 Else
                     MsgBox("No se agrego el paciente")
@@ -50,9 +59,9 @@
                 End If
             End If
 
-        Else
-            MsgBox("Debe rellenar todos los campos")
-        End If
+        'Else
+        '    MsgBox("Debe rellenar todos los campos")
+        'End If
 
         cargarTabla()
         limpiarCampos()
@@ -172,21 +181,18 @@
     End Sub
 
     Private Sub BtnMedicamentos_Click(sender As Object, e As EventArgs) Handles BtnMedicamentos.Click
-        paciente = New Paciente
-        paciente.cedula = TxtCedula.Text
-        Dim result1 = controladorPaciente.cargar(paciente)
+        If TxtNombre.Text = "" And TxtCedula.Text = "" Then
+            MsgBox("Tiene que rellenar los campos Nombre y Cedula primero")
+        Else
+            alergico = New List(Of MedicamentoAlergico)
+            Dim frmAlergico As New FrmMedicamentoAlergicoRegistrar
+            frmAlergico.labelCedula.Text = TxtCedula.Text
+            frmAlergico.labelNombre.Text = TxtNombre.Text
+            frmAlergico.ShowDialog()
+            alergico = frmAlergico.alergico
 
-        paciente.nombre = result1.nombre
-        paciente.fechaNacimiento = result1.fechaNacimiento
-        paciente.correo = result1.correo
-        paciente.telefono = result1.telefono
-        paciente.edad = result1.edad
-        paciente.altura = result1.altura
-        paciente.contactosPersona = result1.contactosPersona
-        paciente.tipoSangre = result1.tipoSangre
-
-        Dim frmMedicamentos = New FrmMedicamentoAlergicoRegistrar(paciente)
-        frmMedicamentos.ShowDialog()
+            frmAlergico.Close()
+        End If
     End Sub
 
     Private Sub TxtBuscarCedula_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscarCedula.TextChanged

@@ -3,25 +3,28 @@
 Public Class FrmMedicamentoAlergicoRegistrar
 
     Private medicamentos As Medicamentos
-    Private alergico As New MedicamentoAlergico
+    Private verAlergico As MedicamentoAlergico
+    Private _alergico As List(Of MedicamentoAlergico)
     Private controladorMedicamentos As New ControladorMedicamentos
     Private controladorAlergicos As New ControladorMedicamentoAlergico
-    Private paciente As New Paciente
 
-    Public Sub New(paciente As Paciente)
-        InitializeComponent()
-        Me.paciente = paciente
-    End Sub
-
+    Property alergico As List(Of MedicamentoAlergico)
+        Get
+            Return _alergico
+        End Get
+        Set(value As List(Of MedicamentoAlergico))
+            _alergico = value
+        End Set
+    End Property
 
     Private Sub FrmMedicamentoAlergicoRegistrar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarMedicamentos()
+        alergico = New List(Of MedicamentoAlergico)
     End Sub
 
     Public Sub CargarMedicamentos()
 
         medicamentos = New Medicamentos
-
         Dim data = controladorMedicamentos.buscarMedicamentos(medicamentos)
 
         For Each item In data
@@ -32,24 +35,20 @@ Public Class FrmMedicamentoAlergicoRegistrar
 
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnRegistrar.Click
 
-        For Each item In clb_medicamentos.CheckedIndices
-            alergico = New MedicamentoAlergico(paciente.cedula, item + 1)
-            If controladorAlergicos.registrar(alergico) = True Then
-                MsgBox("Medicamentos Alergicos agregados...")
-            End If
-        Next
-
+        If comprobar() Then
+            For Each item In clb_medicamentos.CheckedIndices
+                alergico.Add(New MedicamentoAlergico(labelCedula.Text, item + 1))
+            Next
+            Me.Hide()
+        End If
     End Sub
 
-    Public Sub verificar()
-        Dim data = clb_medicamentos.CheckedIndices
-        'Terminar Restricción por medicamento repetido
-    End Sub
+    Function comprobar() As Boolean
+        If clb_medicamentos.CheckedIndices.Count > 0 Then Return True
+        Return False
+    End Function
 
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
-        For Each item In clb_medicamentos.CheckedIndices
-            Console.WriteLine(item)
-        Next
         Me.Close()
     End Sub
 
