@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>Hospital.FrmPaciente</StartupObject>
     <StartupObject>Hospital.FrmLogin</StartupObject>
-    <StartupObject>Hospital.FrmExamenes</StartupObject>
+    <StartupObject>Hospital.FrmLogin</StartupObject>
     <RootNamespace>Hospital</RootNamespace>
     <AssemblyName>Hospital</AssemblyName>
     <FileAlignment>512</FileAlignment>
