@@ -45,7 +45,9 @@ Partial Class FrmEnfermedad
         '
         'BtnEliminar
         '
+        Me.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminar.ForeColor = System.Drawing.Color.White
         Me.BtnEliminar.Location = New System.Drawing.Point(378, 383)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(85, 24)
@@ -57,7 +59,7 @@ Partial Class FrmEnfermedad
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(518, 42)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(65, 18)
@@ -68,6 +70,7 @@ Partial Class FrmEnfermedad
         '
         Me.TxtBuscarCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtBuscarCedula.Location = New System.Drawing.Point(589, 41)
+        Me.TxtBuscarCedula.MaxLength = 10
         Me.TxtBuscarCedula.Name = "TxtBuscarCedula"
         Me.TxtBuscarCedula.Size = New System.Drawing.Size(158, 22)
         Me.TxtBuscarCedula.TabIndex = 55
@@ -84,7 +87,9 @@ Partial Class FrmEnfermedad
         '
         'BtnLimpiar
         '
+        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLimpiar.ForeColor = System.Drawing.Color.White
         Me.BtnLimpiar.Location = New System.Drawing.Point(248, 383)
         Me.BtnLimpiar.Name = "BtnLimpiar"
         Me.BtnLimpiar.Size = New System.Drawing.Size(85, 24)
@@ -96,7 +101,7 @@ Partial Class FrmEnfermedad
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(89, 164)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 18)
@@ -107,7 +112,7 @@ Partial Class FrmEnfermedad
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(51, 209)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(103, 18)
@@ -116,7 +121,9 @@ Partial Class FrmEnfermedad
         '
         'BtnRegistrar
         '
+        Me.BtnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRegistrar.ForeColor = System.Drawing.Color.White
         Me.BtnRegistrar.Location = New System.Drawing.Point(102, 383)
         Me.BtnRegistrar.Name = "BtnRegistrar"
         Me.BtnRegistrar.Size = New System.Drawing.Size(85, 24)
@@ -128,7 +135,7 @@ Partial Class FrmEnfermedad
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(51, 249)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(103, 18)
@@ -139,6 +146,7 @@ Partial Class FrmEnfermedad
         '
         Me.TxtEnfermedad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtEnfermedad.Location = New System.Drawing.Point(160, 209)
+        Me.TxtEnfermedad.MaxLength = 20
         Me.TxtEnfermedad.Name = "TxtEnfermedad"
         Me.TxtEnfermedad.Size = New System.Drawing.Size(206, 22)
         Me.TxtEnfermedad.TabIndex = 46
@@ -147,6 +155,7 @@ Partial Class FrmEnfermedad
         '
         Me.TxtCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCedula.Location = New System.Drawing.Point(160, 164)
+        Me.TxtCedula.MaxLength = 10
         Me.TxtCedula.Name = "TxtCedula"
         Me.TxtCedula.Size = New System.Drawing.Size(206, 22)
         Me.TxtCedula.TabIndex = 44
@@ -155,6 +164,7 @@ Partial Class FrmEnfermedad
         '
         Me.TxtDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtDescripcion.Location = New System.Drawing.Point(160, 249)
+        Me.TxtDescripcion.MaxLength = 30
         Me.TxtDescripcion.Name = "TxtDescripcion"
         Me.TxtDescripcion.Size = New System.Drawing.Size(263, 96)
         Me.TxtDescripcion.TabIndex = 42
@@ -162,7 +172,9 @@ Partial Class FrmEnfermedad
         '
         'BtnSeleccionarPaciente
         '
+        Me.BtnSeleccionarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSeleccionarPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSeleccionarPaciente.ForeColor = System.Drawing.Color.White
         Me.BtnSeleccionarPaciente.Location = New System.Drawing.Point(173, 56)
         Me.BtnSeleccionarPaciente.Name = "BtnSeleccionarPaciente"
         Me.BtnSeleccionarPaciente.Size = New System.Drawing.Size(206, 24)
@@ -174,7 +186,7 @@ Partial Class FrmEnfermedad
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(12, 108)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(143, 18)
@@ -185,7 +197,7 @@ Partial Class FrmEnfermedad
         '
         Me.LabelNombre.AutoSize = True
         Me.LabelNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelNombre.ForeColor = System.Drawing.Color.Black
+        Me.LabelNombre.ForeColor = System.Drawing.Color.White
         Me.LabelNombre.Location = New System.Drawing.Point(170, 108)
         Me.LabelNombre.Name = "LabelNombre"
         Me.LabelNombre.Size = New System.Drawing.Size(29, 18)
@@ -196,7 +208,7 @@ Partial Class FrmEnfermedad
         '
         Me.labelNumeroId.AutoSize = True
         Me.labelNumeroId.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelNumeroId.ForeColor = System.Drawing.Color.Black
+        Me.labelNumeroId.ForeColor = System.Drawing.Color.White
         Me.labelNumeroId.Location = New System.Drawing.Point(24, 136)
         Me.labelNumeroId.Name = "labelNumeroId"
         Me.labelNumeroId.Size = New System.Drawing.Size(130, 18)
@@ -208,7 +220,7 @@ Partial Class FrmEnfermedad
         '
         Me.labelId.AutoSize = True
         Me.labelId.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelId.ForeColor = System.Drawing.Color.Black
+        Me.labelId.ForeColor = System.Drawing.Color.White
         Me.labelId.Location = New System.Drawing.Point(170, 136)
         Me.labelId.Name = "labelId"
         Me.labelId.Size = New System.Drawing.Size(29, 18)
@@ -218,7 +230,9 @@ Partial Class FrmEnfermedad
         '
         'BtnCerrar
         '
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
         Me.BtnCerrar.Location = New System.Drawing.Point(1000, 2)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Size = New System.Drawing.Size(85, 24)
@@ -230,6 +244,7 @@ Partial Class FrmEnfermedad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(1086, 497)
         Me.ControlBox = False
         Me.Controls.Add(Me.BtnCerrar)
@@ -250,6 +265,7 @@ Partial Class FrmEnfermedad
         Me.Controls.Add(Me.TxtEnfermedad)
         Me.Controls.Add(Me.TxtCedula)
         Me.Controls.Add(Me.TxtDescripcion)
+        Me.ForeColor = System.Drawing.Color.White
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmEnfermedad"
