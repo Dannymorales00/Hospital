@@ -22,7 +22,7 @@
                 frm.Left = (.Width - frm.Width) \ 2
             End With
 
-            ' Centrar un control dentro del contenedor  
+            ' Centrar un contol dentro del contenedor  
         Else
             ' referencia al control  
             Dim c As Control = CType(Objeto, Control)
