@@ -44,8 +44,11 @@ Partial Class FrmExamenOrina
         Me.BtnRegistrar = New System.Windows.Forms.Button()
         Me.TxtColor = New System.Windows.Forms.TextBox()
         Me.BtnSeleccionarConsulta = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         CType(Me.TablaExamenes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label9
@@ -288,6 +291,24 @@ Partial Class FrmExamenOrina
         Me.BtnSeleccionarConsulta.Text = "Seleccionar Consulta"
         Me.BtnSeleccionarConsulta.UseVisualStyleBackColor = True
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Window
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1019, 24)
+        Me.MenuStrip1.TabIndex = 120
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.SalirToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.SalirToolStripMenuItem.Text = "Salir"
+        '
         'FrmExamenOrina
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -312,13 +333,17 @@ Partial Class FrmExamenOrina
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.BtnRegistrar)
         Me.Controls.Add(Me.TxtColor)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.ForeColor = System.Drawing.Color.White
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmExamenOrina"
         Me.ShowIcon = False
         Me.Text = "FrmExamenOrina"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.TablaExamenes, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -346,4 +371,6 @@ Partial Class FrmExamenOrina
     Friend WithEvents BtnRegistrar As Button
     Friend WithEvents TxtColor As TextBox
     Friend WithEvents BtnSeleccionarConsulta As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
 End Class

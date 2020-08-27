@@ -35,6 +35,7 @@
         End If
     End Sub
 
-
-
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Me.Hide()
+    End Sub
 End Class

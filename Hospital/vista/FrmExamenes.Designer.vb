@@ -27,11 +27,14 @@ Partial Class FrmExamenes
         Me.BtnExamenOrina = New System.Windows.Forms.Button()
         Me.BtnExamenSangre = New System.Windows.Forms.Button()
         Me.PanelExamenes = New System.Windows.Forms.Panel()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.PanelExamenes.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(872, 24)
@@ -74,16 +77,26 @@ Partial Class FrmExamenes
         Me.PanelExamenes.Size = New System.Drawing.Size(595, 339)
         Me.PanelExamenes.TabIndex = 3
         '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.SalirToolStripMenuItem.Text = "Salir"
+        '
         'FrmExamenes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(872, 465)
+        Me.ControlBox = False
         Me.Controls.Add(Me.PanelExamenes)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmExamenes"
         Me.Text = "FrmExamenes"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.PanelExamenes.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -94,4 +107,5 @@ Partial Class FrmExamenes
     Friend WithEvents BtnExamenOrina As Button
     Friend WithEvents BtnExamenSangre As Button
     Friend WithEvents PanelExamenes As Panel
+    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
 End Class
