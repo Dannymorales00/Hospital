@@ -41,7 +41,7 @@
                 cont = cont + 1
             End If
         Next
-        MsgBox("Se han agregado: " + cont.ToString + " Medicamentos con Exito")
+        MsgBox("Se hn agregado: " + cont.ToString + " Medicamentos con Exito")
     End Sub
 
     Public Sub verificar()
