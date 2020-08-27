@@ -18,4 +18,8 @@
         FrmReporteExamenes.WindowState = FormWindowState.Maximized
         FrmReporteExamenes.ShowDialog()
     End Sub
+
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Hide()
+    End Sub
 End Class
