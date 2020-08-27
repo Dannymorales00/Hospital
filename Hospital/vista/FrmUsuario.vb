@@ -46,13 +46,13 @@
 
     Function ComprobarAgregar() As Boolean
 
-        Return Not (TxtNombre.Text.Equals("") AndAlso TxtCedula.Text.Equals("") AndAlso TxtContraseña.Text.Equals("") AndAlso TxtCorreo.Text.Equals("") AndAlso TxtTelefono.Text.Equals("") AndAlso TxtNombreUsuario.Text.Equals("") AndAlso CBTipo.SelectedIndex < 0)
+        Return Not TxtNombre.Text.Equals("") And Not TxtCedula.Text.Equals("") And Not TxtContraseña.Text.Equals("") And Not TxtCorreo.Text.Equals("") And Not TxtTelefono.Text.Equals("") And Not TxtNombreUsuario.Text.Equals("") And CBTipo.SelectedIndex >= 0
 
     End Function
 
     Function ComprobarActualizar() As Boolean
 
-        Return Not (TxtNombreActualizar.Text.Equals("") AndAlso TxtCedulaActualizar.Text.Equals("") AndAlso TxtContraseñaActualizar.Text.Equals("") AndAlso TxtCorreoActualizar.Text.Equals("") AndAlso TxtTelefonoActualizar.Text.Equals("") AndAlso TxtNombreUsuarioActualizar.Text.Equals("") AndAlso CBTipoActualizar.SelectedIndex < 0)
+        Return Not TxtNombreActualizar.Text.Equals("") And Not TxtCedulaActualizar.Text.Equals("") And Not TxtContraseñaActualizar.Text.Equals("") And Not TxtCorreoActualizar.Text.Equals("") And Not TxtTelefonoActualizar.Text.Equals("") And Not TxtNombreUsuarioActualizar.Text.Equals("") And CBTipoActualizar.SelectedIndex >= 0
 
     End Function
 
@@ -300,4 +300,6 @@
             e.Handled = True
         End If
     End Sub
+
+
 End Class
