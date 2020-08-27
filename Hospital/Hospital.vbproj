@@ -223,7 +223,9 @@
     <Compile Include="vista\FRMConsultaMedico.Designer.vb">
       <DependentUpon>FRMConsultaMedico.vb</DependentUpon>
     </Compile>
-    <Compile Include="vista\FRMConsultaMedico.vb" />
+    <Compile Include="vista\FRMConsultaMedico.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\FrmExamenSangre.Designer.vb">
       <DependentUpon>FrmExamenSangre.vb</DependentUpon>
     </Compile>
