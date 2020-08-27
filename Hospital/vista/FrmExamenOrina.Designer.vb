@@ -53,19 +53,21 @@ Partial Class FrmExamenOrina
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(85, 340)
+        Me.Label9.Location = New System.Drawing.Point(113, 418)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(96, 18)
+        Me.Label9.Size = New System.Drawing.Size(117, 24)
         Me.Label9.TabIndex = 117
         Me.Label9.Text = "Leucocitos:"
         '
         'TxtLeucocitos
         '
         Me.TxtLeucocitos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtLeucocitos.Location = New System.Drawing.Point(185, 336)
+        Me.TxtLeucocitos.Location = New System.Drawing.Point(247, 414)
+        Me.TxtLeucocitos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtLeucocitos.MaxLength = 10
         Me.TxtLeucocitos.Name = "TxtLeucocitos"
-        Me.TxtLeucocitos.Size = New System.Drawing.Size(206, 22)
+        Me.TxtLeucocitos.Size = New System.Drawing.Size(273, 26)
         Me.TxtLeucocitos.TabIndex = 118
         '
         'Label8
@@ -73,19 +75,21 @@ Partial Class FrmExamenOrina
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(103, 312)
+        Me.Label8.Location = New System.Drawing.Point(137, 384)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(76, 18)
+        Me.Label8.Size = New System.Drawing.Size(92, 24)
         Me.Label8.TabIndex = 115
         Me.Label8.Text = "Glucosa:"
         '
         'TxtGlucosa
         '
         Me.TxtGlucosa.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtGlucosa.Location = New System.Drawing.Point(185, 308)
+        Me.TxtGlucosa.Location = New System.Drawing.Point(247, 379)
+        Me.TxtGlucosa.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtGlucosa.MaxLength = 10
         Me.TxtGlucosa.Name = "TxtGlucosa"
-        Me.TxtGlucosa.Size = New System.Drawing.Size(206, 22)
+        Me.TxtGlucosa.Size = New System.Drawing.Size(273, 26)
         Me.TxtGlucosa.TabIndex = 116
         '
         'Label7
@@ -93,19 +97,21 @@ Partial Class FrmExamenOrina
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(87, 280)
+        Me.Label7.Location = New System.Drawing.Point(116, 345)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(92, 18)
+        Me.Label7.Size = New System.Drawing.Size(109, 24)
         Me.Label7.TabIndex = 113
         Me.Label7.Text = "Eritrocitos:"
         '
         'TxtEritrocitos
         '
         Me.TxtEritrocitos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEritrocitos.Location = New System.Drawing.Point(185, 280)
+        Me.TxtEritrocitos.Location = New System.Drawing.Point(247, 345)
+        Me.TxtEritrocitos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtEritrocitos.MaxLength = 10
         Me.TxtEritrocitos.Name = "TxtEritrocitos"
-        Me.TxtEritrocitos.Size = New System.Drawing.Size(206, 22)
+        Me.TxtEritrocitos.Size = New System.Drawing.Size(273, 26)
         Me.TxtEritrocitos.TabIndex = 114
         '
         'lblIdExamenOrina
@@ -113,9 +119,10 @@ Partial Class FrmExamenOrina
         Me.lblIdExamenOrina.AutoSize = True
         Me.lblIdExamenOrina.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIdExamenOrina.ForeColor = System.Drawing.Color.White
-        Me.lblIdExamenOrina.Location = New System.Drawing.Point(187, 218)
+        Me.lblIdExamenOrina.Location = New System.Drawing.Point(249, 268)
+        Me.lblIdExamenOrina.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblIdExamenOrina.Name = "lblIdExamenOrina"
-        Me.lblIdExamenOrina.Size = New System.Drawing.Size(29, 18)
+        Me.lblIdExamenOrina.Size = New System.Drawing.Size(34, 24)
         Me.lblIdExamenOrina.TabIndex = 112
         Me.lblIdExamenOrina.Text = "***"
         Me.lblIdExamenOrina.Visible = False
@@ -125,9 +132,10 @@ Partial Class FrmExamenOrina
         Me.labelNumeroIdExamen.AutoSize = True
         Me.labelNumeroIdExamen.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelNumeroIdExamen.ForeColor = System.Drawing.Color.White
-        Me.labelNumeroIdExamen.Location = New System.Drawing.Point(24, 218)
+        Me.labelNumeroIdExamen.Location = New System.Drawing.Point(32, 268)
+        Me.labelNumeroIdExamen.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labelNumeroIdExamen.Name = "labelNumeroIdExamen"
-        Me.labelNumeroIdExamen.Size = New System.Drawing.Size(157, 18)
+        Me.labelNumeroIdExamen.Size = New System.Drawing.Size(199, 24)
         Me.labelNumeroIdExamen.TabIndex = 111
         Me.labelNumeroIdExamen.Text = "Id Examen de orina:"
         Me.labelNumeroIdExamen.Visible = False
@@ -137,9 +145,10 @@ Partial Class FrmExamenOrina
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(486, 29)
+        Me.Label3.Location = New System.Drawing.Point(648, 36)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(214, 18)
+        Me.Label3.Size = New System.Drawing.Size(268, 24)
         Me.Label3.TabIndex = 110
         Me.Label3.Text = "Lista de examenes de orina"
         '
@@ -150,9 +159,10 @@ Partial Class FrmExamenOrina
         Me.Panel1.Controls.Add(Me.LblIdConsulta)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.LblIdCita)
-        Me.Panel1.Location = New System.Drawing.Point(12, 84)
+        Me.Panel1.Location = New System.Drawing.Point(16, 103)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(423, 107)
+        Me.Panel1.Size = New System.Drawing.Size(564, 132)
         Me.Panel1.TabIndex = 109
         '
         'Label6
@@ -160,9 +170,10 @@ Partial Class FrmExamenOrina
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(9, 9)
+        Me.Label6.Location = New System.Drawing.Point(12, 11)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(163, 18)
+        Me.Label6.Size = New System.Drawing.Size(198, 24)
         Me.Label6.TabIndex = 80
         Me.Label6.Text = "Datos de la consulta"
         '
@@ -171,9 +182,10 @@ Partial Class FrmExamenOrina
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(56, 43)
+        Me.Label1.Location = New System.Drawing.Point(75, 53)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 18)
+        Me.Label1.Size = New System.Drawing.Size(120, 24)
         Me.Label1.TabIndex = 62
         Me.Label1.Text = "Id Consulta:"
         '
@@ -182,9 +194,10 @@ Partial Class FrmExamenOrina
         Me.LblIdConsulta.AutoSize = True
         Me.LblIdConsulta.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblIdConsulta.ForeColor = System.Drawing.Color.White
-        Me.LblIdConsulta.Location = New System.Drawing.Point(168, 43)
+        Me.LblIdConsulta.Location = New System.Drawing.Point(224, 53)
+        Me.LblIdConsulta.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblIdConsulta.Name = "LblIdConsulta"
-        Me.LblIdConsulta.Size = New System.Drawing.Size(29, 18)
+        Me.LblIdConsulta.Size = New System.Drawing.Size(34, 24)
         Me.LblIdConsulta.TabIndex = 79
         Me.LblIdConsulta.Text = "***"
         '
@@ -193,9 +206,10 @@ Partial Class FrmExamenOrina
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(92, 70)
+        Me.Label2.Location = New System.Drawing.Point(123, 86)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 18)
+        Me.Label2.Size = New System.Drawing.Size(74, 24)
         Me.Label2.TabIndex = 75
         Me.Label2.Text = "Id Cita:"
         '
@@ -204,9 +218,10 @@ Partial Class FrmExamenOrina
         Me.LblIdCita.AutoSize = True
         Me.LblIdCita.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblIdCita.ForeColor = System.Drawing.Color.White
-        Me.LblIdCita.Location = New System.Drawing.Point(168, 70)
+        Me.LblIdCita.Location = New System.Drawing.Point(224, 86)
+        Me.LblIdCita.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblIdCita.Name = "LblIdCita"
-        Me.LblIdCita.Size = New System.Drawing.Size(29, 18)
+        Me.LblIdCita.Size = New System.Drawing.Size(34, 24)
         Me.LblIdCita.TabIndex = 76
         Me.LblIdCita.Text = "***"
         '
@@ -215,9 +230,10 @@ Partial Class FrmExamenOrina
         Me.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEliminar.ForeColor = System.Drawing.Color.White
-        Me.BtnEliminar.Location = New System.Drawing.Point(320, 406)
+        Me.BtnEliminar.Location = New System.Drawing.Point(427, 500)
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(85, 24)
+        Me.BtnEliminar.Size = New System.Drawing.Size(113, 30)
         Me.BtnEliminar.TabIndex = 108
         Me.BtnEliminar.Text = "Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
@@ -225,11 +241,13 @@ Partial Class FrmExamenOrina
         'TablaExamenes
         '
         Me.TablaExamenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TablaExamenes.Location = New System.Drawing.Point(486, 55)
+        Me.TablaExamenes.Location = New System.Drawing.Point(648, 68)
+        Me.TablaExamenes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TablaExamenes.Name = "TablaExamenes"
         Me.TablaExamenes.ReadOnly = True
+        Me.TablaExamenes.RowHeadersWidth = 51
         Me.TablaExamenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.TablaExamenes.Size = New System.Drawing.Size(508, 352)
+        Me.TablaExamenes.Size = New System.Drawing.Size(677, 433)
         Me.TablaExamenes.TabIndex = 107
         '
         'BtnLimpiar
@@ -237,9 +255,10 @@ Partial Class FrmExamenOrina
         Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnLimpiar.ForeColor = System.Drawing.Color.White
-        Me.BtnLimpiar.Location = New System.Drawing.Point(202, 406)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(269, 500)
+        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(85, 24)
+        Me.BtnLimpiar.Size = New System.Drawing.Size(113, 30)
         Me.BtnLimpiar.TabIndex = 106
         Me.BtnLimpiar.Text = "Limpiar "
         Me.BtnLimpiar.UseVisualStyleBackColor = True
@@ -249,9 +268,10 @@ Partial Class FrmExamenOrina
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(124, 252)
+        Me.Label4.Location = New System.Drawing.Point(165, 310)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(55, 18)
+        Me.Label4.Size = New System.Drawing.Size(66, 24)
         Me.Label4.TabIndex = 103
         Me.Label4.Text = "Color:"
         '
@@ -260,20 +280,22 @@ Partial Class FrmExamenOrina
         Me.BtnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRegistrar.ForeColor = System.Drawing.Color.White
-        Me.BtnRegistrar.Location = New System.Drawing.Point(81, 406)
+        Me.BtnRegistrar.Location = New System.Drawing.Point(108, 500)
+        Me.BtnRegistrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnRegistrar.Name = "BtnRegistrar"
-        Me.BtnRegistrar.Size = New System.Drawing.Size(85, 24)
+        Me.BtnRegistrar.Size = New System.Drawing.Size(113, 30)
         Me.BtnRegistrar.TabIndex = 105
-        Me.BtnRegistrar.Text = "Agregar"
+        Me.BtnRegistrar.Text = "Registrar"
         Me.BtnRegistrar.UseVisualStyleBackColor = True
         '
         'TxtColor
         '
         Me.TxtColor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtColor.Location = New System.Drawing.Point(185, 252)
+        Me.TxtColor.Location = New System.Drawing.Point(247, 310)
+        Me.TxtColor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtColor.MaxLength = 10
         Me.TxtColor.Name = "TxtColor"
-        Me.TxtColor.Size = New System.Drawing.Size(206, 22)
+        Me.TxtColor.Size = New System.Drawing.Size(273, 26)
         Me.TxtColor.TabIndex = 104
         '
         'BtnSeleccionarConsulta
@@ -281,19 +303,20 @@ Partial Class FrmExamenOrina
         Me.BtnSeleccionarConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSeleccionarConsulta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSeleccionarConsulta.ForeColor = System.Drawing.Color.White
-        Me.BtnSeleccionarConsulta.Location = New System.Drawing.Point(185, 54)
+        Me.BtnSeleccionarConsulta.Location = New System.Drawing.Point(247, 66)
+        Me.BtnSeleccionarConsulta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnSeleccionarConsulta.Name = "BtnSeleccionarConsulta"
-        Me.BtnSeleccionarConsulta.Size = New System.Drawing.Size(206, 24)
+        Me.BtnSeleccionarConsulta.Size = New System.Drawing.Size(275, 30)
         Me.BtnSeleccionarConsulta.TabIndex = 119
         Me.BtnSeleccionarConsulta.Text = "Seleccionar Consulta"
         Me.BtnSeleccionarConsulta.UseVisualStyleBackColor = True
         '
         'FrmExamenOrina
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkCyan
-        Me.ClientSize = New System.Drawing.Size(1019, 465)
+        Me.ClientSize = New System.Drawing.Size(1359, 572)
         Me.ControlBox = False
         Me.Controls.Add(Me.BtnSeleccionarConsulta)
         Me.Controls.Add(Me.Label9)
@@ -313,6 +336,7 @@ Partial Class FrmExamenOrina
         Me.Controls.Add(Me.BtnRegistrar)
         Me.Controls.Add(Me.TxtColor)
         Me.ForeColor = System.Drawing.Color.White
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmExamenOrina"
         Me.ShowIcon = False
         Me.Text = "FrmExamenOrina"

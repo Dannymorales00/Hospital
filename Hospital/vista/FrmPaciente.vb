@@ -134,6 +134,7 @@
         paciente.correo = result1.correo
         paciente.telefono = result1.telefono
         paciente.edad = result1.edad
+        paciente.peso = result1.peso
         paciente.altura = result1.altura
         paciente.contactosPersona = result1.contactosPersona
         paciente.tipoSangre = result1.tipoSangre

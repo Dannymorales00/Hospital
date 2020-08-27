@@ -110,4 +110,8 @@
     Private Sub BtnConsulta_Click(sender As Object, e As EventArgs) Handles BtnConsulta.Click
 
     End Sub
+
+    Private Sub BtnReportes_Click(sender As Object, e As EventArgs) Handles BtnReportes.Click
+        frmReportes.Show()
+    End Sub
 End Class

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>Hospital.FrmPaciente</StartupObject>
     <StartupObject>Hospital.FrmLogin</StartupObject>
-    <StartupObject>Hospital.FrmLogin</StartupObject>
+    <StartupObject>Hospital.FrmExamenes</StartupObject>
     <RootNamespace>Hospital</RootNamespace>
     <AssemblyName>Hospital</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -123,6 +123,7 @@
     <Compile Include="Controladores\ControladorConsulta.vb" />
     <Compile Include="Controladores\ControladorEnfermedad.vb" />
     <Compile Include="Controladores\ControladorExamenOrina.vb" />
+    <Compile Include="Controladores\ControladorExamenSangre.vb" />
     <Compile Include="Controladores\ControladorMedicamentoAlergico.vb" />
     <Compile Include="Controladores\ControladorMedicamentos.vb" />
     <Compile Include="Controladores\ControladorMedico.vb" />
@@ -166,6 +167,9 @@
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_buscar_ExamenOrina_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_buscar_ExamenSangre_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_buscar_medico_Result.vb">
@@ -220,6 +224,12 @@
       <DependentUpon>FRMConsultaMedico.vb</DependentUpon>
     </Compile>
     <Compile Include="vista\FRMConsultaMedico.vb" />
+    <Compile Include="vista\FrmExamenSangre.Designer.vb">
+      <DependentUpon>FrmExamenSangre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmExamenSangre.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\FrmReporteConsulta.Designer.vb">
       <DependentUpon>FrmReporteConsulta.vb</DependentUpon>
     </Compile>
@@ -409,6 +419,9 @@
   <ItemGroup>
     <EmbeddedResource Include="vista\FRMConsultaMedico.resx">
       <DependentUpon>FRMConsultaMedico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmExamenSangre.resx">
+      <DependentUpon>FrmExamenSangre.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmReporteConsulta.resx">
       <DependentUpon>FrmReporteConsulta.vb</DependentUpon>
