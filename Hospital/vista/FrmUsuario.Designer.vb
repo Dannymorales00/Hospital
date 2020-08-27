@@ -115,6 +115,8 @@ Partial Class FrmUsuario
         '
         'CBTipo
         '
+        Me.CBTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CBTipo.FormattingEnabled = True
         Me.CBTipo.Items.AddRange(New Object() {"Medico", "Secretaria", "Enfermera"})
         Me.CBTipo.Location = New System.Drawing.Point(154, 265)
@@ -255,7 +257,7 @@ Partial Class FrmUsuario
         'TxtNombre
         '
         Me.TxtNombre.Location = New System.Drawing.Point(154, 28)
-        Me.TxtNombre.MaxLength = 25
+        Me.TxtNombre.MaxLength = 30
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(166, 21)
         Me.TxtNombre.TabIndex = 3
@@ -399,6 +401,7 @@ Partial Class FrmUsuario
         'AgregarToolStripMenuItem
         '
         Me.AgregarToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AgregarToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.AgregarToolStripMenuItem.Name = "AgregarToolStripMenuItem"
         Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.AgregarToolStripMenuItem.Text = "Agregar"
@@ -406,18 +409,21 @@ Partial Class FrmUsuario
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EliminarToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
         Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'ActualizarToolStripMenuItem
         '
+        Me.ActualizarToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ActualizarToolStripMenuItem.Name = "ActualizarToolStripMenuItem"
         Me.ActualizarToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ActualizarToolStripMenuItem.Text = "Actualizar"
         '
         'BuscarToolStripMenuItem
         '
+        Me.BuscarToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BuscarToolStripMenuItem.Name = "BuscarToolStripMenuItem"
         Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.BuscarToolStripMenuItem.Text = "Buscar"
@@ -435,6 +441,7 @@ Partial Class FrmUsuario
         'CerrarToolStripMenuItem
         '
         Me.CerrarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.CerrarToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
         Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
@@ -484,6 +491,8 @@ Partial Class FrmUsuario
         '
         'CBTipoActualizar
         '
+        Me.CBTipoActualizar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBTipoActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CBTipoActualizar.FormattingEnabled = True
         Me.CBTipoActualizar.Items.AddRange(New Object() {"Medico", "Secretaria", "Enfermera"})
         Me.CBTipoActualizar.Location = New System.Drawing.Point(154, 265)
@@ -603,11 +612,11 @@ Partial Class FrmUsuario
         Me.BtnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCargar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCargar.ForeColor = System.Drawing.SystemColors.Control
-        Me.BtnCargar.Location = New System.Drawing.Point(77, 317)
+        Me.BtnCargar.Location = New System.Drawing.Point(57, 317)
         Me.BtnCargar.Name = "BtnCargar"
-        Me.BtnCargar.Size = New System.Drawing.Size(119, 27)
+        Me.BtnCargar.Size = New System.Drawing.Size(139, 27)
         Me.BtnCargar.TabIndex = 4
-        Me.BtnCargar.Text = "CargarUsuario"
+        Me.BtnCargar.Text = "Cargar usuario"
         Me.BtnCargar.UseVisualStyleBackColor = True
         '
         'Label17
@@ -624,7 +633,7 @@ Partial Class FrmUsuario
         'TxtNombreActualizar
         '
         Me.TxtNombreActualizar.Location = New System.Drawing.Point(154, 58)
-        Me.TxtNombreActualizar.MaxLength = 25
+        Me.TxtNombreActualizar.MaxLength = 30
         Me.TxtNombreActualizar.Name = "TxtNombreActualizar"
         Me.TxtNombreActualizar.Size = New System.Drawing.Size(166, 21)
         Me.TxtNombreActualizar.TabIndex = 3

@@ -1,9 +1,7 @@
 ﻿Public Class FrmExamenes
     Private frmExamenOrina As FrmExamenOrina
-    Private frmExamenSangre As FrmExamenSangre
     Private Sub FrmExamenes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmExamenOrina = New FrmExamenOrina()
-        frmExamenSangre = New FrmExamenSangre()
         Centrar(PanelExamenes)
 
     End Sub
@@ -37,8 +35,7 @@
         End If
     End Sub
 
-    Private Sub BtnExamenSangre_Click(sender As Object, e As EventArgs) Handles BtnExamenSangre.Click
-        frmExamenSangre.ShowDialog()
-        Me.Close()
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Me.Hide()
     End Sub
 End Class

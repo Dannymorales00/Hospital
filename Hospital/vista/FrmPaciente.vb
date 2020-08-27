@@ -1,19 +1,21 @@
 ﻿Public Class FrmPaciente
-    Private frmEnfemedades As New FrmEnfermedad
+    'atributos
     Private paciente As Paciente
     Private controladorPaciente As New ControladorPaciente()
     Private controladorPersonaContacto As New ControladorPersonaContacto
     Private personaContacto As New PersonaContacto()
     Private listaEnfermedades As New List(Of Enfermedad)
+    'ventanas
+    Private frmEnfemedades As New FrmEnfermedad
+    Private frmPersonaContacto As New FRMPersonaContacto()
+
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cargarTabla()
 
     End Sub
 
-
-
     Public Function comprobarAgregar() As Boolean
-        Return Not TxtCedula.Text.Equals("") And TxtNombre.Text.Equals("") And TxtAltura.Text.Equals("") And TxtCorreo.Text.Equals("") And TxtEdad.Text.Equals("") And TxtPeso.Text.Equals("") And TxtTelefono.Equals("")
+        Return Not TxtCedula.Text.Equals("") And Not TxtNombre.Text.Equals("") And Not TxtAltura.Text.Equals("") And Not TxtCorreo.Text.Equals("") And Not TxtEdad.Text.Equals("") And Not TxtPeso.Text.Equals("") And Not TxtTelefono.Equals("") And ComboTipo.SelectedIndex >= 0
 
     End Function
 
@@ -26,8 +28,8 @@
     End Sub
 
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnRegistrar.Click
-        'If comprobarAgregar() Then
-        paciente = New Paciente(Val(TxtCedula.Text), TxtNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipo.SelectedItem.ToString.Trim)
+        If comprobarAgregar() Then
+            paciente = New Paciente(Val(TxtCedula.Text), TxtNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipo.SelectedItem.ToString.Trim)
 
             If BtnRegistrar.Text = "Registrar" Then
                 If controladorPaciente.registrar(paciente) = 1 Then
@@ -52,9 +54,9 @@
                 End If
             End If
 
-        'Else
-        '    MsgBox("Debe rellenar todos los campos")
-        'End If
+        Else
+            MsgBox("Debe rellenar todos los campos")
+        End If
 
         cargarTabla()
         limpiarCampos()
@@ -201,5 +203,27 @@
 
     Private Sub AdministrarEnfermedadesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarEnfermedadesToolStripMenuItem.Click
         frmEnfemedades.Show()
+    End Sub
+
+    Private Sub AdministrarPersonaContactoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarPersonaContactoToolStripMenuItem.Click
+        frmPersonaContacto.Show()
+    End Sub
+
+    Private Sub TxtCedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedula.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtBuscarCedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBuscarCedula.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefono.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
     End Sub
 End Class

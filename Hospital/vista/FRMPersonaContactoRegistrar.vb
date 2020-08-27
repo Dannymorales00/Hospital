@@ -48,4 +48,8 @@
     Private Sub FRMPersonaContactoRegistrar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         personaContacto = New PersonaContacto
     End Sub
+
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Hide()
+    End Sub
 End Class
