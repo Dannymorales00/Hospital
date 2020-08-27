@@ -1,19 +1,21 @@
 ﻿Public Class FrmPaciente
-    Private frmEnfemedades As New FrmEnfermedad
+    'atributos
     Private paciente As Paciente
     Private controladorPaciente As New ControladorPaciente()
     Private controladorPersonaContacto As New ControladorPersonaContacto
     Private personaContacto As New PersonaContacto()
     Private listaEnfermedades As New List(Of Enfermedad)
+    'ventanas
+    Private frmEnfemedades As New FrmEnfermedad
+    Private frmPersonaContacto As New FRMPersonaContacto()
+
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cargarTabla()
 
     End Sub
 
-
-
     Public Function comprobarAgregar() As Boolean
-        Return Not TxtCedula.Text.Equals("") And TxtNombre.Text.Equals("") And TxtAltura.Text.Equals("") And TxtCorreo.Text.Equals("") And TxtEdad.Text.Equals("") And TxtPeso.Text.Equals("") And TxtTelefono.Equals("")
+        Return Not TxtCedula.Text.Equals("") And Not TxtNombre.Text.Equals("") And Not TxtAltura.Text.Equals("") And Not TxtCorreo.Text.Equals("") And Not TxtEdad.Text.Equals("") And Not TxtPeso.Text.Equals("") And Not TxtTelefono.Equals("")
 
     End Function
 
@@ -200,5 +202,9 @@
 
     Private Sub AdministrarEnfermedadesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarEnfermedadesToolStripMenuItem.Click
         frmEnfemedades.Show()
+    End Sub
+
+    Private Sub AdministrarPersonaContactoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarPersonaContactoToolStripMenuItem.Click
+        frmPersonaContacto.Show()
     End Sub
 End Class

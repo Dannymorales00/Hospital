@@ -50,8 +50,9 @@ Partial Class FrmPaciente
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtBuscarCedula = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.AdministrarEnfermedadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdministrarEnfermedadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdministrarPersonaContactoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -101,7 +102,7 @@ Partial Class FrmPaciente
         Me.ComboTipo.FormattingEnabled = True
         Me.ComboTipo.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"})
         Me.ComboTipo.Location = New System.Drawing.Point(155, 340)
-        Me.ComboTipo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboTipo.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboTipo.Name = "ComboTipo"
         Me.ComboTipo.Size = New System.Drawing.Size(80, 21)
         Me.ComboTipo.TabIndex = 56
@@ -278,7 +279,7 @@ Partial Class FrmPaciente
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(442, 75)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
@@ -311,19 +312,26 @@ Partial Class FrmPaciente
         'TxtBuscarCedula
         '
         Me.TxtBuscarCedula.Location = New System.Drawing.Point(506, 46)
-        Me.TxtBuscarCedula.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtBuscarCedula.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtBuscarCedula.Name = "TxtBuscarCedula"
         Me.TxtBuscarCedula.Size = New System.Drawing.Size(134, 20)
         Me.TxtBuscarCedula.TabIndex = 64
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CerrarToolStripMenuItem, Me.AdministrarEnfermedadesToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CerrarToolStripMenuItem, Me.AdministrarEnfermedadesToolStripMenuItem, Me.AdministrarPersonaContactoToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(953, 24)
         Me.MenuStrip1.TabIndex = 65
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'CerrarToolStripMenuItem
+        '
+        Me.CerrarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
+        Me.CerrarToolStripMenuItem.Text = "Cerrar"
         '
         'AdministrarEnfermedadesToolStripMenuItem
         '
@@ -332,12 +340,12 @@ Partial Class FrmPaciente
         Me.AdministrarEnfermedadesToolStripMenuItem.Size = New System.Drawing.Size(159, 20)
         Me.AdministrarEnfermedadesToolStripMenuItem.Text = "Administrar enfermedades"
         '
-        'CerrarToolStripMenuItem
+        'AdministrarPersonaContactoToolStripMenuItem
         '
-        Me.CerrarToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
-        Me.CerrarToolStripMenuItem.Text = "Cerrar"
+        Me.AdministrarPersonaContactoToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.AdministrarPersonaContactoToolStripMenuItem.Name = "AdministrarPersonaContactoToolStripMenuItem"
+        Me.AdministrarPersonaContactoToolStripMenuItem.Size = New System.Drawing.Size(176, 20)
+        Me.AdministrarPersonaContactoToolStripMenuItem.Text = "Administrar persona contacto"
         '
         'FrmPaciente
         '
@@ -425,4 +433,5 @@ Partial Class FrmPaciente
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents CerrarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AdministrarEnfermedadesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AdministrarPersonaContactoToolStripMenuItem As ToolStripMenuItem
 End Class

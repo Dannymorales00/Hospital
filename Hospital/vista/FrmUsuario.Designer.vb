@@ -255,7 +255,7 @@ Partial Class FrmUsuario
         'TxtNombre
         '
         Me.TxtNombre.Location = New System.Drawing.Point(154, 28)
-        Me.TxtNombre.MaxLength = 25
+        Me.TxtNombre.MaxLength = 30
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(166, 21)
         Me.TxtNombre.TabIndex = 3
@@ -603,11 +603,11 @@ Partial Class FrmUsuario
         Me.BtnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCargar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCargar.ForeColor = System.Drawing.SystemColors.Control
-        Me.BtnCargar.Location = New System.Drawing.Point(77, 317)
+        Me.BtnCargar.Location = New System.Drawing.Point(57, 317)
         Me.BtnCargar.Name = "BtnCargar"
-        Me.BtnCargar.Size = New System.Drawing.Size(119, 27)
+        Me.BtnCargar.Size = New System.Drawing.Size(139, 27)
         Me.BtnCargar.TabIndex = 4
-        Me.BtnCargar.Text = "CargarUsuario"
+        Me.BtnCargar.Text = "Cargar usuario"
         Me.BtnCargar.UseVisualStyleBackColor = True
         '
         'Label17
@@ -624,7 +624,7 @@ Partial Class FrmUsuario
         'TxtNombreActualizar
         '
         Me.TxtNombreActualizar.Location = New System.Drawing.Point(154, 58)
-        Me.TxtNombreActualizar.MaxLength = 25
+        Me.TxtNombreActualizar.MaxLength = 30
         Me.TxtNombreActualizar.Name = "TxtNombreActualizar"
         Me.TxtNombreActualizar.Size = New System.Drawing.Size(166, 21)
         Me.TxtNombreActualizar.TabIndex = 3
