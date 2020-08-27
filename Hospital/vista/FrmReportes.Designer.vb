@@ -58,6 +58,7 @@ Partial Class FrmReportes
         Me.TxtCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCedula.Location = New System.Drawing.Point(146, 165)
         Me.TxtCedula.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtCedula.MaxLength = 10
         Me.TxtCedula.Name = "TxtCedula"
         Me.TxtCedula.Size = New System.Drawing.Size(151, 21)
         Me.TxtCedula.TabIndex = 2
