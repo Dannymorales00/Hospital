@@ -13,14 +13,16 @@
     End Sub
 
     Public Sub cargarPaciente()
-        Dim pacienteForm As New FrmBuscarPaciente
+        Dim pacienteForm As New FrmBuscarPaciente()
         pacienteForm.ShowDialog()
         paciente = pacienteForm.PacienteRetorno1
         pacienteForm.Close()
 
-        If Not paciente.cedula = Nothing Then
+        If paciente IsNot Nothing Then
             LblPaciente.Text = paciente.nombre
 
+        Else
+            MsgBox("No selecciono un paciente")
         End If
     End Sub
 
