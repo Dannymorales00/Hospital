@@ -192,7 +192,7 @@
             usuario.cedula = Val(TxtCedulaActualizar.Text)
 
             usuario = controladorUsuario.Buscar(usuario)
-            If Not (usuario.tipo = Nothing) Then
+            If (usuario IsNot Nothing) Then
 
                 TxtNombreActualizar.Text = usuario.nombre
                 TxtNombreUsuarioActualizar.Text = usuario.nombreUsuario
@@ -259,9 +259,11 @@
             If usuario1 IsNot Nothing Then
                 ListaUsuario.Add(usuario1)
                 DataGridView1.DataSource = ListaUsuario
-
+            Else
+                MsgBox("No se encontro el usuario")
             End If
-
+        Else
+            MsgBox("Debe llenar el campo cedula")
 
         End If
 
