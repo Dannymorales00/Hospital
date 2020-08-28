@@ -43,29 +43,34 @@
                 Else
                     MsgBox("Error al agregar el contacto del paciente")
                 End If
+                If alergico.Count > 0 Then
+                    For Each item In alergico
+                        If controladorAlergico.registrar(item) Then
+                            MsgBox("Se agrego el medicamento alergico")
+                        Else
+                            MsgBox("No se el medicamento alergico al paciente")
+                        End If
+                    Next
+                Else
+                    MsgBox("No tiene medicamentos alergicos")
+                End If
 
-                For Each item In alergico
-                    If controladorAlergico.registrar(item) Then
-                        MsgBox("Se agrego el medicamento alergico")
-                    Else
-                        MsgBox("Error al medicamento alergico del paciente")
-                    End If
-                Next
+                If listaEnfermedades.Count > 0 Then
+                    For Each elemento As Enfermedad In listaEnfermedades
 
-                For Each elemento As Enfermedad In listaEnfermedades
+                        'MsgBox("Enfermedad: " + elemento.nombre + " // Descripcion: " + elemento.descripcion)
+                        If controladorEnfermedad.Registrar(elemento) Then
+                            MsgBox("Se agrego las enfermedades")
+                        Else
+                            MsgBox("No se agrego las enfermedades")
 
-                    'MsgBox("Enfermedad: " + elemento.nombre + " // Descripcion: " + elemento.descripcion)
-                    If controladorEnfermedad.Registrar(elemento) Then
-                        MsgBox("Se agrego las enfermedades")
-                    Else
-                        MsgBox("No se agrego las enfermedades")
-
-                    End If
+                        End If
 
 
-                Next
-
-
+                    Next
+                Else
+                    MsgBox("No tiene enfermedades")
+                End If
             Else
                 MsgBox("No se agrego el paciente")
             End If
