@@ -93,9 +93,11 @@
         If usuario.tipo = "Medico" Then
             frmConsulta.usuario = usuario
             frmConsulta.ShowDialog()
-        Else usuario.tipo = "Enfermera"
+        ElseIf usuario.tipo = "Enfermera" Then
 
             frmCitashoy.ShowDialog()
+        Else
+            MessageBox.Show("No tienes permiso para este modulo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         End If
 
