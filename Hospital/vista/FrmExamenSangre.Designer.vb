@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmExamenSangre
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmExamenSangre
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TxtTrigliceridos = New System.Windows.Forms.TextBox()
@@ -48,8 +48,11 @@ Partial Class FrmExamenSangre
         Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.BtnRegistrar = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         CType(Me.TablaExamenes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label10
@@ -57,7 +60,7 @@ Partial Class FrmExamenSangre
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(63, 338)
+        Me.Label10.Location = New System.Drawing.Point(56, 364)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(132, 24)
@@ -67,7 +70,7 @@ Partial Class FrmExamenSangre
         'TxtTrigliceridos
         '
         Me.TxtTrigliceridos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTrigliceridos.Location = New System.Drawing.Point(254, 336)
+        Me.TxtTrigliceridos.Location = New System.Drawing.Point(247, 362)
         Me.TxtTrigliceridos.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtTrigliceridos.Name = "TxtTrigliceridos"
         Me.TxtTrigliceridos.Size = New System.Drawing.Size(273, 26)
@@ -78,7 +81,7 @@ Partial Class FrmExamenSangre
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(54, 441)
+        Me.Label5.Location = New System.Drawing.Point(47, 467)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(141, 24)
@@ -88,7 +91,7 @@ Partial Class FrmExamenSangre
         'TxtHemoglobina
         '
         Me.TxtHemoglobina.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtHemoglobina.Location = New System.Drawing.Point(254, 439)
+        Me.TxtHemoglobina.Location = New System.Drawing.Point(247, 465)
         Me.TxtHemoglobina.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtHemoglobina.Name = "TxtHemoglobina"
         Me.TxtHemoglobina.Size = New System.Drawing.Size(273, 26)
@@ -99,7 +102,7 @@ Partial Class FrmExamenSangre
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(60, 406)
+        Me.Label9.Location = New System.Drawing.Point(53, 432)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(128, 24)
@@ -109,7 +112,7 @@ Partial Class FrmExamenSangre
         'TxtHematocrito
         '
         Me.TxtHematocrito.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtHematocrito.Location = New System.Drawing.Point(254, 404)
+        Me.TxtHematocrito.Location = New System.Drawing.Point(247, 430)
         Me.TxtHematocrito.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtHematocrito.Name = "TxtHematocrito"
         Me.TxtHematocrito.Size = New System.Drawing.Size(273, 26)
@@ -120,7 +123,7 @@ Partial Class FrmExamenSangre
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(82, 372)
+        Me.Label8.Location = New System.Drawing.Point(75, 398)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(110, 24)
@@ -130,7 +133,7 @@ Partial Class FrmExamenSangre
         'TxtColesterol
         '
         Me.TxtColesterol.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtColesterol.Location = New System.Drawing.Point(254, 370)
+        Me.TxtColesterol.Location = New System.Drawing.Point(247, 396)
         Me.TxtColesterol.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtColesterol.Name = "TxtColesterol"
         Me.TxtColesterol.Size = New System.Drawing.Size(273, 26)
@@ -141,7 +144,7 @@ Partial Class FrmExamenSangre
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(82, 266)
+        Me.Label7.Location = New System.Drawing.Point(75, 292)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(110, 24)
@@ -151,7 +154,7 @@ Partial Class FrmExamenSangre
         'TxtCreatinina
         '
         Me.TxtCreatinina.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCreatinina.Location = New System.Drawing.Point(254, 264)
+        Me.TxtCreatinina.Location = New System.Drawing.Point(247, 290)
         Me.TxtCreatinina.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCreatinina.Name = "TxtCreatinina"
         Me.TxtCreatinina.Size = New System.Drawing.Size(273, 26)
@@ -162,7 +165,7 @@ Partial Class FrmExamenSangre
         Me.labelIdExamenSangre.AutoSize = True
         Me.labelIdExamenSangre.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelIdExamenSangre.ForeColor = System.Drawing.Color.Black
-        Me.labelIdExamenSangre.Location = New System.Drawing.Point(257, 236)
+        Me.labelIdExamenSangre.Location = New System.Drawing.Point(250, 262)
         Me.labelIdExamenSangre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labelIdExamenSangre.Name = "labelIdExamenSangre"
         Me.labelIdExamenSangre.Size = New System.Drawing.Size(34, 24)
@@ -175,7 +178,7 @@ Partial Class FrmExamenSangre
         Me.labelNumeroIdExamen.AutoSize = True
         Me.labelNumeroIdExamen.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelNumeroIdExamen.ForeColor = System.Drawing.Color.Black
-        Me.labelNumeroIdExamen.Location = New System.Drawing.Point(21, 236)
+        Me.labelNumeroIdExamen.Location = New System.Drawing.Point(14, 262)
         Me.labelNumeroIdExamen.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labelNumeroIdExamen.Name = "labelNumeroIdExamen"
         Me.labelNumeroIdExamen.Size = New System.Drawing.Size(216, 24)
@@ -189,7 +192,7 @@ Partial Class FrmExamenSangre
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(652, 6)
+        Me.Label3.Location = New System.Drawing.Point(606, 28)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(287, 26)
@@ -204,7 +207,7 @@ Partial Class FrmExamenSangre
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.LblIdCita)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Panel1.Location = New System.Drawing.Point(13, 64)
+        Me.Panel1.Location = New System.Drawing.Point(6, 90)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(564, 132)
@@ -274,13 +277,13 @@ Partial Class FrmExamenSangre
         'TablaExamenes
         '
         Me.TablaExamenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TablaExamenes.Location = New System.Drawing.Point(652, 36)
+        Me.TablaExamenes.Location = New System.Drawing.Point(606, 69)
         Me.TablaExamenes.Margin = New System.Windows.Forms.Padding(4)
         Me.TablaExamenes.Name = "TablaExamenes"
         Me.TablaExamenes.ReadOnly = True
         Me.TablaExamenes.RowHeadersWidth = 51
         Me.TablaExamenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.TablaExamenes.Size = New System.Drawing.Size(677, 433)
+        Me.TablaExamenes.Size = New System.Drawing.Size(677, 422)
         Me.TablaExamenes.TabIndex = 125
         '
         'Label4
@@ -288,7 +291,7 @@ Partial Class FrmExamenSangre
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(72, 300)
+        Me.Label4.Location = New System.Drawing.Point(65, 326)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(123, 24)
@@ -298,7 +301,7 @@ Partial Class FrmExamenSangre
         'TxtAcidoUrico
         '
         Me.TxtAcidoUrico.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtAcidoUrico.Location = New System.Drawing.Point(254, 298)
+        Me.TxtAcidoUrico.Location = New System.Drawing.Point(247, 324)
         Me.TxtAcidoUrico.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtAcidoUrico.Name = "TxtAcidoUrico"
         Me.TxtAcidoUrico.Size = New System.Drawing.Size(273, 26)
@@ -309,7 +312,7 @@ Partial Class FrmExamenSangre
         Me.BtnSeleccionarConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSeleccionarConsulta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSeleccionarConsulta.ForeColor = System.Drawing.Color.Black
-        Me.BtnSeleccionarConsulta.Location = New System.Drawing.Point(302, 26)
+        Me.BtnSeleccionarConsulta.Location = New System.Drawing.Point(295, 52)
         Me.BtnSeleccionarConsulta.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnSeleccionarConsulta.Name = "BtnSeleccionarConsulta"
         Me.BtnSeleccionarConsulta.Size = New System.Drawing.Size(275, 30)
@@ -322,7 +325,7 @@ Partial Class FrmExamenSangre
         Me.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEliminar.ForeColor = System.Drawing.Color.Black
-        Me.BtnEliminar.Location = New System.Drawing.Point(971, 477)
+        Me.BtnEliminar.Location = New System.Drawing.Point(925, 499)
         Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(113, 30)
@@ -335,7 +338,7 @@ Partial Class FrmExamenSangre
         Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnLimpiar.ForeColor = System.Drawing.Color.Black
-        Me.BtnLimpiar.Location = New System.Drawing.Point(813, 477)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(767, 499)
         Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnLimpiar.Name = "BtnLimpiar"
         Me.BtnLimpiar.Size = New System.Drawing.Size(113, 30)
@@ -348,7 +351,7 @@ Partial Class FrmExamenSangre
         Me.BtnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRegistrar.ForeColor = System.Drawing.Color.Black
-        Me.BtnRegistrar.Location = New System.Drawing.Point(652, 477)
+        Me.BtnRegistrar.Location = New System.Drawing.Point(606, 499)
         Me.BtnRegistrar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnRegistrar.Name = "BtnRegistrar"
         Me.BtnRegistrar.Size = New System.Drawing.Size(113, 30)
@@ -356,11 +359,30 @@ Partial Class FrmExamenSangre
         Me.BtnRegistrar.Text = "Agregar"
         Me.BtnRegistrar.UseVisualStyleBackColor = True
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1344, 30)
+        Me.MenuStrip1.TabIndex = 144
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(52, 26)
+        Me.SalirToolStripMenuItem.Text = "Salir"
+        Me.SalirToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
+        '
         'FrmExamenSangre
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1344, 511)
+        Me.ClientSize = New System.Drawing.Size(1344, 542)
+        Me.ControlBox = False
         Me.Controls.Add(Me.BtnEliminar)
         Me.Controls.Add(Me.BtnLimpiar)
         Me.Controls.Add(Me.BtnRegistrar)
@@ -382,11 +404,14 @@ Partial Class FrmExamenSangre
         Me.Controls.Add(Me.TablaExamenes)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TxtAcidoUrico)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "FrmExamenSangre"
         Me.Text = "FrmExamenSangre"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.TablaExamenes, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -418,4 +443,6 @@ Partial Class FrmExamenSangre
     Friend WithEvents BtnEliminar As Button
     Friend WithEvents BtnLimpiar As Button
     Friend WithEvents BtnRegistrar As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
 End Class
