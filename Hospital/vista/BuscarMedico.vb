@@ -1,20 +1,20 @@
 ﻿Public Class BuscarMedico
-    Private medico As Medico
     Private medicoSeleccionado As Medico
+    Private medico As Medico
     Private controladorMedico As ControladorMedico
 
     Public Property P_Medico As Medico
         Get
-            Return medico
+            Return medicoSeleccionado
         End Get
         Set(value As Medico)
-            medico = value
+            medicoSeleccionado = value
         End Set
     End Property
 
     Private Sub BuscarMedico_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        medicoSeleccionado = Nothing
         medico = New Medico()
-        medicoSeleccionado = New Medico()
         controladorMedico = New ControladorMedico()
 
 
@@ -44,22 +44,23 @@
 
 
         If DataGridViewMedicos.SelectedRows.Count > 0 And DataGridViewMedicos.SelectedRows.Count < 2 Then
-            medico = medicoSeleccionado
+            medicoSeleccionado = New Medico()
+            medicoSeleccionado = medico
             'NumeroDeFilaSeleccionada = DataGridViewMedicos.CurrentRow.Index
-
+            Me.Hide()
         Else
             MessageBox.Show("debe seleccionar una fila")
         End If
 
-        Me.Hide()
+
 
     End Sub
 
 
     Private Sub DataGridViewMedicos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewMedicos.CellClick
-        medicoSeleccionado = New Medico()
-        medicoSeleccionado.cedula = DataGridViewMedicos.Item(0, DataGridViewMedicos.CurrentRow.Index).Value
-        medicoSeleccionado.nombre = DataGridViewMedicos.Item(1, DataGridViewMedicos.CurrentRow.Index).Value
+        medico = New Medico()
+        medico.cedula = DataGridViewMedicos.Item(0, DataGridViewMedicos.CurrentRow.Index).Value
+        medico.nombre = DataGridViewMedicos.Item(1, DataGridViewMedicos.CurrentRow.Index).Value
 
 
 

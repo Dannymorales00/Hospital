@@ -27,13 +27,17 @@
     End Sub
 
     Public Sub cargarMedico()
-        Dim medicoForm As New BuscarMedico
+        Dim medicoForm As New BuscarMedico()
         medicoForm.ShowDialog()
         medico = medicoForm.P_Medico
         medicoForm.Close()
 
-        If Not medico.cedula = 0 Then
+        If medico IsNot Nothing Then
             LblMedico.Text = medico.nombre
+
+        Else
+            MsgBox("No selecciono un medico")
+
         End If
 
     End Sub
