@@ -53,7 +53,7 @@
         ' Centrar un Formulario ...  
         If TypeOf Objeto Is Form Then
             Dim frm As Form = CType(Objeto, Form)
-            With Screen.PrimaryScreen.WorkingArea ' Dimensiones de la pantalla sin el TaskBar  
+            With Screen.PrimaryScreen.WorkingArea ' Dimensiones de la pantala sin el TaskBar  
                 frm.Top = (.Height - frm.Height) \ 2
                 frm.Left = (.Width - frm.Width) \ 2
             End With
