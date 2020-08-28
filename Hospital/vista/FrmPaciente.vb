@@ -84,6 +84,9 @@
         Else
             MsgBox("Debe rellenar todos los campos")
         End If
+
+        cargarTabla()
+        limpiarCampos()
     End Sub
 
     Sub limpiarCampos()
