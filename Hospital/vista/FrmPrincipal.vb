@@ -61,7 +61,7 @@
         Else
             ' referencia al control  
             Dim c As Control = CType(Objeto, Control)
-            'le  establece el top y el Left dentro del Parent  
+            'le  establece el top y el Left dentro dl Parent  
             With c
                 .Top = (.Parent.ClientSize.Height - c.Height) \ 2
                 .Left = (.Parent.ClientSize.Width - c.Width) \ 2
