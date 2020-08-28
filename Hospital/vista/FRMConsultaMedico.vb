@@ -39,6 +39,7 @@
             consulta.sintomas = txtSintomas.Text
             If conConsulta.actualizarConsulta(consulta) Then
                 MsgBox("Se ha registrado con exito")
+                Me.Close()
             End If
         End If
     End Sub

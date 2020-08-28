@@ -20,26 +20,41 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        paciente = New Paciente
-        consulta = New ConsultaMedica
 
-        paciente.altura = CDbl(txtAltura.Text)
-        paciente.peso = CDbl(txtPeso.Text)
-        paciente.cedula = cita.paciente.cedula
+        If comprobarAgregar() Then
+            paciente = New Paciente
+            consulta = New ConsultaMedica
+            paciente.altura = CDbl(txtAltura.Text)
+            paciente.peso = CDbl(txtPeso.Text)
+            paciente.cedula = cita.paciente.cedula
 
-        consulta.idCitas = cita.id
-        consulta.peso = paciente.peso
-        consulta.altura = paciente.altura
-        consulta.presion = CDbl(txtPresion.Text)
-        consulta.sintomas = txtSintomas.Text
-        conPaciente.actualizarPesoAltura(paciente)
+            consulta.idCitas = cita.id
+            consulta.peso = paciente.peso
+            consulta.altura = paciente.altura
+            consulta.presion = CDbl(txtPresion.Text)
+            consulta.sintomas = txtSintomas.Text
+            conPaciente.actualizarPesoAltura(paciente)
 
-        If conConsulta.registrarEnfermera(consulta) Then
-            MsgBox("Registro completado")
+            If conConsulta.registrarEnfermera(consulta) Then
+                MsgBox("Registro completado")
+            End If
+            Me.Close()
+        Else
+            MsgBox("Rellene todos los campos")
         End If
-        Me.Close()
+
+
 
     End Sub
+
+
+    Function comprobarAgregar() As Boolean
+        If txtAltura.Text <> "" And txtPeso.Text <> "" And txtSintomas.Text <> "" And txtPresion.Text <> "" Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 
     Private Sub TxtPresion_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPresion.KeyPress
 
