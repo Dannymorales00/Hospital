@@ -3,6 +3,7 @@
     Private pacienteRetorno As Paciente = Nothing
     Private controladorPaciente As New ControladorPaciente
     Private Sub BuscarPaciente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         cargarTabla()
     End Sub
     Public Property PacienteRetorno1 As Paciente
