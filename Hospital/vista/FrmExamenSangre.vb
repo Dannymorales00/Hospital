@@ -44,7 +44,7 @@
             limpiar()
 
         Else
-            MsgBox("no se logro registrar")
+            MsgBox("Ya existe un examen para esa consulta")
         End If
 
     End Sub
