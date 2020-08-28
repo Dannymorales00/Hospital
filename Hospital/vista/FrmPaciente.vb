@@ -1,19 +1,23 @@
 ﻿Public Class FrmPaciente
-    Private frmEnfemedades As New FrmEnfermedad
+    'atributos
     Private paciente As Paciente
+    Private alergico As List(Of MedicamentoAlergico)
     Private controladorPaciente As New ControladorPaciente()
     Private controladorPersonaContacto As New ControladorPersonaContacto
+    Private controladorAlergico As New ControladorMedicamentoAlergico
     Private personaContacto As New PersonaContacto()
     Private listaEnfermedades As New List(Of Enfermedad)
+    'ventanas
+    Private frmEnfemedades As New FrmEnfermedad
+    Private frmPersonaContacto As New FRMPersonaContacto()
+
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cargarTabla()
 
     End Sub
 
-
-
     Public Function comprobarAgregar() As Boolean
-        Return Not TxtCedula.Text.Equals("") And TxtNombre.Text.Equals("") And TxtAltura.Text.Equals("") And TxtCorreo.Text.Equals("") And TxtEdad.Text.Equals("") And TxtPeso.Text.Equals("") And TxtTelefono.Equals("")
+        Return Not TxtCedula.Text.Equals("") And Not TxtNombre.Text.Equals("") And Not TxtAltura.Text.Equals("") And Not TxtCorreo.Text.Equals("") And Not TxtEdad.Text.Equals("") And Not TxtPeso.Text.Equals("") And Not TxtTelefono.Equals("") And ComboTipo.SelectedIndex >= 0
 
     End Function
 
@@ -36,10 +40,17 @@
 
                     If controladorPersonaContacto.registrar(personaContacto) Then
                         MsgBox("Se agrego el contacto la persona contacto ")
-
                     Else
                         MsgBox("Error al agregar el contacto del paciente")
                     End If
+
+                    For Each item In alergico
+                        If controladorAlergico.registrar(item) Then
+                            MsgBox("Se agrego el medicamento alergico")
+                        Else
+                            MsgBox("Error al medicamento alergico del paciente")
+                        End If
+                    Next
 
                 Else
                     MsgBox("No se agrego el paciente")
@@ -73,6 +84,9 @@
         Else
             MsgBox("Debe rellenar todos los campos")
         End If
+
+        cargarTabla()
+        limpiarCampos()
     End Sub
 
     Sub limpiarCampos()
@@ -134,6 +148,7 @@
         paciente.correo = result1.correo
         paciente.telefono = result1.telefono
         paciente.edad = result1.edad
+        paciente.peso = result1.peso
         paciente.altura = result1.altura
         paciente.contactosPersona = result1.contactosPersona
         paciente.tipoSangre = result1.tipoSangre
@@ -174,21 +189,18 @@
     End Sub
 
     Private Sub BtnMedicamentos_Click(sender As Object, e As EventArgs) Handles BtnMedicamentos.Click
-        paciente = New Paciente
-        paciente.cedula = TxtCedula.Text
-        Dim result1 = controladorPaciente.cargar(paciente)
+        If TxtNombre.Text = "" And TxtCedula.Text = "" Then
+            MsgBox("Tiene que rellenar los campos Nombre y Cedula primero")
+        Else
+            alergico = New List(Of MedicamentoAlergico)
+            Dim frmAlergico As New FrmMedicamentoAlergicoRegistrar
+            frmAlergico.labelCedula.Text = TxtCedula.Text
+            frmAlergico.labelNombre.Text = TxtNombre.Text
+            frmAlergico.ShowDialog()
+            alergico = frmAlergico.alergico
 
-        paciente.nombre = result1.nombre
-        paciente.fechaNacimiento = result1.fechaNacimiento
-        paciente.correo = result1.correo
-        paciente.telefono = result1.telefono
-        paciente.edad = result1.edad
-        paciente.altura = result1.altura
-        paciente.contactosPersona = result1.contactosPersona
-        paciente.tipoSangre = result1.tipoSangre
-
-        Dim frmMedicamentos = New FrmMedicamentoAlergicoRegistrar(paciente)
-        frmMedicamentos.ShowDialog()
+            frmAlergico.Close()
+        End If
     End Sub
 
     Private Sub TxtBuscarCedula_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscarCedula.TextChanged
@@ -200,5 +212,27 @@
 
     Private Sub AdministrarEnfermedadesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarEnfermedadesToolStripMenuItem.Click
         frmEnfemedades.Show()
+    End Sub
+
+    Private Sub AdministrarPersonaContactoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarPersonaContactoToolStripMenuItem.Click
+        frmPersonaContacto.Show()
+    End Sub
+
+    Private Sub TxtCedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedula.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtBuscarCedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBuscarCedula.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefono.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> ChrW(8) Then
+            e.Handled = True
+        End If
     End Sub
 End Class

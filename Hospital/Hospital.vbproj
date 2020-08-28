@@ -124,6 +124,7 @@
     <Compile Include="Controladores\ControladorEnfermedad.vb" />
     <Compile Include="Controladores\ControladorExamenOrina.vb" />
     <Compile Include="Controladores\ControladorMedicamentoAdministrado.vb" />
+    <Compile Include="Controladores\ControladorExamenSangre.vb" />
     <Compile Include="Controladores\ControladorMedicamentoAlergico.vb" />
     <Compile Include="Controladores\ControladorMedicamentoRecetado.vb" />
     <Compile Include="Controladores\ControladorMedicamentos.vb" />
@@ -169,6 +170,9 @@
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_buscar_ExamenOrina_Result.vb">
+      <DependentUpon>ProyectoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_buscar_ExamenSangre_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_buscar_medico_Result.vb">
@@ -235,6 +239,15 @@
       <DependentUpon>FRMMedicamentoRecetado.vb</DependentUpon>
     </Compile>
     <Compile Include="vista\FRMMedicamentoRecetado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FRMConsultaMedico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FrmExamenSangre.Designer.vb">
+      <DependentUpon>FrmExamenSangre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FrmExamenSangre.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\FrmReporteConsulta.Designer.vb">
@@ -433,6 +446,9 @@
     <EmbeddedResource Include="vista\FRMMedicamentoRecetado.resx">
       <DependentUpon>FRMMedicamentoRecetado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\FrmExamenSangre.resx">
+      <DependentUpon>FrmExamenSangre.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmReporteConsulta.resx">
       <DependentUpon>FrmReporteConsulta.vb</DependentUpon>
     </EmbeddedResource>
@@ -591,19 +607,11 @@
       <LastGenOutput>ProyectoEntities.vb</LastGenOutput>
     </Content>
     <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\x86\msvcr120.dll" />
     <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />
     <None Include="Resources\usuariospng.png" />
   </ItemGroup>
   <ItemGroup />

@@ -73,7 +73,7 @@
 
 
         Catch ex As Exception
-            MsgBox("error al buscar...")
+            'MsgBox("error al buscar...")
             'MsgBox(ex)
 
         End Try
