@@ -10,7 +10,7 @@
 
     Private Sub BtnExamenOrina_Click(sender As Object, e As EventArgs) Handles BtnExamenOrina.Click
         frmExamenOrina.ShowDialog()
-        Me.Close()
+        Me.Hide()
 
     End Sub
 
@@ -44,7 +44,7 @@
 
     Private Sub BtnExamenSangre_Click(sender As Object, e As EventArgs) Handles BtnExamenSangre.Click
         frmExamenSangre.ShowDialog()
-        Me.Close()
+        Me.Hide()
     End Sub
 
 
