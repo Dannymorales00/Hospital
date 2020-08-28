@@ -31,59 +31,75 @@
     End Sub
 
     Private Sub BtnRegistrar_Click(sender As Object, e As EventArgs) Handles BtnRegistrar.Click
+        If comprobarAgregar() Then
+            paciente = New Paciente(Val(TxtCedula.Text), TxtNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipo.SelectedItem.ToString.Trim)
 
-        paciente = New Paciente(Val(TxtCedula.Text), TxtNombre.Text, DateTimePicker1.Value.ToString("yyyy-MM-dd"), Val(TxtTelefono.Text), TxtCorreo.Text, Val(TxtEdad.Text), Val(TxtPeso.Text), Val(TxtAltura.Text), ComboTipo.SelectedItem.ToString.Trim)
+            If BtnRegistrar.Text = "Registrar" Then
+                If controladorPaciente.registrar(paciente) = 1 Then
+                    AgregarPersonaContacto()
+                    AgregarMedicamentosAlergicos()
+                    AgregarEnfermedades()
 
-        If BtnRegistrar.Text = "Registrar" Then
-            If controladorPaciente.registrar(paciente) = 1 Then
-
-                MsgBox("Se agrego correctamente el paciente")
-                If controladorPersonaContacto.registrar(personaContacto) Then
-                    MsgBox("Se agrego el contacto la persona contacto ")
                 Else
-                    MsgBox("Error al agregar el contacto del paciente")
-                End If
-                If alergico.Count > 0 Then
-                    For Each item In alergico
-                        If controladorAlergico.registrar(item) Then
-                            MsgBox("Se agrego el medicamento alergico")
-                        Else
-                            MsgBox("No se el medicamento alergico al paciente")
-                        End If
-                    Next
-                Else
-                    MsgBox("No tiene medicamentos alergicos")
-                End If
-
-                If listaEnfermedades.Count > 0 Then
-                    For Each elemento As Enfermedad In listaEnfermedades
-
-                        'MsgBox("Enfermedad: " + elemento.nombre + " // Descripcion: " + elemento.descripcion)
-                        If controladorEnfermedad.Registrar(elemento) Then
-                            MsgBox("Se agrego las enfermedades")
-                        Else
-                            MsgBox("No se agrego las enfermedades")
-
-                        End If
-
-
-                    Next
-                Else
-                    MsgBox("No tiene enfermedades")
+                    MsgBox("No se agrego el paciente")
                 End If
             Else
-                MsgBox("No se agrego el paciente")
+                If controladorPaciente.actualizar(paciente) = 1 Then
+                    MsgBox("se actualizó correctamente el paciente")
+                Else
+                    MsgBox("No se actualizo el paciente")
+                End If
             End If
         Else
-            If controladorPaciente.actualizar(paciente) = 1 Then
-                MsgBox("se actualizó correctamente el paciente")
-            Else
-                MsgBox("No se actualizo el paciente")
-            End If
+            MsgBox("Debe rellenar todos los campos")
+
         End If
+
         cargarTabla()
         limpiarCampos()
     End Sub
+
+    Sub AgregarPersonaContacto()
+        MsgBox("Se agrego correctamente el paciente")
+        If controladorPersonaContacto.registrar(personaContacto) Then
+            MsgBox("Se agrego el contacto la persona contacto ")
+        Else
+            MsgBox("Error al agregar el contacto del paciente")
+        End If
+    End Sub
+
+
+    Sub AgregarMedicamentosAlergicos()
+        If alergico.Count > 0 Then
+            For Each item In alergico
+                If controladorAlergico.registrar(item) Then
+                    MsgBox("Se agrego el medicamento alergico")
+                Else
+                    MsgBox("No se el medicamento alergico al paciente")
+                End If
+            Next
+        Else
+            MsgBox("No tiene medicamentos alergicos")
+        End If
+
+    End Sub
+    Sub AgregarEnfermedades()
+        If listaEnfermedades.Count > 0 Then
+            For Each elemento As Enfermedad In listaEnfermedades
+                'MsgBox("Enfermedad: " + elemento.nombre + " // Descripcion: " + elemento.descripcion)
+                If controladorEnfermedad.Registrar(elemento) Then
+                    MsgBox("Se agrego las enfermedades")
+                Else
+                    MsgBox("No se agrego las enfermedades")
+
+                End If
+            Next
+        Else
+            MsgBox("No tiene enfermedades")
+        End If
+
+    End Sub
+
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
         If Not (TxtCedula.Text.Equals("")) Then
