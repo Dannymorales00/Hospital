@@ -199,4 +199,8 @@
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Me.Hide()
     End Sub
+
+    Private Sub BtnCerrar_Click_1(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Hide()
+    End Sub
 End Class
