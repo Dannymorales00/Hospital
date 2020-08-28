@@ -39,7 +39,7 @@
     End Sub
 
     Public Function comprobarRegistrar() As Boolean
-        Return (TxtRegistrarEspecialidad IsNot Nothing And DateTimeFecha.Checked And DateTimeHora.Checked And paciente IsNot Nothing And medico IsNot Nothing)
+        Return (Not TxtRegistrarEspecialidad.Text.Equals("")) And DateTimeFecha.Checked And DateTimeHora.Checked And Not LblPaciente.Text.Equals("Paciente Seleccionado") And Not LblMedico.Text.Equals("Medico Seleccionado")
     End Function
     Private Sub BtnMedico_Click(sender As Object, e As EventArgs) Handles BtnMedico.Click
         cargarMedico()
@@ -59,7 +59,7 @@
             cita.medico = medico
             If BtnRegistrar.Text = "Registrar" Then
                 If controladorCita.registrar(cita) = 1 Then
-                    MsgBox("se agrego correctamente la cita")
+                    MsgBox("Se agrego correctamente la cita")
                 Else
                     MsgBox("No se agrego la cita")
                 End If
