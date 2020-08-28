@@ -44,7 +44,7 @@
             limpiar()
 
         Else
-            MsgBox("no se logro registrar")
+            MsgBox("Ya existe un examen para esa consulta")
         End If
 
     End Sub
@@ -152,5 +152,9 @@
         Else
 
         End If
+    End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Me.Hide()
     End Sub
 End Class

@@ -112,7 +112,7 @@
                 MsgBox("No se elimino el paciente")
             End If
         Else
-            MsgBox("Debe rellenar todos los campos")
+            MsgBox("Debe seleccionar un paciente")
         End If
     End Sub
 

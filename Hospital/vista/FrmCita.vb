@@ -27,19 +27,23 @@
     End Sub
 
     Public Sub cargarMedico()
-        Dim medicoForm As New BuscarMedico
+        Dim medicoForm As New BuscarMedico()
         medicoForm.ShowDialog()
         medico = medicoForm.P_Medico
         medicoForm.Close()
 
-        If Not medico.cedula = 0 Then
+        If medico IsNot Nothing Then
             LblMedico.Text = medico.nombre
+
+        Else
+            MsgBox("No selecciono un medico")
+
         End If
 
     End Sub
 
     Public Function comprobarRegistrar() As Boolean
-        Return (TxtRegistrarEspecialidad IsNot Nothing And DateTimeFecha.Checked And DateTimeHora.Checked And paciente IsNot Nothing And medico IsNot Nothing)
+        Return (Not TxtRegistrarEspecialidad.Text.Equals("")) And DateTimeFecha.Checked And DateTimeHora.Checked And Not LblPaciente.Text.Equals("Paciente Seleccionado") And Not LblMedico.Text.Equals("Medico Seleccionado ")
     End Function
     Private Sub BtnMedico_Click(sender As Object, e As EventArgs) Handles BtnMedico.Click
         cargarMedico()
@@ -59,17 +63,20 @@
             cita.medico = medico
             If BtnRegistrar.Text = "Registrar" Then
                 If controladorCita.registrar(cita) = 1 Then
-                    MsgBox("se agrego correctamente la cita")
+                    MsgBox("Se agrego correctamente la cita")
                 Else
                     MsgBox("No se agrego la cita")
                 End If
             Else
+
                 cita.id = Val(LblID.Text)
                 If controladorCita.actualizar(cita) = 1 Then
                     MsgBox("Se actualizo la cita correctamente")
                 Else
                     MsgBox("Error al actualizar la cita")
                 End If
+
+
             End If
 
         Else
@@ -99,6 +106,7 @@
         LblMedico.Text = "Medico Seleccionado"
         TxtCedulaP.Text = ""
         BtnRegistrar.Text = "Registrar"
+        LblID.Text = ""
     End Sub
 
     Private Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles BtnLimpiar.Click
@@ -107,10 +115,15 @@
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
         cita = New Citas
-        cita.id = Val(LblID.Text)
-        controladorCita.eliminar(cita)
-        cargarTabla()
-        limpiarCampos()
+        If Not LblID.Text.Equals("") Then
+            cita.id = Val(LblID.Text)
+            controladorCita.eliminar(cita)
+            cargarTabla()
+            limpiarCampos()
+        Else
+            MsgBox("Debe seleccionar una cita")
+        End If
+
     End Sub
 
     Private Sub DataGridCitas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridCitas.CellClick
