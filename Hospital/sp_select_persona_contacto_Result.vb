@@ -18,5 +18,6 @@ Partial Public Class sp_select_persona_contacto_Result
     Public Property Dirección As String
     Public Property Nombre_Paciente As String
     Public Property Paciente As Integer
+    Public Property Id As Integer
 
 End Class

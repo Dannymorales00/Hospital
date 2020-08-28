@@ -44,15 +44,14 @@ Partial Class FRMPersonaContacto
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cedulaBuscarTxt = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.BtnCerrar = New System.Windows.Forms.Button()
+        Me.lblId = New System.Windows.Forms.Label()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         CType(Me.tablaPersonas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button3
         '
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Location = New System.Drawing.Point(289, 360)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(81, 24)
@@ -64,7 +63,7 @@ Partial Class FRMPersonaContacto
         '
         Me.labelNombre.AutoSize = True
         Me.labelNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelNombre.ForeColor = System.Drawing.Color.White
+        Me.labelNombre.ForeColor = System.Drawing.Color.Black
         Me.labelNombre.Location = New System.Drawing.Point(333, 191)
         Me.labelNombre.Name = "labelNombre"
         Me.labelNombre.Size = New System.Drawing.Size(37, 13)
@@ -75,7 +74,7 @@ Partial Class FRMPersonaContacto
         '
         Me.labelCedula.AutoSize = True
         Me.labelCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelCedula.ForeColor = System.Drawing.Color.White
+        Me.labelCedula.ForeColor = System.Drawing.Color.Black
         Me.labelCedula.Location = New System.Drawing.Point(333, 221)
         Me.labelCedula.Name = "labelCedula"
         Me.labelCedula.Size = New System.Drawing.Size(37, 13)
@@ -86,7 +85,7 @@ Partial Class FRMPersonaContacto
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(272, 221)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(50, 13)
@@ -97,7 +96,7 @@ Partial Class FRMPersonaContacto
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New System.Drawing.Point(272, 191)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(54, 13)
@@ -106,9 +105,7 @@ Partial Class FRMPersonaContacto
         '
         'btnRegistrar
         '
-        Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrar.ForeColor = System.Drawing.Color.White
         Me.btnRegistrar.Location = New System.Drawing.Point(177, 360)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(81, 24)
@@ -120,7 +117,6 @@ Partial Class FRMPersonaContacto
         '
         Me.telefonoTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.telefonoTxt.Location = New System.Drawing.Point(190, 144)
-        Me.telefonoTxt.MaxLength = 10
         Me.telefonoTxt.Name = "telefonoTxt"
         Me.telefonoTxt.Size = New System.Drawing.Size(206, 22)
         Me.telefonoTxt.TabIndex = 24
@@ -129,7 +125,6 @@ Partial Class FRMPersonaContacto
         '
         Me.relacionTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.relacionTxt.Location = New System.Drawing.Point(190, 97)
-        Me.relacionTxt.MaxLength = 20
         Me.relacionTxt.Name = "relacionTxt"
         Me.relacionTxt.Size = New System.Drawing.Size(206, 22)
         Me.relacionTxt.TabIndex = 23
@@ -138,7 +133,6 @@ Partial Class FRMPersonaContacto
         '
         Me.cedulaTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cedulaTxt.Location = New System.Drawing.Point(190, 59)
-        Me.cedulaTxt.MaxLength = 10
         Me.cedulaTxt.Name = "cedulaTxt"
         Me.cedulaTxt.Size = New System.Drawing.Size(206, 22)
         Me.cedulaTxt.TabIndex = 22
@@ -147,7 +141,6 @@ Partial Class FRMPersonaContacto
         '
         Me.nombreTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nombreTxt.Location = New System.Drawing.Point(190, 22)
-        Me.nombreTxt.MaxLength = 50
         Me.nombreTxt.Name = "nombreTxt"
         Me.nombreTxt.Size = New System.Drawing.Size(206, 22)
         Me.nombreTxt.TabIndex = 21
@@ -156,7 +149,6 @@ Partial Class FRMPersonaContacto
         '
         Me.direccionTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.direccionTxt.Location = New System.Drawing.Point(177, 247)
-        Me.direccionTxt.MaxLength = 200
         Me.direccionTxt.Name = "direccionTxt"
         Me.direccionTxt.Size = New System.Drawing.Size(263, 96)
         Me.direccionTxt.TabIndex = 20
@@ -166,7 +158,7 @@ Partial Class FRMPersonaContacto
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(20, 206)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(78, 18)
@@ -175,9 +167,7 @@ Partial Class FRMPersonaContacto
         '
         'Button1
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(177, 200)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(81, 24)
@@ -189,7 +179,7 @@ Partial Class FRMPersonaContacto
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.Location = New System.Drawing.Point(20, 247)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(85, 18)
@@ -200,7 +190,7 @@ Partial Class FRMPersonaContacto
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(20, 148)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(79, 18)
@@ -211,7 +201,7 @@ Partial Class FRMPersonaContacto
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(19, 101)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(144, 18)
@@ -222,7 +212,7 @@ Partial Class FRMPersonaContacto
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(20, 22)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(151, 18)
@@ -233,7 +223,7 @@ Partial Class FRMPersonaContacto
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(19, 63)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 18)
@@ -248,14 +238,14 @@ Partial Class FRMPersonaContacto
         Me.tablaPersonas.ReadOnly = True
         Me.tablaPersonas.RowHeadersWidth = 51
         Me.tablaPersonas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.tablaPersonas.Size = New System.Drawing.Size(626, 395)
+        Me.tablaPersonas.Size = New System.Drawing.Size(727, 395)
         Me.tablaPersonas.TabIndex = 31
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(515, 19)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(65, 18)
@@ -266,16 +256,13 @@ Partial Class FRMPersonaContacto
         '
         Me.cedulaBuscarTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cedulaBuscarTxt.Location = New System.Drawing.Point(586, 18)
-        Me.cedulaBuscarTxt.MaxLength = 10
         Me.cedulaBuscarTxt.Name = "cedulaBuscarTxt"
         Me.cedulaBuscarTxt.Size = New System.Drawing.Size(158, 22)
         Me.cedulaBuscarTxt.TabIndex = 33
         '
         'Button4
         '
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.White
         Me.Button4.Location = New System.Drawing.Point(400, 360)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(81, 24)
@@ -283,26 +270,32 @@ Partial Class FRMPersonaContacto
         Me.Button4.Text = "Eliminar"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'BtnCerrar
+        'lblId
         '
-        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
-        Me.BtnCerrar.Location = New System.Drawing.Point(1063, 2)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(81, 24)
-        Me.BtnCerrar.TabIndex = 35
-        Me.BtnCerrar.Text = "Cerrar"
-        Me.BtnCerrar.UseVisualStyleBackColor = True
+        Me.lblId.AutoSize = True
+        Me.lblId.Location = New System.Drawing.Point(446, 18)
+        Me.lblId.Name = "lblId"
+        Me.lblId.Size = New System.Drawing.Size(45, 13)
+        Me.lblId.TabIndex = 35
+        Me.lblId.Text = "Label10"
+        Me.lblId.Visible = False
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Location = New System.Drawing.Point(39, 361)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCerrar.TabIndex = 36
+        Me.btnCerrar.Text = "Button2"
+        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'FRMPersonaContacto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(1152, 461)
-        Me.ControlBox = False
-        Me.Controls.Add(Me.BtnCerrar)
+        Me.ClientSize = New System.Drawing.Size(1253, 461)
+        Me.Controls.Add(Me.btnCerrar)
+        Me.Controls.Add(Me.lblId)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.cedulaBuscarTxt)
@@ -354,5 +347,6 @@ Partial Class FRMPersonaContacto
     Friend WithEvents Label9 As Label
     Friend WithEvents cedulaBuscarTxt As TextBox
     Friend WithEvents Button4 As Button
-    Friend WithEvents BtnCerrar As Button
+    Friend WithEvents lblId As Label
+    Friend WithEvents btnCerrar As Button
 End Class
