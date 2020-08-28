@@ -7,9 +7,12 @@
     Private controladorCita As New ControladorCita
     Private conPaciente As New ControladorPaciente
     Private conMedico As New ControladorMedico
+    Private FechaActual As New DateTimePicker()
 
     Private Sub FrmCita_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cargarTabla()
+        DateTimeFecha.MinDate = FechaActual.Value
+
     End Sub
 
     Public Sub cargarPaciente()
@@ -119,10 +122,17 @@
 
     Private Sub DataGridCitas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridCitas.CellClick
         TxtRegistrarEspecialidad.Text = DataGridCitas.Item(1, DataGridCitas.CurrentRow.Index).Value
-
         Dim fecha As String = DataGridCitas.Item(2, DataGridCitas.CurrentRow.Index).Value
 
-        DateTimeFecha.Value = fecha.Split(" ").ElementAt(0)
+        Dim fechaCita As New DateTimePicker()
+        fechaCita.Value = fecha.Split(" ").ElementAt(0)
+
+        'fecha de la cita es menor que la fecha actual retorna un numero menor que cero
+        If DateTime.Compare(FechaActual.Value, fechaCita.Value) < 0 Then
+            DateTimeFecha.Value = fechaCita.Value
+        Else
+            DateTimeFecha.Value = FechaActual.Value
+        End If
 
 
         DateTimeHora.Value = "2020-11-01" + " " + fecha.Split(" ").ElementAt(1)

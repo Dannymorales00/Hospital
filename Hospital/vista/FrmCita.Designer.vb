@@ -22,8 +22,8 @@ Partial Class FrmCita
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BtnRegistrar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -153,8 +153,8 @@ Partial Class FrmCita
         '
         'DataGridCitas
         '
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        Me.DataGridCitas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        Me.DataGridCitas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridCitas.BackgroundColor = System.Drawing.SystemColors.ScrollBar
         Me.DataGridCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridCitas.Location = New System.Drawing.Point(459, 70)
@@ -162,8 +162,8 @@ Partial Class FrmCita
         Me.DataGridCitas.Name = "DataGridCitas"
         Me.DataGridCitas.ReadOnly = True
         Me.DataGridCitas.RowHeadersWidth = 51
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.DataGridCitas.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.DataGridCitas.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridCitas.RowTemplate.Height = 24
         Me.DataGridCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridCitas.Size = New System.Drawing.Size(561, 268)
@@ -218,6 +218,7 @@ Partial Class FrmCita
         Me.DateTimeFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimeFecha.Location = New System.Drawing.Point(152, 103)
         Me.DateTimeFecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.DateTimeFecha.MinDate = New Date(2020, 8, 26, 0, 0, 0, 0)
         Me.DateTimeFecha.Name = "DateTimeFecha"
         Me.DateTimeFecha.Size = New System.Drawing.Size(152, 21)
         Me.DateTimeFecha.TabIndex = 14
