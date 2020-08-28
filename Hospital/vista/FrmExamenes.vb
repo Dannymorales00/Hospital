@@ -10,7 +10,7 @@
 
     Private Sub BtnExamenOrina_Click(sender As Object, e As EventArgs) Handles BtnExamenOrina.Click
         frmExamenOrina.ShowDialog()
-        Me.Close()
+        Me.Hide()
 
     End Sub
 
@@ -24,7 +24,7 @@
                 frm.Left = (.Width - frm.Width) \ 2
             End With
 
-            ' Centrar un control dentro del contenedor  
+            ' Centrar un contol dentro del contenedor  
         Else
             ' referencia al control  
             Dim c As Control = CType(Objeto, Control)
@@ -44,7 +44,7 @@
 
     Private Sub BtnExamenSangre_Click(sender As Object, e As EventArgs) Handles BtnExamenSangre.Click
         frmExamenSangre.ShowDialog()
-        Me.Close()
+        Me.Hide()
     End Sub
 
 

@@ -39,6 +39,7 @@
         Try
             Using almacen As New ProyectoEntities1
                 Return almacen.sp_obtener_consulta_por_idCita(cita.id).Single
+
             End Using
         Catch ex As Exception
 

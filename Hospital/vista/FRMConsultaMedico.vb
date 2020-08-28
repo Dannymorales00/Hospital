@@ -1,59 +1,64 @@
-﻿Public Class FRMConsultaMedico
-    Private _cita As Citas
-    Dim controladorConsulta As New ControladorConsulta
-    Dim consulta As New ConsultaMedica
+﻿Public Class frmConsultaMedico
+    Private _citas As Citas
+    Private conConsulta As New ControladorConsulta
+    Private consulta As New ConsultaMedica
+    Private frmMedicamentosAdministrados As New FrmMedicamentoAdministrado
+    Private frmMedicamentoRecetado As New FRMMedicamentoRecetado
     Property citas As Citas
         Get
-            Return _cita
+            Return _citas
         End Get
         Set
-            _cita = Value
+            _citas = Value
         End Set
     End Property
 
-    Private Sub FRMConsultaMedico_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        llenarDatos()
+    Private Sub frmConsultaMedico_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        obtenerDatoConsulta()
+
     End Sub
 
-    Sub llenarDatos()
-        Dim result = controladorConsulta.obtenerDatosConsulta(citas)
 
-        consulta.id = result.id
-        consulta.altura = result.altura
-        consulta.descripcionSintomas = result.descripcionSintomas
-        consulta.peso = result.peso
-        consulta.presion = result.presion
+    Sub obtenerDatoConsulta()
+        Dim datos = conConsulta.obtenerDatosConsulta(citas)
+        consulta.altura = datos.altura
+        consulta.descripcionSintomas = datos.descripcionSintomas
+        consulta.presion = datos.presion
+        consulta.peso = datos.peso
+        consulta.id = datos.id
 
         txtAltura.Text = consulta.altura.ToString
-        txtDescripcionSintomas.Text = consulta.descripcionSintomas
         txtPeso.Text = consulta.peso.ToString
+        txtDescripcionSintomas.Text = consulta.descripcionSintomas
         txtPresion.Text = consulta.presion.ToString
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
         If comprobarCampos() Then
-            consulta.sintomas = txtSintomasMostrados.Text
             consulta.descripcionProceso = txtDescripcionProceso.Text
-            If controladorConsulta.actualizarConsulta(consulta) Then
-                MsgBox("Consulta Registrada con Exito")
-                Me.Close()
-
-            Else
-                MsgBox("Error al registrar la Consulta")
+            consulta.sintomas = txtSintomas.Text
+            If conConsulta.actualizarConsulta(consulta) Then
+                MsgBox("Se ha registrado con exito")
             End If
-        Else
-            MsgBox("Rellene todos los campos")
-
         End If
-
     End Sub
 
     Function comprobarCampos() As Boolean
-        If txtSintomasMostrados.Text <> "" And txtDescripcionProceso.Text <> "" Then
+        If txtDescripcionProceso.Text <> "" And txtSintomas.Text <> "" Then
             Return True
         Else
+            MsgBox("Rellene todos los campos")
             Return False
         End If
     End Function
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        frmMedicamentosAdministrados.consultaMedica = consulta
+        frmMedicamentosAdministrados.ShowDialog()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        frmMedicamentoRecetado.consultaMedica = consulta
+        frmMedicamentoRecetado.ShowDialog()
+    End Sub
 End Class

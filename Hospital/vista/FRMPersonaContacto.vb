@@ -12,6 +12,7 @@
         relacionTxt.Text = ""
         cedulaTxt.ReadOnly = False
         btnRegistrar.Text = "Registrar"
+        lblId.Text = "Label10"
     End Sub
 
     Sub cargarTabla()
@@ -102,6 +103,7 @@
         direccionTxt.Text = tablaPersonas.Item(4, tablaPersonas.CurrentRow.Index).Value
         labelNombre.Text = tablaPersonas.Item(5, tablaPersonas.CurrentRow.Index).Value
         labelCedula.Text = tablaPersonas.Item(6, tablaPersonas.CurrentRow.Index).Value
+        lblId.Text = tablaPersonas.Item(7, tablaPersonas.CurrentRow.Index).Value
         cedulaTxt.ReadOnly = True
         btnRegistrar.Text = "Actualizar"
 
@@ -110,10 +112,15 @@
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         personaContacto = New PersonaContacto
-        personaContacto.cedula = cedulaTxt.Text
-        conPersonaContacto.eliminar(personaContacto)
-        cargarTabla()
-        limpiarCampos()
+        If lblId.Text <> "Label10" Then
+            personaContacto.id = lblId.Text
+            conPersonaContacto.eliminar(personaContacto)
+            cargarTabla()
+            limpiarCampos()
+        Else
+            MsgBox("Seleccione una Persona Primero")
+        End If
+
 
     End Sub
 

@@ -34,7 +34,7 @@ Partial Class FrmMedicamentoAlergicoRegistrar
         'BtnRegistrar
         '
         Me.BtnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegistrar.Location = New System.Drawing.Point(198, 389)
+        Me.BtnRegistrar.Location = New System.Drawing.Point(12, 389)
         Me.BtnRegistrar.Name = "BtnRegistrar"
         Me.BtnRegistrar.Size = New System.Drawing.Size(102, 33)
         Me.BtnRegistrar.TabIndex = 33
