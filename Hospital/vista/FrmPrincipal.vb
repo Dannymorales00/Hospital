@@ -81,14 +81,12 @@
 
     End Sub
 
-    Private Sub BtnReportes_Click(sender As Object, e As EventArgs) Handles BtnReportes.Click
-        frmReporte.ShowDialog()
-    End Sub
+
 
     Private Sub BtnReportes_Click(sender As Object, e As EventArgs) Handles BtnReportes.Click
 
         If usuario.tipo.Equals("Medico") Or usuario.tipo.Equals("Secretaria") Then
-            frmReportes.Show()
+            frmReporte.ShowDialog()
         Else
             MessageBox.Show("No tienes permiso para este modulo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
 

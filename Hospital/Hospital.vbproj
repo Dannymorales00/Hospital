@@ -223,10 +223,10 @@
     <Compile Include="sp_validar_usuario_Result.vb">
       <DependentUpon>ProyectoEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="vista\FRMConsultaMedico.Designer.vb">
-      <DependentUpon>FRMConsultaMedico.vb</DependentUpon>
+    <Compile Include="vista\frmConsultaMedico.Designer.vb">
+      <DependentUpon>frmConsultaMedico.vb</DependentUpon>
     </Compile>
-    <Compile Include="vista\FRMConsultaMedico.vb">
+    <Compile Include="vista\frmConsultaMedico.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\FrmMedicamentoAdministrado.Designer.vb">
@@ -239,9 +239,6 @@
       <DependentUpon>FRMMedicamentoRecetado.vb</DependentUpon>
     </Compile>
     <Compile Include="vista\FRMMedicamentoRecetado.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\FRMConsultaMedico.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\FrmExamenSangre.Designer.vb">
@@ -437,8 +434,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="vista\FRMConsultaMedico.resx">
-      <DependentUpon>FRMConsultaMedico.vb</DependentUpon>
+    <EmbeddedResource Include="vista\frmConsultaMedico.resx">
+      <DependentUpon>frmConsultaMedico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FrmMedicamentoAdministrado.resx">
       <DependentUpon>FrmMedicamentoAdministrado.vb</DependentUpon>

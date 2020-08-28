@@ -45,6 +45,7 @@ Partial Class FRMPersonaContacto
         Me.cedulaBuscarTxt = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.lblId = New System.Windows.Forms.Label()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         CType(Me.tablaPersonas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -279,11 +280,21 @@ Partial Class FRMPersonaContacto
         Me.lblId.Text = "Label10"
         Me.lblId.Visible = False
         '
+        'btnCerrar
+        '
+        Me.btnCerrar.Location = New System.Drawing.Point(39, 361)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCerrar.TabIndex = 36
+        Me.btnCerrar.Text = "Button2"
+        Me.btnCerrar.UseVisualStyleBackColor = True
+        '
         'FRMPersonaContacto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1253, 461)
+        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.lblId)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label9)
@@ -337,4 +348,5 @@ Partial Class FRMPersonaContacto
     Friend WithEvents cedulaBuscarTxt As TextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents lblId As Label
+    Friend WithEvents btnCerrar As Button
 End Class
