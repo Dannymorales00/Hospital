@@ -157,4 +157,8 @@
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Me.Hide()
     End Sub
+
+    Private Sub DateTimeHora_ValueChanged(sender As Object, e As EventArgs) Handles DateTimeHora.ValueChanged
+
+    End Sub
 End Class
